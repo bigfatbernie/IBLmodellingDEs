@@ -183,19 +183,19 @@
 }{}
 \iftoggle{solutions}{
 	\voidenvironment{displayonly}
-	\voidenvironment{lesson}
+	\voidenvironment{module}
 	\voidenvironment{notes}
 	\renewcommand{\coversubtitle}{Solutions}
 }{}
 \iftoggle{standard}{
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
-	\voidenvironment{lesson}
+	\voidenvironment{module}
 	\renewcommand{\coversubtitle}{MAT223 Notes}
 }{}
 %\voidenvironment{solution}
 %\voidenvironment{annotation}
-%\voidenvironment{lesson}
+%\voidenvironment{module}
 %%\voidenvironment{notes}
 %%\voidenvironment{displayonly}
 
@@ -294,10 +294,7 @@ copyright.
 
 
 
-%\addcontentsline{toc}{chapter}{Lessons}
-
-
-
+%\addcontentsline{toc}{chapter}{modules}
 
 
 
@@ -313,583 +310,12 @@ copyright.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{topic}[Mathematical Modelling]
-%\Title{Mathematical Modelling}
+\include{chap1-mathmodelling}
 
 
-In this section, we study some strategies to model problems mathematically in an effective manner.
 
 
 
-\end{topic}
-
-
-\begin{lesson}
-	\Title{Defining Problem Statement}
-
-	\Heading{Objectives}
-	\begin{itemize}
-		\item The first step in Mathematical modelling is to define the problem
-		\item A good way to do this is to figure out what is the ``mathematical object'' we are looking for at the end of the process
-
-		\item The second step is to create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-\begin{annotation}
-	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-	\end{goals}
-\end{annotation}
-	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-
-\end{lesson}
-
-
-
-
-\section*{Step A. Defining the problem}
-\addcontentsline{toc}{subsection}{Step A. Defining the problem}
-
-The first step is to define the problem we want to solve or improve.
-
-To do this, we should start from the end! We need to decide on what kind of mathematical object we will use in the end to show that we solved, or at least improved, the problem we were tasked with. \\
-
-
-Once this is done, we can define the problem mathematically. 
-
-\begin{example}
-	Your team was tasked with optimizing the layout of an airport.
-	
-	You decided that in the end, to show that the team did find a good layout fo an airport, they will show
-	\begin{itemize}
-		\item $T = $ the total time (in minutes) necessary by the average person to walk from their airport transportation (taxi, train, bus) to their gate.
-	\end{itemize}
-	
-	Once this decision is made, the problem to solve (or improve) becomes the following:
-	
-	\begin{itemize}
-		\item Minimize $T$
-	\end{itemize}
-
-	There will probably be some constraints, which will be studied in Step C.
-
-\end{example}
-
-
-\vfill
-
-
-\section*{Task 1.A: Elevator problem at theBigCompany}
-\addcontentsline{toc}{subsection}{Task 1.A: Elevator problem at theBigCompany}
-
-
-\begin{annotation}
-	\begin{goals}
-		\Goal{Make the question precise, bring it into a ``mathematical form''.}
-		\begin{itemize}
-			\item Choose a mathematical object best suited for the problem, e.g. a number, a geometric form, a graph, a function, an algorithm, ...
-
-		\end{itemize}
-	\end{goals}
-%	\begin{notes}
-%		
-%		\begin{itemize}
-%			\item There are many ways to solve this problem.
-%				Some students
-%				might start with equations. After they use their
-%				equations to solve the problem, make them draw a picture
-%				and come up with a graphical solution.
-%
-%			\item When the students start coming up with vector equations,
-%				give them the vocabulary of \emph{linear
-%				combinations}
-%				and \emph{column vector notation}.
-%		\end{itemize}
-%	\end{notes}
-\end{annotation}
-
-
-You are hired by theBigCompany to help with their ``elevator problem''.
-
-This is the email you received:
-
-\begin{center}
-	\color{blue}
-	\begin{tabular}{?l}
-	\begin{minipage}{.75\textwidth}
-	-------- Forwarded Message -------- \\[10pt]
-	\textcolor{black}{Date: } Mon, 16 September 2019 21:41:35 + 0000  \\
-	\textcolor{black}{From: } CEO <theCEO@theBigCompany.ca> \\
-	\textcolor{black}{To: } Human Resources <hr@theBigCompany.ca> \\
-	\textcolor{black}{Subject: } they're still late !?\@\&! \\
-	
-	Hey Shophika! \\
-	
-	I still get complaints about staff being late, some by 15 minutes.
-	
-	With the staff we have, that's about one salary lost.
-	
-	Again the bottleneck of the elevators seems to be the problem.
-	
-	Can you suggest solutions? \\
-	
-	Thanks, the CEO
-	\end{minipage}
-	\end{tabular}
-\end{center}
-
-
-\vspace{5mm}
-
-\begin{annotation}
-	\begin{notes}
-		
-		\begin{itemize}
-			\item Students will start discussing how to solve the problem
-			\item This question deals with what will happen \textbf{after} solving the problem
-			\item The goal of this question is to think about how to best tell a ``mathematically-challenged'' CEO that you solved the problem
-		\end{itemize}
-	\end{notes}
-\end{annotation}
-
-\paragraph{Scenario 1:}
-
-With your team, you must decide on one answer and be prepared to report on your decision and the reason for your choice.
-
-\subparagraph{Task.} What mathematical object would you use to convince the CEO that you have solved or improved the problem?
-
-
-
-
-
-
-
-
-\newpage
-
-
-
-\question
-\label{object}
-For each part, what ``mathematical object'' would you use to communicate that you have solved or improved the problem? Then define the problem mathematically.
-\begin{parts}
-	\item Help the city of Toronto choose the best recycling centre.
-	\item Help the Canadian Institute of Health Information (CIHI) estimate how significant the outbreak of illnesses will be in the coming year in Canada.
-	\item Create a mathematical model to rank roller coasters according to thrill factor.
-	\item Gas stations offer different prices for gas. I would like to create an app that finds the best gas station to go to. What should ``best'' mean?
-	\item The mayor of Toronto wants to extend the subway line with a new \textcolor{RoyalBlue}{blue line} as in Figure \ref{TTC}. Is it optimal?
-	
-	\item Is it better to buy or rent? 
-	\begin{enumerate}
-		\item Is it better to buy a car or rent Zipcar, Enterprise Carshare, or Car2go?
-		\item Does the criteria you used to evaluate the previous question change if the question is whether to buy a bicycle or use Bike Share Toronto? 
-	\end{enumerate}
-
-	\begin{center}
-	\begin{figure}[!htbp]
-	\includegraphics*[width=500pt]{images/TTC-extension.png}
-	\caption{Extension plans for Toronto subway line.}
-	\label{TTC}	
-	\end{figure}
-	\end{center}
-	
-\end{parts}
-
-
-
-
-
-
-
-
-\newpage
-
-\section*{Step B. Building a mind map}
-\addcontentsline{toc}{subsection}{Step B. Building a mind map}
-
-\begin{annotation}
-	\begin{notes}
-	\begin{itemize}
-		\item Students usually come up with more complicated variations:
-		\begin{itemize}
-			\item Money spent on late employees' salaries
-			\item sum of time in minutes that employees are late counting only employees that are at most 15 minutes late
-		\end{itemize}
-		\item Stick with $R$, a simple first approach
-	\end{itemize}	
-	\end{notes}
-	
-\end{annotation}
-
-
-A mind map is a tool to visually outline and organize ideas. Typically a key idea is the centre of a mind map and associated ideas are added to create a diagram that shows the flow of ideas. In Figure \ref{mindmap1}, we focus on the definition of ``best'', with three possible definitions
-branching off to be further explored. From here, we can focus our attention on one of the three branches
-at a time.
-
-\begin{figure}[!htbp]
-\begin{tikzpicture}
-	\fill[color=Green] (0,0) rectangle (4,1) node[pos=.5] {\color{black}``Best'' recycling centre};
-	\fill[color=BurntOrange] (7,2.5) rectangle (11,1.5) node[pos=.5] {\color{black}Most participation};
-	\fill[color=Goldenrod] (7,0) rectangle (11,1) node[pos=.5] {\color{black}Least cost to the city};
-	\fill[color=red] (7,-1.5) rectangle (12,-0.5) node[pos=.5] {\color{black}Processes the most recyclables};
-	\draw (4,0.75) -- (7,2);
-	\draw (4,0.5) -- (7,0.5);
-	\draw (4,0.25) -- (7,-1);
-\end{tikzpicture}
-\caption{An example of a simple mind map.}
-\label{mindmap1}
-\end{figure}
-
-
-Let's think about the least-cost option first. We probably can't determine how much any recycling program costs without knowing more about the recycling program, so a good place to start is to ask the question ``What kinds of recycling programs exist?''
-If we aren't familiar with different types of recycling, we might need to do some research to see what kinds of programs exist.
-
-
-A possible next step on your mind map for the least-cost approach could be the one shown in Figure \ref{mindmap2}.
-
-\begin{figure}[!htbp]
-\begin{tikzpicture}
-	\fill[color=Green] (0,0) rectangle (4,1) node[pos=.5] {\color{black}``Best'' recycling centre};
-	\fill[color=BurntOrange] (6,2.5) rectangle (8,1.5) node[pos=.5] {\color{black}\begin{minipage}{40pt}\raggedright Most participation\end{minipage}};
-	\fill[color=Goldenrod] (6,0) rectangle (8,1) node[pos=.5] {\color{black}\begin{minipage}{45pt}\raggedright Least cost to the city\end{minipage}};
-	\fill[color=red] (6,-2) rectangle (8,-0.5) node[pos=.5] {\color{black}\begin{minipage}{50pt}\raggedright Processes the most recyclables\end{minipage}};
-	\draw (4,0.75) -- (6,2);
-	\draw (4,0.5) -- (6,0.5);
-	\draw (4,0.25) -- (6,-1.25);
-	\fill[color=WildStrawberry] (10,2.25) rectangle (12,3.25) node[pos=.5] {\color{black}\begin{minipage}{40pt}\raggedright Drop off centre\end{minipage}};	
-	\fill[color=Thistle] (10,0.75) rectangle (12.5,1.75) node[pos=.5] {\color{black}\begin{minipage}{60pt}\raggedright Curbside single stream\end{minipage}};	
-	\fill[color=Periwinkle] (10,0.25) rectangle (12,-0.75) node[pos=.5] {\color{black}\begin{minipage}{50pt}\raggedright Curbside (pre-sorted)\end{minipage}};	
-	\fill[color=Cerulean] (10,-2.25) rectangle (12,-1.25) node[pos=.5] {\color{black}\begin{minipage}{50pt}\raggedright Pay as you throw\end{minipage}};
-	\draw (8,0.8) -- (10,2.75);	
-	\draw (8,0.6) -- (10,1.25);	
-	\draw (8,0.4) -- (10,-0.25);	
-	\draw (8,0.2) -- (10,-1.75);	
-\end{tikzpicture}
-\caption{Next step of a mind map.}
-\label{mindmap2}
-\end{figure}
-
-
-
-\begin{annotation}
-	\begin{goals}
-		\Goal{FreeMind}
-
-		\hfill \qrcode{http://freemind.sourceforge.net}	
-	\end{goals}
-\end{annotation}
-
-
-\subparagraph{Software.} There is free online software to help creating a mind map. One such is \textcolor{blue}{\underline{\href{http://freemind.sourceforge.net}{FreeMind}}}.
-
-
-
-
-
-
-\newpage
-
-\section*{Task 1.B: Elevator problem at theBigCompany}
-\addcontentsline{toc}{subsection}{Task 1.B: Elevator problem at theBigCompany}
-
-
-\paragraph{Scenario 2:} \label{elevatorR}
-
-Your team decides that the mathematical object you will use to show the CEO that you solved or improved the problem is
-\begin{itemize}
-	\item $R=$ the sum in minutes by which every employee is late.
-\end{itemize}
-
-Employees that are on time count for 0 minutes. 
-
-\subparagraph{Task.} Create a mind map for the question: \quad How can $R$ be minimized?
-
-
-\vfill
-
-\question
-
-For each part, create a mind map. Focus on the same approach you had for question \ref{object}.
-\begin{parts}
-	\item Help the city of Toronto choose the best recycling centre.
-	\item Help the Canadian Institute of Health Information (CIHI) estimate how significant the outbreak of illnesses will be in the coming year in Canada.
-	\item Create a mathematical model to rank roller coasters according to thrill factor.
-	\item Gas stations offer different prices for gas. I would like to create an app that finds the best gas station to go to. What should ``best'' mean?
-	\item The mayor of Toronto wants to extend the subway line with a new blue line as in Figure \ref{TTC}. Is it optimal?
-	
-	\item Is it better to buy a car or rent Zipcar, Enterprise Carshare, or Car2go?
-
-	
-\end{parts}
-
-
-
-
-
-
-
-
-\begin{lesson}
-	\Title{Making Assumptions}
-	
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla bla bla	
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-
-\begin{annotation}
-	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-	\end{goals}
-\end{annotation}
-	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-
-
-\end{lesson}
-
-
-\begin{annotation}
-	\begin{notes}
-		This is horrible and definitely needs to be worked on!
-	\end{notes}
-\end{annotation}
-
-
-
-
-
-
-
-
-
-\section*{Step C. Making Assumptions}
-\addcontentsline{toc}{subsection}{Step C. Making Assumptions}
-
-
-
-
-
-
-
-
-
-
-
-\begin{lesson}
-	\Title{Defining Variables}
-	
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla bla bla	
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-\begin{annotation}
-	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-	\end{goals}
-\end{annotation}
-	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-
-
-\end{lesson}
-
-
-
-
-
-\section*{Step D. Parameters or Variables?}
-\addcontentsline{toc}{subsection}{Step D. Parameters or Variables?}
-
-
-%There is a clear difference between \emph{variables} and \emph{parameters}. 
-
-\begin{definition}[Variables and Parameters]
-
-A \emph{variable} represents a model state, and may change during simulation.
-
-A \emph{parameter} is commonly used to describe objects statically. A \emph{parameter} is normally a constant in a single simulation, and is changed only when you need to adjust your model behaviour. 
-\end{definition}
-
-%Use a variable instead of a parameter if you need to model some data unit continuously changing over time. Use a parameter instead of a variable if you just need to model some parameter of an object changed only at particular moments of time.
-
-
-
-\begin{annotation}
-	\begin{goals}
-	\qrcode{https://en.wikipedia.org/wiki/Parameter\#Mathematical\_models}	
-	\end{goals}
-\end{annotation}
-\begin{note}{(from Wikipedia)}
-The quantities appearing in the equations we classify into variables and parameters. The distinction between these is not always clear cut, and it frequently depends on the context in which the variables appear. 
-
-Usually a model is designed to explain the relationships that exist among quantities which can be measured independently in an experiment; these are the \emph{variables} of the model. 
-
-To formulate these relationships, however, one frequently introduces ``constants'' which stand for inherent properties of nature (or of the materials and equipment used in a given experiment). These are the \emph{parameters}.	
-\end{note}
-
-
-
-
-
-
-
-
-
-The choice of question in the previous lesson should determine the \emph{dependent} variable.
-
-%
-%The \emph{parameters} are the independent variables in the problem, e.g. the speed of the elevators. The final answer will depend on the parameters in the problem. 
-%
-%We can estimate the parameters, and sometimes even change them. \\
-%
-%The \emph{variables} are dependent. This meant that if we change the parameters, the variables will change automatically. 
-
-
-
-
-\vfill
-
-
-
-
-
-\section*{Task 1.D: Elevator problem at theBigCompany}
-\addcontentsline{toc}{subsection}{Task 1.D: Elevator problem at theBigCompany}
-
-
-We now give you some technical details about theBigCompany:
-
-\begin{itemize}
-	\item The company occupies the floors 30--33 of the building Place Ville-Marie (in Montr\'eal).
-	\item Personnel is distributed in the following way: 
-	\begin{itemize}
-		\item 350 employees in floor 30,
-		\item 350 employees in floor 31,
-		\item 250 employees in floor 32, 
-		\item 150 employees in floor 33.
-	\end{itemize}
-\end{itemize}
-
-\textsl{Note.} Even though these details are fictional, the numbers respect the building code.
-
-
-\subparagraph{Tasks.} Focus on a \textbf{few} parameters and variables. State hypotheses.
-
-\begin{enumerate} 
-
-	\item With your team, decide on what kind of information you would need to have to be able to solve this problem.
-
-	\item Find the relevant information about the elevators (search the internet, by experimentation). Check the reliability of the data you found.
-
-	\item For the relevant information that you cannot obtain, make assumptions. These assumptions should be reasonable and you should be able to justify them.
-\end{enumerate}
-
-\vspace{0.5in}
-
-\newpage
-%\vfill
-
-
-
-\question
-For each part, you are required to make an estimate for some quantity. Make assumptions and justify them in order to solve the problem.
-\begin{parts}
-	\item What is the number of piano players in Toronto? \hfill \emph{(Fermi problem)}
-	\item How many linear km of roads are there in Toronto?
-	\item How much salt the city of Toronto needs for its roads during the Winter?
-	\item The skating season in Canada is shortening: What are the key-factors determining its length?
-	
-\end{parts}
-
-
-
-
-
-
-
-
-\begin{lesson}
-	\Title{Building Solutions}
-	
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla bla bla	
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-\begin{annotation}
-	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-	\end{goals}
-\end{annotation}
-	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-\end{lesson}
-
-
-
-
-
-
-
-\begin{lesson}
-	\Title{Model Assessment}
-	
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla bla bla	
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-\begin{annotation}
-	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-	\end{goals}
-\end{annotation}
-	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-
-\end{lesson}
-
-
-
-
-
-\begin{lesson}
-	\Title{Putting it all together}
-	\Heading{Textbook} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-	
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla bla bla	
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-
-\end{lesson}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -898,60 +324,9 @@ For each part, you are required to make an estimate for some quantity. Make assu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{topic}[First-Order Models]
-
-\end{topic}
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%		Basic Models
-
-
-\begin{lesson}
-	\Title{Basic Models}
-	\Heading{Textbook}	
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla bla bla	
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-
-\end{lesson}
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%		Direction Fields
-
-
-\begin{lesson}
-	\Title{Direction Fields}	
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla bla bla	
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-
-\end{lesson}
-
-
-
-
-
-
-
-
-
-
+\include{chap2-firstorder}
 
 
 
@@ -968,10 +343,7 @@ For each part, you are required to make an estimate for some quantity. Make assu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{topic}[Higher-Order Models]
-
-\end{topic}
-
+\include{chap3-higherorder}
 
 
 
@@ -997,9 +369,7 @@ For each part, you are required to make an estimate for some quantity. Make assu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{topic}[Discrete Models]
-
-\end{topic}
+\include{chap4-discrete}
 
 
 
@@ -1031,7 +401,7 @@ For each part, you are required to make an estimate for some quantity. Make assu
 \newpage
 
 
-\begin{lesson}
+\begin{module}
 	\Title{Linear Combinations}
 
 	\Heading{Textbook} Section 1.1
@@ -1074,7 +444,7 @@ For each part, you are required to make an estimate for some quantity. Make assu
 	We will use column vector notation and the idea of equating
 	coordinates in order to solve problems.
 
-\end{lesson}
+\end{module}
 
 
 \section*{Task 1.1: The Magic Carpet Ride}
@@ -1170,7 +540,7 @@ get to the cabin with these modes of transportation, why is that the case?
 % point(s).
 
 
-\begin{lesson}
+\begin{module}
 	\Title{Linear Combinations}
 
 	\Heading{Textbook}
@@ -1201,11 +571,11 @@ get to the cabin with these modes of transportation, why is that the case?
 	groups of vectors. I.e., we need sets and set-builder notation. This preview of set-builder
 	notation will take some of difficulty away when we define span as a set of vectors.
 
-	In this course we will be using formal and precise language. Part of this lesson
+	In this course we will be using formal and precise language. Part of this module
 	is that there are multiple correct ways (and multiple incorrect ways) to use formal
 	language. Gone are the days of ``there's only one right answer and it is 4''!
 
-\end{lesson}
+\end{module}
 
 
 \section*{Task 1.2: The Magic Carpet Ride, Hide and Seek}
@@ -1473,7 +843,7 @@ argument supporting your answer.
 	\end{parts}
 
 
-\begin{lesson}
+\begin{module}
 	\Title{Visualizing Sets, Formal Language of Linear Combinations}
 
 	\Heading{Textbook}
@@ -1495,7 +865,7 @@ argument supporting your answer.
 	to formal descriptions.
 
 
-\end{lesson}
+\end{module}
 
 	\question
 	\begin{annotation}
@@ -1698,7 +1068,7 @@ argument supporting your answer.
 			\end{solution}
 	\end{parts}
 
-\begin{lesson}
+\begin{module}
 	\Title{Restricted Linear Combinations, Lines}
 
 	\Heading{Textbook} Section 1.2
@@ -1729,7 +1099,7 @@ argument supporting your answer.
 	into vector form and set-based descriptions which apply to all
 	dimensions.
 
-\end{lesson}
+\end{module}
 
 	\displayonlynewpage
 	\begin{definition}[Non-negative \& Convex Linear Combinations]
