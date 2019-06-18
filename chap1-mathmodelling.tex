@@ -15,12 +15,12 @@ In this section, we study some strategies to model problems mathematically in an
 We also provide a structure to modelling problems by breaking them in small parts:
 
 \begin{enumerate}[label={\bf \Alph*.}]
-	\item \hyperref[A-define]{Define the problem}
-	\item \hyperref[B-mindmap]{Build a mind map}
-	\item \hyperref[C-assumptions]{Make assumptions}
-	\item \hyperref[D-parvsvar]{Decide on your parameters and variables}
-	\item \hyperref[E-model]{Construct a model}
-	\item \hyperref[F-analysis]{Analysis of the model}
+	\item \hyperref[define]{Define the problem}
+	\item \hyperref[mindmap]{Build a mind map}
+	\item \hyperref[assumptions]{Make assumptions}
+%	\item \hyperref[D-parvsvar]{Decide on your parameters and variables}
+	\item \hyperref[model]{Construct a model}
+	\item \hyperref[analysis]{Analysis of the model}
 \end{enumerate}
 
 
@@ -56,7 +56,7 @@ We also provide a structure to modelling problems by breaking them in small part
 
 
 
-\section*{Step A. Defining the problem}\label{A-define}
+\section*{Step A. Defining the problem}\label{define}
 \addcontentsline{toc}{subsection}{Step A. Defining the problem}
 
 The first step is to define the problem we want to solve or improve.
@@ -213,7 +213,7 @@ For each part, what ``mathematical object'' would you use to communicate that yo
 
 \newpage
 
-\section*{Step B. Building a mind map}\label{B-mindmap}
+\section*{Step B. Building a mind map}\label{mindmap}
 \addcontentsline{toc}{subsection}{Step B. Building a mind map}
 
 A mind map is a tool to visually outline and organize ideas. Typically a key idea is the centre of a mind map and associated ideas are added to create a diagram that shows the flow of ideas. In Figure \ref{mindmap1}, we focus on the definition of ``best'', with three possible definitions
@@ -369,7 +369,7 @@ For each part, create a mind map. Focus on the same approach you had for questio
 
 
 
-\section*{Step C. Making Assumptions}\label{C-assumption}
+\section*{Step C. Making Assumptions}\label{assumption}
 \addcontentsline{toc}{subsection}{Step C. Making Assumptions}
 
 
@@ -405,45 +405,60 @@ Another thing to keep in mind are \emph{time constraints}. Whether in a class, t
 
 \hfill \\
 
-\section*{Step D. Parameters or Variables?}\label{D-parvsvar}
-\addcontentsline{toc}{subsection}{Step D. Parameters or Variables?}
+%	\section*{Step D. Parameters or Variables?}\label{D-parvsvar}
+%	\addcontentsline{toc}{subsection}{Step D. Parameters or Variables?}
+%	
+%	
+%	
+%	When you have defined the problem you want to solve and you have made your (initial) assumptions, it is then time to define some details of the problem.
+%	
+%	
+%	
+%	
+%	With the problem statement clearly defined and an initial set of assumptions made (a list that will likely get longer), you are ready to start to define the details of your model. Now is the time to pause to ask what
+%	is important that you can measure. Identifying these notions as variables, with units and some sense of their range, is key to building the model.
+%	The purpose of a model is to predict or quantify something of interest. We refer to these predictions
+%	as the outputs of the model. Another term we use
+%	for outputs is dependent variables. We will also have independent variables, or inputs to the model. Some quantities in a model might be held constant, in which case they are referred to as model parameters. Let's look at a few simple examples that will help you distinguish between these concepts. We'll also see how they depend on your viewpoint and the problem statement.
+%	
+%	
+%	
+%	%There is a clear difference between \emph{variables} and \emph{parameters}. 
+%	
+%	\begin{definition}[Variables and Parameters]
+%	
+%	
+%	A \emph{variable} represents a model state, and may change during simulation.
+%	
+%	A \emph{parameter} is commonly used to describe objects statically. A \emph{parameter} is normally a constant in a single simulation, and is changed only when you need to adjust your model behaviour. 
+%	\end{definition}
+%	
+%	%Use a variable instead of a parameter if you need to model some data unit continuously changing over time. Use a parameter instead of a variable if you just need to model some parameter of an object changed only at particular moments of time.
+%	
+%	
+%	
+%	\begin{annotation}
+%		\begin{goals}
+%		\qrcode{https://en.wikipedia.org/wiki/Parameter\#Mathematical\_models}	
+%		\end{goals}
+%	\end{annotation}
+%	\begin{note}{(from Wikipedia)}
+%	The quantities appearing in the equations we classify into variables and parameters. The distinction between these is not always clear cut, and it frequently depends on the context in which the variables appear. 
+%	
+%	Usually a model is designed to explain the relationships that exist among quantities which can be measured independently in an experiment; these are the \emph{variables} of the model. 
+%	
+%	To formulate these relationships, however, one frequently introduces ``constants'' which stand for inherent properties of nature (or of the materials and equipment used in a given experiment). These are the \emph{parameters}.	
+%	\end{note}
 
 
-%There is a clear difference between \emph{variables} and \emph{parameters}. 
-
-\begin{definition}[Variables and Parameters]
-
-A \emph{variable} represents a model state, and may change during simulation.
-
-A \emph{parameter} is commonly used to describe objects statically. A \emph{parameter} is normally a constant in a single simulation, and is changed only when you need to adjust your model behaviour. 
-\end{definition}
-
-%Use a variable instead of a parameter if you need to model some data unit continuously changing over time. Use a parameter instead of a variable if you just need to model some parameter of an object changed only at particular moments of time.
-
-
-
-\begin{annotation}
-	\begin{goals}
-	\qrcode{https://en.wikipedia.org/wiki/Parameter\#Mathematical\_models}	
-	\end{goals}
-\end{annotation}
-\begin{note}{(from Wikipedia)}
-The quantities appearing in the equations we classify into variables and parameters. The distinction between these is not always clear cut, and it frequently depends on the context in which the variables appear. 
-
-Usually a model is designed to explain the relationships that exist among quantities which can be measured independently in an experiment; these are the \emph{variables} of the model. 
-
-To formulate these relationships, however, one frequently introduces ``constants'' which stand for inherent properties of nature (or of the materials and equipment used in a given experiment). These are the \emph{parameters}.	
-\end{note}
 
 
 
 
-
-
-
-
-
-The choice of question in the previous module should determine the \emph{dependent} variable.
+%
+%
+%
+%The choice of question in the previous module should determine the \emph{dependent} variable.
 
 %
 %The \emph{parameters} are the independent variables in the problem, e.g. the speed of the elevators. The final answer will depend on the parameters in the problem. 
@@ -461,8 +476,8 @@ The choice of question in the previous module should determine the \emph{depende
 
 
 
-\section*{Task 1.C-D: Elevator problem at theBigCompany}
-\addcontentsline{toc}{subsection}{Task 1.C-D: Elevator problem at theBigCompany}
+\section*{Task 1.C: Elevator problem at theBigCompany}
+\addcontentsline{toc}{subsection}{Task 1.C: Elevator problem at theBigCompany}
 
 
 We now give you some technical details about theBigCompany:
@@ -514,11 +529,10 @@ We now give you some technical details about theBigCompany:
 
 %\vspace{0.5in}
 
-%\newpage
-\vfill
+\newpage
+%\vfill
 
 
-\vfill
 
 \question
 For each part, you are required to make an estimate for some quantity. Make assumptions and justify them in order to solve the problem.
@@ -563,17 +577,24 @@ For each part, you are required to make an estimate for some quantity. Make assu
 \end{module}
 
 
-\section*{Step E. Construction of a Model}\label{E-model}
-\addcontentsline{toc}{subsection}{Step E. Construction of a Model}
 
 
-This is the part of the modelling where we tie all the variables and parameters in a mathematical model to answer the ``mathematical'' problem defined in \hyperref[A-define]{Step A}.
 
-This usually means writing down mathematical equations, constructing a graph, analyzing a geometric figure, or do some statistical analysis.
+
+
+
+
+\section*{Step D. Construction of a Model}\label{model}
+\addcontentsline{toc}{subsection}{Step D. Construction of a Model}
+
+
+This is the part of the modelling where we connect all that we have done so far: the problem we defined, the mind map, the assumptions, and all the variables and parameters in a mathematical model to answer the ``mathematical'' problem defined in \hyperref[define]{Step A}.
+
+This usually means writing down mathematical equations, constructing a graph, analyzing a geometric figure, or do some statistical analysis. \\
 
 
 \begin{example}
-Your team is tasked with finding the best recycling centre (we looked at this example in \hyperref[B-mindmap]{Step B}) and your  team has chosen to minimize the cost to the city by using drop off centres.
+Your team is tasked with finding the best recycling centre (we looked at this example in \hyperref[mindmap]{Step B}) and your  team has chosen to minimize the cost to the city by using drop off centres.
 
 As part of modelling process, your team has made the following assumptions/measurements:
 \begin{itemize}
@@ -600,7 +621,7 @@ The Mathematical model might look like this
 	
 \end{example}
 
-
+\hfill
 
 Sometimes, the mathematical tools necessary to tackle the problem are clear, but often they are not. In those cases it may be helpful to analyze some simple cases.
 
@@ -616,13 +637,25 @@ Sometimes, the mathematical tools necessary to tackle the problem are clear, but
 
 
 
-\section*{Task 1.E: Elevator problem at theBigCompany}
-\addcontentsline{toc}{subsection}{Task 1.E: Elevator problem at theBigCompany}
+\section*{Task 1.D: Elevator problem at theBigCompany}
+\addcontentsline{toc}{subsection}{Task 1.D: Elevator problem at theBigCompany}
 
 
-With the same details as before in \hyperref[D-parvsvar]{step D}, write down a mathematical model for this problem.
+With the same details as before in \hyperref[assumptions]{step C}, write down a mathematical model for this problem.
 
 
+\newpage
+
+\question
+For each part, create a model to answer the question. Remember all the previous steps.
+
+\begin{parts}\label{models1}
+	\item You want to open a piano store in Toronto, where should you open it?
+	\item There was a big snow storm in Toronto and the roads need cleaning. How should the city deploy its snow plowers?
+	\item The city of Toronto wants to deactivate the Pickering nuclear power plant in favour of renewable power sources. What is the best way to create the same amount of electricity using only renewable sources in the GTA?
+	\item Loblaws wants to start an online food delivery service. How should they do it?
+	\item The city airport (YTZ) built a tunnel to access the island airport from the city. Before that, they used a ferry. Was building the tunnel a good decision?	
+\end{parts}
 
 
 
@@ -653,8 +686,175 @@ With the same details as before in \hyperref[D-parvsvar]{step D}, write down a m
 \end{module}
 
 
-\section*{Step F. Analysis of the Model}\label{F-analysis}
-\addcontentsline{toc}{subsection}{Step F. Analysis of the Model}
+
+
+\section*{Step E. Analysis of the Model}\label{analysis}
+\addcontentsline{toc}{subsection}{Step E. Analysis of the Model}
+
+
+At this point, you have defined a problem statement, and a mind map to help you decide how to approach the problem. You have made assumptions and made note of them and justified them.
+You finally created a model to solve the problem.
+
+The next step is to analyze the model.
+
+There are two types of analysis:
+
+
+\paragraph{\textcolor{cyan}{\textbf{Superficial assessment.}}} Are the units correct? Are the variables and parameters of a reasonable magnitude? Does it behave as expected? Does it make sense?
+
+
+
+\paragraph{\textcolor{cyan}{\textbf{In-depth assessment.}}} Once the superficial assessment is verified, we need to understand the model at a deeper level. 
+
+What are the model's strengths? What are its weaknesses?
+
+When you change the inputs of the model, how do the outputs change? This is called {\emph sensitivity analysis}. 
+
+
+Next is a simple example adapted from \cite{bliss}.
+
+
+\begin{annotation}
+	\begin{goals}
+	\Goal{Desmos Graph}
+	\hfill \qrcode{https://www.desmos.com/calculator/z9cftzus0z}	
+	\end{goals}
+\end{annotation}
+
+\begin{example}[Modelling the flu]
+
+History of the project:
+\begin{itemize}
+	\item Split population into two classes: \emph{infected} and \emph{not infected}
+	\item Assume that each infected person infects $R$ number of non infected people every $b$ days
+	\item Define $I(n) = $ number of infected people after $n$ days
+	\item The two previous points imply \quad $I(n \cdot b) = R \cdot I(n)$
+	\item We can then conclude that \quad $I(n b) = (1+R)^n \, I(0)$ \hfill (why?)
+\end{itemize}
+
+After plotting the resulting function $I(n)$ (click or follow the QR code on the right), we can assess our model:
+
+\emph{Strengths:}
+\begin{itemize}
+	\item After two days $(b=2)$, there are 6 infected people, so it is following our assumption
+	\item The number of infected people increases faster and faster as expected 
+	\item The disease spreads at a constant rate. Also on Desmos, check the infection rate $\dfrac{I(n+b)}{I(n)}$
+	\item We could find an explicit formula for the number of infected individuals $I(n)$
+\end{itemize}
+
+
+\emph{Weaknesses:}
+\begin{itemize}
+	\item The model is too simple, so it doesn't model the spread of the flu accurately
+	\item The model an exponential rate of infection, which is not possible for very long
+	\item The model predicts that eventually the disease will spread to everyone
+	\item The model assumes that there are only two types of people: infected and susceptible. Do people recover from the disease?
+\end{itemize}
+
+\end{example}
+
+
+
+
+After assessing the model, if time allows, it is important to re-think the model and the assumptions made.
+
+
+
+
+
+\section*{Task 1.E: Elevator problem at theBigCompany}
+\addcontentsline{toc}{subsection}{Task 1.E: Elevator problem at theBigCompany}
+
+
+Continuing on the elevator problem, let us think of this model for the problem.
+
+\textbf{Facts:}
+\begin{itemize}
+	\item Loading time of people at ground floor = 20 s
+	\item Speed of uninterrupted ascent/descent = 1.5 floors/s
+	\item Stop time at a floor = 7 s
+	\item Number of elevators serving floors 30--33 = 8
+
+	(these elevators serve floors 23-33 = 11 floors)
+	
+	\item Maximal capacity of elevators = 25 people
+\end{itemize}
+
+
+\textbf{Assumptions:}
+\begin{itemize}
+	\item Personnel that should start at time $t$, arrive uniformly in the interval $[t-30, t-5]$ in minutes
+	\item First arrived, first served
+	\item During morning rush hour, elevators don't stop on the way down
+	\item Elevators stop only at half the floors they serve
+	\item Elevator failures are neglected
+	\item Mean number of people per floor is equal to the mean number of people per floow of the BigCompany
+	\item Elevators are filled, in average, to 80\% of their capacity
+\end{itemize}
+
+
+\textbf{Model:}
+\begin{itemize}
+	\item Mean number of people per floor $= d = \dfrac{350+350+250+150}{4} = 275$ people / floor
+	\item Number of people on floors served by elevators (11 floors) $= N = d \cdot 11 = 3025$ people
+	\item Time $\Delta t$ of one trip
+
+\hfil $\Delta t \quad = \quad $ \framebox{$\substack{\text{loading time on}\\\text{ground floor}}$} 
+		$ \;+ \;$ \framebox{$\substack{\text{time of flight}\\\text{ground $\to 33$}}$}
+		$ \;+\; $ \framebox{$\substack{\text{time of flight}\\\text{$33 \to$ ground}}$}
+		$\;+\; $ \framebox{$\substack{\text{stop time to}\\\text{6 of the 11 floors}}$} $\quad = \quad$ 106 s
+		
+		\item Number of trips necessary per elevator $= n = \dfrac{3025}{20 \cdot 8} \approx 19$ trips
+
+		\item Time necessary to carry the staff of the BigCompany $= \pmb{t} = \dfrac{19 \cdot 106}{60} = 33 $ minutes
+\end{itemize}
+
+\hfill \\
+
+\begin{annotation}
+	\begin{notes}
+
+Some questions to guide the students:
+	\begin{itemize}
+	\item What are the strengths?
+	\item What are the weaknesses?
+	\item Is the result around what you expected?
+\end{itemize}	
+	
+\hfill \\
+In case students don't realize that something is wrong:
+\begin{itemize}
+	\item People start arriving 30 minutes before the starting time, so \emph{everybody will be on time?}
+	\item Assume that the CEO of the BigCompany is right: people are arriving late! What's wrong with the model?
+
+	\item Which assumptions should be relaxed? Or checked?
+	\item If one needs to be replaced, by what?
+	\end{itemize}
+	
+	\end{notes}
+\end{annotation}
+
+Your task is to assess this model.
+Be ready to report on your assessment.
+
+
+
+
+\newpage
+
+\question
+Assess the models created in question \ref{models1}:
+
+\begin{parts}
+	\item You want to open a piano store in Toronto, where should you open it?
+	\item There was a big snow storm in Toronto and the roads need cleaning. How should the city deploy its snow plowers?
+	\item The city of Toronto wants to deactivate the Pickering nuclear power plant in favour of renewable power sources. What is the best way to create the same amount of electricity using only renewable sources in the GTA?
+	\item Loblaws wants to start an online food delivery service. How should they do it?
+	\item The city airport (YTZ) built a tunnel to access the island airport from the city. Before that, they used a ferry. Was building the tunnel a good decision?	
+\end{parts}
+
+
+
 
 
 
@@ -672,3 +872,12 @@ With the same details as before in \hyperref[D-parvsvar]{step D}, write down a m
 
 
 \end{module}
+
+
+
+
+\section*{Step F. Writing a report}\label{F-report}
+\addcontentsline{toc}{subsection}{Step F. Writing a report}
+
+
+
