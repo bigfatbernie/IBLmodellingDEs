@@ -58,7 +58,7 @@
 		marginparsep=5pt, 
 		marginparwidth=2in,
 		right=10pt,
-		showframe,
+%		showframe,
 		includeall}
 
 	% set all the latex values.  We need to addtolength
@@ -111,7 +111,7 @@
 \newcommand{\declareoutlinedbox}[5]{%
 	% #1 = name of the box environment
 	% #2 = full sidetext of the box environment
-	% #3 = abbriviated sidetext of the box environment (if the box is short)
+	% #3 = abbreviated sidetext of the box environment (if the box is short)
 	% #4 = color of the outline of the box
 	% #5 = emph color while inside the box
 	\def\probset@sidetextabbrformatted{\sidetextformatting #3}
@@ -138,7 +138,7 @@
 		boxrule=1pt,
 		fonttitle=\bfseries\sffamily,coltitle=#5,colbacktitle=white,
 		titlerule=0mm,
-		colframe=#4,coltext=black,colback=white,
+		colframe=#4,coltext=black,colback=#4!5!white,
 		top=2pt,bottom=2pt,bottomtitle=-5pt,
 		attach boxed title to top left={yshift=-2mm, xshift=4mm},
 		boxed title style={ boxrule=0pt, colframe=white },
@@ -244,8 +244,8 @@
 	}
 	\DeclareDocumentEnvironment{goals}{o}{
 		\footnotesize\sffamily\parskip=1.5mm%
-		\begin{tcolorbox}[colframe=NavyBlue,
-			colback=blue!5!white, 
+		\begin{tcolorbox}[colframe=Cerulean,
+			colback=Cerulean!5!white, 
 			left=0mm, 
 			right=0mm, 
 			top=1mm, 
@@ -254,12 +254,12 @@
 			rightrule=0mm, 
 			sharp corners,
 		]
-		\setlist{leftmargin=*, labelindent=1mm, label={\color{NavyBlue!70!black}$\blacksquare$\!\!}, topsep=0pt}
+		\setlist{leftmargin=*, labelindent=1mm, label={\color{Cerulean!70!black}$\blacksquare$\!\!}, topsep=0pt}
 	}{%
 		\end{tcolorbox}
 	}
 	\DeclareDocumentCommand{\Goal}{m}{%
-		\textcolor{NavyBlue}{\bfseries #1}
+		\textcolor{Cerulean}{\bfseries #1}
 		\vspace{1mm}\par
 	}
 	\DeclareDocumentEnvironment{notes}{o}{
@@ -289,10 +289,10 @@
 		\marginpar{\BODY}
 	}
 
-	% environment for describing lessons
-	\newcounter{lessoncounter}
-	\DeclareDocumentEnvironment{lesson}{o}{%
-		\addtocounter{lessoncounter}{1}
+	% environment for describing modules
+	\newcounter{modulecounter}
+	\DeclareDocumentEnvironment{module}{o}{%
+		\addtocounter{modulecounter}{1}
 		\setlist{ label={\color{Cerulean!70!black}$\blacksquare$}, topsep=0pt}
 		\newpage
 		% increase the margin widths
@@ -313,7 +313,7 @@
 		    ([shift={(0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
 		    --
 		    ([shift={(0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south west) 
-			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Lesson \thelessoncounter};
+			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Module \themodulecounter};
 		\end{tikzpicture}
 		
 	}{%
@@ -327,7 +327,7 @@
 	\DeclareDocumentCommand{\Title}{m}{%
 		\begin{center}
 			\color{Cerulean}{\textbf{\sffamily\Large  #1}}
-			\addcontentsline{toc}{section}{Lesson \thelessoncounter: #1}
+			\addcontentsline{toc}{section}{Module \themodulecounter: #1}
 		\end{center}\par
 	}
 	\DeclareDocumentCommand{\Heading}{m}{%
@@ -416,8 +416,9 @@
 %%
 	\definecolor{defcolor}{rgb}{.05,.4,.15}
 	\colorlet{defframecolor}{green!50!black}
+	\colorlet{defbgcolor}{green!50!white}
 \declareoutlinedbox{definition}{DEFINITION}{DEF}{defframecolor}{defcolor}
-	\definecolor{excolor}{rgb}{.05,.4,.15}
+	\definecolor{excolor}{rgb}{0.9,0.45,0.2}
 	\colorlet{exframecolor}{orange!90!black}
 \declareoutlinedbox{example}{EXAMPLE}{Ex}{exframecolor}{excolor}
 	\colorlet{notecolor}{red!70!black}
