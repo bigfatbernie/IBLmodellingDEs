@@ -1,0 +1,107 @@
+In this module you will learn
+\begin{itemize}
+	\item what is a slope field
+	\item how to sketch a slope field
+	\item to interpret a slope field
+\end{itemize}
+
+\hfill \\
+
+As we saw in the previous module, once we have found a differential equation that models a situation, we often want to figure out what happens to the solution.
+
+In this module, we will focus on getting an idea of the solutions and integral curves using what is called a \textbf{slope field}.
+
+
+
+
+
+\begin{definition}[Slope field] Consider the equation $y' = f(x,y)$.
+If we evaluate $f(x,y)$ over a rectangular grid of points, and we draw an arrow at each point $(x,y)$ of the grid with slope $f(x,y)$, then the collection of all the arrows is called a \emph{slope field}.
+\end{definition}
+
+\begin{graybox}
+	
+We can sketch Slope Fields with Wolfram Alpha.
+
+For a differential equation $\dfrac{dy}{dx} = f(x,y)$, we need to input
+\begin{itemize}
+	\item Vector Field: $(1, f(x,y))$.
+\end{itemize}
+
+\url{http://www.wolframalpha.com/input/?i=slope+field}
+\hfill \qrcode{http://www.wolframalpha.com/input/?i=slope+field}	
+\end{graybox}
+
+
+
+
+
+\begin{example}
+Let us take an \hyperlink{sols-ex}{example from the previous module}.
+
+Consider the initial-value problem
+$$
+\begin{cases}
+	\dfrac{dy}{dx}=-\dfrac{x}{y} \\
+	y(0)=-3
+\end{cases}
+$$
+
+We can use this definition to sketch the slope field for the differential equation $ \dfrac{dy}{dx} = -\dfrac{x}{y}$.
+
+We now sketch this slope field with Desmos:
+
+\url{https://www.desmos.com/calculator/scmz6ps0or} \hfill \qrcode{https://www.desmos.com/calculator/scmz6ps0or}
+
+Now notice that the arrows have the slope of a solution. This means that solutions will be tangent to the arrows, so we can \emph{roughly} trace the solution by following the arrows.
+
+Below, we did just that starting with the point $(0,-3)$.
+
+\setlength{\len}{175pt}
+\begin{center}
+%\begin{figure}
+%\includegraphics*[width=\len]{images/module9-slopefield-ex1.png}
+%\hfil
+\begin{tabular}{ccc}
+\includegraphics*[width=\len]{images/module9-slopefield-ex1-sol.png}
+ & & 
+\includegraphics*[width=\len]{images/module9-slopefield-ex1-intcurve.png}\\
+approximated solution & & approximated integral curve
+\end{tabular}
+%\caption{Slope Field for the differential equation $\frac{dy}{dx} = -\frac{x}{y}$.
+%\label{mod9-slopefield1}
+%\end{figure}
+\end{center}
+
+\textbf{\textcolor{orange}{Important. }} Remember that this gives us only an approximation of the solution and integral curve. From the approximation, we can tell that the solution seems circular, but we still need to show that it is so.
+
+\end{example}
+
+
+
+%\setlength{\len}{150pt}
+%\hspace{-1.35cm}\begin{tabular}{ccc}
+%\includegraphics*[width=\len]{figures/0101_dirfield_rocket.png}
+%	& \includegraphics*[width=\len]{figures/0101_intcurves_rocket.png} 
+%	& \includegraphics*[width=\len]{figures/0101_rocket_pos.png} \\
+%Direction field for $u$
+%	& Approximations of $u$
+%	& Solution $u(t)$
+%\end{tabular}
+
+
+%
+%This particular one is:
+%\href{http://www.wolframalpha.com/input/?i=direction+field+calculator&f1=%7B1%2C-9.8*x-0.75*y%2B10%7D%2Fsqrt(1%2B(-9.8*x-0.75*y%2B10)%5E2)&f=VectorPlot.vectorfunction%5Cu005f%7B1%2C-9.8*x-0.75*y%2B10%7D%2Fsqrt(1%2B(-9.8*x-0.75*y%2B10)%5E2)&f2=x&f=VectorPlot.vectorplotvariable1%5Cu005fx&f3=0&f=VectorPlot.vectorplotlowerrange1%5Cu005f0&f4=2&f=VectorPlot.vectorplotupperrange1_2&f5=y&f=VectorPlot.vectorplotvariable2%5Cu005fy&f6=0&f=VectorPlot.vectorplotlowerrange2%5Cu005f0&f7=4&f=VectorPlot.vectorplotupperrange2%5Cu005f4}{\tt Click Here}
+%\hfill \qrcode{http://www.wolframalpha.com/input/?i=direction+field+calculator&f1=%7B1%2C-9.8*x-0.75*y%2B10%7D%2Fsqrt(1%2B(-9.8*x-0.75*y%2B10)%5E2)&f=VectorPlot.vectorfunction%5Cu005f%7B1%2C-9.8*x-0.75*y%2B10%7D%2Fsqrt(1%2B(-9.8*x-0.75*y%2B10)%5E2)&f2=x&f=VectorPlot.vectorplotvariable1%5Cu005fx&f3=0&f=VectorPlot.vectorplotlowerrange1%5Cu005f0&f4=2&f=VectorPlot.vectorplotupperrange1_2&f5=y&f=VectorPlot.vectorplotvariable2%5Cu005fy&f6=0&f=VectorPlot.vectorplotlowerrange2%5Cu005f0&f7=4&f=VectorPlot.vectorplotupperrange2%5Cu005f4}
+
+
+
+\begin{video}
+\begin{itemize}
+	\item \href{https://youtu.be/MI2xCwBekX4}{https://youtu.be/MI2xCwBekX4} \hfill \qrcode{https://youtu.be/MI2xCwBekX4}
+	\item \href{https://youtu.be/8Amgakx5aII}{https://youtu.be/8Amgakx5aII} \hfill \qrcode{https://youtu.be/8Amgakx5aII}
+\end{itemize}	
+\end{video}
+
+

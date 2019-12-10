@@ -1,0 +1,76 @@
+In this module you will learn
+\begin{itemize}
+	\item how to analyze a model to check whether it makes sense
+\end{itemize}
+
+\hfill \\
+
+
+
+At this point, you have defined a problem statement, and a mind map to help you decide how to approach the problem. You have made assumptions and made note of them and justified them.
+You finally created a model to solve the problem.
+
+The next step is to analyze the model.
+
+There are two types of analysis:
+
+
+\paragraph{\textcolor{cyan}{\textbf{Superficial assessment.}}} Are the units correct? Are the variables and parameters of a reasonable magnitude? Does it behave as expected? Does it make sense?
+
+
+
+\paragraph{\textcolor{cyan}{\textbf{In-depth assessment.}}} Once the superficial assessment is verified, we need to understand the model at a deeper level. 
+
+What are the model's strengths? What are its weaknesses?
+
+When you change the inputs of the model, how do the outputs change? This is called {\emph sensitivity analysis}. 
+
+
+Next is a simple example adapted from \cite{bliss}.
+
+
+\begin{annotation}
+	\begin{goals}
+	\Goal{Desmos Graph}
+	\hfill \qrcode{https://www.desmos.com/calculator/z9cftzus0z}	
+	\end{goals}
+\end{annotation}
+
+\begin{example}\textbf{Modelling the flu}
+
+History of the project:
+\begin{itemize}
+	\item Split population into two classes: \emph{infected} and \emph{not infected}
+	\item Assume that each infected person infects $R$ number of non infected people every $b$ days
+	\item Define $I(n) = $ number of infected people after $n$ days
+	\item The two previous points imply \quad $I(n \cdot b) = R \cdot I(n)$
+	\item We can then conclude that \quad $I(n b) = (1+R)^n \, I(0)$ \hfill (why?) \\
+\end{itemize}
+
+After plotting the resulting function $I(n)$ (click or follow the QR code on the right), we can assess our model: \\
+
+\emph{Strengths:}
+\begin{itemize}
+	\item After two days $(b=2)$, there are 6 infected people, so it is following our assumption
+	\item The number of infected people increases faster and faster as expected 
+	\item The disease spreads at a constant rate. Also on Desmos, check the infection rate $\dfrac{I(n+b)}{I(n)}$
+	\item We could find an explicit formula for the number of infected individuals $I(n)$ \\
+\end{itemize}
+
+
+\emph{Weaknesses:}
+\begin{itemize}
+	\item The model is too simple, so it doesn't model the spread of the flu accurately
+	\item The model an exponential rate of infection, which is not possible for very long
+	\item The model predicts that eventually the disease will spread to everyone
+	\item The model assumes that there are only two types of people: infected and susceptible. Do people recover from the disease?
+\end{itemize}
+
+\end{example}
+
+
+
+
+After assessing the model, if time allows, it is important to re-think the model and the assumptions made.
+
+
