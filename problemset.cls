@@ -23,12 +23,15 @@
 	\RequirePackage{everypage}
 	\RequirePackage{xparse}
 	\RequirePackage{environ}
-	\RequirePackage[usenames,dvipsnames]{xcolor}
+	\RequirePackage[usenames, dvipsnames, cmyk, hyperref]{xcolor}
 	\RequirePackage{tcolorbox}
 		\tcbuselibrary{skins}
+		\tcbuselibrary{breakable}
 	\RequirePackage{ifthen}
 	\RequirePackage{titlesec}
 	\RequirePackage{changepage}
+	\RequirePackage{eso-pic} % replaces `everyshi` to draw borders on the modules
+	\RequirePackage{multicol}
 
 
 
@@ -50,17 +53,29 @@
 
 
 	\geometry{top=.25in,
-		headsep=0.25in, 
-		headheight=0.25in, 
+		headsep=0in, 
+		headheight=0in, 
 		left=.9in, 
-		bottom=0.3in, 
-		footskip=0.35in,
+		bottom=.3in, 
+		footskip=0in,
 		marginparsep=5pt, 
 		marginparwidth=2in,
 		right=10pt,
-%		showframe,
 		includeall}
 
+	% command to set even and odd page margins
+	% for book printing.
+	\def\setbookgeometry{\geometry{top=.4in,
+		headsep=0in, 
+		headheight=0in, 
+		left=1.5in, 
+		bottom=.5in, 
+		footskip=0in,
+		marginparsep=5pt, 
+		marginparwidth=.8in,
+		right=10pt,
+		includeall,
+		twoside=true}}
 	% set all the latex values.  We need to addtolength
 	% because geometry magically adjusted them so we start
 	% out using all of the page's area; the actual values may
@@ -111,7 +126,7 @@
 \newcommand{\declareoutlinedbox}[5]{%
 	% #1 = name of the box environment
 	% #2 = full sidetext of the box environment
-	% #3 = abbreviated sidetext of the box environment (if the box is short)
+	% #3 = abbriviated sidetext of the box environment (if the box is short)
 	% #4 = color of the outline of the box
 	% #5 = emph color while inside the box
 	\def\probset@sidetextabbrformatted{\sidetextformatting #3}
@@ -138,7 +153,7 @@
 		boxrule=1pt,
 		fonttitle=\bfseries\sffamily,coltitle=#5,colbacktitle=white,
 		titlerule=0mm,
-		colframe=#4,coltext=black,colback=#4!5!white,
+		colframe=#4,coltext=black,colback=white,
 		top=2pt,bottom=2pt,bottomtitle=-5pt,
 		attach boxed title to top left={yshift=-2mm, xshift=4mm},
 		boxed title style={ boxrule=0pt, colframe=white },
@@ -196,7 +211,7 @@
 				\color{gray}{\sffamily\large\thequestion}
 			\end{minipage}
 		}%
-		%\addcontentsline{toc}{subsection}{\thequestion}%
+		\addcontentsline{toc}{subsection}{\thequestion}%
 		\nopagebreak
 		\par
 	}
@@ -241,6 +256,22 @@
 		\ifthenelse{ \equal{#1}{inline} }{}{
 			\end{adjustwidth}
 		}
+	}
+	\DeclareDocumentEnvironment{graybox}{o}{
+		\footnotesize\sffamily\parskip=1.5mm%
+		\begin{tcolorbox}[colframe=Gray,
+			colback=Gray!5!white, 
+			left=0mm, 
+			right=0mm, 
+			top=1mm, 
+			bottom=1mm, 
+			leftrule=0mm, 
+			rightrule=0mm, 
+			sharp corners,
+		]
+		\setlist{leftmargin=*, labelindent=1mm, label={\color{Gray!70!black}$\blacksquare$\!\!}, topsep=0pt}
+	}{%
+		\end{tcolorbox}
 	}
 	\DeclareDocumentEnvironment{goals}{o}{
 		\footnotesize\sffamily\parskip=1.5mm%
@@ -289,11 +320,11 @@
 		\marginpar{\BODY}
 	}
 
-	% environment for describing modules
-	\newcounter{modulecounter}
-	\DeclareDocumentEnvironment{module}{o}{%
-		\addtocounter{modulecounter}{1}
-		\setlist{ label={\color{Cerulean!70!black}$\blacksquare$}, topsep=0pt}
+	% environment for describing lessons
+	\newcounter{lessoncounter}
+	\DeclareDocumentEnvironment{lesson}{o}{%
+		\addtocounter{lessoncounter}{1}
+		\setlist{ label={\color{Plum!70!black}$\blacksquare$}, topsep=0pt}
 		\newpage
 		% increase the margin widths
 		\newgeometry{top=.5in,
@@ -309,11 +340,11 @@
 		
 		% put a banner on the left of the page
 		\begin{tikzpicture}[remember picture,overlay]
-		    \draw[line width=25mm,Cerulean] 
+		    \draw[line width=25mm,Plum] 
 		    ([shift={(0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
 		    --
 		    ([shift={(0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south west) 
-			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Module \themodulecounter};
+			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Lesson \thelessoncounter};
 		\end{tikzpicture}
 		
 	}{%
@@ -324,37 +355,432 @@
 	\DeclareDocumentEnvironment{displayonly}{o}{
 	}{%
 	}
-	\DeclareDocumentCommand{\Title}{m}{%
-		\begin{center}
-			\color{Cerulean}{\textbf{\sffamily\Large  #1}}
-			\addcontentsline{toc}{section}{Module \themodulecounter: #1}
-		\end{center}\par
+	% environment for describing book "modules"
+	\newcounter{modulecounter}
+	\def\probset@InModuleEnv{0}
+	\newcommand*\probset@cleartooddpage{
+		\clearpage
+		\ifodd\value{page}
+		\else
+			\hbox{}
+			\newpage
+		\fi
 	}
-	\DeclareDocumentCommand{\Heading}{m}{%
-		{\color{Cerulean}{\hspace{-0.1in}\sffamily\large #1}}
-		\par
+	\newcommand\probset@drawModuleBanner[2]{
+		\def\bannerpathR{
+			([shift={(-0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north east) 
+			--
+			([shift={(-0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south east)
+		}
+		\def\bannerpathL{
+			([shift={(0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
+			--
+			([shift={(0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south west)
+		}
+		\ifstrequal{#2}{reverse}{
+			\ifodd\value{page}
+				\def\bannerpath{\bannerpathR}
+			\else
+				\def\bannerpath{\bannerpathL}
+			\fi
+		}{
+			\ifodd\value{page}
+				\def\bannerpath{\bannerpathL}
+			\else
+				\def\bannerpath{\bannerpathR}
+			\fi
+		}
+		\begin{tikzpicture}[remember picture,overlay]
+		    \draw[line width=25mm,Cerulean] 
+			\bannerpath     
+			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily #1};
+		\end{tikzpicture}
 	}
-
-
-%%%%%%%%%%% Topic Page
-%
-	% environment for describing topics
-	\newcounter{topiccounter}
-	\DeclareDocumentEnvironment{topic}{o}{%
-		\addtocounter{topiccounter}{1}
-		\setlist{ label={\color{RedViolet!70!black}$\blacksquare$}, topsep=0pt}
-		\newpage
+	\AddToShipoutPictureBG{%
+		% if we are in a module page, draw a border
+		\IfStrEq{\probset@InModuleEnv}{1}{%
+			\ifnum\value{page}=\value{probset@currentModuleStart}
+			\else
+				% put a banner on the page with no text if we are not the first
+				% page in a module
+				\probset@drawModuleBanner{Module \themodulecounter: \probset@InModuleEnvTitle}{reverse}
+			\fi
+		}{}
+	}
+	\newcounter{probset@currentModuleStart}
+	\DeclareDocumentEnvironment{module}{m}{%
+		\addtocounter{modulecounter}{1}
+		\setlist[itemize]{ label={\color{Cerulean!70!black}$\blacksquare$}, topsep=0pt}
+		\probset@cleartooddpage
 		% increase the margin widths
 		\newgeometry{top=.5in,
 			headsep=0in, 
 			headheight=0in, 
-			left=1.2in, 
-			bottom=.3in, 
-			footskip=0in,
+			right=1.2in, 
+			bottom=.5in, 
+			footskip=.3in,
 			marginparsep=10pt, 
-			marginparwidth=2in,
-			right=10pt,
-			includeall}
+			marginparwidth=1in,
+			left=1in,
+			%includeall,
+			%reversemarginpar,
+			twoside=true}
+		
+		% make sure we know what page this module starts on so
+		% we can do something special on the first page
+		\setcounter{probset@currentModuleStart}{\value{page}}
+		% put a banner on the left of the page
+		\probset@drawModuleBanner{Module \themodulecounter: #1}{reverse}
+		\def\probset@InModuleEnvTitle{#1}
+		% renew some document commands to style them appropriately in
+		% the module environment
+%		\RenewDocumentCommand{\Title}{m}{%
+			\begin{center}
+				\color{Cerulean}{\sffamily\Large  #1}
+				\addcontentsline{toc}{section}{Module \themodulecounter: #1}
+			\end{center}\par
+%		}
+%			\RenewDocumentCommand{\Title}{m}{%
+%				\begin{center}
+%					\color{Cerulean}{\sffamily\Large  ##1}
+%					\addcontentsline{toc}{section}{Module \themodulecounter: ##1}
+%				\end{center}\par
+%			}
+		\RenewDocumentCommand{\Heading}{m}{%
+			{\color{Cerulean}{\hspace{-0.1in}\sffamily\large ##1}}
+			\par
+		}
+		\RenewDocumentEnvironment{definition}{o}{
+			\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Cerulean} ####1}}
+			\begin{leftborderbox}[colframe=Cerulean, colback=Cerulean!10]
+			{\bfseries\sffamily\color{Cerulean} ##1.}
+		}{%
+			\end{leftborderbox}
+		}
+		\RenewDocumentEnvironment{theorem}{o}{
+			\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{myorange} ####1}}
+			\begin{leftborderbox}[colframe=myorange, colback=myorange!10]
+			{\bfseries\sffamily\color{myorange} Theorem.}
+		}{%
+			\end{leftborderbox}
+		}
+		\def\probset@InModuleEnv{1}
+		
+	}{%
+		\def\probset@InModuleEnv{0}
+		\probset@cleartooddpage
+	}
+	
+	\DeclareDocumentEnvironment{emphbox}{o}{
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Green} ##1}}
+		\begin{leftborderbox}[colframe=Green, colback=Green!10]
+		{\bfseries\sffamily\color{Green} #1.}
+	}{%
+		\end{leftborderbox}
+	}
+	\DeclareDocumentEnvironment{teamwork}{o}{
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Green}}}
+		\begin{leftborderbox}[colframe=Green, colback=Green!10]
+		{\bfseries\sffamily\color{Green} Teamwork.}
+		\setlist[itemize]{ label={\color{Green!70!black}$\blacksquare$}, topsep=0pt}
+
+	}{%
+		\end{leftborderbox}
+	}
+	\DeclareDocumentEnvironment{video}{o}{
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Gray}}}
+		\begin{leftborderbox}[colframe=Gray, colback=Gray!10]
+		{\bfseries\sffamily\color{Gray} Video.}
+		\setlist[itemize]{ label={\color{Gray!70!black}$\blacksquare$}, topsep=0pt}
+
+	}{%
+		\end{leftborderbox}
+	}\DeclareDocumentEnvironment{important}{o}{
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{myorange}}}
+		\begin{leftborderbox}[colframe=myorange, colback=myorange!10]
+		{\bfseries\sffamily\color{myorange!70!black} Important.}
+		\setlist[itemize]{ label={\color{myorange!70!black}$\blacksquare$}, topsep=0pt}
+	}{%
+		\end{leftborderbox}
+	}
+	% custom tcolorbox with colored bar on the left
+	\newtcolorbox{leftborderbox}[1][]{
+		blanker,
+		frame hidden,
+		enhanced,
+		breakable,
+		beforeafter skip=7pt,
+		%frame code={
+		%	\fill[fill=tcbcolframe] (frame.south west) -- (interior.south west) -- (interior.north west) -- (frame.north west);
+		%	},
+		sharp corners,
+		borderline west={4pt}{0pt}{tcbcolframe},
+		boxsep=0pt,
+		left=8pt,
+		right=5pt,
+		top=5pt,
+		bottom=5pt,
+		%boxrule=0pt,
+		%leftrule=4pt,
+		colframe=myorange,
+		colback=myorange!20,
+		#1
+	}
+	\newtcolorbox{thinleftborderbox}[1][]{
+		blanker,
+		frame hidden,
+		enhanced,
+		breakable,
+		beforeafter skip=7pt,
+		%frame code={
+		%	\fill[fill=tcbcolframe] (frame.south west) -- (interior.south west) -- (interior.north west) -- (frame.north west);
+		%	},
+		sharp corners,
+		borderline west={2pt}{0pt}{tcbcolframe},
+		boxsep=0pt,
+		left=8pt,
+		right=5pt,
+		top=5pt,
+		bottom=5pt,
+		%boxrule=0pt,
+		%leftrule=4pt,
+		colframe=myorange,
+		colback=myorange!20,
+		#1
+	}
+	\DeclareDocumentEnvironment{bookonly}{o}{
+	}{%
+	}
+	\DeclareDocumentEnvironment{example}{o}{
+		\renewcommand{\currentbackgroundcolor}{Red!4}
+		\begin{leftborderbox}[colframe=Red!50, colback=\currentbackgroundcolor]
+		% if we didn't pass in an argument, make the first
+		% paragraph have a `\medskip` after it.
+		\IfValueTF{#1}{}{
+			% redefine \par to be a `\par` followed by a `\medskip`
+			% followed by a redefinition of `\par` to what it used to be.
+			\let\oldpar\par
+			\par\def\par{\oldpar\medskip\let\par\oldpar}
+			\setlist[itemize]{ label={\color{Red!70!black}$\blacksquare$}, topsep=0pt}
+		}{}
+		{\bfseries\sffamily\color{Red!70!black} Example.}
+	}{%
+		\end{leftborderbox}
+	}
+	\DeclareDocumentEnvironment{proof}{o}{
+		\par{\bfseries Proof.}
+	}{%
+		\hfill$\blacksquare$
+	}
+	\DeclareDocumentCommand{\Title}{m}{%
+		\begin{center}
+			\color{Plum}{\sffamily\Large  #1}
+			\addcontentsline{toc}{section}{Lesson \thelessoncounter: #1}
+		\end{center}\par
+	}
+	\DeclareDocumentCommand{\Heading}{m}{%
+		{\color{Plum}{\hspace{-0.1in}\sffamily\large #1}}
+		\par
+	}
+
+% other enumerate environments
+\NewDocumentCommand{\prob}{o}{%
+	\IfNoValueTF{#1}{%
+		\refstepcounter{enumi}%
+		\item[\theenumi]%
+	}{%
+		\refstepcounter{enumi}%
+		\item[\theenumi \textsuperscript{#1}]%
+	}%
+}
+\newenvironment{problist}{%
+	\begin{enumerate}
+	}{%
+	\end{enumerate}
+}
+\newcommand{\Probset@VoidEnvironment}[1]{%
+  \expandafter\providecommand\csname env@#1@save@env\endcsname{}%
+  \expandafter\providecommand\csname env@#1@process\endcsname{}%
+  \@ifundefined{#1}{}{\RenewEnviron{#1}{}}%
+}
+
+\newenvironment{exercises}{%
+	\DeclareDocumentEnvironment{solution}{o}{
+		\nopagebreak
+		%\par
+			\begin{adjustwidth}{1cm}{}
+			\color{cyan}
+	}{%
+			\end{adjustwidth}
+	}
+	% XXX hide the solutions for now...
+	\Probset@VoidEnvironment{solution}
+
+	% tcolorbox doesn't work with tikz externalize,
+	% so we need to disable it around a tcolorbox.
+	% since \tikzexternaldisable is locally scoped,
+	% create a global version of the command
+	\global\let\extdisable\tikzexternaldisable
+	\global\let\extenable\tikzexternalenable
+
+	\begin{multicols*}{2}[{%
+			\subsection*{Practice Problems}}]\small %
+	}{%
+	\end{multicols*}%
+	\clearpage
+}
+
+\newenvironment{noexercises}{%
+	\DeclareDocumentEnvironment{solution}{o}{
+		\nopagebreak
+		%\par
+			\begin{adjustwidth}{1cm}{}
+			\color{cyan}
+	}{%
+			\end{adjustwidth}
+	}
+	% XXX hide the solutions for now...
+	\Probset@VoidEnvironment{solution}
+
+	% tcolorbox doesn't work with tikz externalize,
+	% so we need to disable it around a tcolorbox.
+	% since \tikzexternaldisable is locally scoped,
+	% create a global version of the command
+	\global\let\extdisable\tikzexternaldisable
+	\global\let\extenable\tikzexternalenable
+
+%	\begin{multicols*}{2}[{%
+%			\subsection*{Practice Problems}}]\small %
+%	}{%
+%	\end{multicols*}%
+	\clearpage
+}
+
+
+
+%%
+%% Commands to save definitions for reuse later
+%%
+% Usage:
+% 	\begin{SaveDefinition}[
+%  	   		key=unionintersection,          % this is the key used to render the definition later
+%			title={Unions \& Intersections}
+%		]
+%		The \emph{union} of two sets $X$ and $Y$ is $X\cup Y=\ldots$.
+% 	\end{SaveDefinition}
+\pgfkeys{
+	/definitions/all/.initial=
+}
+\NewEnviron{SaveDefinition}[1][]{%
+	% save the arguments in temporary keys for use later
+	\pgfkeys{
+		/definitions/working/.cd,
+		key/.initial,
+		title/.initial,
+		,#1,% there cannot be a space between the `,` and the `#1`.
+		title/.get=\deftitle, % the `.get` commands need to come after `#1`, otherwise the contents of `#1` won't get stored
+		key/.get=\defkey,
+	}%
+	% save the actual definition
+	\edef\deflist{\pgfkeysvalueof{/definitions/all}\pgfkeysvalueof{/definitions/working/key},}%
+	%
+	\edef\compareval{\pgfkeysnovalue}%
+	\def\wordtrue{true}
+	% we redefine with an \edef so that "title=" and "title={}" will both be recognized as an empty title
+	\edef\deftitle{\pgfkeysvalueof{/definitions/working/title}}% 
+	%
+	% from here on out, we want keys saved to be global
+	% we need to use the low-level command here to deal with expansion issues.
+	\globaldefs=1\relax%
+	\pgfkeyslet{/definitions/all}{\deflist}%
+	\pgfkeyslet{/definitions/stored/\defkey/body}{\BODY}%
+	\pgfkeyslet{/definitions/stored/\defkey/key}{\defkey}%
+	\ifdefequal{\deftitle}{\compareval}{
+		% the title is empty
+		% XXX This is an annoying hack...I don't know how to get it working another way
+		\pgfkeyslet{/definitions/stored/\defkey/title}{\compareval}%
+	}{%
+		% the title is non-empty
+		\pgfkeyslet{/definitions/stored/\defkey/title}{\deftitle}%
+	}%
+}
+\NewDocumentCommand{\SavedDefinitionBody}{m}{%
+	\pgfkeysvalueof{/definitions/stored/#1/body}%
+}
+\NewDocumentCommand{\SavedDefinitionTitle}{m}{%
+	\pgfkeysvalueof{/definitions/stored/#1/title}%
+}
+
+\NewDocumentCommand{\SavedDefinitionRender}{m}{%
+	%\edef\deftitle{\SavedDefinitionTitle{#1}}%
+	% XXX I don't know why "\edef\deftitle{\SavedDefinitionTitle{#1}}" doesn't work...
+	\edef\deftitle{\pgfkeysvalueof{/definitions/stored/#1/title}}%
+	\edef\defbody{\SavedDefinitionBody{#1}}%
+	\edef\compareval{\pgfkeysnovalue}%
+	\ifdefequal{\deftitle}{\compareval}{%
+		% the title is empty, do nothing
+		\begin{definition}
+			\defbody
+		\end{definition}
+	}{%
+		% the title is non-empty
+		\begin{definition}[\deftitle]
+			\defbody
+		\end{definition}
+	}%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Topic Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% environment for describing topics
+	
+	\newcounter{topiccounter}
+
+	\newcounter{probset@currentTopicStart}
+%	\newcounter{topiccounter}
+	\DeclareDocumentEnvironment{topic}{o}{%
+		\addtocounter{topiccounter}{1}
+		\setlist{ label={\color{RedViolet!70!black}$\blacksquare$}, topsep=0pt}
+		
+		%\probset@cleartooddpage
+%		\newcommand*\probset@cleartoevenpage{
+			\clearpage
+			\ifodd\value{page}
+				\hbox{}
+				\newpage
+			\fi
+%		}
+
+		
+%		\newpage
+		% increase the margin widths
+		\newgeometry{top=.5in,
+			headsep=0in, 
+			headheight=0in, 
+			right=1.2in, 
+			bottom=.5in, 
+			footskip=.3in,
+			marginparsep=10pt, 
+			marginparwidth=1in,
+			left=1in,
+			%includeall,
+			%reversemarginpar,
+			twoside=true}
+
+%		\newgeometry{top=.5in,
+%			headsep=0in, 
+%			headheight=0in, 
+%			left=1.2in, 
+%			bottom=.3in, 
+%			footskip=0in,
+%			marginparsep=10pt, 
+%			marginparwidth=2in,
+%			right=10pt,
+%			includeall}
 		
 		\section{#1}
 		% put a banner on the left of the page
@@ -363,12 +789,12 @@
 		    ([shift={(0.05\pgflinewidth,-0.55\pgflinewidth)}]current page.north west) 
 		    --
 		    ([shift={(-0.05\pgflinewidth,-0.55\pgflinewidth)}]current page.north east) 
-		    node[anchor=east,text=white] {\Huge\sffamily #1};
+		    node[anchor=east,text=white] {\Huge\sffamily#1};
 		    \draw[line width=25mm,RedViolet] 
 		    ([shift={(0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
 		    --
 		    ([shift={(0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south west) 
-			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily #1};
+			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Chapter {\thetopiccounter} -- #1};
 		\end{tikzpicture}		
 %		\addcontentsline{toc}{section}{\thetopiccounter \qquad #1}
 %		
@@ -392,38 +818,45 @@
 			includeall}
 
 	}
-%	% items in the displayonly environment only show up in "display mode";
-%	% i.e., when the annotations environment is hidden
-%	\DeclareDocumentEnvironment{displayonly}{o}{
-%	}{%
-%	}
-%	\DeclareDocumentCommand{\Title}{m}{%
-%		\begin{center}
-%			\color{RedViolet}{\textbf{\sffamily\Large  #1}}
-%			\addcontentsline{toc}{section}{Section \thetopiccounter: #1}
-%		\end{center}\par
-%	}
-%	\DeclareDocumentCommand{\Heading}{m}{%
-%		{\color{RedViolet}{\hspace{-0.1in}\sffamily\large #1}}
-%		\par
-%	}
-%
-%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
 
 
 %%
 %% SET UP PRESETS AND DEFAULT ENVIRONMENTS
 %%
+
+%\definecolor{myorange}{HTML}{F29B23}
+\definecolor{PineGreen}{HTML}{008B72}
+\definecolor{LimeGreen}{HTML}{8DC73E}
+\definecolor{NavyBlue}{HTML}{006EB8}
+\definecolor{BlueGreen}{HTML}{00B3B8}
+\definecolor{WildStrawberry}{HTML}{EE2967}
+\definecolor{Cerulean}{HTML}{00A2E3}
+\definecolor{Green}{HTML}{00A64F}
+\definecolor{Blue}{HTML}{2D2F92}
+\definecolor{cyan}{HTML}{00AEEF}
+\definecolor{Plum}{HTML}{92268F}
+\definecolor{Turquoise}{HTML}{00B4CE}
+\definecolor{myred}{HTML}{D13409}
+\definecolor{mypink}{HTML}{B3094F}
+\definecolor{mydark}{HTML}{23112A}
+\definecolor{mygreen}{HTML}{34A320}
 	\definecolor{defcolor}{rgb}{.05,.4,.15}
 	\colorlet{defframecolor}{green!50!black}
-	\colorlet{defbgcolor}{green!50!white}
+	\definecolor{myorange}{HTML}{F29B23}
 \declareoutlinedbox{definition}{DEFINITION}{DEF}{defframecolor}{defcolor}
-	\definecolor{excolor}{rgb}{0.9,0.45,0.2}
-	\colorlet{exframecolor}{orange!90!black}
-\declareoutlinedbox{example}{EXAMPLE}{Ex}{exframecolor}{excolor}
-	\colorlet{notecolor}{red!70!black}
-	\colorlet{noteframecolor}{red!90!black}
-\declareoutlinedbox{note}{NOTE}{NOTE}{noteframecolor}{notecolor}
+	\colorlet{thmcolor}{red!70!black}
+	\colorlet{thmframecolor}{red!90!black}
+\declareoutlinedbox{theorem}{THEOREM}{THM}{thmframecolor}{thmcolor}
 
 \titleformat{\chapter}
   {\normalfont\sffamily\huge\color{blue}}
@@ -434,6 +867,8 @@
 \titleformat{\subsection}
   {\normalfont\sffamily\large\color{cyan}}
   {\thesection}{1em}{}
+
+\newcommand{\currentbackgroundcolor}{white}
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{.17cm}
