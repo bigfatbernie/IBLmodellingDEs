@@ -408,6 +408,18 @@
 		}{}
 	}
 	\newcounter{probset@currentModuleStart}
+
+% BEGIN SUBMODULE ENVIRONMENT
+	\newcounter{submodulecounter}
+	\DeclareDocumentEnvironment{submodule}{m}{%
+		\addtocounter{submodulecounter}{1}
+		{\color{Cerulean}\sffamily\Large  \themodulecounter.\thesubmodulecounter. #1}
+		\\
+		\addcontentsline{toc}{subsection}{\themodulecounter.\thesubmodulecounter. #1}
+		\par
+	}{}
+% END OF NEW SUBMODULE ENVIRONMENT
+
 	\DeclareDocumentEnvironment{module}{m}{%
 		\addtocounter{modulecounter}{1}
 		\setlist[itemize]{ label={\color{Cerulean!70!black}$\blacksquare$}, topsep=0pt}
@@ -428,6 +440,7 @@
 		
 		% make sure we know what page this module starts on so
 		% we can do something special on the first page
+		\setcounter{submodulecounter}{0}
 		\setcounter{probset@currentModuleStart}{\value{page}}
 		% put a banner on the left of the page
 		\probset@drawModuleBanner{Module \themodulecounter: #1}{reverse}
@@ -866,7 +879,7 @@
   {\thesection}{1em}{}
 \titleformat{\subsection}
   {\normalfont\sffamily\large\color{cyan}}
-  {\thesection}{1em}{}
+  {\thesubsection}{1em}{}
 
 \newcommand{\currentbackgroundcolor}{white}
 
