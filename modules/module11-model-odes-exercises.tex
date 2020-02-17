@@ -1,0 +1,121 @@
+\begin{exercises}
+		% Topics:
+		% 
+	\begin{center}
+		\includegraphics*[width=175pt]{images/module11-lake.pdf}
+	\end{center}
+	\begin{problist}
+	\prob Model the pollution in a lake where water flows in and out at the same rate and incoming water is polluted with $2+\sin(2t)$ kg/L of pollutant, where $t$ is measured in years.
+	
+		
+	\prob Construct a model for a population with a rate of growth proportional to its current size.
+	
+	\prob Find a model for a population that grows proportionally to its current size but with a variable proportion constant. This variable proportion constant should guarantee the following properties for the population:
+	\begin{itemize}
+		\item If the population is too large, then it should decrease;
+		\item If the population is small, then it should increase.
+	\end{itemize}
+		
+	
+	\prob Improve the previous model by considering also a \emph{survivability threshold}: if the population is below this value, it should decrease and eventually become extinct.
+		
+	
+	\prob Consider two competing populations, like cheetahs ($c(t)$) and lions ($\ell(t)$): two populations that do not hunt each other, but compete for the same food (prey). Create a model for these two populations that captures how the competition for food affects them.
+	
+	{\bf Hint. } It might be helpful to think about how one population would grow in the absence of the other; and how one population is affected by the competition of the other.
+
+	\begin{center}
+			\includegraphics*[width=150pt]{images/module11-stadium.pdf}
+	\end{center}
+		
+	\prob People are in a stadium watching cricket match. When the match is over, people leave the stadium. 
+	
+	\begin{enumerate}
+	\item Model the way people leave the stadium.
+	
+	To help you with this task, use the fact that in this situation, people behave like a fluid according to Torricelli's Law:
+	
+		\begin{center}
+		\framebox{
+		\begin{minipage}{6cm}
+		\begin{center}
+		The area of the region occupied by the fans decreases proportionally to the square root of the radius and also proportionally to the size of the exit.
+		\end{center}
+		\end{minipage}}
+		\end{center}
+
+	\item How do the parameters $\theta$ and $\alpha$ affect the total time it will take for the stadium to empty?
+	\end{enumerate}
+	
+	\begin{center}
+		\includegraphics*[width=150pt]{images/module11-pool.pdf}
+	\end{center}
+	
+	
+	\prob Consider the pool in the figure. The goal is to track the amount of chlorine in the water for one Summer month. At the beginning of the month, the pool is full and contains 150g of chlorine uniformly mixed in the water. Consider evaporation and rain. To make the model simpler, assume that water evaporates with the chlorine.
+	
+	
+	
+	\prob After solving the lecture problem \ref{pendulum} below, we find a property of this model. 
+	\begin{enumerate}
+		\item The constants $g$ and $L$ (length of the string) appear only has $\frac{g}{L}$. What does this imply?
+		\item We are sending a mission to the Moon and we need to know how a 1m long pendulum behaves on the Moon. To test it, we need to build on Earth a pendulum that behaves in the same way. How long should the length of the string be on Earth?
+	\end{enumerate}
+	
+
+	\prob After solving the lecture problem \ref{pendulum} below, construct a model for the same problem considering string tension.
+	\begin{enumerate}
+		\item Show that you obtain the same model that you get while disregarding tension.
+		\item Explain why this makes sense.
+	\end{enumerate}
+	
+	\begin{center}
+		\includegraphics*[width=150pt]{images/module11-ant_tunnel.pdf}
+	\end{center}
+	
+	\prob 	An ant queen, known affectionately as Aunty Ant, is commissioning a construction assessment
+	for a new tunnel.  Aunty Ant's worker ants only know one way to construct a tunnel: they grab some dirt in their pincers,
+	walk the dirt out of the tunnel, deposit it, and then return to grab more dirt.
+	
+	Prepare a report which uses differential equations to address the following construction scenarios.  Include a
+	description of how you modelled the scenario and a graph of tunnel-length vs.~worktime.
+	Also make sure to define any variables and constants you are using.
+
+	\begin{enumerate}
+		\item One tireless worker is assigned dig the tunnel.  The worker walks the same speed
+			whether she is carrying dirt or not.
+		\item One tireless worker is assigned to dig the tunnel, but she can walk twice as fast
+			when she is not carrying dirt as when she is carrying dirt.
+		\item Aunty Ant really wants the tunnel to progress linearly after the first
+			day of construction (that is, the graph of tunnel-depth vs.~time after
+			the first day should be a straight line).  She will give you full control over
+			how many workers are devoted to the tunnel at any given time.
+		\item (Optional) A single ant is assigned to dig the tunnel, but she gets fatigued
+			the farther she walks.  Her speed after walking a total distance of $k$ units is $1/k$.
+
+	\end{enumerate}
+
+
+	\prob 	The alien world of Robotron is inhabited by billions of tiny nanobots.  These nanobots
+	all share a common source of power, and their speed is directly proportional to the
+	total amount of energy shared among all the nanobots. 
+
+	One day the nanobots decide to beam their energy into space.  They all form lines,
+	march to the edge of their colony, and send a tiny portion of their shared energy into
+	space.  Since the nanobots are very polite, after an individual nanobot has sent its energy
+	into space, it moves aside and lets the next nanobot take a turn.
+
+	\begin{enumerate}
+		\item Suppose the nanobots live in a tube with an opening at only one end.  Come
+			up with a differential equation to model the amount of energy left in the nanobot
+			colony over time.
+		\item How does your model change if the nanobots live in a disk where energy can be launched
+			from anywhere on the perimeter?  What about a sphere?
+		\item Newton's law of cooling states that the rate of change of temperature of an object is
+			proportional to the difference between the object's temperature and the ambient (outside)
+			temperature.  Does this law relate to your model for the nanobots?  If so, how?
+	\end{enumerate}
+
+	
+	\end{problist}
+\end{exercises}

@@ -1,0 +1,311 @@
+In this module you will learn
+\begin{itemize}
+	\item to identify specific types of differential equations that can be solved rigorously
+	\item how to solve these types of differential equations
+\end{itemize}
+
+\hfill \\
+
+We just learned how to model a situation and end up with a differential equation.
+We will now focus on solving differential equations. 
+
+There are a few different techniques that depend on the differential equation. 
+
+\hfill
+
+\begin{submodule}{Separable Differential Equations}
+
+\begin{definition}[Separable ODE]
+A differential equation is called \emph{separable} if it has the form
+$$
+g(y) y'(t) = h(t),
+$$
+that is if we can separate all the $y$'s into the left-hand side and the all the $t$'s into the right-hand side of the equation. Observe that the $y$'s on the left hand side must all be multiplied by $y'(t)$. 
+\end{definition}
+
+
+\subparagraph{\textcolor{cyan}{Method of solution. }} The idea to solve this type of DEs is simple:
+\begin{enumerate}[label={\bf \arabic*. } ]
+\item Integrate both sides with respect to $t$:
+$$
+\int g(y) y'(t) \, dt = \int h(t) \, dt
+$$
+
+\item Change variables on the left-hand side to $u = y(t)$, so $du = y'(t) dt$ and we get
+$$
+\int g(u) \, du = \int h(t) \, dt.
+$$
+
+\item Solve both integrals and we obtain a solution, usually in implicit form:
+$$
+G(u) = H(t) + C.
+$$
+
+\item To finish, recall that $u=y(t)$, so we obtain
+$$
+G\big(y(t)\big) = H(t) + C.
+$$
+\end{enumerate}
+
+\begin{important}
+	Observe that the solution is given in implicit form. In general, when using this technique, the solution $y(t)$ will be given in implicit form, so there is still some work ahead to find an explicit formula for $y(t)$.	
+\end{important}
+
+
+
+\def\arcsinh{\rm arcsinh\ }
+\begin{example}
+The shape $y(x)$ of a free falling chain under its own weight, called a catenary, satisfies the differential equation:
+$$
+y''(x) = \frac1a \sqrt{1+\big(y'(x)\big)^2}.
+$$
+
+It doesn't seem to be a \textbf{\color{Red!70!black}separable equation}, but if we can define $z(x) = y'(x)$, which satisfies
+$$
+z'(x) = \frac1a \sqrt{1+\big(z(x)\big)^2}
+\qquad \Leftrightarrow \qquad \frac{1}{\sqrt{1+\big(z(x)\big)^2}} z'(x) = \frac1a.
+$$
+
+This is now clearly in the form of a \emph{\color{Red!70!black}separable ODE}. \\
+
+We can solve it using the method described above: we need to solve
+$$
+\int \frac{1}{\sqrt{1+z^2}}\,dz \quad = \quad \int \frac1a \,dx \quad = \quad \frac{x}{a} + C_1
+$$
+The integral on the left can be solved using a hyperbolic substitution $z = \sinh u$:
+$$
+\int \frac{1}{\sqrt{1+z^2}}\,dz = \int 1 \, du = u = \arcsinh z.
+$$
+This means that the solution satisfies
+$$
+\arcsinh z = \frac{x}{a} + C_1 
+\qquad \Leftrightarrow \qquad z = \sinh \left(\frac{x}{a} + C_1 \right).
+$$
+
+Now recall that $z(x) = y'(x)$, so we need to integrate $z(x)$ to obtain the catenary curve $y(x)$:
+$$
+y(x) = \int z(x) \, dx = a \cosh \left(\frac{x}{a} + C_1\right) + C_2.
+$$
+
+To find $C_1$ and $C_2$, we use the fact that $y'(0)=0$:
+$$
+y(x) = a \cosh \frac{x}{a}  + C_2.
+$$
+(the constant $C_2$ moves the curve up or down, so it doesn't change the shape).
+\end{example}
+
+
+\begin{video}
+\begin{itemize}
+	\item \href{https://youtu.be/txtFH89HwOA}{https://youtu.be/txtFH89HwOA} \hfill \qrcode{https://youtu.be/txtFH89HwOA}
+\end{itemize}	
+\end{video}
+
+\end{submodule}
+
+\hfill \\
+
+\begin{submodule}{First-Order Linear Differential Equations}
+
+\begin{definition}[First-Order Linear ODE]
+A differential equation is called \emph{first-order linear} if it has the form
+$$
+y'(t) + p(t) y(t) = f(t),
+$$
+that is if we can separate all the $y$'s into the left-hand side and the all the $t$'s into the right-hand side of the equation. Observe that the $y$'s on the left hand side must all be multiplied by $y'(t)$. 
+\end{definition}
+
+
+The idea to solve this type of DEs is to transform it into the result of a product rule. \\
+
+
+\begin{example}
+Consider the following \textbf{\color{Red!70!black}first-order linear ODE}
+$$
+t^2 \frac{dy}{dt} + 2t y = \sin t.
+$$
+
+Observe that the left-hand side of the DE is the result of the product rule:
+$$
+\frac{d}{dt} \bigg[ t^2 y \bigg] = \sin t.
+$$
+So  we can integrate both sides with respect to $t$ to obtain
+$$
+t^2 y = - \cos t + C 
+\quad \Leftrightarrow \quad y = -\frac{\cos t}{t^2} + \frac{C}{t^2}.
+$$
+\end{example}
+
+
+Now let us look at another example, where the left-hand side of the ODE is not in the form of the result of a product rule, but can be transformed into one.
+
+
+\begin{example}
+Consider the \textbf{\color{Red!70!black}first-order linear ODE}
+\begin{equation}\tag{$\star$}\label{eq:intfact_1}
+\frac{dy}{dt} + \frac12 y = \frac13 e^{\frac t3}.
+\end{equation}
+%which passes through the point $(0,1)$.
+
+
+Again, the ``trick'' is to look at this equation and realize that the left-hand side can look like the result of the product rule.
+It's not obvious that this can be done (yet!), but if we multiply the whole ODE by the function
+$$
+e^{\frac{t}{2}},
+$$
+then we obtain
+$$
+e^{\frac t2} \frac{dy}{dt} + \frac12e^{\frac t2} y = \frac13 e^{\frac t2} e^{\frac t3}
+$$
+and now the left-hand side is the result of a product rule
+$$
+\frac{d}{dt}\left[e^{\frac t2} y \right] = \frac13e^{\frac 56 t}.
+$$
+
+We integrate both sides to obtain
+$$
+e^{\frac t2} y = \frac13 \frac65 e^{\frac56 t} + c
+$$
+thus
+$$
+y %= \frac25 e^{\frac56 t-\frac12t} + c e^{-\frac t2} 
+	= \frac25 e^{\frac t3} + c e^{-\frac t2}.
+$$
+
+\end{example}
+
+
+This last example required us to come up with a function to multiply the ODE so that it becomes of the right form: with a left-hand side that is the result of the product rule.
+
+This function is called the \textbf{\color{cyan}integrating factor}.
+
+Let us now see how we can find this function in more detail.
+
+
+\begin{example}
+Consider the same ODE \eqref{eq:intfact_1}:
+\begin{equation}\tag{$\star$}
+\frac{dy}{dt} + \frac12 y = \frac13 e^{\frac t3}.
+\end{equation}
+
+So we multiply both sides of the equation with an unknown function $\mu(t)$, called the \textbf{\color{cyan}integrating factor}:
+\begin{equation}\tag{\#}\label{eq:intfactor2}
+\mu(t) \frac{dy}{dt} + \frac12 \mu(t) y = \frac13 \mu(t) e^{\frac t3}.
+\end{equation}
+
+And we find which $\mu(t)$ makes the left-hand side equal to the product rule:
+$$
+\frac{d}{dt} \big[ \mu(t) y \big] 
+	= \mu(t) \frac{dy}{dt} + \frac{d \mu(t)}{dt} y,
+$$
+and this needs to equal the left-hand side:
+$$
+\mu(t) \frac{dy}{dt} + \frac{d \mu(t)}{dt} y = \mu(t) \frac{dy}{dt} + \frac12 \mu(t) y
+\qquad \Leftrightarrow \qquad
+	\mu'(t) = \frac12 \mu(t).
+$$
+
+We now need to solve this equation for $\mu(t)$. Fortunately, this is a \textbf{\color{cyan}separable ODE}:
+\begin{align*}
+\mu'(t) = \frac12 \mu(t) \quad
+	& \Leftrightarrow \quad \frac{\mu'(t)}{\mu(t)} = \frac12 \\
+	& \Leftrightarrow \quad \ln |\mu(t)| = \frac t2  + A\\
+	& \Leftrightarrow \quad \mu(t) = a e^{\frac t2},
+\end{align*}
+where $a = e^A$.
+
+We say that the function $\mu(t) = e^{\frac t2}$ is an \textbf{\color{cyan}integrating factor} for the equation \eqref{eq:intfact_1}.
+Observe that we chose $a=1$ ($A=0$), because we only need one function $\mu(t)$ that satisfies our condition $\mu' = \frac12 \mu$, we don't need to find all possible solutions. \\
+
+
+After finding the integrating factor $\mu(t)$, the rest of the solution is the same as in the previous example.
+%
+%The equation \eqref{eq:intfactor2} then becomes
+%$$
+%e^{\frac t2} \frac{dy}{dt} + \frac12e^{\frac t2} y = \frac13 e^{\frac t2} e^{\frac t3}
+%$$
+%or equivalently
+%$$
+%\frac{d}{dt}\left[e^{\frac t2} y \right] = \frac13e^{\frac 56 t}.
+%$$
+%
+%We integrate both sides to obtain
+%$$
+%e^{\frac t2} y = \frac13 \frac65 e^{\frac56 t} + c
+%$$
+%thus
+%$$
+%y %= \frac25 e^{\frac56 t-\frac12t} + c e^{-\frac t2} 
+%	= \frac25 e^{\frac t3} + c e^{-\frac t2}.
+%$$
+\end{example}
+
+
+Now that we have a good idea of the method needed to solve these ODEs, let us tackle the general equation.
+
+
+\subparagraph{\color{cyan}Method of solution. } This method is also known as the \textbf{\color{cyan}Method of the Integrating Factor}. 
+\begin{enumerate}[label={\bf \arabic*. } ]
+\item Multiply both sides by $\mu(t)$, the integrating factor:
+$$
+\mu(t) \frac{dy}{dt} + p(t)\mu(t) y = \mu(t) g(t).
+$$
+
+Note that we don't know what this function is yet. So it is just a placeholder for a function we will find next.
+
+\item Find function $\mu(t)$ which satisfies
+$$
+\mu'(t) = p(t) \mu(t).
+$$
+
+This is a \textbf{\color{cyan}separable ODE}, so we can solve it:
+$$
+\mu(t) = A e^{\int p(t) \, dt}.
+$$
+
+We only need one function $\mu(t)$, not the general one, so we take $A=1$ to get
+$$
+\mu(t) = e^{\int p(t) \, dt}.
+$$
+
+\item Observe that $\mu(t)$ satisfies
+$$
+\mu(t) p(t) = \mu'(t),
+$$
+so we use this in the equation:
+$$
+\frac{d}{dt} \big[ \mu(t) y \big] = \mu(t) g(t).
+$$
+
+\item Integrate the equation:
+$$
+\mu(t) y = \int \mu(t) g(t) \, dt + c,
+$$
+which means that the solution is
+$$
+y = \frac{1}{\mu(t)} \left[ \int \mu(t) g(t) \, dt + c \right],
+$$
+where 
+$$
+\mu(t) = e^{\int p(t) \, dt}.
+$$
+
+\end{enumerate}
+
+\begin{important}
+	Observe that the solution is given in explicit form. This is always the case with this type of ODEs.
+	
+	Also, be careful to add the integration constant as soon as you integrate, so that in the end you will have a term $\frac{c}{\mu(t)}$.
+\end{important}
+
+
+\begin{video}
+\begin{itemize}
+	\item \href{https://youtu.be/ezhi3E_bdvk}{https://youtu.be/ezhi3E\_bdvk} \hfill \qrcode{https://youtu.be/ezhi3E_bdvk}
+\end{itemize}	
+\end{video}
+
+\end{submodule}
+
+%\hfill \\
+
