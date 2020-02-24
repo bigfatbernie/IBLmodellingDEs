@@ -1,0 +1,101 @@
+\begin{exercises}
+	
+	\begin{problist}
+	
+	\prob \label{approx:comp}For the following initial-value problems, approximate their solution with different values of $\Delta t$ and compare with their exact solutions. 
+	\begin{enumerate}
+		\item $y'=-y+5+t$, $y(0) = 4,5,6$
+		\item $y'=y+5-t$, $y(0) = -4$
+		\item $y'=(t-y)\sin(y)$, $y(0)=-1$
+		\item $\displaystyle y'=\frac{y+3t}{1+t^2}$, $y(0)=-1,1$
+	\end{enumerate}
+	
+	\textbf{Hint. } Write a computer program that does the approximation for you.
+	
+	
+	\prob Consider the differential equation
+	$$ y'=-\frac{x}{y}.$$
+	\begin{enumerate}
+		\item Sketch a slope field for this differential equation.
+		\item Use Euler's Method to approximate the solution for some values of $\Delta x$ and for some initial conditions.
+		\item Does Euler Method do a good job approximating the solution?
+	\end{enumerate}
+	
+	\begin{annotation}
+	\begin{Goals}
+		There is a singularity at $y=0$, so the method will behave erratically when it goes across that line.
+			\href{https://www.desmos.com/calculator/5swjyrxvtr}{https://www.desmos.com/calculator/5swjyrxvtr} \hfill \qrcode{https://www.desmos.com/calculator/5swjyrxvtr}
+	\end{Goals}
+	\end{annotation}
+	
+	
+	
+	
+	\prob In this module, we derived Euler's Method. One of the main steps was obtaining the equation
+	$$\frac{y_1-y_0}{\Delta t} = \text{slope of the arrow}.$$
+	
+	In Euler's Method, we used the slope at the beginning of the arrow. We can derive a new Method where we use the slope at the end of the arrow. 
+	
+	\begin{enumerate}
+		\item Find a formula and the algorithm for this new method.
+		\item Use this method with to approximate the solution of $y'=-y+5+t$, $y(0) = 4,5,6$ and compare the results with your results from question \ref{approx:comp}.
+		\item Which of these two methods gives a better approximation?
+		\item In your opinion, which of these two methods is better? Why?
+	\end{enumerate}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\prob Consider an initial-value problem with solution $y(t)$. If we want to find an approximation for $t \in [0,T]$, we define the error of the approximation $\{y^{\Delta t}_i\}$ by
+	\begin{equation}\tag{E}\label{error} 
+		E(\Delta t) = \big| y(T) - y^{\Delta t}_N \big|,
+	\end{equation}
+	where $T = N \Delta t$.
+	
+	\begin{enumerate}
+		\item For the initial-value problems from the previous question, study what happens when the value of $\Delta t$ decreases.
+		\item What do you expect to happen as $\Delta t$ converges to $0$?
+		\item Estimate how fast Euler's method converges. Find a value of $p$ such that
+			$$ E(\Delta t) \leq C (\Delta t)^p,$$
+		where the constant $C$ changes for each ODE, but doesn't change if you keep the same ODE but change only the value of $\Delta t$.
+%		\item In fact, when using Euler's method on a computer, there are more approximations that are subtler. For example, the computer approximates every number that you write and it also approximates every operation that the method needs. This means that the real error of the approximation 
+	\end{enumerate}
+	
+
+	\prob Using Euler's Method with a step size of $\Delta t = 0.05$, and keeping only three digits throughout your computations, determine the approximations at $T=0.2, 0.3, 0.4$ for each of the following initial-value problems.
+	\begin{enumerate}
+		\item $y'=-y+5+t$, $y(0) = 4$
+		\item $y'=y+5-t$, $y(0) = -4$
+	\end{enumerate}
+	Compare the results with what you obtained for problem \ref{approx:comp}. Where do the differences come from?
+	
+	\prob Round-off errors become important when the value of $N$ is very large, which happens if we want a very accurate approximation. This means that the actual error \eqref{error} of the approximation has two components:
+	$$ E(\Delta t) = f(\Delta t) + g(\Delta t), $$
+	where
+	\begin{itemize}
+		\item $\displaystyle \lim_{\Delta t \to 0^+} f(\Delta t) = 0$ \hfill (approximation error)
+		\item $\displaystyle \lim_{\Delta t \to \infty} f(\Delta t) = \infty$ \hfill (approximation error)
+		\item $\displaystyle \lim_{\Delta t \to 0^+} g(\Delta t) = \infty$ \hfill (round-off error)
+		\item $\displaystyle \lim_{\Delta t \to \infty} f(\Delta t) = 0$ \hfill (round-off error)
+	\end{itemize}
+	
+	Answer the following questions and justify your answers based on these ideas.
+	\begin{enumerate}
+		\item Justify why the four limits above make sense.
+		\item Does the approximation converge to the solution as $\Delta t \to 0$?
+		\item Is there an optimal $\Delta t$ that gives the best possible approximation?
+	\end{enumerate}
+	
+	
+
+	
+	
+	\end{problist}
+\end{exercises}

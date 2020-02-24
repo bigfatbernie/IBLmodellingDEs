@@ -1,7 +1,115 @@
 \begin{exercises}
 
 	\begin{problist}
-	\prob Exercise
+	\prob For the following initial-value problems, answer the following questions:
+		\begin{enumerate}[label=(\roman*)]
+		\item Is there a unique solution?
+		\item Without solving, what is its domain?
+		\end{enumerate}
+		
+		\begin{enumerate}
+			\item $y'+y=t$ with $y(0)=0$.
+			\item $\displaystyle y'+\frac{1}{e^t} y = t$ with $y(0)=0$.
+			\item $\displaystyle y'+\frac{1}{e^t-2} y = t$ with $y(0)=0$.
+			\item $y'+\ln(t)y = t$ with $y(e)=1$.		
+			\item $\displaystyle y'+\frac{1}{1+t^2} y = \tan(t)$ with $y(0)=0$.
+			\item $\displaystyle y'+\frac{1}{1+t^2} y = \tan(2t)$ with $y(\pi)=0$.
+			\item $\displaystyle y'=\frac{1}{1+\sin(t)} y - \tan(t)$ with $y(0)=0$.
+			\item $\displaystyle y'=\frac{1}{1+\sin(t)} y - \tan(t)$ with $y(t_0)=0$.
+			\item $\displaystyle y'=\frac{1}{1+\sin(t)} y^2 - \tan(t)$ with $y(t_0)=0$.
+			\item $y'+\ln(y) = t$ with $y(e)=1$.		
+			\item $\displaystyle y'=\frac{ty}{1+y}$ with $y(0)=0$.
+			\item $(t+y^2)y'=ty$ with $y(-1)=1$.
+			\item $\displaystyle y'=\frac{t\sin(y)}{y}$ with $y(1)=0$.
+		\end{enumerate}
+
+
+	
+	
+	\prob Consider the problem
+		$$
+		y' + p(t) y = g(t) \qquad \text{ with } \qquad y(t_0)=y_0,
+		$$
+		where $p(t)$ and $g(t)$ are graphed below
+		\begin{center}
+		\includegraphics*[width=200pt]{images/module13-pg_graph.pdf}
+		\end{center}
+		
+		
+		\begin{enumerate}
+		\item Is there a unique solution satisfying $y(3)=2$? If so, what is its domain?
+		
+		\item Is there a unique solution satisfying $y(t_0)=-1$ for which values of $t_0$? If so, what is the domain of these solutions?
+		\end{enumerate}
+
+	
+	
+	\prob Consider the problem
+		$$
+		y' = f(t,y)
+		$$
+		where $f(t,y)$ and $\frac{\partial f}{\partial y}(t,y)$ are continuous for all $t,y$.
+		\begin{itemize}
+		\item Assume that $y=\frac{1}{t}$ is a solution for $t>0$
+		\item Assume that $y = -e^{-t}$ is a solution for all $t$
+		\end{itemize}
+		
+		Let $y=\phi(t)$ be the solution of this ODE with the initial condition $y(1) = \frac12$.
+		
+		Calculate $\displaystyle \lim_{t \to +\infty} y(t)$.
+
+
+
+	\prob Consider the initial-value problem:
+		$$ 
+		\begin{cases}
+			y' = \ln(t+2) y + \frac{1}{t-3} \\
+			y(0)=0
+		\end{cases}
+		$$
+		
+		\begin{enumerate}
+			\item Is this ODE linear or nonlinear?
+			\item Show that this problem has a unique solution.
+			\item Use the Existence and Uniqueness Theorem for \textbf{Linear} ODEs. What is the domain of the solution?
+			\item Use the Existence and Uniqueness Theorem for \textbf{Nonlinear} ODEs. What is the domain of the solution?
+			\item Compare both Theorems.
+		\end{enumerate}
+
+
+
+
+	\prob Consider the initial-value problem:
+		$$ 
+		\begin{cases}
+			y' = \ln(t+2) y + \frac{1}{t-3} \\
+			y(0)=0
+		\end{cases}
+		$$
+		
+		\begin{enumerate}
+			\item State the conditions to be able to apply the Existence and Uniqueness Theorem for \textbf{Linear} ODEs.
+			\item State the conditions to be able to apply the Existence and Uniqueness Theorem for \textbf{Nonlinear} ODEs. Simplify the conditions.
+			\item Compare the conditions of both theorems.
+		\end{enumerate}
+
+
+	\prob Consider the initial-value problem:
+		$$ 
+		\begin{cases}
+			y' + p(t) y = g(t) \\
+			y(0)=0		
+		\end{cases}
+		$$
+		
+		\begin{enumerate}
+			\item State the conditions to be able to apply the Existence and Uniqueness Theorem for \textbf{Linear} ODEs.
+			\item State the conditions to be able to apply the Existence and Uniqueness Theorem for \textbf{Nonlinear} ODEs. Simplify the conditions.
+			\item Compare the conditions of both theorems.
+		\end{enumerate}
+	
+	
+
 
 	\end{problist}
 \end{exercises}

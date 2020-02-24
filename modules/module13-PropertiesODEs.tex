@@ -1,8 +1,156 @@
 In this module you will learn
 \begin{itemize}
-	\item 
+	\item to find some properties of solutions without the need to find a solution or approximating it
+	\item an existence and uniqueness of solution theorem
 \end{itemize}
 
 \hfill \\
+
+
+Until now we studied problems where there was one unique solution. Is this true for every problem?
+
+\begin{itemize}
+\item There are DEs with no solutions, e.g. $(y')^2  =  -1$ or $\sin(y') = 2$.
+\end{itemize}
+
+So if a problem has a solution, is it always unique?
+
+\begin{itemize}
+\item This is also not true. For example: $t y' = 2y$ with $y(0)=0$.
+
+Check that
+\begin{align*}
+y=0 \qquad & \text{ is a solution} \\
+y = t^2 \qquad & \text{ is also a solution}
+\end{align*}
+\end{itemize}
+
+\hfill 
+
+
+It is important (not just to mathematicians) to know whether a problem has solutions or not before trying to solve it. 
+It is also important to know whether there is one unique solution or multiple solutions.
+
+So for {\bf linear differential equations} we have the following theorem.
+
+\begin{theorem}[Existence and Uniqueness for Linear DE]
+Let $p$ and $g$ be continuous functions in an open interval $I = (a,b)$ containing the point $t_0$.
+Then there exists a unique function $y=\phi(t)$ that satisfies
+\begin{align*}
+& y' + p(t) y = g(t) \qquad \text{ for each $t \in I$,} \\
+& y(t_0) = y_0,
+\end{align*}
+for any $y_0 \in \R$.
+\end{theorem}
+
+\begin{example}
+Consider the initial-value problem
+$$
+\begin{cases}
+y'+\frac{1}{\sin(t)}y = e^t \\
+y(1)=2
+\end{cases}
+$$
+
+We can see that 
+\begin{itemize}
+	\item $p(t) = \frac{1}{\sin(t)}$, which is continuous for $t \in (0,\pi)$ and $t_0=1$ is included in this interval;
+	\item $g(t) = e^t$ is continuous for all values of $t$.
+\end{itemize}
+
+So we can conclude, from the Theorem, that there is a unique solution $y(t)$ defined for $t \in (0,\pi)$.
+\end{example}
+
+
+\begin{example}
+We can see why on the previous example $ty'=2y$, this Theorem doesn't apply. To use the Theorem, we need to write this equation as 
+$$
+y' -\frac2t y = 0,
+$$
+and the function $p(t) = -\frac2t$ is not continuous at $0$.
+\end{example}
+
+
+\begin{example} The equation $y'=\frac{2}{3\sqrt[3]{x}}$ with the condition $y(0) = 0$ has a unique solution:
+$$
+y = x^{\frac23}.
+$$
+
+So even though $g(t) = \frac{2}{3\sqrt[3]{x}}$ is not continuous at $0$, the DE still has a unique solution.
+\end{example}
+
+
+
+
+
+The previous Theorem is very restrictive -- it only applies to some very particular differential equations. 
+
+Below, we state another Theorem that applies to a much broader range of differential equations.
+
+\begin{theorem}[Existence and Uniqueness for Nonlinear DE]
+Let the functions $f(t,y)$ and $\frac{\partial f}{y\partial y}$ be continuous in some rectangle $|t-t_0|\leq a$ and $|y-y_0|\leq b$ for $a,b>0$.
+
+Then, in some interval $(t_0-h,t_0+h)$, there is a unique solution $y=\phi(t)$ of the IVP
+\begin{align*}
+& y' = f(t,y) \\
+& y(t_0) = y_0.
+\end{align*}
+
+Furthermore, $h \geq \min\{ a,b/M\}$ where $M = \max \big| f(t,y) \big|$.
+\end{theorem}
+
+\begin{definition}[Partial derivative]
+	Consider a function $f(t,y)$. Then its \emph{partial derivative with respect to $y$} at the point $(t_0,y_0)$, denoted by $\frac{\partial f}{\partial y}(t_0,y_0)$ is $g'(y_0)$, the derivative of the function $g(y)=f(t_0,y)$ at the point $y_0$.
+	
+	Roughly, assume that the variable $t=t_0$ is a fixed number and take the derivative on the variable $y$.
+\end{definition}
+
+
+You should spend some time comparing these two Theorems. \\
+
+
+Observe that the last Theorem gives a much weaker result when the differential equation is linear.
+
+
+\begin{example}
+Consider the IVP
+$$
+\begin{cases}
+y'=y^2\\
+y(0)=3.
+\end{cases}
+$$
+
+This problem is nonlinear, so we need to use the second Theorem. To apply, compute
+\begin{align*}
+f(x,y) & = y^2 \\
+\frac{\partial f}{\partial y}(x,y) & = 2y,
+\end{align*}
+which are continuous for all $x,y\in \R$.
+
+The previous Theorem guarantees that a solution exists and is unique in some interval around $x=0$.
+
+Even though the rectangle spans the whole space of $x$ and $y$, it doesn't mean that the solution exists for all $x$. The extra part of the Theorem, guarantees that the solution exists for $t<h$ where $h = \frac1b$ (because $M=b^2$). Since $b \geq y_0$, we know that a solution exists for $t < \frac{1}{y_0} = \frac13$.
+
+In fact, this is a separable ODE, so we can find its solution:
+$$
+y(x) = \frac{1}{\frac13-x},
+$$
+which is defined only for $x<\frac13$.
+\end{example}
+
+
+\begin{graybox}
+This kind of Theorems are called \textbf{\color{gray}Existence and Uniqueness Theorems}.
+\end{graybox}
+
+
+
+\begin{video}
+\begin{itemize}
+	\item \href{https://youtu.be/53BPf9JrFcU}{https://youtu.be/53BPf9JrFcU} \hfill \qrcode{https://youtu.be/53BPf9JrFcU}
+	\item \href{https://youtu.be/GV1gFLZ7V18}{https://youtu.be/GV1gFLZ7V18} \hfill \qrcode{https://youtu.be/GV1gFLZ7V18}
+\end{itemize}	
+\end{video}
 
 
