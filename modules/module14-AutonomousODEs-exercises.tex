@@ -3,7 +3,81 @@
 	\begin{problist}
 	\prob Show that all autonomous differential equations are separable.
 	
+	\prob Consider the ODE $y'=\displaystyle \frac1y$.
+	Then which of the statements below are true or false and justify your choice.
+	\begin{enumerate}
+		\item The solutions always stay positive.
+		\item The solutions always stay negative.
+		\item The solutions never change sign.
+		\item The solutions always change sign.
+		\item Some solutions change sign, and some don't.
+	\end{enumerate}
 	
+	\prob Sketch a slope field for the autonomous ODE $$y'=\cos(y).$$
+	\prob Sketch a slope field for the autonomous ODE $$y'=\tan(y).$$
+	\prob What is a common property of all slope fields of autonomous ODEs?
+	
+	
+	\prob Consider the ODE
+	$$ 
+	y' = {\rm sign}(y) = 
+		\begin{cases}
+			1 & \text{ if } y > 0 \\	
+			0 & \text{ if } y = 0 \\	
+			-1 & \text{ if } y < 0
+		\end{cases}. 
+	$$
+
+	\begin{enumerate}
+		\item What are the equilibrium solutions?
+		\item Find two solutions that satisfy $y(0)=0$.
+		\item Are there solutions that satisfy $\displaystyle \lim_{t \to \infty} y(t) = \pi$?
+		\item What are the possible limits of solutions as $t\to \infty$?
+	\end{enumerate}
+	
+%		y=0 sol
+%		y=max(0,t+c) sol
+%		y=min(0,-t+c) sol
+
+
+
+
+	\prob \label{mod14-q-stable}Consider a function $f(y)$ such that
+	\begin{itemize}
+		\item $f(1)=0$;
+		\item $f'$ is continuous for all $y$;
+		\item $f'(1)<0$.
+	\end{itemize}
+	\begin{enumerate}
+		\item Show that there is an open interval $(a,b)$ satisfying $1 \in (a,b)$ and $f'(y)<0$ for all $y \in (a,b)$.
+		\item Show that %there is an interval $(c,d) \subseteq (a,b)$ such that
+		\begin{itemize}
+%			\item $1 \in (c,d)$, 
+			\item $f(y)>0$ if $y \in (a,1)$, %(c,1)$,
+			\item $f(y)<0$ if $y \in (1,b)$. %(1,d)$.
+		\end{itemize}
+		\item Consider the initial-value problem $y'=f(y)$ with $y(0)=y_0$. Show that this problem has a unique solution.
+		\item Show that if $y_0 \in (a,b)$, then $\displaystyle \lim_{t \to \infty} y(t) = 1$.
+		\item Write a Theorem about equilibrium points based on the results of this question.
+	\end{enumerate}
+
+
+	\prob Consider a function $f(y)$ such that
+	\begin{itemize}
+		\item $f(2)=0$;
+		\item $f'$ is continuous for all $y$;
+		\item $f'(2)>0$.
+	\end{itemize}
+	
+	Complete a study similar to question \ref{mod14-q-stable} for this function $f$.
+	
+	
+	
+	\prob Consider an autonomous ODE $y'=f(y)$ with two stable equilibrium solutions $y=1$ and $y=2$ and where $f$ is continuous.
+	\begin{enumerate}
+		\item Show that there must exist another equilibrium point $c \in (1,2)$.
+		\item Show that if $f(y)\not\equiv 0$ in $(1,2)$, then there must exist an equilibrium point $c \in (1,2)$ that is either semi-stable or unstable.
+	\end{enumerate}
 
 	\end{problist}
 \end{exercises}
