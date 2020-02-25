@@ -88,10 +88,10 @@
 % Set up the footers to have the correct copyright notices
 %%%
 
-\fancypagestyle{siefken}{%
+\fancypagestyle{usual}{%
 	\fancyhead[LO,RE]{\leftmark}	
 	\fancyhead[RO,LE]{}	
-	\fancyfoot[LO,RE]{\footnotesize\it \copyright\, Galv\~ao-Sousa-Siefken, 2019--2020 \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}	
+	\fancyfoot[LO,RE]{\footnotesize\it \copyright\, 2020 Galv\~ao-Sousa-Siefken \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}	
 %	\rfoot{\footnotesize\it \copyright\, Galv\~ao-Sousa-Siefken, 2019--2020 \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}
 %	\lfoot{}
 	\renewcommand{\headrulewidth}{0pt}
@@ -103,15 +103,15 @@
 %	\lfoot{}
 %	\renewcommand{\headrulewidth}{0pt}
 %}
-\fancypagestyle{iola}{%
-	\rfoot{\footnotesize\it \copyright\,IOLA Team \url{iola.math.vt.edu} \ \makebox(30,5){\includegraphics[height=2.2em]{images/iolalogo.png}}}
-	\lfoot{}
+\fancypagestyle{siam}{%
+	\lfoot{\footnotesize\it \copyright\, 2014 Society for Industrial and Applied Mathematics.}
+	\rfoot{\footnotesize \it Reprinted with permission.  All rights reserved.}
 	\renewcommand{\headrulewidth}{0pt}
 }
 
-\DeclareDocumentEnvironment{iola}{o}{%
-	\newpage
-	\pagestyle{iola}
+\DeclareDocumentEnvironment{siam}{o}{%
+%	\newpage
+	\pagestyle{siam}
 }{%
 	\newpage
 }
@@ -203,14 +203,14 @@
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
 	\voidenvironment{lesson}
-	\renewcommand{\coversubtitle}{MAT231 Notes}
+	\renewcommand{\coversubtitle}{MAT231 Lecture Problems}
 }{}
 \iftoggle{book}{
 	\voidenvironment{displayonly}
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
 	\voidenvironment{lesson}
-	\renewcommand{\coversubtitle}{%{\hspace{-5pt}\begin{tabular}{l}MAT231 Workbook%\\\small\today{} Edition
+	\renewcommand{\coversubtitle}{%{\hspace{-5pt}\begin{tabular}{l}MAT231 Workbook\\\small\today{} Edition
 	%\end{tabular}}
 	}
 }{}
@@ -219,6 +219,9 @@
 %\voidenvironment{lesson}
 %%\voidenvironment{notes}
 %%\voidenvironment{displayonly}
+
+
+\def\qrvideo#1{\href{#1}{#1}\hfill\qrcode{#1}}
 
 
 
@@ -249,13 +252,14 @@
 
 \hbox{}
 
+
 \newpage
 
 
 \include{chap0-about}
 	
 \newpage
-\pagestyle{siefken}
+\pagestyle{usual}
 
 
 
@@ -284,14 +288,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%		Chapter 1 - Introduction to Differential Equations
+%		Chapter 2 - First-Order Differential Equations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 
-\include{chap2-intro}
+\include{chap2-firstorder}
 
 
 
@@ -299,14 +303,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%		Chapter 3 - First-order Models
+%		Chapter 3 - First-order Systems
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 
-\include{chap3-firstorder}
+\include{chap3-systems}
 
 
 
@@ -357,22 +361,6 @@
 
 
 
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%%		Jason's Linear Algebra Book
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\newpage
-%
-%\hfill
-%
-%\include{LA}
-%
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -391,29 +379,12 @@
 \end{topic}
 
 
-\subsection{2019 $M_3C$ competition report from the winning team}
-\label{2019M3C}
 
-%\hspace{-0.5cm}\includegraphics*[page=1,scale=0.9]{example/Vaping-abridged.pdf}
-%
-%\newpage
+\include{appendix-LinAlg}
 
-In the folowing pages you can find an abridged version of the full report. The full report can be found at \href{http://uoft.me/modelling-app-report}{http://uoft.me/modelling-app-report}.
 
-	\vfil
 
-	\hfil \framebox{\includegraphics*[scale=0.67]{example/Vaping-cover.pdf}}
-
-\newpage
-
-\forLoop[1]{1}{12} % variable is \i
-{
-	\hfil\\
-	\vfil
-	\hfil \framebox{\includegraphics*[page=\i,scale=0.85]{example/Vaping-abridged.pdf}}
-	\newpage
-}
-
+\include{appendix-M3C-team}
 
 
 
