@@ -566,6 +566,8 @@
 	}
 	\DeclareDocumentEnvironment{example}{o}{
 		\renewcommand{\currentbackgroundcolor}{Red!4}
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{BurntOrange} ##1}}
+
 		\begin{leftborderbox}[colframe=Red!50, colback=\currentbackgroundcolor]
 		% if we didn't pass in an argument, make the first
 		% paragraph have a `\medskip` after it.
