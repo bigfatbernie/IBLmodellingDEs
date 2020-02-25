@@ -1,0 +1,1091 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%		Chapter 2 - First-Order ODEs
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{topic}[First-Order Differential Equations]
+
+\end{topic}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Definitions
+
+
+\begin{module}{Introduction to Differential Equations}
+%	\Title{Definition}
+	\label{ODE-intro}
+%	\Heading{Textbook}	
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item Bla bla bla	
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+
+\begin{lesson}
+	\Title{Introduction to Differential Equations}
+
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+%	
+%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+%
+\end{lesson}
+
+
+	\input{modules/module07-intro.tex}
+%	\input{modules/module07-defs-exercises.tex}
+
+\end{module}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  MODULE - Solutions
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{module}{Solutions of Differential Equations}
+	%\Title{Solutions}
+	\label{intro-sols}
+
+	\input{modules/module08-sols.tex}
+	\input{modules/module08-sols-exercises.tex}
+\end{module}
+
+
+
+\begin{lesson}
+	\Title{Solutions of Differential Equations}
+
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+%	
+%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+%
+\end{lesson}
+
+
+
+
+\newpage
+
+\question
+
+Which of these shows solutions of $y' = (x-1)(x+1) = x^2 - 1$ ?
+
+\newlength{\len}
+\setlength{\len}{120pt}
+\begin{tabular}{ccc}
+\includegraphics[width=\len]{images/module8-figs-6.png}
+	& \includegraphics[width=\len]{images/module8-figs-3.png}
+	& \includegraphics[width=\len, page=2]{images/module8-figs-2.png} \\
+A & B & C \\[15pt]
+%
+\includegraphics[width=\len]{images/module8-figs-1.png}
+	& \includegraphics[width=\len]{images/module8-figs-5.png}
+	& \includegraphics[width=\len]{images/module8-figs-4.png} \\
+D & E & F \\
+\end{tabular}
+
+%		\begin{tabular}{ccc}
+%		%	\begin{tikzpicture}
+%		%	    \begin{scope}
+%		%	    \clip (-3,-3) rectangle (3,3);
+%		%		\foreach \k in {-9,-8, ..., 36} {
+%		%	      \draw[samples=50,domain=-3:3,variable=\x] plot ({\x},{\k/3-(\x*\x)});
+%		%	    }
+%		%	    \end{scope}
+%		%	    \draw[thick] (-3,-3) -- (-3,3);
+%		%	    \draw[thick] (-3,-3) -- (3,-3);
+%		%	    \foreach \k in {-3,-2, ..., 3} {
+%		%	      \draw ({\k,-3}) node[below] {\tiny $\k$};
+%		%	      \draw ({-3,\k}) node[left] {\tiny $\k$};
+%		%	    }
+%		%	\end{tikzpicture}
+%		\includegraphics[width=\len, page=6]{images/module8-figs.pdf}
+%			& \includegraphics[width=\len, page=3]{images/module8-figs.pdf}
+%			& \includegraphics[width=\len, page=2]{images/module8-figs.pdf} \\
+%		A & B & C \\[15pt]
+%		%
+%		\includegraphics[width=\len, page=1]{images/module8-figs.pdf}
+%			& 
+%		%		\begin{tikzpicture}
+%		%	    \begin{scope}
+%		%	    \clip (-3,-3) rectangle (3,3);
+%		%		\foreach \k in {-9,-8, ..., 36} {
+%		%	      \draw[samples=50,domain=-3:3,variable=\x] plot ({\x},{-\k/3+(\x*\x)});
+%		%	    }
+%		%	    \end{scope}
+%		%	    \draw[thick] (-3,-3) -- (-3,3);
+%		%	    \draw[thick] (-3,-3) -- (3,-3);
+%		%	    \foreach \k in {-3,-2, ..., 3} {
+%		%	      \draw ({\k,-3}) node[below] {\tiny $\k$};
+%		%	      \draw ({-3,\k}) node[left] {\tiny $\k$};
+%		%	    }
+%		%	\end{tikzpicture}
+%		\includegraphics[width=\len, page=5]{images/module8-figs.pdf}
+%			& \includegraphics[width=\len, page=4]{images/module8-figs.pdf} \\
+%		D & E & F \\
+%		\end{tabular}
+
+
+\bookonlynewpage
+
+
+\question
+
+We seek a first-order ordinary differential equation 
+\quad $y' = f(x)$ \quad 
+whose solutions satisfy
+$$
+\begin{cases}
+y(x)  \mbox{ is increasing if } x<2 \\
+y(x) \mbox{ is decreasing if } 2 < x < 4 \\
+y(x) \mbox{ is increasing if } x > 4
+\end{cases}
+$$
+%
+Write down or graph an $\pmb{f(x)}$ that would produce such solutions.
+
+
+
+
+\bookonlynewpage
+
+\question
+
+Consider the ODE \quad $y'(t) = \big(y(t)\big)^2$ \quad .
+Which of the following is true?
+	
+\begin{parts}
+	\item $y(t)$ must always be positive
+	\item $y(t)$ must always be negative \\[5pt]
+
+	\item $y(t)$ must always be decreasing
+	\item $y(t)$ must always be increasing
+\end{parts}
+
+
+
+
+\bookonlynewpage
+
+\question Consider the differential equation $2xy'=y$.
+	
+	\begin{parts}
+		\item Check that the curves of the form $y^2 + C x = 0$ satisfy the differential equation.
+		\item Sketch one solution of the differential equation.
+		\item Sketch all the integral curves for the differential equation.
+		\item What is the difference between a solution passing through the point $(1,-1)$ and an integral curve passing through the same point?
+	\end{parts}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Slope Fields
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  MODULE - Slope Fields
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{module}{Slope Fields}
+	%\Title{Slope Fields}
+	\label{intro-slopefields}
+
+	\input{modules/module09-slopes.tex}
+	\input{modules/module09-slopes-exercises.tex}
+\end{module}
+
+
+
+\begin{lesson}
+	\Title{Slope Fields}
+
+	\Heading{Objectives}
+	\begin{itemize}
+		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+	\end{itemize}
+	
+	\Heading{Motivation} 
+
+\begin{annotation}
+	\begin{goals}
+	\Goal{Extra Reading}
+	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+	
+	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+	\end{goals}
+\end{annotation}
+	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+
+\end{lesson}
+
+
+
+
+\newpage
+
+\question
+\begin{minipage}{.7\textwidth}
+	A catapult throws a projectile into the air and we track the height (in metres) of the projectile from the ground as a function $y(t)$, where $t$ is the time (in seconds) that elapsed since the object was launched from the catapult. \\
+
+	Then, the slope fields for $y(t)$ and $y'(t)$ are shown below:
+\end{minipage}\hfill
+\begin{minipage}{100pt}
+	\includegraphics*[width=100pt]{images/module9-catapult.pdf}	
+\end{minipage}
+
+
+
+
+
+
+\setlength{\len}{200pt}
+\begin{tabular}{cc}
+\includegraphics*[height=\len]{images/module9-y.png}
+	& \includegraphics*[height=\len]{images/module9-yprime.png} \\
+Slope field for $y(t)$
+	& Slope field for $y'(t)$
+\end{tabular}
+
+\hfill {\footnotesize(These slope fields were created using WolframAlpha)} \\
+
+\begin{parts}
+	\item On the slope field, sketch a \emph{possible} solution.	
+	\item Consider the graph of $y(t)$. Does it form a parabola? Justify your answer.
+\end{parts}
+
+\begin{annotation}
+	\begin{Goals}
+		Students should think about the initial conditions.
+		What is a possible value for $y(0)$? What is a possible value for $y'(0)$?
+		Then sketch a possible solution that starts at those values. \\
+		
+		The equilibrium in the slope field for $y'(t)$ is called \emph{terminal velocity}. Some students might be able to identify it.
+	\end{Goals}
+\end{annotation}
+
+
+
+
+
+\bookonlynewpage
+
+
+
+\question Sketch the slope field for the following differential equations. 
+
+\begin{parts}
+	\item $y'=x$
+
+\begin{annotation}
+	\begin{Goals}
+		The goal is not to be very accurate, but to capture the symmetry of each of these slope fields.
+	\end{Goals}
+	
+\end{annotation}
+
+	\begin{tikzpicture}[xscale=0.75,yscale=0.75]
+		\draw[thick,-{\seta}] (-5,0) -- (5.5,0) node[above] {\small $x$};
+		\draw[thick,-{\seta}] (0,-5) -- (0,5.5) node[left] {\small $y$};
+		\draw[] (1,0) node[below] {\tiny 1};
+		\draw[] (0,1) node[left] {\tiny 1};
+		\draw[step=1,lightgray,thin] (-5,-5) grid (5,5);
+	\end{tikzpicture}
+	
+	
+\vfil	
+	
+	\item $y'=y^2$	
+
+	\begin{tikzpicture}[xscale=0.75,yscale=0.75]
+		\draw[thick,-{\seta}] (-5,0) -- (5.5,0) node[above] {\small $x$};
+		\draw[thick,-{\seta}] (0,-5) -- (0,5.5) node[left] {\small $y$};
+		\draw[] (1,0) node[below] {\tiny 1};
+		\draw[] (0,1) node[left] {\tiny 1};
+		\draw[step=1,lightgray,thin] (-5,-5) grid (5,5);
+	\end{tikzpicture}
+
+\end{parts}
+
+
+
+\bookonlynewpage
+
+\question Consider the following slope fields:
+
+
+\setlength{\len}{150pt}
+\begin{tabular}{ccc}
+	\includegraphics*[height=\len]{images/module9-graph1}
+		& \includegraphics*[height=\len]{images/module9-graph2}
+		& \includegraphics*[height=\len]{images/module9-graph3} \\
+		(A) & (B) & (C) \\[10pt]
+	\includegraphics*[height=\len]{images/module9-graph4}
+		& \includegraphics*[height=\len]{images/module9-graph5}
+		& \includegraphics*[height=\len]{images/module9-graph6} \\
+		(D) & (E) & (F)
+\end{tabular}
+
+\hfill {\footnotesize(These slope fields were created using WolframAlpha)} \\
+
+
+\begin{parts}
+	\item Which slope field(s) corresponds to a differential equation of the form
+		\qquad $y'=f(x)$ \qquad ?	
+
+	\item Which slope field(s) corresponds to a differential equation of the form
+		\qquad $y'=g(y)$ \qquad ?	
+
+	\item Which slope field(s) corresponds to a differential equation of the form
+		\qquad $y'=h(x+y)$ \qquad ?	
+
+	\item Which slope field(s) corresponds to a differential equation of the form
+		\qquad $y'=\kappa(x-y)$ \qquad ?	
+
+	\item Which slope field(s) corresponds to a differential equation of the form
+		\qquad $y'=1+\big( \ell(x,y) \big)^2$ \qquad ?	
+
+	\item Which slope field(s) corresponds to a differential equation of the form
+		\qquad $y'=1-\big( m(x,y) \big)^2$ \qquad ?	
+
+\end{parts}
+
+\begin{annotation}
+	\begin{Goals}
+		Students should be able to justify their choices	.
+	\end{Goals}
+	
+\end{annotation}
+
+
+
+
+
+
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Numerical Methods
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  MODULE - Numerical Methods
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{module}{Approximating Solutions}
+	%\Title{Slope Fields}
+	\label{Approximation}
+
+	\input{modules/module10-approximations.tex}
+	\input{modules/module10-approximations-exercises.tex}
+\end{module}
+
+
+
+\begin{lesson}
+	\Title{Approximating Solutions}
+
+%	\Heading{Objectives}
+%%	\begin{itemize}
+%%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+%	
+%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+%
+\end{lesson}
+
+
+
+
+\newpage
+
+\question
+	Consider the differential equation
+	$$ y' = y - 2 .$$
+	
+\begin{parts}
+	\item Use Euler's Method to find an approximation of the solution of this differential equation that passes through the point $(0,3)$.
+	\item Find the solution of the differential equation with the same initial condition.
+
+	\item Use Euler's Method to find an approximation of the solution of this differential equation that passes through the point $(0,1)$.
+	\item Find the solution of the differential equation with the same initial condition.
+
+	\item Compare the approximations with the actual solutions. Is there a property of the Euler's Method that you can infer?
+	\item Explain in words why the Method satisfies that property.
+	
+
+\end{parts}
+
+\begin{annotation}
+	\begin{Goals}
+		The goal is to have student's recognize that the Euler approximation ``curves slower'' than the actual solution.
+		
+		Students can explain in words why that is the case using the way the approximations are generated.
+	\end{Goals}
+\end{annotation}
+
+
+\bookonlynewpage
+
+
+
+\question
+	Which differential equations will be approximated perfectly using Euler's Method?
+
+\begin{annotation}
+	\begin{Goals}
+		The question is purposefully ambiguous.
+		What do we mean by approximated perfectly?
+		
+		Ex: The IVP $y'=$ sign$(t)$ (assuming sign$(0)=1$) with $y(-5)=5$ has solution $y = |t|$ and it is captured with Euler's method if $\Delta t=\frac5k$ for any $k\in\mathbb{N}$. \\
+		
+		Once students discuss, they'll find ODE's of the form $y'= c$ for any constant. 
+		
+		Prompt them to find other types. Show them the example above only after they tried for a bit. 
+		Then, let them revise their Conjecture.  \\
+		
+		Ex 2: $y'=f(y+t)$ with $y(0)=0$ and $f(z) = \lfloor z \rfloor$ is approximated perfectly if $\Delta t = 1$, but not if $\Delta t$ takes any other value.
+		
+	\end{Goals}
+\end{annotation}
+
+
+
+
+
+
+
+
+%\bookonlynewpage
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%		Chapter 3 -
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%\begin{topic}[First-Order Models]
+%
+%\end{topic}
+%
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Modelling with ODEs
+
+
+\begin{module}{Modelling with Differential Equations}
+	%\Title{Slope Fields}
+	\label{model-odes}
+
+	\input{modules/module11-model-odes.tex}
+	\input{modules/module11-model-odes-exercises.tex}
+\end{module}
+
+
+
+\begin{lesson}
+	\Title{Modelling with Differential Equations}
+
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+%	
+%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+
+\end{lesson}
+
+
+
+
+\newpage
+
+\question \label{pendulum}
+	A pendulum is swinging side to side. We want to model its movement.
+
+\begin{minipage}{.7\textwidth}
+\begin{parts}
+	\item Define the problem. Which function(s) do we want to find in the end?
+	\item Build a mind map.
+	\item Make assumptions. Remember to use your mind map to help structure the problem.
+	\item Construct a model. You should end up with one (or more) differential equations. 
+	
+	Remember that there are some Physics principles that can help you (e.g. Newton's 2$^{\rm nd}$ Law, Conservation of Energy, Linear Momentum, and Angular Momentum, Rate of Change is Rate in $-$ Rate out).
+	\item Assess your model:
+	\begin{enumerate}
+		\item Find one test that your model passes.
+		\item Find one test that your model fails.
+	\end{enumerate}
+	
+\end{parts}
+\end{minipage}\hfill
+\begin{minipage}{100pt}
+	\includegraphics*[width=100pt]{images/module11-pendulum.pdf}	
+\end{minipage}
+
+
+
+
+
+
+
+\begin{annotation}
+	\begin{Goals}
+		Students will mostly likely identify the goal as finding the position of the ball $\vec{r}(t) = \big( x(t) , y(t) \big)$. That's fine!
+		
+		Later, in Step 3, try to guide the students to recognize the following:
+		\begin{itemize}
+			\item Rope is massless (negligible)
+			\item Rope doesn't bend (negligible)
+			\item So can assume that the rope is rigid. How does that affect the position of the ball?
+			\item No friction (negligible)
+			\item \textbf{Important:} Students always focus on string tension. One can consider it, but it all cancels out. It's one of the exercises of the module (above). For the lecture, don't consider tension.
+		\end{itemize}
+		
+		Then on Step 4, guide students to recognize that they actually only need to find a model for the angle, because the position of the ball really only depends on the angle $\theta(t): \vec{r}\big(\theta(t)\big)$
+				
+	\end{Goals}
+\end{annotation}
+
+
+
+
+
+
+
+\bookonlynewpage
+
+\hfill
+
+
+
+\bookonlynewpage
+
+\question \label{rumour} Model the spreading of a rumour through the students of a school.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Solvable Types of ODEs: Separable, First-Order Linear, Exact (?)
+
+
+\begin{module}{Solvable Types of ODEs}
+	%\Title{Separable ODEs}
+
+	\label{model-odes}
+
+	\input{modules/module12-SolvableODEs.tex}
+	\input{modules/module12-SolvableODEs-exercises.tex}
+
+%	\Heading{Textbook}	
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item Bla bla bla	
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+
+
+\end{module}
+
+
+\begin{lesson}
+	\Title{Solvable Types of Differential Equations}
+
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+%	
+%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+
+\end{lesson}
+
+
+
+
+\newpage
+
+\question 
+	Decide whether the following differential equations are separable, first-order linear, both, or neither. If they are of one of the solvable types, solve it.
+
+\begin{parts}
+	\item $\displaystyle\theta''(t) = \frac{g}{L} \sin\big(\theta(t)\big)$
+	\item $\displaystyle P'(t) = r P(t) \left( 1 - \frac{P(t)}{K} \right)$
+	\item $\displaystyle v'(t) = -g - \frac{\gamma}{m} v(t)$
+	\item $\displaystyle y'(t) = -gt - \frac{g}{m} y(t) + 10$
+\end{parts}
+
+
+
+
+
+
+
+
+
+
+
+\bookonlynewpage
+
+
+\question Consider a differential equation $y' = f(t,y)$ with the following slope field.
+
+\begin{center}
+	\includegraphics*[width=200pt]{images/module12-dirfield.pdf}
+\end{center}
+
+\begin{parts}
+	\item What are the equilibrium solutions of the ODE?
+
+
+\item Directly on the direction field above, sketch the solution of the problem
+$$
+\begin{cases}
+y'=f(t,y) \\
+y(0) = \dfrac14
+\end{cases}
+$$
+
+\item From the direction field above, what is the type(s) of this ODE? Justify your answer.
+
+\begin{enumerate}[label={\bf (\alph*)}]
+\hfil 
+\begin{minipage}{.3\textwidth}
+\item separable. \\[-10pt]
+\item of first-order and linear.
+\end{minipage}
+\hfil
+\begin{minipage}{.4\textwidth}
+\item autonomous. \\[-10pt]
+\item none of the other options.
+\end{minipage}
+\end{enumerate}
+
+\item Assume that $y=g(t)$ and $y=h(t)$ are two solutions of the differential equation with $g(0)<h(0)$, then
+
+\hfill (select all the possible options)\\[-10pt]
+
+\begin{enumerate}[label={\bf (\alph*)}]
+\hfil 
+\begin{minipage}{.2\textwidth}
+\item $g(3) < h(3)$
+\end{minipage}
+\hfil
+\begin{minipage}{.2\textwidth}
+\item $g(3) = h(3)$
+\end{minipage}
+\hfil
+\begin{minipage}{.2\textwidth}
+\item $g(3) > h(3)$
+\end{minipage}
+\end{enumerate}
+
+\end{parts}
+
+
+
+
+\bookonlynewpage
+
+
+
+\question
+\begin{parts}
+	\item Calculate $\big( \sin(x) f(x) \big)'$.
+	\item Find the general solution of 
+		$$ \sin(x) y' + \cos(x) y = \sqrt{x}.$$
+	\item What is the integrating factor for the differential equation
+		$$ y' + \frac{\cos(x)}{\sin(x)} y = \frac{\sqrt{x}}{\sin(x)}$$
+\end{parts}
+
+
+
+
+\begin{annotation}
+	\begin{Goals}
+		Students will mostly likely identify the goal as finding the position of the ball $\vec{r}(t) = \big( x(t) , y(t) \big)$. That's fine!
+		
+		Later, in Step 3, try to guide the students to recognize the following:
+		\begin{itemize}
+			\item Rope is massless (negligible)
+			\item Rope doesn't bend (negligible)
+			\item So can assume that the rope is rigid. How does that affect the position of the ball?
+			\item No friction (negligible)
+			\item \textbf{Important:} Students always focus on string tension. One can consider it, but it all cancels out. It's one of the exercises of the module (above). For the lecture, don't consider tension.
+		\end{itemize}
+		
+		Then on Step 4, guide students to recognize that they actually only need to find a model for the angle, because the position of the ball really only depends on the angle $\theta(t): \vec{r}\big(\theta(t)\big)$
+				
+	\end{Goals}
+\end{annotation}
+
+
+
+
+
+
+
+\bookonlynewpage
+
+\hfill
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Properties of ODEs
+
+
+\begin{module}{Properties of Differential Equations}
+	%\Title{First-Order Linear ODEs}
+%	\Heading{Textbook}	
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item Bla bla bla	
+%	\end{itemize}
+
+	\label{model-odes}
+
+	\input{modules/module13-PropertiesODEs.tex}
+	\input{modules/module13-PropertiesODEs-exercises.tex}
+
+
+
+%	\Heading{Motivation} 
+
+
+
+\end{module}
+
+
+
+\begin{lesson}
+	\Title{Properties of Differential Equations}
+
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+%	
+%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+
+\end{lesson}
+
+
+
+
+\newpage
+
+\question For the following initial-value problems, answer the following questions:
+\begin{enumerate}[label=\color{gray}(\alph*)]
+\item Is there a unique solution?
+
+\item Without solving, what is its domain?
+\end{enumerate}
+
+
+
+
+\begin{parts}
+	\item $y' = t + \frac{y}{t-\pi}$ with $y(1) = 1$
+	\item $y' = t + \sqrt{y-\pi}$ with $y(1) = 1$
+	\item $y' = \sqrt{4 - (t^2+y^2)}$ with $y(1) = 1$
+\end{parts}
+
+
+\bookonlynewpage
+
+
+\question The initial-value problem
+$$
+\begin{cases}
+y' = -\dfrac{x}{y} \\
+y\big(\frac12\big) = \frac{\sqrt{3}}{2}.
+\end{cases}
+$$
+has the solutions
+
+\hfil $y_1(x) = \cos\big( \arcsin (x) \big) \qquad \text{ and } \qquad y_2(x) = \sqrt{1-x^2}$ \quad . 
+
+\begin{parts}
+\item Does the problem satisfy the conditions of one of the Existence and Uniqueness Theorems?
+
+\item What can you conclude?
+
+\end{parts}
+
+
+\bookonlynewpage
+
+\begin{minipage}{.5\textwidth}
+\question Consider a differential equation $y' = f(t,y)$ where 
+\begin{itemize}
+	\item $f(t,y)$ is continuous for all $t,y$;
+	\item $\frac{\partial f}{\partial y}(t,y)$ is continuous for all $t,y$.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{250pt}
+%Consider the following graph:
+%\begin{center}
+	\includegraphics*[width=250pt]{images/module13-3graphs.pdf}
+%\end{center}
+\end{minipage}
+
+
+\begin{parts}
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{blue} blue $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{gray} gray $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{blue} blue $y2$} and \textbf{\color{gray} gray $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
+
+	\item Based on the answers to the three parts above, write a Corollary to the Existence and Uniqueness Theorems.
+\end{parts}
+
+
+
+
+
+
+
+
+
+%	\begin{graybox}
+%	THIS WILL BECOME A LECTURE PROBLEM!\\
+%	
+%	Observe that as a consequence of the previous two theorems, we know that solutions cannot intersect!
+%	
+%	If they did, then if we chose the point of intersection as the initial point $(t_0,y_0)$, we would have two solutions which contradicts the Theorems.
+%	\end{graybox}
+
+
+
+
+
+%\bookonlynewpage
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Autonomous of ODEs
+
+
+\begin{module}{Autonomous Differential Equations}
+	%\Title{First-Order Linear ODEs}
+%	\Heading{Textbook}	
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item Bla bla bla	
+%	\end{itemize}
+
+	\label{model-odes}
+
+	\input{modules/module14-AutonomousODEs.tex}
+	\input{modules/module14-AutonomousODEs-exercises.tex}
+
+
+
+%	\Heading{Motivation} 
+
+
+
+\end{module}
+
+
+
+\begin{lesson}
+	\Title{Autonomous Differential Equations}
+
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+%	
+%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+
+\end{lesson}
+
+
+
+
+\newpage
+
+\question Consider the differential equation \quad $y'=f(y)$ \quad where $f(y)$ is given by the following graph:
+\begin{center}
+	\includegraphics*[width=350pt]{images/module14-graphf.pdf}
+\end{center}
+
+\begin{parts}
+	\item What are the equilibrium points?
+	\item Which equilibrium solutions are stable, unstable, or semi-stable?
+	\item Write a definition for a \textbf{stable}, \textbf{unstable}, and \textbf{semi-stable} equilibrium point.
+	\item Roughly, sketch a solution satisfying:
+	\begin{enumerate}
+		\item $y(0)=2.5$.
+		\item $y(0)=-\frac14$.
+		\item $y(1)=\frac14$.
+	\end{enumerate}
+	\item If $y(0) = 2$, then $y(t) = $
+	\item If $y(0) = \frac12$, then $\displaystyle \lim_{t\to \infty} y(t) = $
+	\item If $y(0) = -2$, then $\displaystyle \max_{t \in [0,\infty)} y(t) = $
+\end{parts}
+
+
+\bookonlynewpage
+
+
+\hfill
+
+
+\bookonlynewpage
+
+
+
+
+
+
+
+
