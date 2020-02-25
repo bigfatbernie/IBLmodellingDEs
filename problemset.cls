@@ -258,7 +258,7 @@
 		}
 	}
 	\DeclareDocumentEnvironment{graybox}{o}{
-		\footnotesize\sffamily\parskip=1.5mm%
+		\sffamily\parskip=1.5mm%
 		\begin{tcolorbox}[colframe=Gray,
 			colback=Gray!5!white, 
 			left=0mm, 
@@ -344,7 +344,7 @@
 		    ([shift={(0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
 		    --
 		    ([shift={(0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south west) 
-			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Lesson \thelessoncounter};
+			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Lesson \thelessoncounter};  %FIGURE OUT HOW TO PUT THE LESSON TITLE HERE
 		\end{tikzpicture}
 		
 	}{%
@@ -492,7 +492,7 @@
 		\end{leftborderbox}
 	}
 	\DeclareDocumentEnvironment{teamwork}{o}{
-		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Green}}}
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Green} ##1}}
 		\begin{leftborderbox}[colframe=Green, colback=Green!10]
 		{\bfseries\sffamily\color{Green} Teamwork.}
 		\setlist[itemize]{ label={\color{Green!70!black}$\blacksquare$}, topsep=0pt}
@@ -501,7 +501,7 @@
 		\end{leftborderbox}
 	}
 	\DeclareDocumentEnvironment{video}{o}{
-		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Gray}}}
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Gray} ##1}}
 		\begin{leftborderbox}[colframe=Gray, colback=Gray!10]
 		{\bfseries\sffamily\color{Gray} Video.}
 		\setlist[itemize]{ label={\color{Gray!70!black}$\blacksquare$}, topsep=0pt}
@@ -509,7 +509,7 @@
 	}{%
 		\end{leftborderbox}
 	}\DeclareDocumentEnvironment{important}{o}{
-		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{myorange}}}
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{myorange} ##1}}
 		\begin{leftborderbox}[colframe=myorange, colback=myorange!10]
 		{\bfseries\sffamily\color{myorange!70!black} Important.}
 		\setlist[itemize]{ label={\color{myorange!70!black}$\blacksquare$}, topsep=0pt}
@@ -867,9 +867,26 @@
 	\colorlet{defframecolor}{green!50!black}
 	\definecolor{myorange}{HTML}{F29B23}
 \declareoutlinedbox{definition}{DEFINITION}{DEF}{defframecolor}{defcolor}
+	\RenewDocumentEnvironment{definition}{o}{
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Cerulean} ##1}}
+			\begin{leftborderbox}[colframe=Cerulean, colback=Cerulean!10]
+				{\bfseries\sffamily\color{Cerulean} #1.}
+		}{%
+			\end{leftborderbox}
+		}
+	
 	\colorlet{thmcolor}{red!70!black}
 	\colorlet{thmframecolor}{red!90!black}
 \declareoutlinedbox{theorem}{THEOREM}{THM}{thmframecolor}{thmcolor}
+	\RenewDocumentEnvironment{theorem}{o}{
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{myorange} ##1}}
+			\begin{leftborderbox}[colframe=myorange, colback=myorange!10]
+			{\bfseries\sffamily\color{myorange} Theorem.
+			%\IfNoValueTF{#1}{Theorem.}{#1.}
+			}
+		}{%
+			\end{leftborderbox}
+		}
 
 \titleformat{\chapter}
   {\normalfont\sffamily\huge\color{blue}}
