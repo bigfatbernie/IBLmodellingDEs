@@ -51,7 +51,7 @@ In this chapter, we follow the approach of Bliss, Fowler, and Galluzzo from
 
 \begin{module}{Defining the Problem}
 	%\Title{Defining the Problem Statement}
-	\label{define}
+	\label{mod:define}
 
 	\input{modules/module01-define.tex}
 	\input{modules/module01-define-exercises.tex}
@@ -176,12 +176,20 @@ What mathematical object would you use to convince the CEO that you have solved 
 
 
 
-\question
-The mayor of Toronto wants to extend the subway line with a new \textcolor{RoyalBlue}{blue line} as in the figure below.
+\question \label{p:TTC}
+
+The mayor of Toronto wants to extend the subway line with a new \textbf{\color{orange}orange line} as in the figure below.
 	
-	\begin{center}
-	\includegraphics*[width=500pt]{images/TTC-extension.png}
-	\end{center}
+%	\begin{center}
+%	\includegraphics*[width=500pt]{images/TTC-extension.png}
+%	\end{center}
+
+\begin{center}
+	\includegraphics*[width=500pt]{images/TTC.png}
+\end{center}
+\begin{minipage}{1.1\textwidth}
+\hfill {\footnotesize (Map taken from \href{https://uoft.me/modelling-TTC}{Wikimedia Commons} created by Craftwerker) \qquad \qrcode[height=30pt]{https://uoft.me/modelling-TTC}}
+\end{minipage}
 	
 \begin{parts}
 	\item What ``mathematical object'' would you use to communicate that to the Mayor that this line is optimal (or sub optimal) ?

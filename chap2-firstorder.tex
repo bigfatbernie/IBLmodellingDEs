@@ -128,59 +128,135 @@
 Which of these shows solutions of $y' = (x-1)(x+1) = x^2 - 1$ ?
 
 \newlength{\len}
-\setlength{\len}{120pt}
+%\setlength{\len}{120pt}
+%\begin{tabular}{ccc}
+%\includegraphics[width=\len]{images/module8-figs-6-small.png}
+%	& \includegraphics[width=\len]{images/module8-figs-3-small.png}
+%	& \includegraphics[width=\len, page=2]{images/module8-figs-2-small.png} \\
+%A & B & C \\[15pt]
+%%
+%\includegraphics[width=\len]{images/module8-figs-1-small.png}
+%	& \includegraphics[width=\len]{images/module8-figs-5-small.png}
+%	& \includegraphics[width=\len]{images/module8-figs-4-small.png} \\
+%D & E & F \\
+%\end{tabular}
+
+
+\def\modeightA{
+\begin{tikzpicture}[scale=0.65,yscale=0.8]
+    \begin{scope}
+	    \clip (-3,-3) rectangle (3,3);
+		\foreach \k in {-9,-7, ..., 31} {
+	      \draw[samples=50,domain=-3:3,variable=\x,color=gray!80!black] plot ({\x},{(\k-3*(\x*\x))/2});
+	    }
+    \end{scope}
+    \draw[thick] (-3,-3) -- (-3,3);
+    \draw[thick] (-3,-3) -- (3,-3);
+    \foreach \k in {-3,-2, ..., 3} {
+      \draw ({\k,-3}) node[below] {\tiny $\k$};
+      \draw ({-3,\k}) node[left] {\tiny $\k$};
+    }
+\end{tikzpicture}
+}
+
+\def\modeightB{
+\begin{tikzpicture}[scale=0.65,yscale=0.8]
+    \begin{scope}
+	    \clip (-3,-3) rectangle (3,3);
+		\foreach \k in {-9,-7, ..., 39} {
+	      \draw[samples=50,domain=-3:3,variable=\x,color=gray!80!black] plot ({\x},{((\x*\x*\x)/3-(\x*\x)+\k/2)});
+    	}
+    \end{scope}
+    \draw[thick] (-3,-3) -- (-3,3);
+    \draw[thick] (-3,-3) -- (3,-3);
+    \foreach \k in {-3,-2, ..., 3} {
+      \draw ({\k,-3}) node[below] {\tiny $\k$};
+      \draw ({-3,\k}) node[left] {\tiny $\k$};
+    }
+\end{tikzpicture}
+}
+
+\def\modeightC{
+\begin{tikzpicture}[scale=0.65,yscale=0.8]
+    \begin{scope}
+	    \clip (-3,-3) rectangle (3,3);
+		\foreach \k in {-15,-13, ..., 29} {
+	      \draw[samples=50,domain=-3:3,variable=\x,color=gray!80!black] plot ({\x},{-(((\x+1)*(\x+1)*(\x+1))/3-((\x+1)*(\x+1))+\k/2)});
+    	}
+    \end{scope}
+    \draw[thick] (-3,-3) -- (-3,3);
+    \draw[thick] (-3,-3) -- (3,-3);
+    \foreach \k in {-3,-2, ..., 3} {
+      \draw ({\k,-3}) node[below] {\tiny $\k$};
+      \draw ({-3,\k}) node[left] {\tiny $\k$};
+    }
+\end{tikzpicture}
+}
+
+\def\modeightD{
+\begin{tikzpicture}[scale=0.65,yscale=0.8]
+    \begin{scope}
+	    \clip (-3,-3) rectangle (3,3);
+		\foreach \k in {-15,-13, ..., 29} {
+	      \draw[samples=50,domain=-3:3,variable=\x,color=gray!80!black] plot ({\x},{(((\x+1)*(\x+1)*(\x+1))/3-((\x+1)*(\x+1))+\k/2)});
+    	}
+    \end{scope}
+    \draw[thick] (-3,-3) -- (-3,3);
+    \draw[thick] (-3,-3) -- (3,-3);
+    \foreach \k in {-3,-2, ..., 3} {
+      \draw ({\k,-3}) node[below] {\tiny $\k$};
+      \draw ({-3,\k}) node[left] {\tiny $\k$};
+    }
+\end{tikzpicture}
+}
+
+\def\modeightE{
+\begin{tikzpicture}[scale=0.65,yscale=0.8]
+    \begin{scope}
+	    \clip (-3,-3) rectangle (3,3);
+		\foreach \k in {-9,-7, ..., 31} {
+	      \draw[samples=50,domain=-3:3,variable=\x,color=gray!80!black] plot ({\x},{-(\k-3*(\x*\x))/2});
+	    }
+    \end{scope}
+    \draw[thick] (-3,-3) -- (-3,3);
+    \draw[thick] (-3,-3) -- (3,-3);
+    \foreach \k in {-3,-2, ..., 3} {
+      \draw ({\k,-3}) node[below] {\tiny $\k$};
+      \draw ({-3,\k}) node[left] {\tiny $\k$};
+    }
+\end{tikzpicture}
+}
+
+\def\modeightF{
+\begin{tikzpicture}[scale=0.65,yscale=0.8]
+    \begin{scope}
+	    \clip (-3,-3) rectangle (3,3);
+		\foreach \k in {-9,-7, ..., 39} {
+	      \draw[samples=50,domain=-3:3,variable=\x,color=gray!80!black] plot ({\x},{(-(\x*\x*\x)/3+(\x*\x)-\k/2)});
+    	}
+    \end{scope}
+    \draw[thick] (-3,-3) -- (-3,3);
+    \draw[thick] (-3,-3) -- (3,-3);
+    \foreach \k in {-3,-2, ..., 3} {
+      \draw ({\k,-3}) node[below] {\tiny $\k$};
+      \draw ({-3,\k}) node[left] {\tiny $\k$};
+    }
+\end{tikzpicture}
+}
+
+
 \begin{tabular}{ccc}
-\includegraphics[width=\len]{images/module8-figs-6-small.png}
-	& \includegraphics[width=\len]{images/module8-figs-3-small.png}
-	& \includegraphics[width=\len, page=2]{images/module8-figs-2-small.png} \\
+\modeightA
+	& \modeightB
+	& \modeightC \\
 A & B & C \\[15pt]
 %
-\includegraphics[width=\len]{images/module8-figs-1-small.png}
-	& \includegraphics[width=\len]{images/module8-figs-5-small.png}
-	& \includegraphics[width=\len]{images/module8-figs-4-small.png} \\
+\modeightD
+	& \modeightE
+	& \modeightF \\
 D & E & F \\
 \end{tabular}
 
-%		\begin{tabular}{ccc}
-%		%	\begin{tikzpicture}
-%		%	    \begin{scope}
-%		%	    \clip (-3,-3) rectangle (3,3);
-%		%		\foreach \k in {-9,-8, ..., 36} {
-%		%	      \draw[samples=50,domain=-3:3,variable=\x] plot ({\x},{\k/3-(\x*\x)});
-%		%	    }
-%		%	    \end{scope}
-%		%	    \draw[thick] (-3,-3) -- (-3,3);
-%		%	    \draw[thick] (-3,-3) -- (3,-3);
-%		%	    \foreach \k in {-3,-2, ..., 3} {
-%		%	      \draw ({\k,-3}) node[below] {\tiny $\k$};
-%		%	      \draw ({-3,\k}) node[left] {\tiny $\k$};
-%		%	    }
-%		%	\end{tikzpicture}
-%		\includegraphics[width=\len, page=6]{images/module8-figs.pdf}
-%			& \includegraphics[width=\len, page=3]{images/module8-figs.pdf}
-%			& \includegraphics[width=\len, page=2]{images/module8-figs.pdf} \\
-%		A & B & C \\[15pt]
-%		%
-%		\includegraphics[width=\len, page=1]{images/module8-figs.pdf}
-%			& 
-%		%		\begin{tikzpicture}
-%		%	    \begin{scope}
-%		%	    \clip (-3,-3) rectangle (3,3);
-%		%		\foreach \k in {-9,-8, ..., 36} {
-%		%	      \draw[samples=50,domain=-3:3,variable=\x] plot ({\x},{-\k/3+(\x*\x)});
-%		%	    }
-%		%	    \end{scope}
-%		%	    \draw[thick] (-3,-3) -- (-3,3);
-%		%	    \draw[thick] (-3,-3) -- (3,-3);
-%		%	    \foreach \k in {-3,-2, ..., 3} {
-%		%	      \draw ({\k,-3}) node[below] {\tiny $\k$};
-%		%	      \draw ({-3,\k}) node[left] {\tiny $\k$};
-%		%	    }
-%		%	\end{tikzpicture}
-%		\includegraphics[width=\len, page=5]{images/module8-figs.pdf}
-%			& \includegraphics[width=\len, page=4]{images/module8-figs.pdf} \\
-%		D & E & F \\
-%		\end{tabular}
 
 
 \bookonlynewpage
@@ -604,6 +680,23 @@ Slope field for $y(t)$
 
 \newpage
 
+
+\begin{annotation}
+	\begin{goals}
+	\Goal{Pendulum and Rumours}
+		This should take 2 lectures.
+		
+		Lecture 1. Focus on Pendulum problem. Students should finish it at home.
+		
+		
+		Lecture 2. Rumour problem is more open-ended. 
+		
+		Students should follow the structure from chapter 1 to think about this problem.
+	\end{goals}
+\end{annotation}
+		
+		
+		
 \question \label{pendulum}
 	A pendulum is swinging side to side. We want to model its movement.
 
@@ -634,7 +727,7 @@ Slope field for $y(t)$
 
 
 \begin{annotation}
-	\begin{Goals}
+	\begin{goals}
 		Students will mostly likely identify the goal as finding the position of the ball $\vec{r}(t) = \big( x(t) , y(t) \big)$. That's fine!
 		
 		Later, in Step 3, try to guide the students to recognize the following:
@@ -648,7 +741,7 @@ Slope field for $y(t)$
 		
 		Then on Step 4, guide students to recognize that they actually only need to find a model for the angle, because the position of the ball really only depends on the angle $\theta(t): \vec{r}\big(\theta(t)\big)$
 				
-	\end{Goals}
+	\end{goals}
 \end{annotation}
 
 
