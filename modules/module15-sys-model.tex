@@ -1,0 +1,127 @@
+In this module you will learn
+\begin{itemize}
+	\item how to model two or more inter-dependent quantities using systems
+\end{itemize}
+
+\hfill \\
+
+
+Often, when modelling something, we are faced with two or more quantities that depend on each other. This means that one equation is not enough, so we need to learn how to deal with a system of equations. \\
+
+
+Just like we did in module \ref{model-odes}, we will follow the step by step procedure developed in chapter 1.
+
+\paragraph{\emph{Step 1.}} Define the problem
+
+\begin{example}
+We want to model two interacting populations, like the populations of bears and salmon in a specific natural park.\\
+
+The first step is to decide on what we want to find at the end of the process. 
+In this case, we want to know the number of individuals in each population and how they change as time passes. So we define:
+\begin{itemize}
+	\item $b(t) =$ number of bears in the natural park at time $t$;
+	\item $s(t) =$ number of salmon in the natural park at time $t$.
+\end{itemize}
+\end{example}
+
+
+\paragraph{\emph{Step 2.}} Build a mind map
+
+\begin{example}
+We start with both species in the centre:
+
+\def\SalmonBear{
+	\fill[color=orange!50!white] (-4,0) rectangle (-2,1) node[pos=.5] {\color{black}Salmon};
+	\fill[color=brown!60!white] (4,0) rectangle (2,1) node[pos=.5] {\color{black}Bear};
+}
+\begin{center}
+\begin{tikzpicture}
+	\SalmonBear
+\end{tikzpicture}
+\end{center}
+
+We can start brainstorming about the things that affect these populations:
+\begin{center}
+%\begin{tikzpicture}
+%	\SalmonBear
+%    \begin{scope}[decoration={
+%    markings,
+%    mark=at position 0.5 with {\arrow{>}}}
+%    ]
+%	\draw[postaction={decorate}] (-2,1) arc (120:60:4) node[pos=0.5,above] {food};
+%    \draw[postaction={decorate}] (2,0) arc (300:240:4) node[pos=0.5,below] {hunts};
+%    \end{scope}
+%    \draw (-3,0) -- (-4,-1);
+%    \fill[color=green!50!white] (-5.25,-2) rectangle (-2.75,-1) node[pos=.5] {\color{black}reproduction};
+%    \draw (-3,1) -- (-4,2);
+%    \fill[color=yellow!50!white] (-5.25,2) rectangle (-2.75,3) node[pos=.5] {\color{black}habitat limits};
+%    \draw (3,0) -- (4,-1);
+%    \fill[color=red!50!white] (5.25,-2) rectangle (2.75,-1) node[pos=.5] {\color{black}competition};
+%    \draw (3,1) -- (4,2);
+%    \fill[color=yellow!50!white] (5.25,2) rectangle (2.75,3) node[pos=.5] {\color{black}habitat limits};
+%\end{tikzpicture}
+\begin{tikzpicture}
+	\SalmonBear
+    \begin{scope}[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{>}}}
+    ]
+    \draw[postaction={decorate}] (-2,0.5) -- (2,0.5) node[pos=0.5,above] {food};
+    \draw[postaction={decorate}] (2,0) arc (300:240:4) node[pos=0.5,below] {hunts};
+    \end{scope}
+    \draw (-3,0) -- (-4,-1);
+    \fill[color=green!50!white] (-5.25,-2) rectangle (-2.75,-1) node[pos=.5] {\color{black}reproduction};
+    \draw (-3,1) -- (-0.5,2);
+    \draw (3,1) -- (0.5,2);
+    \fill[color=yellow!50!white] (-1.5,2) rectangle (1.5,3) node[pos=.5] {\color{black}habitat limits};
+    \draw (3,0) -- (4,-1);
+    \fill[color=red!50!white] (5.25,-2) rectangle (2.75,-1) node[pos=.5] {\color{black}competition};
+\end{tikzpicture}
+\end{center}
+	
+\end{example}
+
+
+\paragraph{\emph{Step 3.}} Make assumptions
+
+\begin{example}
+In this step, we discuss which of the boxes in the mind map we want to actually consider in our model, and which assumptions we need to make to consider them. \\
+
+Let us start with how these species interact with each other:
+\begin{enumerate}
+	\item Salmon provide food for bears: the bear population profits from each encounter with salmon. How does each bear-salmon encounter affect the bear population?
+	\item Bears hunt salmon: the salmon population is likely to decrease with each encounter with a bear. How does each bear-salmon encounter affect the salmon population?
+\end{enumerate}
+
+These two components are essential in our model, so we need to include them. It still leaves some freedom on how to do this. \\
+
+There are other elements that we might want to include in our model:
+\begin{enumerate}[start=3]
+	\item Salmon reproduction: in the absence of predators and under ideal conditions, salmon should grow according to the Malthusian model, i.e. the rate of growth is proportional to the number of salmon;
+	\item Bear competition: bears are mainly predators, so without salmon, their numbers will decrease, also according to the Malthusian model;
+	\item Habitat limits: these species live in habitats that have limited resources, so we can consider a carrying capacity for each species.
+\end{enumerate}
+
+To make the model simpler, we will \emph{ignore habitat limits}. This means that this model will not be accurate if the populations become very large.
+	
+\end{example}
+
+
+\paragraph{\emph{Step 4.}} Construct a model
+
+\begin{example}
+We will start with our populations:
+\begin{itemize}
+	\item $b(t)$
+	\item $s(t)$
+\end{itemize}
+and we will start adding components to each of these one by one. \\
+
+For the first two items, we need to estimate the number of encounters salmon-bear. We assume that the number of encounters is proportional to the number of all possible encounters: $b(t) s(t)$.
+
+\begin{enumerate}
+	\item Salmon provide food for bears: 
+\end{enumerate}
+
+\end{example}
+

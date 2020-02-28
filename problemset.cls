@@ -437,7 +437,8 @@
 			%includeall,
 			%reversemarginpar,
 			twoside=true}
-		
+		\RenewDocumentCommand{\emph}{m}{{\bfseries\color{Cerulean} ##1}}
+
 		% make sure we know what page this module starts on so
 		% we can do something special on the first page
 		\setcounter{submodulecounter}{0}
