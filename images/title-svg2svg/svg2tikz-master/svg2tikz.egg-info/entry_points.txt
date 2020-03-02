@@ -1,3 +1,0 @@
-[console_scripts]
-svg2tikz = svg2tikz.extensions.tikz_export:main_cmdline
-

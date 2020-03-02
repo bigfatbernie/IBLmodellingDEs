@@ -117,11 +117,81 @@ We will start with our populations:
 \end{itemize}
 and we will start adding components to each of these one by one. \\
 
-For the first two items, we need to estimate the number of encounters salmon-bear. We assume that the number of encounters is proportional to the number of all possible encounters: $b(t) s(t)$.
+For the first two items, we need to estimate the number of encounters salmon-bear. We assume that the number of encounters is proportional to the number of all possible encounters: \emph{$b(t)\, s(t)$}.
 
 \begin{enumerate}
-	\item Salmon provide food for bears: 
+	\item Salmon provide food for bears: for every possible salmon-bear encounter, there is a probability that a bear actually encounters a salmon, and then there is a chance that the bear will catch the salmon. Each catch improves the possibility that the bear population will increase. All these put together means that this factor should increase the bear growth rate by \emph{$a \,b(t)\, s(t)$}, where the constant $a$ needs to be found.
+	\item Bears hunt salmon: similarly to the previous item, for every possible encounter, there is a probability that the bear actually encounters a salmon, and then there is a chance that the bear will catch the salmon. Every catch will decrease the salmon population, so the salmon growth rate will decrease by \emph{$c \,b(t) \,s(t)$}, there the constant $b$ needs to be found.
 \end{enumerate}
 
+Right now we have the following model:
+$$
+\begin{cases}
+b'(t) = a \,b(t)\, s(t) + \cdots \\
+s'(t) = - c \,b(t)\, s(t) + \cdots	
+\end{cases}
+$$
+
+We continue with the other elements:
+\begin{enumerate}[start=3]
+	\item Salmon reproduction: this was explained before and should contribute to the salmon growth rate with the term \emph{$d s(t)$}.
+	\item Bear competition: this was also explained above and should contribute to the bear growth rate with the term \emph{$-e b(t)$}.
+	\item Habitat limits: we decided to ignore this.
+\end{enumerate}
+
+We have the model:
+$$
+\begin{cases}
+b'(t) = a \, b(t) \,s(t) -e \, b(t) \\
+s'(t) = - c \, b(t) \,s(t) + d \, s(t)
+\end{cases}
+$$
+
+To find the constants $a,c,d,e$, we would probably need to go back to Step 3 and make further assumptions related to the way that we are measuring them.
 \end{example}
+
+
+
+\paragraph{\emph{Step 5.}} Model assessment
+
+\begin{example}
+
+We can do several things here. I'll let you brainstorm and think of ways you can assess this model.
+
+One of the things that we can do is approximate its solutions using Euler's Method discussed in Module \ref{Approximation}. 
+
+Let us assume, for this example the constants: $a=1$, $e=10$, $c=1$, $d=5$ and a time step $\Delta t = 0.5$ and we assumed an initial population of $b(0)=6$ and $s(0)=9$. Then we obtain the graph below:
+
+
+\begin{center}
+\includegraphics*[width=200pt]{images/module15-lotka-volterra.png}
+\end{center}
+\begin{itemize}
+	\item \url{https://www.desmos.com/calculator/zywspwstwk} \hfill \qrcode{https://www.desmos.com/calculator/zywspwstwk}
+\end{itemize}
+
+The $x-$axis is the bear population while the $y-$axis is the salmon population. Each dot gives gives an approximation of the populations $\Delta t = 0.5$ time units after the previous approximation.\\
+
+
+From this approximation, we can say infer that this model creates a population cycle, but it seems to spiral outwards: 
+\begin{center}
+\includegraphics*[width=200pt]{images/module15-lotka-volterra-more.png}
+\end{center}
+
+\begin{itemize}
+	\item Is having a population cycle a feature that our model should have?
+	\item Is the spiralling outwards a feature we want in our model?
+	\item Is the spiralling a feature of the model or the approximation? If it's from the approximation, how does the model behave?
+\end{itemize}
+
+\end{example}
+
+
+
+\paragraph{\emph{Step 6.}} Putting it all together in a report
+
+We'll skip this part here.
+
+
+
 
