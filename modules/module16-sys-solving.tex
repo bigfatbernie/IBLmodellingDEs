@@ -1,8 +1,390 @@
 In this module you will learn
 \begin{itemize}
-	\item what is an autonomous differential equation
-	\item how to obtain some properties of solutions of autonomous differential equations without solving them
+	\item how to solve systems of two linear first-order ODEs with constant coefficients
 \end{itemize}
 
 \hfill \\
+
+
+First, a system of two first-order ODEs has the form:
+$$
+\begin{cases}
+x'(t) = f\big(t, x(t),y(t)\big) \\	
+y'(t) = g\big(t, x(t),y(t)\big)
+\end{cases}
+$$
+where the functions $f$ and $g$ are continuous and have continuous derivatives. \\
+
+This system could be nonlinear, so we are only considering linear systems with constant coefficients, which means that they have a very specific form:
+$$
+\begin{cases}
+	x'(t) = a x(t) + b y(t) + e\\
+	y'(t) = c x(t) + d y(t) + f
+\end{cases}
+%
+\quad \Leftrightarrow \quad 
+	\begin{bmatrix} x'(t) \\ y'(t) \end{bmatrix}
+	=
+	\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+	\begin{bmatrix} x(t) \\ y(t) \end{bmatrix}
+	+	\begin{bmatrix} e \\ f \end{bmatrix}
+%
+\quad \Leftrightarrow \quad 
+	\vec{r}'(t)
+	=
+	A \, \vec{r}(t) + \vec{b}
+$$
+where
+$$
+\vec{r}(t) = \begin{bmatrix} x(t) \\ y(t) \end{bmatrix}
+\quad , \quad 
+A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+\quad and \quad 
+\vec{b}=\begin{bmatrix} e \\ f \end{bmatrix}.
+$$
+
+The unknown functions we are trying to find is $\vec{r}(t)$. \\
+
+
+\paragraph{\emph{Homogeneous Systems.}} These are systems of the form above with $\vec{b} = \vec{0}$.
+
+This means that we want to find all functions $\vec{r}(t)$ that satisfy
+$$
+\vec{r}'(t) = A \vec{r}(t).
+$$
+
+
+\begin{example}
+Let us start with an example of the same problem where $\vec{r}(t)$ is a ``one-dimensional'' vector, a scalar function $u(t)$, and the matrix $A$ is a ``one-dimensional matrix'', a constant $a$. \\
+
+We want to solve the problem	
+$$
+u'(t) = a \cdot u(t).
+$$
+
+We have seen how to solve these kind of problems before. The solutions are
+$$
+u(t) = c e^{at},
+$$
+where $c$ can be any constant.
+\end{example}
+
+In our two-dimensional case, it is a little more complicated. We can't just write $e^{At}$ where $A$ is a matrix (this expression can make sense, but we would have to find out what is the exponential of a matrix). \\
+
+So we can use the example above to make an \emph{educated guess}: the solution should look like an exponential:
+$$
+\vec{r}(t) = 
+\vec{c} \, e^{\lambda t},
+$$
+where $\vec{c}$ is a constant vector. \\
+
+If our guess is correct, to find $\vec{r}(t)$, we only need to find $\lambda$ and $\vec{c}$. \\
+
+Let us see what happens when we use this guess and plug it into the system of ODEs:
+\begin{align*}
+\vec{r}'(t) = A \vec{r}(t) \quad
+	& \Leftrightarrow \quad \vec{c} \lambda e^{\lambda t} = A \vec{c} e^{\lambda t} \\
+	& \Leftrightarrow \quad \vec{c} \lambda = A \vec{c}.
+\end{align*}
+
+This is a problem you have seen before -- and eigenvalue-eigenvector problem: 
+\begin{itemize}
+	\item $\lambda$ can be any eigenvalue of the matrix $A$
+	\item $\vec{c}$ can be any eigenvector of $A$ associated with $\lambda$ 
+\end{itemize}
+
+This means that we might have multiple choices for eigenvalues and eigenvectors, or even that eigenvalues and eigenvectors involve complex numbers.
+Let us split our study of possible solutions in three cases.
+
+
+
+%%%%%%%%%       %%%%%%%%%       %%%%%%%%%       %%%%%%%%%       %%%%%%%%%
+
+\subsection{Two real and distinct eigenvalues}
+
+\begin{example}
+Consider the problem
+$$
+\vec{r}'(t) = \begin{bmatrix}	
+ 10 & 18 \\ -6 & -11	
+ \end{bmatrix} \, \vec{r}(t).
+$$
+
+Then, the eigenvalues and eigenvectors of the matrix are
+\begin{itemize}
+	\item $\lambda_1=-2$ with eigenvector $\vec{v}_1 = \begin{bmatrix} 3 \\ -2 \end{bmatrix}$
+	\item $\lambda_2=1$ with eigenvector $\vec{v}_2 = \begin{bmatrix} 2 \\ -1 \end{bmatrix}$
+\end{itemize}
+
+This means that we found two solutions:
+$$
+\vec{r}_1(t) = \begin{bmatrix} 3 \\ -2 \end{bmatrix} e^{-2t}
+\quad \text{ and } \quad \vec{r_2}(t) = \begin{bmatrix} 2 \\ -1 \end{bmatrix} e^{t}.
+$$
+
+Then, we can show that 
+$$
+\vec{r}(t) = c_1 \begin{bmatrix} 3 \\ -2 \end{bmatrix} e^{-2t}
++c_2\begin{bmatrix} 2 \\ -1 \end{bmatrix} e^{t}
+$$
+is also a solution of the problem for any constants $c_1$ and $c_2$.
+
+In fact, we can show that this formula captures all possible solutions for this problem.
+\end{example}
+
+
+\begin{video}
+	\begin{itemize}
+		\item \qrvideo{https://youtu.be/YUjdyKhWt6E}
+	\end{itemize}
+\end{video}
+
+
+
+
+%%%%%%%%%       %%%%%%%%%       %%%%%%%%%       %%%%%%%%%       %%%%%%%%%
+
+\subsection{Two complex eigenvalues}
+
+We actually don't need to know a lot about complex numbers to be able to understand how to solve this case.
+The results about complex values that are necessary to know will be included in the box below.
+
+\begin{definition}[Complex numbers]
+\begin{itemize}
+	\item A complex number is a number of the form $z=a+ib$ where $i$ is called the imaginary constant and satisfies $i^2=-1$.
+	\item Given a complex number $z=a+ib$, we call $\overline{z}=a-ib$ its complex conjugate. It satisfies:
+	$$ z \cdot \overline{z} = a^2+b^2 = |z|^2.$$
+
+	\item If a matrix has real components and two complex eigenvalues, then the eigenvalues are complex conjugates of each other. Moreover, the eigenvectors are also complex conjugates of each other.
+	\item Euler's Formula: $e^{i \theta} = \cos(\theta) + i \sin (\theta)$.
+\end{itemize}
+\end{definition}
+
+
+
+
+\begin{example}
+Consider the problem
+$$
+\vec{r}'(t) = \begin{bmatrix}	
+ 1 & 1 \\ -1 & 1
+ \end{bmatrix} \, \vec{r}(t).
+$$
+
+Then, the eigenvalues and eigenvectors of the matrix are
+\begin{itemize}
+	\item $\lambda_1=1+i$ with eigenvector $\vec{v}_1 = \begin{bmatrix} -i \\ 1 \end{bmatrix}$
+	\item $\lambda_2=1-i$ with eigenvector $\vec{v}_2 = \begin{bmatrix} i \\ 1 \end{bmatrix}$
+\end{itemize}
+
+This means that we found two solutions:
+$$
+\vec{r}_1(t) = \begin{bmatrix} -i \\ 1 \end{bmatrix} e^{(1+i)t}
+\quad \text{ and } \quad \vec{r}_2(t) = \begin{bmatrix} i \\ 1 \end{bmatrix} e^{(1-i)t}.
+$$
+
+Then, all solutions of this system of ODEs can be expressed as
+$$
+\vec{r}(t) = c_1 \begin{bmatrix} -i \\ 1 \end{bmatrix} e^{(1+i)t}
++c_2\begin{bmatrix} i \\ 1 \end{bmatrix} e^{(1-i)t}.
+$$
+
+There is a problem with the form of these solutions: they involve complex numbers!
+
+Imagine that we start with a problem where we have two (real) quantities that interact with each other through this system of differential equations.
+Then we expect these quantities to measure in real numbers, not complex.
+
+\begin{itemize}
+	\item This means that we expect \emph{the imaginary part of this solutions to cancel out}.
+\end{itemize}
+
+So let us manipulate this formula using Euler's formula and see if we can re-write in such a way that doesn't involve complex numbers. \\
+
+We have:
+\begin{align*}
+	e^{(1+i)t} &= e^t \cdot e^{it} = e^t \big( \cos(t) + i \sin(t)\big) \\
+	e^{(1-i)t} &= e^t \cdot e^{-it} = e^t \big( \cos(t) - i \sin(t)\big)
+\end{align*}
+
+So our solution expands to:
+$$
+\vec{r}(t) = c_1 \begin{bmatrix} -i \\ 1 \end{bmatrix} e^t \big( \cos(t) + i \sin(t)\big)
++c_2\begin{bmatrix} i \\ 1 \end{bmatrix} e^t \big( \cos(t) - i \sin(t)\big).
+$$
+
+We can now manipulate this expression:
+\begin{align*}
+\vec{r}(t) 
+	& = e^t
+		\begin{bmatrix}
+			-i c_1 	\big( \cos(t) + i \sin(t)\big) + i c_2 \big( \cos(t) - i \sin(t)\big) \\
+			c_1 	\big( \cos(t) + i \sin(t)\big) + c_2 \big( \cos(t) - i \sin(t)\big) \\
+		\end{bmatrix} \\
+	& = e^t 
+		\begin{bmatrix}
+			(c_1+c_2) \sin(t) - i (c_1-c_2) \cos(t) \\
+			(c_1+c_2) \cos(t) + i(c_1-c_2) \sin(t)
+		\end{bmatrix} \\
+	& = e^t \left( (c_1+c_2) \begin{bmatrix} \sin(t) \\ \cos(t) \end{bmatrix}
+		+ i (c_1 -c_2) \begin{bmatrix} - \cos(t) \\ \sin(t) \end{bmatrix}
+		\right)
+\end{align*}
+
+So now we do something that might look like a ``cheating''. We define:
+$$
+a_1 = c_1+c_2 \quad \text{ and } \quad a_2 = i (c_1-c_2).
+$$
+
+
+Then the solution is
+$$
+\vec{r}(t) = a_1\begin{bmatrix} \sin(t) \\ \cos(t) \end{bmatrix} e^t
+		+ a_2 \begin{bmatrix} - \cos(t) \\ \sin(t) \end{bmatrix} e^t.
+$$
+
+This last form doesn't include any complex numbers and is equivalent to the previous form.
+
+\end{example}
+
+\begin{graybox}
+	It may look like the final solution above still includes complex numbers in the constants $a_1$ and $a_2$. 
+	
+	To convince yourself that this is not the case, solve the following exercise.\\
+	
+	Find the unique solution of
+	$$
+	\vec{r}'(t) = \begin{bmatrix}	
+ 		1 & 1 \\ -1 & 1
+		\end{bmatrix} 
+		\, \vec{r}(t)
+	\qquad \text{ with} \qquad
+	\vec{r}(0) = \begin{bmatrix}
+ 			-3 \\ 2
+	 \end{bmatrix}
+	 $$
+	 
+	 Find the constants $c_1, c_2$ and then the constants $a_1,a_2$. Which ones are complex and which ones are real?
+\end{graybox}
+
+\begin{video}
+	\begin{itemize}
+		\item \qrvideo{https://youtu.be/TRVS5Wo9LoM}
+	\end{itemize}
+\end{video}
+
+
+
+%%%%%%%%%       %%%%%%%%%       %%%%%%%%%       %%%%%%%%%       %%%%%%%%%
+
+\subsection{One repeated real eigenvalue}
+
+
+\begin{example}
+Consider the problem
+$$
+\vec{r}'(t) = \begin{bmatrix}	
+ 5 & 0 \\ 1 & 5	
+ \end{bmatrix} \, \vec{r}(t).
+$$
+
+Then, there is only one eigenvalue with one eigenvector
+\begin{itemize}
+	\item $\lambda_1=5$ with eigenvector $\vec{v}_1 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$, which yield a solution $\vec{r}_1(t) = c_1 \begin{bmatrix} 0 \\ 1 \end{bmatrix} e^{5t}$.
+\end{itemize}
+
+This is a \emph{problem} because we need two solutions to put together and obtain two constants, as in the two previous cases.
+%\end{example}
+
+\begin{graybox}
+To convince yourself that it is a problem, try solving the problem above with initial conditions
+$$
+\vec{r}(0) = \begin{bmatrix}	0 \\ 4 \end{bmatrix}.
+$$
+
+What about with initial conditions
+$$
+\vec{r}(0) = \begin{bmatrix}	 1 \\ 4 \end{bmatrix} \quad ?
+$$
+\end{graybox}
+
+%\begin{example}
+
+This means that we ware missing one solution -- that will enable us to solve the problem for any initial conditions. \\
+
+
+Let us re-write the original problem in a different form by letting 
+$$
+\vec{r}(t) = \begin{bmatrix} x(t) \\ y(t)\end{bmatrix}.
+$$
+Then we have
+$$
+\begin{cases}
+x'(t) = 5 x(t) \\
+y'(t) = x(t) +5 y(t)	
+\end{cases}
+$$
+These are two ODEs, but we can solve the first and then tackle the second one.
+We obtain
+$$
+\begin{cases}
+	x(t) = c_2 e^{5t} \\
+	y(t) = 	c_1 e^{5t} + c_2 t e^{5t} 
+\end{cases}
+\quad \Leftrightarrow \quad
+	\vec{r}(t) = \begin{bmatrix}
+		c_2 \\ c_1 + c_2 t
+	\end{bmatrix} e^{5t}
+\quad \Leftrightarrow \quad
+	\vec{r}(t) = c_1 \begin{bmatrix} 0 \\ 1 \end{bmatrix} e^{5t} + c_2
+	\begin{bmatrix}	1 \\ t
+	\end{bmatrix} e^{5t}
+$$
+\end{example}
+
+\begin{graybox}
+Observe that the solution we found has the form:
+$$
+	\vec{r}(t) = \underbrace{c_1 \begin{bmatrix} 0 \\ 1 \end{bmatrix} e^{5t}}_{\text{solution } \vec{r}_1(t)} + c_2 \left( 
+	\underbrace{\begin{bmatrix}	1 \\ 0 \end{bmatrix}}_{\text{new vector } \vec{w}} e^{5t} + \underbrace{\begin{bmatrix} 0  \\ 1 
+	\end{bmatrix}}_{\vec{v}_1} t e^{5t}\right).
+$$
+
+So we can make another \emph{educated guess} that the solution we were missing has the form:
+$$
+\vec{r}_2(t) = \left(\vec{w} + \vec{v}_1 t\right) e^{\lambda t}.
+$$
+
+With this form in mind, we can plug it into the system of ODEs \quad $\vec{r}'(t) = A \vec{r}(t)$ \quad, which has exactly one eigenvalue $\lambda$, to get:
+$$
+\lambda \vec{w}e^{\lambda t} + \lambda \vec{v}_1 t e^{\lambda t} + \vec{v}_1 e^{\lambda t}
+= A \vec{w} e^{\lambda t} + A \vec{v}_1 t  e^{\lambda t}
+$$
+which is equivalent to:
+$$
+\lambda \vec{w} + \underbrace{\lambda \vec{v}_1}_{=A \vec{v}_1} t  + \vec{v}_1
+= A \vec{w}  + A \vec{v}_1 t 
+	\quad \Leftrightarrow \quad
+	\left( \lambda I - A \right ) \vec{w} = \vec{v}_1
+$$
+%which becomes
+%$$
+%\lambda \vec{w} + \vec{v}_1
+%= A \vec{w}  
+%	\quad \Leftrightarrow \quad
+%	\left( \lambda I - A \right ) \vec{w} = \vec{v}_1
+%$$
+
+Since at this point we already know $\lambda$ and $\vec{v}_1$, we can now find $\vec{w}$ in a similar way used to find the eigenvector $\vec{v}_1$. The vector $\vec{w}$ is called a \emph{generalized eigenvector} of $A$ associated with the eigenvalue $\lambda$.
+
+\end{graybox}
+
+\begin{video}
+	\begin{itemize}
+		\item \qrvideo{https://youtu.be/hCShTLmeZN4}
+	\end{itemize}
+\end{video}
+
+
+
+
 
