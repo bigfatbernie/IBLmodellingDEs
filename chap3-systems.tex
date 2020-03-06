@@ -224,18 +224,104 @@ $$
 \newpage
 
 \question
-	Core Exercise with several parts
+	Consider the following model for cheetah's and lions, where
+	$$ \vec{p}(t) = \begin{bmatrix} \ell(t) = \text{population of lions} \\ c(t) = \text{population of cheetahs} \end{bmatrix} $$
+	which satisfies
+	$$
+	\frac{d\,\vec{p}}{dt} = \begin{bmatrix}
+ 		1 & -1 \\
+ 		-3 & 1
+ 	\end{bmatrix}
+	$$
+	
+	The general solution is:
+	$$
+	\vec{p}(t) = c_1 \begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix} e^{(1-\sqrt{3})t} + c_2 \begin{bmatrix} -1 \\ \sqrt{3} \end{bmatrix} e^{(1+\sqrt{3})t}.
+	$$
 \begin{parts}
-	\item Part 1
-	\item Part 2
+	\item Without computing them, what are the eigenvalues and eigenvectors of the matrix?
+	\item Sketch the graph of the solution with $c_1=\pm 1$ and $c_2=0$.
+	\item Sketch the graph of the solution with $c_1=0$ and $c_2=\pm 1$.
+	\item When one constant is set to 0, what is the shape of the graph? Is it always like that? Can you prove it?
+	\item Sketch the graph of the solution with $c_1=\pm 1$ and $c_2=\pm 1$.
+	\item Provide an interpretation of the different types of solutions.
 \end{parts}
+
+\begin{annotation}
+	\begin{goals}
+	At the end, let the students know that the equilibrium is called \emph{saddle point} and it is \emph{unstable}, because solutions go away from it.
+	
+	For the interpretation question, when one population hits zero, it is extinct, so the graph doesn't make sense. 
+	
+	We can interpret that if a population becomes extinct, then the other will behave as it would without competitors: grow exponentially fast!
+	\end{goals}
+\end{annotation}
+
+
+
+
+
+
+\bookonlynewpage
+
+\question
+	Let us expand the model from the previous exercise to:
+	$$ \vec{p}(t) = \begin{bmatrix} \ell(t) = \text{population of lions} \\ c(t) = \text{population of cheetahs} \end{bmatrix} $$
+	which satisfies
+	$$
+	\frac{d\,\vec{p}}{dt} = \begin{bmatrix}
+ 		1 & -1 \\
+ 		-3 & 1
+ 	\end{bmatrix} \vec{p}
+ 	+ \begin{bmatrix}
+ 		- 10 \\ 50
+	 \end{bmatrix} \vec{p}.
+	$$
+	
+	The extra term corresponds to the effect of harvesting 10 lions and bringing in 50 cheetahs every year to the reserve. \\
+	
+	The general solution is:
+	$$
+	\vec{p}(t) = \begin{bmatrix} 20 \\ 10 \end{bmatrix} +
+		c_1 \begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix} e^{(1-\sqrt{3})t} + c_2 \begin{bmatrix} -1 \\ \sqrt{3} \end{bmatrix} e^{(1+\sqrt{3})t}.
+	$$
+\begin{parts}
+	\item Sketch the phase portrait.
+	\item Provide an interpretation of the different types of solutions.
+\end{parts}
+
+\begin{annotation}
+	\begin{goals}
+		Some students might try to sketch everything from scratch.
+		Remind them that the solutions look very similar and they only have to adapt the phase portrait they had before.
+	\end{goals}
+\end{annotation}
+
 
 
 \bookonlynewpage
 
 
 \question
-	One more core exercise
+	For each of the following general solutions, sketch the phase portrait.
+\begin{parts}
+	\item $	\vec{r}(t) = c_1 \begin{bmatrix} 2 \\ 1 \end{bmatrix} e^{2t} + c_2 \begin{bmatrix} -1 \\ 1 \end{bmatrix} e^{5t}.$
+	\item $	\vec{r}(t) = c_1 \begin{bmatrix} 2 \\ 1 \end{bmatrix} e^{-2t} + c_2 \begin{bmatrix} -1 \\ 1 \end{bmatrix} e^{-5t}.$	
+\end{parts}
+\begin{annotation}
+	\begin{goals}
+	At the end, let the students know that these equilibria are called 
+	\begin{itemize}
+		\item \emph{source} and it is \emph{unstable}, because solutions go away from it.
+		\item \emph{sink} and it is \emph{asymptotically stable}, because solutions converge to it.
+	\end{itemize}
+	
+	If there is time, students can think about:
+
+	Given a matrix $A$, which part of $A$ indicates whether the equilibrium is stable / unstable? Which part indicates whether it's a sink/source vs spiral sink/source?
+	\end{goals}
+\end{annotation}
+
 
 
 
