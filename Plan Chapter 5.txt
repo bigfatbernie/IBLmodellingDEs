@@ -1,0 +1,16 @@
+
+*21*	How to solve
+
+		a) expand to spot pattern	-> prove using induction
+		b) solutions seem exponential (like ODEs) -> try exponential form u_k = r^k 
+			exercise: show r^k <=> e^{rk}
+
+*22*	Modelling 1 difference equation
+
+*23*	Modelling systems of difference equations
+
+*24*	Nonlinear models
+
+
+
+Appendix:	6.2. Mathematical Induction
