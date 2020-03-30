@@ -1,294 +1,277 @@
 \subsection{Mathematical Induction Review}
 \label{app:induction}
 
-\begin{center}\textbf{\color{cyan}Algebra of Solving Systems of 2 Linear Equations} 	
-\end{center}
 
-We can write a linear system of equations 
-\begin{align*}
-a_{11} x_1 + a_{12} x_2 &= b_1 \\
-a_{21} x_1 + a_{22} x_2 &= b_2
-\end{align*}
-into matrix form
-$$
-{\bf A} \vec{x} = \vec{b},
-$$
-where
-$$
-{\bf A} 
-	= \begin{pmatrix} 
-		a_{11} & a_{12} \\
-		a_{21} & a_{22}
-	\end{pmatrix}
-	\quad \text{,} \quad 
-\vec{x}  
-	= \begin{pmatrix} 
-		x_{1} \\
-		x_{2} 
-	\end{pmatrix}
-	\quad \text{ and } \quad 
-\vec{b}  
-	= \begin{pmatrix} 
-		b_{1} \\
-		b_{2} 
-	\end{pmatrix} .
-$$
 
-We can solve a system like this one in several different ways.
+
+
+
+Mathematical induction is a very powerful tool for proving results. It allows us to prove generalized results. 
+Its shortcoming is that you already have to suspect what the solution is. It then allows you to prove it.
+
+
+\begin{definition}[The Principle of Mathematical Induction]
+	
+Assume that ${\bf P}(1)$, ${\bf P}(2)$, ${\bf P}(3), \ldots$ is an infinite sequence of mathematical statements. \\
+
+\begin{tabular}{ll|ll}
+{\bf If}  & & {\bf If} \\
+	& (a) \quad ${\bf P}(1)$ is true, 		& & first domino falls \\
+	& 	{\bf and} & & {\bf and} \\
+	& (b) \quad  for any $k$, ${\bf P}(k)$ implies ${\bf P}(k+1)$ 	
+		& & if a domino falls, then the next one falls \\
+{\bf then} & & & {\bf then} \\
+	& all the statements in the sequence are true	& & all dominoes fall!
+\end{tabular}
+
+\end{definition}
+
 
 \begin{example}
-Solve the system
+For any $n\in \N$, $1+3+5+\cdots+(2n-1) = n^2$. \\
+
+Let us prove this formula using Mathematical Induction.
+
+\paragraph{Proof.}
+If $n=1$, we get $1=1^2$, which is true -- ${\bf P}(1)$ holds.
+
+Assume that $1+3+5+\cdots+(2k-1) = k^2$ for some $k$.
+Then
 \begin{align*}
-3x_1+2x_2 &= 7 \\
-2x_1+3x_2 & = 8.
+1+3+5+\cdots+\big(2(k+1)-1\big) 
+	& = \underbrace{1+3+5+\cdots+(2k-1)}_{= k^2 \text{ by induction hypothesis}} + (2k+1) \\
+	& = k^2+(2k+1)\\
+	& = k^2 + 2k + 1\\
+	& = (k+1)^2.
 \end{align*}
+By induction, the equality holds for all $n\in \N$.
+
 \end{example}
 
-\begin{definition}[Solution by substitution.] 
-We can write
-$$
-x_2 = \frac{7-3x_1}{2},
-$$
-and use this on the second equation
-$$
-2x_1 + 3\frac{7-3x_1}{2} = 8
-	\quad \Leftrightarrow \quad 4x_1 + 21-9x_1=16
-	\quad \Leftrightarrow \quad -5x_1 =-5
-	\quad \Leftrightarrow \quad x_1 =1
-$$
-Then re-use the first equation we obtained to get $x_2 = 2$.
-	
-\end{definition}
-
-\begin{definition}[Solution by Cramer's rule]
-	
-Using the same method of substitution on the general system, we obtain
-$$
-a_{12} x_2 = b_1 - a_{11} x_1,
-$$
-and we use this into the second equation (after multiplying by $a_{12}$)
-$$
-a_{12} a_{21} x_1 = a_{22} b_1 - a_{11}a_{22} x_1 = a_{12} b_2
-$$
-This implies 
-$$
-x_1 
-	= \frac{b_1 a_{22} - a_{12} b_2}{a_{11}a_{22} - a_{12}a_{21}}
-	= \frac{
-		\begin{vmatrix} 
-			b_1 & a_{12} \\
-			b_2 & a_{22}
-		\end{vmatrix}
-		}{
-		\begin{vmatrix} 
-			a_{11} & a_{12} \\
-			a_{21} & a_{22}
-		\end{vmatrix}
-		}
-$$
-Then we use this to obtain
-$$
-x_2
-	= \frac{a_{11} b_2  - b_1 a_{21} }{a_{11}a_{22} - a_{12}a_{21}}
-	= \frac{
-		\begin{vmatrix} 
-			a_{11} & b_1 \\
-			a_{21} & b_2
-		\end{vmatrix}
-		}{
-		\begin{vmatrix} 
-			a_{11} & a_{12} \\
-			a_{21} & a_{22}
-		\end{vmatrix}
-		}
-$$
-
-\end{definition}
-
-\begin{important}
-This implies that there is a unique solution of the system if and only if
-$$
-\det ({\bf A}) = a_{11}a_{22} - a_{12}a_{21} \neq 0.
-$$
-\end{important}
-
-
-
-\begin{definition}[Solution by inverse matrix]
- A matrix is {\bf invertible} or {\bf nonsingular} \quad iff \quad ${\bf A}^{-1}$ exists \quad iff \quad $\det({\bf A}) \neq 0$.
-
-If the matrix {\bf A} is invertible, then we can write
-$$
-{\bf A}^{-1} 
-	= \frac{1}{\det({\bf A})} \begin{pmatrix}
-						a_{22} & -a_{12} \\
-						-a_{21} & a_{11}
-						\end{pmatrix}
-$$
-
-We can now use this to solve the system of equations:
-\begin{align*}
-{\bf A} \vec{x}	& = \vec{b}  \\
-{\bf A}^{-1} {\bf A} \vec{x}	& = {\bf A}^{-1} \vec{b}  \\
-{\bf I} \vec{x}	& = {\bf A}^{-1} \vec{b}  \\
-\vec{x}	& = {\bf A}^{-1} \vec{b}
-\end{align*}
-
-\end{definition}
-
-
-
-
-
-\begin{definition}[Homogeneous Systems]
-	
-A system of equations is called \emph{homogeneous} if $\vec{x}=\vec{0}$ is a solution, which means that $\vec{b} = 0$:
-$$
-{\bf A} \vec{x} = \vec{0}.
-$$
-
-Otherwise, it is called \emph{nonhomogeneous}.
-\end{definition}
-
-
-
-\hfil
-
-
-
-
-
-
-
-\begin{center}\textbf{\color{cyan}Eigenvalues and Eigenvectors} 	
-\end{center}
-
-
-We can think of the matrix multiplication $\vec{y}={\bf A}\vec{x}$ as a mapping or transformation: given a vector $\vec{x}$ it transforms it into a different vector $\vec{y}$.
-
-In many applications, it is important to know which vectors $\vec{x}$ are transformed into multiples of themselves.
-
-These vectors satisfy the property
-$$
-{\bf A}\vec{x} = \lambda \vec{x} \qquad \Leftrightarrow \qquad ({\bf A} - \lambda {\bf I} ) \vec{x} = \vec{0}.
-$$
-
-One such vector is $\vec{x}=\vec{0}$. But that's not very interesting. We want to look for nonzero vectors that satisfy this property.
-
-These vectors are called {\bf eigenvectors} and the corresponding $\lambda$ is called an {\bf eigenvalue}.
-
-\begin{important}
-The second formulation above implies that the matrix $({\bf A} - \lambda {\bf I})$ is singular, otherwise the unique solution would be $\vec{x}=\vec{0}$. 
-So that implies that 
-\begin{equation}\tag{\bf characteristic equation}
-\det({\bf A} - \lambda {\bf I}) = 0
-\end{equation}
-\end{important}
-
-
 
 \begin{example}
-Let us find the eigenvalues and eigenvectors for
-$$
-{\bf A} = \begin{pmatrix} 1 & 8 \\ 4 & 5 \end{pmatrix}.
-$$
+	
+For any $x\in \R$ with $x\geq -1$ and $n \in \N$, then $(1+x)^n \geq 1+nx$. \hfill (Bernoulli's Inequality)
 
-First we solve the characteristic equation:
-$$
-\det({\bf A} - \lambda {\bf I}) 
-	= \begin{vmatrix}
-		1 - \lambda & 8 \\	
-		4 & 5 - \lambda
-	\end{vmatrix}
-	= (1-\lambda)(5-\lambda) - 32 = 0
-\qquad \Leftrightarrow \qquad
-	\lambda^2 - 6 \lambda -27=0
-$$
-which implies that
-$$
-\lambda = 3 \pm \sqrt{9 + 27} = 3 \pm 6
-$$
+\paragraph{Proof.}
+For $n=1$, $1+x\geq 1+x$, which is true!
 
+Assume that $(1+x)^k \geq 1+kx$. Then
+\begin{align*}
+(1+x)^{k+1} 
+	& = (1+x)^k (1+x) 
+		\geq (1+kx)(1+x) \\
+	& = 1 + x + kx^2 + kx 
+		= 1+(k+1)x+kx^2 \\
+	& \geq 1+(k+1)x.
+\end{align*}
+By induction, the claim holds for all $n \in \N$.
 
-\subparagraph{Eigenvalue $\lambda_1 = -3$. } To find the eigenvector, we write its equation
-$$
-({\bf A} - \lambda_1 {\bf I} ) \vec{x} = \vec{0}
-\qquad \Leftrightarrow \qquad
-\begin{pmatrix}
-	4 & 8 \\
-	4 & 8
-\end{pmatrix}
-\begin{pmatrix}
-x_1 \\ x_2 
-\end{pmatrix}
-	= \begin{pmatrix}
-	0 \\ 0
-	\end{pmatrix}
-$$
-which implies that
-$$
-4x_1 +8x_2 = 0
-\qquad \Leftrightarrow \qquad
-x_1 = -2 x_2.
-$$
-So one eigenvector for this eigenvalue is
-$$
-\vec{x}_1 = \begin{pmatrix}
-	-2 \\ 1
-	\end{pmatrix}
-$$
+\begin{graybox}
+	
+In the proof, we didn't use the fact that $x\geq -1$, but 
+for $n=3$ and $x=-4$, $(1+x)^n = -27 \not\geq -11 = 1+nx$.  \\
 
+Where did we use the hypothesis $x\geq -1$?
+\end{graybox}
 
-\subparagraph{Eigenvalue $\lambda_2 = 9$. } To find the eigenvector, we write its equation
-$$
-\begin{pmatrix}
-	-8  & 8 \\
-	4 & -4
-\end{pmatrix}
-\begin{pmatrix}
-x_1 \\ x_2 
-\end{pmatrix}
-	= \begin{pmatrix}
-	0 \\ 0
-	\end{pmatrix}
-$$
-which implies that
-$$
--8x_1 +8x_2 = 0
-\qquad \Leftrightarrow \qquad
-x_1 = x_2.
-$$
-So one eigenvector for this eigenvalue is
-$$
-\vec{x}_2 = \begin{pmatrix}
-	1 \\ 1
-	\end{pmatrix}
-$$
 \end{example}
 
 
 
 
 
+
+%%%%%%%%%%
+
+\newpage
+
+\begin{definition}[Principle of Strong Mathematical Induction]
+
+Assume that ${\bf P}(1)$, ${\bf P}(2)$, ${\bf P}(3), \ldots$ is an infinite sequence of mathematical statements. \\
+
+\begin{tabular}{lll|ll}
+{\bf If} & & & {\bf If} \\
+	& (a) & ${\bf P}(1)$ is true, 		 & & first domino falls \\
+	&  {\bf and} & & & {\bf and} \\
+	& (b) &  For any $k$, ${\bf P}(1), \ldots, {\bf P}(k)$ implies ${\bf P}(k+1)$ 	& & if all previous dominos fell, \\
+	& & & & then the next one falls \\
+{\bf then} & & & {\bf then} \\
+	& \multicolumn{2}{l|}{all the statements in the sequence are true} & & all dominoes fall!
+\end{tabular}
+
+\end{definition}
+
+
+\begin{example}
 \begin{theorem}
-Let {\bf A} have real or complex eigenvalues $\lambda_1$ and $\lambda_2$ such that $\lambda_1 \neq \lambda_2$ and let the corresponding eigenvectors be
-$$
-\vec{x}_1 = \begin{pmatrix} x_{11}  \\ x_{21} \end{pmatrix}
-\qquad \text{ and } \qquad
-\vec{x}_2 = \begin{pmatrix} x_{12}  \\ x_{22} \end{pmatrix}.
-$$
-If {\bf X} is the matrix with columns taken from the eigenvectors:
-$$
-{\bf X} = \begin{pmatrix}
-x_{11} & x_{12} \\
-x_{21} & x_{22}
-\end{pmatrix},
-$$
-then 
-$$\det({\bf X}) \neq 0.$$
+Every number $n\in\N, n\geq 2$ can be written as a product of primes (or is a prime).
 \end{theorem}
 
+\paragraph{Proof.}
+Base case: $n=2$ is a prime.
+
+Assume that the Theorem holds for $n=2,3,4,\ldots, k$ and consider $n=k+1$.
+
+If $k+1$ is prime, the claim holds.
+
+If $k+1$ is not a prime, then it is divisible by some $2 \leq m \leq k$: $k+1=m\cdot \ell$ for some $2 \leq m,\ell\leq k$.
+By hypothesis, both $m$ and $\ell$ are products of primes, hence so is $k+1$.
+The Theorem follows by strong induction.
+\end{example}
 
 
 
 
+%\begin{ex} How many cuts are needed to cut a chocolate bar with $n$ squares into $1\times 1$ pieces?
+%\end{ex}
+%
+%\paragraph{Claim: } $n-1$ cuts are needed to separate $n$ squares. \\
+%
+%\begin{minipage}{12cm}
+%\begin{proof}
+%For $n=1$, no cuts are needed, so the claim holds.
+%
+%Assume that the claim holds for $n=1,2,3,\ldots,k$ and consider a bar with $k+1$ squares.
+%Perform one cut to obtain smaller bars with $m$ and $\ell$ squares (so $k+1=m+\ell$).
+%By assumption, $m-1$ and $\ell-1$ are needed to cut the smaller bars, so to cut the original bar, we need
+%$$
+%1 + m-2+\ell-1 = m + \ell -1 = k
+%$$
+%The claim holds for $n=k+1$, so by strong induction it holds for all $n\in\N$.
+%\end{proof}
+%\end{minipage}
+%\qquad
+%\begin{minipage}{125pt}
+%\includegraphics*[width=100pt]{figures/chocobar.pdf}
+%\end{minipage}
+%
+%
+%
+%\begin{thm}
+%Every $n\in \N$ can be written as a sum of distinct nonnegative integer powers of $2$.
+%\end{thm}
+%
+%\begin{ex}
+%\begin{align*}
+%17 & = 2^0 + 2^4 \\
+%42 & = 2^1 + 2^3+ 2^5 \\
+%65 & = 2^0 + 2^6
+%\end{align*}
+%\end{ex}
+%
+%\begin{proof}
+%The Theorem holds for $n=1$, since $1 = 2^0$.
+%
+%Assume that it works for $n=1,2,\ldots, k$ and consider $n=k+1$.
+%
+%If $k$ is even then by assumption $k=2^{a_1} + 2^{a_2} + \cdots + 2^{a_\ell}$ for $0<a_1<a_2<\cdots<a_\ell$ and 
+%$$
+%k+1 = 2^0 + 2^{a_1} + 2^{a_2} + \cdots + 2^{a_\ell}
+%$$
+%is the required representation.
+%
+%If $k$ is odd, then $k+1$ is even, hence $k+1=2 m$ for some $m\in \N$. By assumption, $m=2^{a_1} + 2^{a_2} + \cdots + 2^{a_\ell}$ for some $0\leq a_1<a_2<\cdots<a_\ell$ and hence
+%$$
+%k+1 = 2^{a_1+1} + 2^{a_2+1} + \cdots + 2^{a_\ell+1}.
+%$$
+%By strong induction, the Theorem follows.
+%\end{proof}
+%
+%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	practice problems
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercises}
+		% Topics:
+		% 
+	\begin{problist}
+		% 
+		\prob Is the triangle inequality true for more than two numbers?
+			$$
+			|x_1 + x_2 + \cdots + x_n| \stackrel{?}{\leq} |x_1| + |x_2| + \cdots + |x_n| 
+			$$
+			If it is, prove it.
+			
+		\prob Is the AGM inequality true for any $x_1, x_2, \ldots, x_n \geq 0$?
+			$$
+			\sqrt{x_1 x_2 \cdots x_n} \stackrel{?}{\leq}\frac{x_1 + x_2 + \cdots + x_n}{n}
+			$$
+			If it is, prove it.
+			
+		\prob Prove that for any $n \in \N$, $2^{6n}+3^{2n-2}$ is divisible by $5$.
+
+
+		\prob How many subsets does a set $S$ with $n$ elements have (including $S$ and $\emptyset$)?
+		
+		\prob Show that If $x_1, \ldots, x_n \in [0,1]$ then $\displaystyle \prod_{i=1}^n (1-x_i) \geq 1 - \sum_{i=1}^n x_i$
+
+		\prob Can you use Mathematical induction to prove that $P(m), P(m+1), P(m+2),\ldots$ are true? If so, how?
+
+		\prob Can you use Mathematical induction to prove that $P(2), P(4), P(6), P(8), \ldots$ are true? If so, how?
+
+		\prob Can you use Mathematical induction to prove that $P(1), P(3), P(5), P(7), \ldots$ are true? If so, how?
+
+		\prob For which $n \in \N$, $2^n \geq (n+1)^2$? Prove your answer.
+
+		\prob Show that for even $n$'s, $n(n^2+3n+2)$ is divisible by $24$.
+
+		\begin{center}
+			\includegraphics*[width=15pt]{images/app-ind-L-shape.pdf}
+		\end{center}
+		\prob Prove that for any $n \in \N$, a $2^n \times 2^n$ checkerboard with one single square removed has an L--tiling (i.e., can be covered with L--shapes).
+%
+%{\it Proof. } 
+%For $k=1$, a $2\times 2$ board with one square removed has an L--shape, so it can be covered with a single L.
+%
+%Assume for $k$ and prove for $k+1$:
+%
+%\begin{minipage}{10cm}
+%Divide the board in 4 $2^k \times 2^k$ boards. One of the smaller boards will have a square missing.
+%
+%Remove three squares from the centre from each of the other 3 boards - forming an L--shape as in the figure.
+%We then have 4 boards with dimensions $2^k \times 2^k$ with one square removed.
+%
+%By induction hypothesis, we can cover each of these boards with L--shapes and we can cover the middle gap with one L--shape.
+%Therefore the $2^{k+1} \times 2^{k+1}$ board has an L--tiling, and the claim follows by induction. \qed
+%\end{minipage}
+%\quad
+%\begin{minipage}{150pt}
+%\includegraphics*[width=150pt]{images/app-ind-2k1_board.pdf}
+%\end{minipage}
+
+		\prob Read the following proof:
+		
+		\begin{theorem} All horses have the same colour.
+		\end{theorem}
+		
+		\begin{graybox}
+			
+		\paragraph{Proof.}
+		Assume that the claim holds for groups of $k$ horses, and consider a group with $k+1$ horses $S = \{h_1, \ldots, h_{k+1}\}$.\\
+		
+		By hypothesis, the horses in $A = \{h_1,\ldots, h_k\}$ and $B = \{h_2, \ldots, h_{k+1}\}$ have the same colour. Since the horse $h_2$ is in both groups, we deduce that the colour of the horses in $A$ must be the same as of these in $B$.  \\
+		
+		In conclusion, the horses in $S = A \cup B$ must have the same colour, and the claim holds by induction.	
+		\end{graybox}
+		
+		This proof is flawed. Explain how.
+		
+
+
+%
+%\paragraph{The proof above is FALSE: } 
+%For $k=1$, $k+1=2$ and $A = \{h_1\}$ and $B = \{h_2\}$, so there are no common horses to $A$ and $B$ an the argument that the colour in $A$ is the same as in $B$ fails!
+%
+%(it's like we proved that the first domino falls and if a domino falls the next one also falls, except the second one never falls!)
+
+		
+	\end{problist}
+\end{exercises}
