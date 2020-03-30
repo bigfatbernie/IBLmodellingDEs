@@ -50,7 +50,7 @@
 \begin{module}{Introduction to Difference Equations}
 	\label{diff:intro}
 
-	\input{modules/module20-diff-intro.tex}
+	\input{modules/module23-diff-intro.tex}
 %	\input{modules/module20-diff-intro-exercises.tex}
 \end{module}
 
@@ -109,8 +109,8 @@
 \begin{module}{Solving Difference Equations}
 	\label{diff:solve}
 
-	\input{modules/module21-diff-solve.tex}
-	\input{modules/module21-diff-solve-exercises.tex}
+	\input{modules/module24-diff-solve.tex}
+	\input{modules/module24-diff-solve-exercises.tex}
 \end{module}
 
 
@@ -169,17 +169,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  MODULE - Modelling with One Difference Equation
+%  MODULE - Modelling with Difference Equations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-\begin{module}{Modelling with One Difference Equation}
+\begin{module}{Modelling with Difference Equations}
 	\label{diff:model}
 
-	\input{modules/module22-diff-model.tex}
-	\input{modules/module22-diff-model-exercises.tex}
+	\input{modules/module25-diff-model.tex}
+	\input{modules/module25-diff-model-exercises.tex}
 \end{module}
 
 
@@ -200,17 +200,99 @@
 \newpage
 
 \question
-	Core Exercise with several parts
+	Let us expand on the economic example above.
+	
+	We put a certain amount of money in a savings bank account with an annual interest rate of $p\%$, and compounded at regular periods of $\alpha$ (in years). \\
+	
+	Even though we call $p\%$ the annual interest rate, because it is compounded during the year, at the end of the year the effective annual interest rate $p_{\rm eff}\%$ is actually higher.
+	
+	Calculate the effective interest rate $p_{\rm eff}\%$.
+
+\begin{annotation}
+\begin{goals}
+	The effective annual interest rate is the interest rate with a compounding period of 1 year that gives the same result s the rate of $p\%$ compounded every $\alpha$ years.
+\end{goals}
+\end{annotation}
+
+	
+
+\bookonlynewpage
+
+
+
+\question
+	Given a population with
+	\begin{itemize}
+		\item $\mu=$ probability that an individual will die between two seasons.
+	\end{itemize}
 \begin{parts}
-	\item Part 1
-	\item Part 2
+	\item Define the following quantity
+	\begin{itemize}
+		\item $P(k)=$probability that an individual born at season $0$ is alive at the beginning of season $k$.
+	\end{itemize}
+	Find a model for $P(k)$.
+
+	\item What is the probability of the individual dying at age $k$?
+	\item What is the average lifespan of an individual in this population?
 \end{parts}
+
+\begin{annotation}
+\begin{goals}
+\begin{itemize}
+	\item For the first part, it might be necessary to give the questions:
+	\begin{enumerate}[label=(\alph*)]
+		\item What is the probability of dying between seasons $(k-1)$ and $k$?
+		\begin{itemize}
+			\item Find an expression that uses $\mu$.
+			\item Find an expression that does not use $\mu$.
+		\end{itemize}
+	\end{enumerate}
+	\item For the last part, the average lifespan is the average of $P(k)$:
+	$$ L = \sum_{k=0}^\infty k P(k) $$
+	\item Give the hint: $\displaystyle \sum_{k=0}^\infty k r^k = \frac{r}{(r-1)^2}$
+\end{itemize}	
+\end{goals}
+\end{annotation}
+
+
 
 \bookonlynewpage
 
 
 \question
-	One more core exercise
+	Consider a population of special rabbits. Once a pair of rabbits is born, they grow and one year later they are still immature. But two years after they are born they give birth to another pair of rabbits.
+	
+	Model this population of rabbits.
+	
+	
+
+
+\bookonlynewpage
+
+
+\question
+	Consider another population of rabbits. This is the lifecycle of a pair of rabbits:
+	\begin{enumerate}[label=(year \arabic*)]
+		\item Born
+		\item Immature (no babies)
+		\item Young Adult (2 pairs of babies)
+		\item Adult (1 pair of babies)
+		\item Old (no babies)
+		\item Die
+	\end{enumerate}	
+	
+	Model this population of rabbits.
+	
+\begin{annotation}
+	\begin{goals}
+		Students might try to find a pattern. 
+		
+		It is possible, but very difficult.
+		
+		Hint: Use a system of difference equations.
+	\end{goals}
+\end{annotation}
+	
 
 
 %
@@ -266,26 +348,73 @@
 
 
 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  MODULE - Models for Two or More Interconnected Quantities
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%\begin{module}{Models for Two or More Interconnected Quantities}
+%	\label{diff:sys}
+%
+%	\input{modules/module26-diff-sys.tex}
+%	\input{modules/module26-diff-sys-exercises.tex}
+%\end{module}
+%
+%
+%
+%\begin{lesson}
+%	\Title{Models for Two or More Interconnected Quantities}
+%
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item Bla
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
+%
+%\end{lesson}
+%
+%
+%\newpage
+%
+%\question
+%	Core Exercise with several parts
+%\begin{parts}
+%	\item Part 1
+%	\item Part 2
+%\end{parts}
+%
+%\bookonlynewpage
+%
+%
+%\question
+%	One more core exercise
+%
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  MODULE - Models for Two or More Interconnected Quantities
+%  MODULE - Analysis of Difference Equations
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-\begin{module}{Models for Two or More Interconnected Quantities}
-	\label{diff:sys}
+\begin{module}{Analysis of Difference Equations}
+	\label{diff:analysis}
 
-	\input{modules/module23-diff-sys.tex}
-	\input{modules/module23-diff-sys-exercises.tex}
+	\input{modules/module26-diff-analysis}
+	\input{modules/module26-diff-analysis-exercises.tex}
 \end{module}
 
 
 
 \begin{lesson}
-	\Title{Models for Two or More Interconnected Quantities}
+	\Title{Analysis of Difference Equations}
 
 	\Heading{Objectives}
 	\begin{itemize}
@@ -316,6 +445,7 @@
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  MODULE - Nonlinear Models
@@ -327,8 +457,8 @@
 \begin{module}{Nonlinear Models}
 	\label{diff:nonlinear}
 
-	\input{modules/module24-diff-nonlinear}
-	\input{modules/module24-diff-nonlinear-exercises.tex}
+	\input{modules/module27-diff-nonlinear}
+	\input{modules/module27-diff-nonlinear-exercises.tex}
 \end{module}
 
 

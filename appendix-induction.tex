@@ -1,0 +1,294 @@
+\subsection{Mathematical Induction Review}
+\label{app:induction}
+
+\begin{center}\textbf{\color{cyan}Algebra of Solving Systems of 2 Linear Equations} 	
+\end{center}
+
+We can write a linear system of equations 
+\begin{align*}
+a_{11} x_1 + a_{12} x_2 &= b_1 \\
+a_{21} x_1 + a_{22} x_2 &= b_2
+\end{align*}
+into matrix form
+$$
+{\bf A} \vec{x} = \vec{b},
+$$
+where
+$$
+{\bf A} 
+	= \begin{pmatrix} 
+		a_{11} & a_{12} \\
+		a_{21} & a_{22}
+	\end{pmatrix}
+	\quad \text{,} \quad 
+\vec{x}  
+	= \begin{pmatrix} 
+		x_{1} \\
+		x_{2} 
+	\end{pmatrix}
+	\quad \text{ and } \quad 
+\vec{b}  
+	= \begin{pmatrix} 
+		b_{1} \\
+		b_{2} 
+	\end{pmatrix} .
+$$
+
+We can solve a system like this one in several different ways.
+
+\begin{example}
+Solve the system
+\begin{align*}
+3x_1+2x_2 &= 7 \\
+2x_1+3x_2 & = 8.
+\end{align*}
+\end{example}
+
+\begin{definition}[Solution by substitution.] 
+We can write
+$$
+x_2 = \frac{7-3x_1}{2},
+$$
+and use this on the second equation
+$$
+2x_1 + 3\frac{7-3x_1}{2} = 8
+	\quad \Leftrightarrow \quad 4x_1 + 21-9x_1=16
+	\quad \Leftrightarrow \quad -5x_1 =-5
+	\quad \Leftrightarrow \quad x_1 =1
+$$
+Then re-use the first equation we obtained to get $x_2 = 2$.
+	
+\end{definition}
+
+\begin{definition}[Solution by Cramer's rule]
+	
+Using the same method of substitution on the general system, we obtain
+$$
+a_{12} x_2 = b_1 - a_{11} x_1,
+$$
+and we use this into the second equation (after multiplying by $a_{12}$)
+$$
+a_{12} a_{21} x_1 = a_{22} b_1 - a_{11}a_{22} x_1 = a_{12} b_2
+$$
+This implies 
+$$
+x_1 
+	= \frac{b_1 a_{22} - a_{12} b_2}{a_{11}a_{22} - a_{12}a_{21}}
+	= \frac{
+		\begin{vmatrix} 
+			b_1 & a_{12} \\
+			b_2 & a_{22}
+		\end{vmatrix}
+		}{
+		\begin{vmatrix} 
+			a_{11} & a_{12} \\
+			a_{21} & a_{22}
+		\end{vmatrix}
+		}
+$$
+Then we use this to obtain
+$$
+x_2
+	= \frac{a_{11} b_2  - b_1 a_{21} }{a_{11}a_{22} - a_{12}a_{21}}
+	= \frac{
+		\begin{vmatrix} 
+			a_{11} & b_1 \\
+			a_{21} & b_2
+		\end{vmatrix}
+		}{
+		\begin{vmatrix} 
+			a_{11} & a_{12} \\
+			a_{21} & a_{22}
+		\end{vmatrix}
+		}
+$$
+
+\end{definition}
+
+\begin{important}
+This implies that there is a unique solution of the system if and only if
+$$
+\det ({\bf A}) = a_{11}a_{22} - a_{12}a_{21} \neq 0.
+$$
+\end{important}
+
+
+
+\begin{definition}[Solution by inverse matrix]
+ A matrix is {\bf invertible} or {\bf nonsingular} \quad iff \quad ${\bf A}^{-1}$ exists \quad iff \quad $\det({\bf A}) \neq 0$.
+
+If the matrix {\bf A} is invertible, then we can write
+$$
+{\bf A}^{-1} 
+	= \frac{1}{\det({\bf A})} \begin{pmatrix}
+						a_{22} & -a_{12} \\
+						-a_{21} & a_{11}
+						\end{pmatrix}
+$$
+
+We can now use this to solve the system of equations:
+\begin{align*}
+{\bf A} \vec{x}	& = \vec{b}  \\
+{\bf A}^{-1} {\bf A} \vec{x}	& = {\bf A}^{-1} \vec{b}  \\
+{\bf I} \vec{x}	& = {\bf A}^{-1} \vec{b}  \\
+\vec{x}	& = {\bf A}^{-1} \vec{b}
+\end{align*}
+
+\end{definition}
+
+
+
+
+
+\begin{definition}[Homogeneous Systems]
+	
+A system of equations is called \emph{homogeneous} if $\vec{x}=\vec{0}$ is a solution, which means that $\vec{b} = 0$:
+$$
+{\bf A} \vec{x} = \vec{0}.
+$$
+
+Otherwise, it is called \emph{nonhomogeneous}.
+\end{definition}
+
+
+
+\hfil
+
+
+
+
+
+
+
+\begin{center}\textbf{\color{cyan}Eigenvalues and Eigenvectors} 	
+\end{center}
+
+
+We can think of the matrix multiplication $\vec{y}={\bf A}\vec{x}$ as a mapping or transformation: given a vector $\vec{x}$ it transforms it into a different vector $\vec{y}$.
+
+In many applications, it is important to know which vectors $\vec{x}$ are transformed into multiples of themselves.
+
+These vectors satisfy the property
+$$
+{\bf A}\vec{x} = \lambda \vec{x} \qquad \Leftrightarrow \qquad ({\bf A} - \lambda {\bf I} ) \vec{x} = \vec{0}.
+$$
+
+One such vector is $\vec{x}=\vec{0}$. But that's not very interesting. We want to look for nonzero vectors that satisfy this property.
+
+These vectors are called {\bf eigenvectors} and the corresponding $\lambda$ is called an {\bf eigenvalue}.
+
+\begin{important}
+The second formulation above implies that the matrix $({\bf A} - \lambda {\bf I})$ is singular, otherwise the unique solution would be $\vec{x}=\vec{0}$. 
+So that implies that 
+\begin{equation}\tag{\bf characteristic equation}
+\det({\bf A} - \lambda {\bf I}) = 0
+\end{equation}
+\end{important}
+
+
+
+\begin{example}
+Let us find the eigenvalues and eigenvectors for
+$$
+{\bf A} = \begin{pmatrix} 1 & 8 \\ 4 & 5 \end{pmatrix}.
+$$
+
+First we solve the characteristic equation:
+$$
+\det({\bf A} - \lambda {\bf I}) 
+	= \begin{vmatrix}
+		1 - \lambda & 8 \\	
+		4 & 5 - \lambda
+	\end{vmatrix}
+	= (1-\lambda)(5-\lambda) - 32 = 0
+\qquad \Leftrightarrow \qquad
+	\lambda^2 - 6 \lambda -27=0
+$$
+which implies that
+$$
+\lambda = 3 \pm \sqrt{9 + 27} = 3 \pm 6
+$$
+
+
+\subparagraph{Eigenvalue $\lambda_1 = -3$. } To find the eigenvector, we write its equation
+$$
+({\bf A} - \lambda_1 {\bf I} ) \vec{x} = \vec{0}
+\qquad \Leftrightarrow \qquad
+\begin{pmatrix}
+	4 & 8 \\
+	4 & 8
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\ x_2 
+\end{pmatrix}
+	= \begin{pmatrix}
+	0 \\ 0
+	\end{pmatrix}
+$$
+which implies that
+$$
+4x_1 +8x_2 = 0
+\qquad \Leftrightarrow \qquad
+x_1 = -2 x_2.
+$$
+So one eigenvector for this eigenvalue is
+$$
+\vec{x}_1 = \begin{pmatrix}
+	-2 \\ 1
+	\end{pmatrix}
+$$
+
+
+\subparagraph{Eigenvalue $\lambda_2 = 9$. } To find the eigenvector, we write its equation
+$$
+\begin{pmatrix}
+	-8  & 8 \\
+	4 & -4
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\ x_2 
+\end{pmatrix}
+	= \begin{pmatrix}
+	0 \\ 0
+	\end{pmatrix}
+$$
+which implies that
+$$
+-8x_1 +8x_2 = 0
+\qquad \Leftrightarrow \qquad
+x_1 = x_2.
+$$
+So one eigenvector for this eigenvalue is
+$$
+\vec{x}_2 = \begin{pmatrix}
+	1 \\ 1
+	\end{pmatrix}
+$$
+\end{example}
+
+
+
+
+
+\begin{theorem}
+Let {\bf A} have real or complex eigenvalues $\lambda_1$ and $\lambda_2$ such that $\lambda_1 \neq \lambda_2$ and let the corresponding eigenvectors be
+$$
+\vec{x}_1 = \begin{pmatrix} x_{11}  \\ x_{21} \end{pmatrix}
+\qquad \text{ and } \qquad
+\vec{x}_2 = \begin{pmatrix} x_{12}  \\ x_{22} \end{pmatrix}.
+$$
+If {\bf X} is the matrix with columns taken from the eigenvectors:
+$$
+{\bf X} = \begin{pmatrix}
+x_{11} & x_{12} \\
+x_{21} & x_{22}
+\end{pmatrix},
+$$
+then 
+$$\det({\bf X}) \neq 0.$$
+\end{theorem}
+
+
+
+
+

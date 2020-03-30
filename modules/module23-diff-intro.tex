@@ -1,0 +1,55 @@
+In this module you will learn
+\begin{itemize}
+	\item what is a difference equation
+	\item the different types of difference equations
+\end{itemize}
+
+\hfill \\[-10pt]
+
+
+\begin{definition}[Difference Equation]
+	A \emph{difference equation} is an equation involving an unknown sequence and a recursive relation between different terms of that sequence.
+\end{definition}
+
+\begin{example}
+\begin{enumerate}
+	\item $u_{k+1} = u_k + u_{k-1}$
+	\item $x_k = 2 x_{k-1}$
+\end{enumerate}	
+\end{example}
+
+
+
+Among difference equations, there are lots of types, that require different approaches, so we need to classify them.
+
+\begin{definition}[Types of Differential Equations]
+	Just like with differential equations, the main way we distinguish difference equations is according to:
+	\begin{itemize}
+		\item \emph{order}: the order of a difference equation is the difference between the highest and the smallest terms of the sequence present in the difference equation;
+		\item \emph{linear} vs \emph{nonlinear}: A difference equation \quad $F\big(k,u_k,u_{k-1},\ldots,u_{k-n} \big) = 0$ \quad is called \emph{linear} if $F$ is a linear function of $u_k, u_{k-1}, \ldots,u_{k-n}$. Linear difference equations have the form
+			$$ a_0(k) u_k + a_1(k) u_{k-1} + \cdots + a_n(k) u_{k-n} = b(k). $$
+			All other differential equations are called \emph{nonlinear}.
+	\end{itemize}
+\end{definition}
+
+\begin{graybox}
+	Roughly, to check whether a difference equation is \textbf{linear}, we need to check that:
+	\begin{itemize}
+		\item The unknown $u_k$ and its other terms appear with exponent 1;
+		\item The unknown $u_k$ and its other terms do not multiply by each other;
+		\item The unknown $u_k$ and its other terms are not the objects of other functions -- there are no occurrences of things like $\sin(u_k)$ or $e^{u_{k-4}}$, $\ln(u_{k+1})$, $\sqrt{u_{k-1}}$, etc.
+	\end{itemize}
+\end{graybox}
+
+\begin{example}
+\begin{enumerate}
+	\item The difference equation $u_{k} = 2 u_{k-2}$ is linear and second-order,because $k-(k-2) = 2$.
+	\item The difference equation $u_{k+1} =  u_{k}^2+u_{k-2}$ is nonlinear and third-order, because $(k+1)-(k-2) = 3$.
+\end{enumerate}	
+\end{example}
+
+
+
+Similarly to differential equations, linear difference equations are, in general, easier to study and their theory is much more developed.
+
+

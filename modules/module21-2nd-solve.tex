@@ -1,0 +1,332 @@
+In this module you will learn
+\begin{itemize}
+	\item how to solve this type of ODEs
+\end{itemize}
+
+\hfill \\
+
+In this module we will learn how to solve a specific type of Second-Order ODEs: linear second-order ODEs with constant coefficients. These equations have the form
+$$
+a y''(t)  + b y'(t) + c y(t) = f(t).
+$$
+
+\subsection{Homogeneous ODEs}
+
+These are ODEs above with $f(t) \equiv 0$.
+So we are trying to solve
+$$
+a y''(t)  + b y'(t) + c y(t) = 0.
+$$
+
+The main idea to solve these problems is the same as for systems: making an \emph{educated guess} that the solution should look like an exponential:
+$$
+y(t) = e^{rt},
+$$
+and we need to find which values of $r$ yield solutions.
+
+We do that by plugging this formula for $y(t)$ into the ODE:
+\begin{itemize}
+	\item $y'(t) = r e^{rt}$
+	\item $y''(t) = r^2 e^{rt}$
+\end{itemize}
+
+We get
+$$
+a r^2 e^{rt} + br e^{rt} + c e^{rt} = 0
+\quad \Leftrightarrow \quad 
+	a r^2 + br + c = 0
+$$
+and we know how to solve this:
+$$
+r = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.
+$$
+
+That means that we have three possible cases.
+
+
+
+
+
+\paragraph{\color{cyan}Two real distinct roots.} When $b^2-4ac > 0$, we have two possible values for $r$ that are real numbers: $r_1$ and $r_2$.
+
+Then, similarly to what we did with systems of ODEs, we obtain two solutions
+$$
+y_1(t) = e^{r_1 t} \quad \text{ and } \quad y_2(t) = e^{r_2 t},
+$$
+and the general solution is
+$$
+y(t) = c_1 e^{r_1 t} + c_2 e^{r_2 t}.
+$$
+
+\begin{video}
+\begin{itemize}
+	\item \qrvideo{https://youtu.be/_8fcT95JV34}
+	\item \qrvideo{https://youtu.be/nE_OnX8ulHA}
+	\item \qrvideo{https://youtu.be/v1xKZOrGsVc}
+\end{itemize}	
+\end{video}
+
+
+
+\paragraph{\color{cyan}Two complex roots.} When $b^2-4ac<0$, we have two possible values for $r$, but they are complex values:
+$$
+r_{\pm} = a \pm ib.
+$$
+\begin{graybox}
+What are the value of $a$ and $b$?	
+\end{graybox}
+
+Then we have two solutions
+$$
+y_{+}(t) = e^{(a+ib) t} \quad \text{ and } \quad y_{-}(t) = e^{(a-ib) t},
+$$
+and the general solution is
+$$
+y(t) = a_1 e^{(a+ib) t}  + a_2 e^{(a-ib) t}.
+$$
+
+Just like we did with systems with complex eigenvalues, we prefer to write the solutions without complex numbers, so we expand it using Euler's formula to get
+\begin{align*}
+y(t) 	& = a_1 e^{(a+ib) t}  + a_2 e^{(a-ib) t} \\
+		& = a_1 e^{at}e^{ibt}  + a_2 e^{at}e^{-ibt} \\
+		& = a_1 e^{at} \big( \cos(bt) + i \sin(bt) \big)  + a_2 e^{at} \big( \cos(bt) - i \sin(bt) \big) \\
+		& = (a_1+a_2)  \cos(bt)e^{at} + i (a_1-a_2)\sin(bt) e^{at} \\
+		& = c_1 \cos(bt)e^{at} + c_2\sin(bt) e^{at}
+\end{align*}
+
+\begin{graybox}
+How do $c_1$ and $c_2$ depend on $a_1,a_2$?	
+\end{graybox}
+
+So another way to write the general solution is
+$$
+y(t) = c_1 \cos(bt)e^{at} + c_2\sin(bt) e^{at}.
+$$
+
+
+\begin{video}
+\begin{itemize}
+	\item \qrvideo{https://youtu.be/DORl6GMPtjM?t=396}
+\end{itemize}	
+\end{video}
+
+
+
+
+\paragraph{\color{cyan}One real repeated root.} When $b^2-4ac=0$, then we are left with only one value for $r=-\frac{b}{2a}$.
+
+We then have one solution
+$$
+y_1(t) = e^{-\frac{b}{2a}t}.
+$$
+
+\begin{example}
+Consider the ODE 
+$$
+y''(t) + 2y'(t) + y(t) = 0.
+$$	
+
+To find the general solution, we assume that the solutions have the form $y(t) = e^{rt}$, which means that $r$ must satisfy
+$$
+r^2 +2r+1 = 0 
+	\quad \Leftrightarrow \quad r=-1,
+$$
+so $y_1(t) = c_1 e^{-t}$.
+
+Now can we solve this ODE with the following initial conditions?
+\begin{itemize}
+	\item $y(0)=2$ and $y'(0)=-2$.
+	\item $y(0)=2$ and $y'(0)=1$.
+\end{itemize}
+\end{example}
+
+This previous example, should give a good idea on why having one value for $r$ means that we are missing something. 
+We need to find a second solution $y_2(t)$. \\
+
+
+\begin{graybox}
+If we want to find all the divisors of $42$, and we already know that $d_1=2$ is a divisor, then we can use the divisor $d_1$ we know to write 
+$$
+d_1 \cdot x = 42 
+	\quad \Leftrightarrow\quad 2x = 42
+	\quad \Leftrightarrow\quad x = 21,
+$$
+where $x$ is the product of all the other divisors.
+
+We used the divisor we knew $d_1$ to obtain a simpler problem for the other divisors.
+\end{graybox}
+
+
+\subparagraph{\color{cyan}Reduction of Order.} The idea here is the same. We use the solution we found to try to obtain a simpler ODE for the other solution:
+$$
+y(t) = y_1(t) \cdot u(t),
+$$
+where $y(t)$ is the solution we are still missing, $y_1(t)$ is the solution we already found, and $u(t)$ is a function. If we find $u(t)$, then we find $y(t)$. We hope that the function $u(t)$ satisfies a simpler problem.
+
+To do that, we need to plug the formula above for $y(t)$ into the original ODE. 
+
+\begin{graybox}
+You should do these calculations yourself.
+Remember to use the product rule and to be careful not to make any mistakes.	
+
+Also remember that we know the value of $r$
+\end{graybox}
+
+We obtain
+$$
+u''(t) = 0
+\quad \Leftrightarrow \quad u(t) = c_1 + c_2 t.
+$$
+
+This means that we found 
+$$
+y(t) = (c_1 + c_2 t) e^{rt}
+\quad \Leftrightarrow \quad y(t) = \underbrace{c_1 e^{rt}}_{\substack{\rm previous \\ \text{solution } y_1(t)}} + c_2 t e^{rt}.
+$$
+
+The general solution is this
+$$
+y(t) = c_1 e^{rt} + c_2 t e^{rt},
+$$
+where $r = -\frac{b}{2a}$.
+
+
+\begin{video}
+\begin{itemize}
+	\item \qrvideo{https://youtu.be/DORl6GMPtjM}
+\end{itemize}	
+\end{video}
+
+
+
+
+
+
+\subsection{Non-Homogeneous ODEs}
+
+We are trying to solve
+$$
+a y''(t)  + b y'(t) + c y(t) = f(t),
+$$
+where $f(t)$ is a known function. \\
+
+
+\begin{graybox}
+If $u(t)$ is the general solution of
+$$
+ay''(t)+by'(t)+cy(t) = 0,
+$$
+and $v(t)$ satisfies
+$$
+ay''(t)+by'(t)+cy(t) = f(t),
+$$
+then $y(t) = u(t) + v(t)$ gives the general solution of
+$$
+ay''(t)+by'(t)+cy(t) = f(t).
+$$
+
+This is a practice problem at the end of this module.
+\end{graybox}
+
+
+This means that to solve this ODE, we split the general solution into two parts
+$$
+y(t) = y_c(t) + y_p(t),
+$$
+where
+\begin{itemize}
+	\item $y_c(t)$ is called the \emph{complementary solution} and it is the general solution of the corresponding homogenous ODE. It is solved using the technique we studied above.
+	\item $y_p(t)$ is called the \emph{particular solution} and it is one function that satisfies the original ODE.
+\end{itemize}
+
+\begin{important}
+It may seem strange that to solve the original ODE, we need its solution, but what we are trying to do is find \emph{all possible solutions} of the original ODE.
+
+To find all possible solutions of the original ODE, we require two things:
+\begin{itemize}
+	\item One solution of the original ODE:  $y_p(t)$,
+	\item and all possible solution of the homogeneous ODE: $y_c(t)$.
+\end{itemize}
+\end{important}
+
+
+We already know how to find the complementary solution, so we will focus our attention on finding one particular solution.
+
+\paragraph{\color{cyan}Method of Undetermined Coefficients.} As you probably have gotten used to by now, this is a method of educated guess-and-check. \\
+
+Let us look at the equation from a different point-of-view
+\begin{align*}
+a y''(t) + by'(t) + cy(t) & = f(t) \\
+\substack{\displaystyle\text{linear combination of}\\\displaystyle\text{function and derivatives}} & = f(t)
+\end{align*}
+and remember that some functions don't change much when differentiated:
+\begin{itemize}
+	\item Exponentials $y=ce^{rt}$ don't change their form after differentiation $y'=cre^{rt} = de^{rt}$. They even keep the same exponential term.
+	\item Polynomials don't change their form either: their derivative is also a polynomial, with lower degree.
+	\item Cosines and Sines alternate between one and the other, so functions of the form $y=c_1 \sin(rt) + c_2\cos(rt)$ don't change after differentiation.
+\end{itemize}
+
+This means that, if $f(t)$ is one of these types of function, then $y(t)$ must be of the same form.	
+
+
+\begin{example}
+Find a particular solution for the ODE
+$$
+y''  - 4y = 10 e^{3t} = (\text{constant}) \cdot (\text{exponential of } 3t).
+$$	
+
+Our candidate is
+$$
+y_p(t) = A e^{3t}.
+$$
+
+Now we need to find the constant $A$ by plugging it into the ODE:
+$$
+9 A e^{3t} - 4 \cdot A e^{3t} = 10 e^{3t}
+\quad \Leftrightarrow \quad 
+	A = 2,
+$$
+so $y_p(t) = 2 e^{3t}$ is a particular solution.
+\end{example}
+
+
+\begin{example}
+Find a particular solution for the ODE
+$$
+y''  - 4y = 3t^2+2t = (\text{polynomial of degree 2}).
+$$	
+
+Our candidate is
+$$
+y_p(t) = At^2 + Bt + C.
+$$
+
+Now we need to find the constants $A, B, C$ by plugging the formula for $y_p$ into the ODE:
+$$
+2A - 4At^2 - 4B t - 4C = 3t^2+2t
+\quad \Leftrightarrow \quad 
+\begin{cases}
+A = -\frac34 \\
+B = -\frac12 \\
+C = \frac{A}{2} = -\frac38.	
+\end{cases}
+$$
+so $y_p(t) = -\frac34 t^2 - \frac{t}{2} - \frac38$ is a particular solution.
+\end{example}
+
+There are some more details to deal with when using this method that will be addressed in the core exercises.
+
+
+
+
+\begin{video}
+\begin{itemize}
+	\item \qrvideo{https://youtu.be/CjZ0TfPnWVU}
+	\item \qrvideo{https://youtu.be/ubdSxJ2nmVk}
+	\item \qrvideo{https://youtu.be/YRvqem1n0nQ}
+\end{itemize}	
+\end{video}
+
+
+
+
