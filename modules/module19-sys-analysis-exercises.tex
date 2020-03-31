@@ -1,0 +1,99 @@
+\newpage 
+
+\begin{exercises}
+
+	\begin{problist}
+	\prob Consider the model for student learning:
+	\begin{itemize}
+		\item $\vec{x} = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$
+		\item $x_1=$ student confidence in his/her own abilities ($x_1 \in [0,1]$)
+		\item $x_2=$ student knowledge measured in IQ past 100
+		\item $\vec{x}'(t) =
+		\begin{bmatrix}
+			a & b \\
+			c & - d 
+		\end{bmatrix}
+		\vec{x}(t)
+		+ \begin{bmatrix}
+ 			-e \\ 0
+ 		\end{bmatrix}$
+		\item Constants $a,b,c,d,e>0$.
+	\end{itemize}
+	\begin{enumerate}
+		\item What is the equilibrium solution $\vec{x}_e$? 
+		\item If tests are harder, then $d$ is larger. How does that affect the equilibrium confidence and knowledge of students?
+		\item Is the equilibrium solution stable?
+		\item Assume $a=1, b=c=2, d=3,e=0$. As $t \to +\infty$, what are the possible outcomes for $\vec{x}(t)$ Explain the meaning for the students.
+		\item Assume $a=1, b=c=2, d=3,e=0$. Some solutions satisfy $\displaystyle \lim_{t \to +\infty} \begin{bmatrix}c(t) \\ k(t) \end{bmatrix} = \begin{bmatrix} + \infty \\ + \infty \end{bmatrix}$.
+
+			Show on a graph which initial conditions $\vec{x}(0) = \begin{bmatrix}c(0) \\ k(0) \end{bmatrix}$ guarantee this limit?
+
+		\item If the tests become harder, i.e., $d$ increases, then is that good or bad for students?.
+	\end{enumerate}
+	
+	\prob Consider the model for a tree:
+	\begin{itemize}
+		\item $\vec{x}(t) = \begin{bmatrix} \ell(t) \\ h(t) \end{bmatrix}$
+		\item $\ell(t)=$ area of leafs on the tree
+		\item $h(t)=$ height of the tree
+		\item $\vec{x}'(t) =
+		\begin{bmatrix}
+			a & -b \\
+			c & -d 
+		\end{bmatrix}
+		\vec{x}(t)$
+		\item Constants $a,b,c,d>0$.
+	\end{itemize}
+	\begin{enumerate}
+		\item Is it possible to have the tree growing taller and taller forever while the leaf area remains bounded?
+		\item What would happen to the tree if the area of leafs is proportional to the height squared (not square root)?
+		\item If $ad=bc$, explain what happens to the tree as $t\to \infty$.
+	\end{enumerate}
+	
+	
+	\prob Consider the model of a car:
+	\begin{itemize}
+		\item $\vec{c}(t) = \begin{bmatrix} v(t) \\ f(t) \end{bmatrix}$
+		\item $v(t)=$ speed of the car
+		\item $f(t)=$ amount of fuel in the car's tank
+		\item $\vec{c}'(t) =
+		\begin{bmatrix}
+			-2 & 1 \\
+			-2 & 0 
+		\end{bmatrix}
+		\vec{c}(t)
+		+ \begin{bmatrix}
+ 			0 \\ -1	
+		\end{bmatrix}$
+	\end{itemize}
+	\begin{enumerate}
+		\item What is the equilibrium solution $\vec{c}_{\rm eq}$? What is the meaning of your result?
+		\item If the car runs out of fuel at 300 m/s, then describe what happens to the car. 
+		\item Describe what happens to the car when it starts at rest with a full tank of $300$ L.
+		\item If the car attains its maximum velocity when there are still $300$ L of fuel left, what was the car's maximum velocity?
+
+
+	\end{enumerate}
+
+
+	\prob Consider the model for crying babies:
+	\begin{itemize}
+		\item $\vec{c}(t) = \begin{bmatrix} a(t) \\ b(t) \end{bmatrix}$
+		\item $a(t)=$ volume of baby A's cries in dB
+		\item $b(t)=$ volume of baby B's cries in dB
+		\item $\vec{c}'(t) =
+		\begin{bmatrix}
+			-\alpha & \beta \\
+			\beta & -\alpha 
+		\end{bmatrix}
+		\vec{c}(t)$
+		\item Constants $\alpha,\beta>0$.
+	\end{itemize}
+
+	The constants $\alpha$ and $\beta$ are $1$ and $2$. Does it make a difference which is 1 and which is 2?
+
+
+	
+		
+	\end{problist}
+\end{exercises}

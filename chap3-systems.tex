@@ -347,13 +347,13 @@ $$
 
 \begin{lesson}
 	\Title{Analysis of Models with Systems}
-
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla
-	\end{itemize}
-	
-	\Heading{Motivation} 
+%
+%	\Heading{Objectives}
+%	\begin{itemize}
+%		\item Bla
+%	\end{itemize}
+%	
+%	\Heading{Motivation} 
 
 \end{lesson}
 
@@ -363,9 +363,50 @@ $$
 \newpage
 
 \question
-	Consider the following model for cheetah's and lions, where
+	Consider the following model for the sales from a designer clothing brand:
+	\begin{itemize}
+	\item $x_1(t) = $ purchases by ``common mortals'' (CM) at time $t$ in years since the beginning of 2015.
+	\item $x_2(t) = $ purchases by ``famous people'' (FP) at time $t$.
+	\end{itemize}
+	
+	Our model is based on the following two principles:
+	\begin{enumerate}[label={($P_{\arabic*}$)}]
+		\item CM will buy more items from the brand when CM or FP buy more.
+		\item FP will buy less when CM buy them, but will buy more when FP buy it.
+	\end{enumerate}
+
+	The model we considered is:
+	$$
+	\vec{x}'(t) = 
+	\begin{bmatrix}
+ 		a & b \\
+ 		-c & d
+	\end{bmatrix}
+	\vec{x}(t)
+	$$
+	
+	\begin{parts}
+		\item Suppose that at the beginning only CM buy this brand. Describe how $x_1(t)$ and $x_2(t)$ evolve as $t>0$.
 
 
+		\item Suppose that at the beginning only FP buy this brand. Describe how $x_1(t)$ and $x_2(t)$ evolve as $t>0$.
+
+
+		\item What conditions on the constants $a,b,c,d$ will guarantee that the solutions will spiral? In that case, is it a spiral source or spiral sink? Is it clockwise or counterclockwise?
+		\item Are there constants $a,b,c,d>0$, such that the solution $\vec{x}$ is periodic?
+		\item Consider the constants $a=b=c=d=1$. Assume that initially CM were buying $c_0>0$ items and FP were buying $f_0>0$ items.
+			What will happen to $x_1(t)$ and $x_2(t)$ as $t \to \infty$? Explain the results in terms of the evolution of purchases from CM and FP.
+		\item Consider the constants $a=b=c=d=1$.  If $c_0=10$, $f_0=100$, then at what time will FP stop buying items? And at what time will FP be buying the maximum number of items?
+	
+	\end{parts}
+
+
+
+
+\bookonlynewpage
+
+
+\hfill
 
 \bookonlynewpage
 

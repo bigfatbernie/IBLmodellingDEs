@@ -1,0 +1,248 @@
+In this module you will learn
+\begin{itemize}
+	\item different ways to analyze models with several differential equations
+\end{itemize}
+
+\hfill \\
+
+
+
+In this chapter, we have learned how to create models involving systems of ODEs and how to solve some special types of systems of ODEs.
+
+Once we create a model that involves a system of ODEs, the ultimate goal is not to solve the system of ODEs, but to be able to understand how the situation will proceed.
+Solving the system of ODEs is often a large step in that direction, but it is more important to be able to take the solution and knowing how to interpret in light of the original situation.
+
+Sometimes, when we cannot find an explicit formula for the solution, it is still possible to study the system to find some properties and behaviours of the solutions. \\
+
+In this module, we'll study one example using two different methods.
+
+
+\begin{example}
+The goal here is not the modelling but the analysis of the model, so we will quickly explain the model. \\
+
+We are going to model population versus cost of living in Toronto.
+
+
+Consider the following functions
+\begin{itemize}
+\item $p(t) = $ Population of Toronto (GTA) in millions at time $t$ in years since the beginning of 2015.
+\item $c(t) = $ Cost of living in Toronto (in thousands of dollars) at time $t$.
+\item Define a vector $\vec{x}(t) = \begin{bmatrix} p(t) \\ c(t) \end{bmatrix}$.
+\end{itemize}
+
+These two factors are related according to the following properties:
+\begin{itemize}
+\item In the absence of any migration, the population will decrease proportionally to the cost of living (with constant $a$);
+\item There are always people moving into Toronto independently of its current population or cost of living (with constant $b$)
+\item In the absence of any other factors, the cost of living; increases proportionally to the population (with constant $d$)
+\item In the absence of any other factors, the cost of living; increases proportionally to the cost of living due to inflation (with constant $e$);
+\item The city is always expanding, so the cost of living is always decreasing independently of its current population or cost of living (with constant $f$).
+\end{itemize}
+The constants $a,b,d,e,f$ are all positive. \\
+
+Our model is:
+$$
+\vec{x}'(t) = 
+	\begin{bmatrix}
+ 		0 & -a \\
+ 		d & e
+	\end{bmatrix}
+					\vec{x}(t) + 
+	\begin{bmatrix}
+		b \\ -f
+	\end{bmatrix}
+$$
+\end{example}
+
+\hfill
+
+\begin{center}
+\textbf{\color{cyan}
+Qualitative evolution of quantities
+}
+\end{center}
+
+
+%\paragraph{Qualitative evolution of quantities.}
+We can try to figure out how these quantities, $p(t)$ and $c(t)$, are going to increase or decrease. \\
+
+As an academic example, let us imagine that initially  \quad $p(0)=c(0)=0$.
+
+Then, at $t=0$, we have
+$$
+p'(0)= b > 0 \quad \text{ and } \quad
+c'(0)=-f < 0.
+$$
+
+This means that $p(t)$ is increasing while $c(t)$ wants to decrease.
+
+Here we need to make sure that everything still makes sense: since it doesn't make sense to have a negative cost of living (government incentives to move into the city?!), we need to disregard our system and assume that $c(t)$ will continue constant while $c'(t)<0$.
+
+We then have:
+\begin{graybox}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c}
+$\pmb{t}$	& $0$ 		& 			& &  			& 			& 	&	& \hspace{1cm} $+\infty$ \\[5pt] \hline\hline
+$\pmb{p}$ & $0$	& $\nearrow$	& \hspace{0.5cm} &	\hspace{1cm}	&	&  \hspace{0.5cm}	&  	& 	\\[5pt] \hline
+$\pmb{c}$ & $0$		& $\rightarrow$	&  0 & \hspace{1cm} & 	\hspace{0.5cm}	& \hspace{1cm} 	& \hspace{0.5cm}	&\hspace{1cm}	\\[5pt]
+\end{tabular}
+\end{center}
+\end{graybox}
+
+While $c(t)=0$, we have
+$$
+p'(t)= b > 0  \quad \text{ and } \quad 
+c'(t)=d\, p(t) -f.
+$$
+
+This means that $p(t)$ is increasing with constant slope (linearly) until $c'(t_1)=0$.
+We can figure out when this will happen:
+$$
+0=c'(t_1)=d\, p(t_1) -f \quad \Leftrightarrow \quad p(t_1) = \frac{f}{d}.
+$$
+
+So we continue our table:
+\begin{graybox}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c}
+$\pmb{t}$	& $0$ 		& 			& $t_1$ &  			& 			& 	&	& \hspace{1cm} $+\infty$ \\[5pt] \hline\hline
+$\pmb{p}$ & $0$	& $\nearrow$	& $\displaystyle\frac{f}{d}$ &	\hspace{1cm}	&	&  \hspace{0.5cm}	&  	& 	\\[5pt] \hline
+$\pmb{c}$ & $0$		& $\rightarrow$	&  0 & \hspace{1cm} & 	\hspace{0.5cm}	& \hspace{1cm} 	& \hspace{0.5cm}	&\hspace{1cm}	\\[5pt]
+\end{tabular}
+\end{center}
+\end{graybox}
+
+What happens after $t_1$?
+
+Consider $t>t_1$ slightly after $t_1$. Then
+$$
+\begin{cases}
+p'(t) = -a c(t) + b >0 & \text{ still positive because $c(t)$ is very small, but the slope is decreasing} \\
+c'(t) = d p(t) + e c(t) - f	>0 & \text{ increasing quickly as both $p$ and $c$ increase}
+\end{cases}
+$$
+
+\begin{graybox}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c}
+$\pmb{t}$	& $0$ 		& 			& $t_1$ &  			& 			& 	&	& \hspace{1cm} $+\infty$ \\[5pt] \hline\hline
+$\pmb{p}$ & $0$	& $\nearrow$	& $\displaystyle\frac{f}{d}$ &	\IncDown	&	&  \hspace{1cm}	&  	& 	\\[5pt] \hline
+$\pmb{c}$ & $0$		& $\rightarrow$	&  0 & \IncUp & 	\hspace{0.5cm}	& \hspace{1cm} 	& \hspace{0.5cm}	&\hspace{1cm}	\\[5pt]
+\end{tabular}
+\end{center}
+\end{graybox}
+
+At a certain time $t_2$, the population will stop increasing. Let us find out when this happens:
+$$
+0=p'(t_2) = -a c(t_2) + b >0 
+	\quad \Leftrightarrow \quad c(t_2) = \frac{b}{a}.
+$$
+
+\begin{graybox}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c}
+$\pmb{t}$	& $0$ 		& 			& $t_1$ &  			& 	$t_2$		& 	&	& \hspace{1cm} $+\infty$ \\[5pt] \hline\hline
+$\pmb{p}$ & $0$	& $\nearrow$	& $\displaystyle\frac{f}{d}$ &	\IncDown	& $\rightarrow$	&  \hspace{1cm}	&  	& 	\\[5pt] \hline
+$\pmb{c}$ & $0$		& $\rightarrow$	&  0 & \IncUp & 	 $\displaystyle \frac{b}{a}$	& \hspace{1cm} 	& \hspace{0.5cm}	&\hspace{1cm}	\\[5pt]
+\end{tabular}
+\end{center}
+\end{graybox}
+
+After this point we have $t>t_2$ slightly after $t_2$:
+$$
+\begin{cases}
+p'(t) = -a c(t) + b <0 & \text{ decreasing rapidly while $c'(t)>0$}\\
+c'(t) = d p(t) + e c(t) - f	>0 & \text{ still increasing quickly until $p(t)=0$}
+\end{cases}
+$$
+
+We expect that at some point $p(t_3)=0$. From that point on we have
+$$
+\begin{cases}
+p'(t_3) = -a c(t_3) + b <0 & \text{ we need to ignore the model at this point and keep $p$ constant}\\
+c'(t_3) = e c(t_3) - f	>0 & \text{ still increasing exponentially}
+\end{cases}
+$$
+
+So this is our final table:
+\begin{graybox}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c}
+$\pmb{t}$	& $0$ 		& 			& $t_1$ &  			& 	$t_2$		& 	& $t_3$	& \hspace{1cm} $+\infty$ \\[5pt] \hline\hline
+$\pmb{p}$ & $0$	& $\nearrow$	& $\displaystyle\frac{f}{d}$ &	\IncDown	& $\rightarrow$	&  \DecDown	& 0 	& $\rightarrow$	\\[5pt] \hline
+$\pmb{c}$ & $0$		& $\rightarrow$	&  0 & \IncUp & 	 $\displaystyle \frac{b}{a}$	& \IncUp 	& 	& \IncUp	\\[5pt]
+\end{tabular}
+\end{center}
+\end{graybox}
+
+
+
+Observe that to do this analysis, we didn't need to know how to solve the system of ODEs. \\
+
+
+
+
+
+
+\begin{center}
+\textbf{\color{cyan}
+Finding the equilibrium point(s)
+}
+\end{center}
+
+%\paragraph{Finding the equilibrium point.} 
+This is often easy to find, and by using the intuition we gained while learning to sketch phase portraits, this can give us a lot of insight about the solutions.
+
+Let us find the equilibrium point:
+$$
+\begin{cases}
+0= p'(t) = -a c(t) + b \\
+0= c'(t) = d p(t) + e c(t) - f	
+\end{cases}
+\quad \Leftrightarrow \quad 
+	\begin{cases}
+ 	\displaystyle c(t) = \frac{b}{a} \\[5pt]
+	\displaystyle p(t) = \frac{af - be}{ad}
+	\end{cases}
+$$
+
+Observe that if the population and cost of living are at these levels, then they will remain constant. \\
+
+This also informs us that the disastrous scenario on the first analysis, where the population all left the city, might have been caused by the stating position. \\
+
+
+\begin{center}
+\textbf{\color{cyan}
+Properties of the system
+%Other questions about the system
+}
+\end{center}
+
+%\paragraph{Other questions about the system.} 
+We can look for other properties of the system of ODEs.
+
+Based on the two analyses above, we can ask the following question:
+\begin{itemize}
+	\item Is there a value for the cost of living such that if it is above that, then eventually all the population will leave the city?
+\end{itemize}
+
+We know that 
+$$
+p'(t) = -a c(t) + b < 0 \quad \Leftrightarrow \quad c(t) > \frac{b}{a}.
+$$
+
+So as long as the cost of living is above $\frac{b}{a}$, then the population will continue to decrease. \\
+
+Observe that depending on the constants $d, e, f$, we could still have
+$$
+c'(t) = d p(t) + e \frac{b}{a} - f < 0,
+$$
+so that we could end up with a cycle around the equilibrium we found before.
+
+
+
+
+
+
+
+
