@@ -1,0 +1,134 @@
+\emph{Question. } Is the airplane wing going to break? \\
+
+\hfill
+
+\emph{Introduction (adapted from Stuart Lee -- \href{https://people.cs.clemson.edu/~steve/Spiro/electra1.html}{Click here for the original}). } 
+
+In early 1959, with great fanfare, Lockheed's new, 4-engine prop-jet, the Electra II, went into service. The Electra looked like a ``regular airline'', except that the thick prop blades and the four enormous large engine covers (the nacelles and cowlings) that housed the General Electric/Allison jet-turbine driver power plants made the wings seem ever smaller and stubbier. In addition, the fuselage was relatively wide- making it one of the roomiest airliners of its time. But the Electra's appearance seemed slightly off.
+
+\begin{center}
+\includegraphics*[height=150pt]{images/project-wing-Electra_1959.jpg}
+\qquad
+\includegraphics*[height=150pt]{images/project-wing-Electra_1960a.jpg}
+\end{center}
+
+The pilots soon got over the appearance and came to respect the airplane, The Electra had incredible power. One pilot remarked that ``It climbs like a damned fighter plane!''. \\
+
+In the evening of September 29, 1959, Braniff's spanking new Electra disintegrated in midair (\href{http://www.baaa-acro.com/1959/archives/crash-of-a-lockheed-l-188-electra-in-buffalo-34-killed/}{description}). \\
+
+What had caused this brand-new jet prop to disintegrate over Buffalo, Texas? \\
+
+The investigators combing the wreckage of the Braniff Electra noticed something alarming. The shards of what appeared to be the left wing were found a considerable distance from the rest of the wreckage. \\
+
+And the story got worse.
+On March 17, 1960, Northwest Airlines flight 710 left Minneapolis-St. Paul (\href{http://www.baaa-acro.com/1960/archives/crash-of-a-lockheed-l-188-electra-in-tell-city-63-killed/}{description}). 
+Witnesses on the ground heard tearing sounds in the sky. They looked up and saw the thick fuselage of the Electra emerging from the clouds. The entire right wing was missing, and only a stub of the left wing remained attached to the Electra.
+
+The airliner seemed to float for a while, but then it dipped, diving straight down toward the ground, trailing white smoke and pieces of aircraft. The 63 people entombed in the fuselage struck the muddy ground, vertically, at 618 miles per hour.
+Rescuers found nothing at the site of impact larger than a spoon.
+
+But 3 km away, they found the wreckage of the left wing. \\
+
+This was beyond, alarming. In a period of less than six months, two brand-new Electras lost their wings and disintegrated with much loss of life. What could have caused this? Could it have been severe clear-air turbulence (CAT), or was there something drastically wrong with these airliners. \\
+
+The airlines who had Electra fleets were nearly panicking. Meetings were quickly set up with the FAA. Investigations were set up. 
+Boeing lent staff, simulators, and a wind tunnel to Lockheed. Douglas contributed engineers and equipment; most notably flutter vanes that, when attached to the ends of the wings, could induce serious oscillation.
+
+The investigation, occurring in the early sixties, was the first serious use of computer stress analysis in this field.
+
+Electras were test flown in every possible form of turbulence. Test pilots tried to destroy the Electra by ramming it into the severe Sierra Madre air waves, over and over again. Electras were put through every possible flight maneuver that would normally cause a wing failure. Super severe wind tunnel winds were shot out at Electras and mock-ups. Over and over, every possible test was done to try and break the Electra. \\
+
+ Finally, on May 5, 1960, an engineer stood up at a Lockheed meeting and announced: ``We're pretty sure we've found it!''.  \\
+
+Basically, the problem was a high-speed aircraft in a conventional design. 
+Every aircraft wing is flexible to some degree. And wing vibration, oscillation, or flutter is inherent in the design. Flutter is expected on wings. In engineering terms, there are more than 100 different types of flutter -- or ``modes'' -- in which metal can vibrate. The ``mode'' that destroyed the Electras was ``whirl mode''. \\
+
+Whirl mode was nothing new. It was not a mysterious phenomenon. As a matter of fact, it is a form of vibrating motion inherent in any piece of rotating machinery such as oil drills, table fans, and automobile drive shafts.
+
+The theory was devastatingly simple. A propeller has gyroscopic tendencies. In other words, it will stay in a smooth plane of rotation unless it is displaced by some strong external force, just as a spinning top can be made to wobble if a finger is placed firmly against it. The moment such a force is applied to a propeller, it reacts in the opposite direction.
+
+\emph{Now suppose the force drives the propeller upward. The stiffness that is part of its structure promptly resists the force and pitches the prop downward. Each succeeding upward force is met by a protesting downward motion. The battle of vibration progresses. The propeller continues to rotate in one direction, but the rapidly developing whirl mode is vibrating in the opposite direction. The result, if the mode is not checked, is a wildly wobbling gyroscope that eventually begins to transmit its violent motion to a natural outlet: the wing.}
+
+Whirl mode did occasionally develop in propeller-driver airliners. It always encountered the powerful stiffness of the entire engine package, the nacelles and the engine mounting, the mounting being a bar truss holding the engine to the wing. No problem usually. But on painful microscopic examination of the crash wreckage of the eight Electra engines, it was found that something caused the engines to loosen and wobble, causing severe whirl mode, which tore off the Electra's wings. Specifically, the investigation centred on the outboard engines.
+
+What the investigators found was that the engine mounts weren't strong enough to dampen the whirl mode that originated in the outboard engine nacelles. The oscillation transmitted to the wings caused severe up-and-down vibration, which grew until the wings tore right off. \hfill \\
+
+
+
+
+\emph{Project. } In this project we will study mechanical resonance of an airplane wing due to a vibrating propeller.
+We use Differential Equations to create a simple model of the wing flutter. \\
+
+Start with a picture of a propeller mounted on a wing.
+
+\begin{center}
+\includegraphics*[width=200pt]{images/project-wing-wing.pdf}
+\end{center}
+
+We want to keep the model simple, so we consider only the wing's centre of mass. This implies that the wing behaves as a \emph{spring-mass system}: the spring is the wing-body joint that allows the centre of mass to move up and down\footnote{The centre of mass actually moves on an arch, but we consider only its vertical motion.}. The forcing function is the vibrational force that results from the motion of the propeller. \\
+
+For this example assume that the wing has a mass of 900 kg and the wing-body joint acts as a spring with constant 8100 N/m. Also assume that the damping forces are negligible and the wing is at rest when the propeller begins to vibrate.
+
+\emph{Task. } 
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+
+\item Let $y(t)$ be the position of the centre of mass of the wing and $f(t)$ the vertical vibrational force from the propeller. Write an IVP (Initial-Value Problem) that models the movement of the wing.
+%    
+%    $$
+%    y '' = - 9 y + \frac{1}{900} f(t)
+%    $$
+
+\item Assuming that the propeller vibrates with a force $f_1(t) = 1800 \sin(6t)$ (in N). Find the position of the wing's centre of mass and plot it.
+
+Describe the position of the wing's centre of mass as $t$ grows large ($0 \leq t \leq 25$).
+
+%    \begin{gather*}
+%    y '' = - 9 y + 2 \sin(6t) \\
+%    y = \frac{2}{45} \sin(6t)
+%    \end{gather*}
+
+\item Just before wing-failure, the propeller actually slowed down. Let us simulate this by changing the forcing function to $f_2(t) = 1800 \sin(3 t)$ (in N).
+
+\begin{enumerate}[label=\emph{(\alph*)}] 
+\item Find the equation of motion using the new forcing function. 
+
+\item Plot the solution.
+
+\item Describe the position of the wing's centre of mass as $t$ grows large. What consequences does this have for the wing?
+\end{enumerate}
+
+\item It is very unlikely that the frequency of the propeller will match exactly this, so assume that $f_3(t) = 1800 \sin(3.5 t)$ (in N).
+\begin{enumerate}[label=\emph{(\alph*)}] 
+\item Find the equation of motion using the new forcing function. 
+
+\item Plot the solution.
+
+\item Using a trigonometric identity, re-write your solution as a product of two trig functions. Describe how this new form for the solution explains the plot.
+
+\item Describe the position of the wing's centre of mass as $t$ grows large. What consequences does this have for the wing?
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\vfill
+%\newpage
+
+\emph{Further Investigation. } 
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item If you were the Lead Engineer in charge of fixing this problem, what would you do? How would that change the Differential Equation? Using the new differential equation, show that it would indeed solve the problem.
+
+\item What happens if there are two propellers (like the actual Lockheed Electra)?
+
+\item Can you model wing flex?
+\begin{center}
+\includegraphics*[width=200pt]{images/project-wing-wing2.pdf}
+\end{center}
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}

@@ -1,0 +1,57 @@
+An X-ray tube fires X-rays, which travel in a straight line. 
+An X-ray detector will give you the intensity of any X-ray that hits the detector. 
+If there is a vacuum between the X-ray tube and the X-ray detector, then the X-ray will have the same intensity when it hits the detector as when it left the tube. 
+However, when X-rays pass through matter they interact with the atoms in the material and are sometimes deflected off course, or absorbed. 
+We call this phenomenon \emph{attenuation of the X-ray} and it results in a decrease in the intensity of the X-ray beam. 
+When this happens, the X-ray detector will show a lower intensity than the original intensity of the X-ray.
+
+The intensity of an X-ray is measured in keV (kiloelectronvolt).
+
+\vfill
+
+\emph{Task.}
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Experiments indicate that the rate of decrease in the intensity of the X-ray beam as it travels through some matter is proportional to the \emph{linear absorption coefficient} $A$ of the material. Find an ordinary differential equation (ODE) to model the intensity, $I$, of an X-ray beam fired into some uniform matter with linear absorption coefficient $A$. Be sure to include an initial condition.
+\begin{itemize}
+\item What are the units of $A$?
+\item Classify the equation.
+\item Solve the equation in terms of the initial condition and $A$. 
+\end{itemize}
+
+\vfill
+
+\item How far into a material can an X-ray beam travel before its intensity has decreased to $\displaystyle \frac{1}{e}$ times its original intensity.
+\end{enumerate}
+
+\vfill
+
+Now you will explore one of the main ideas behind medical X-ray imaging. In order to do this, you need to know the linear attenuation coefficient of healthy human tissue. 
+
+\vfill
+
+\begin{enumerate}[resume,label=\emph{\arabic*.}]
+\item You have a 15keV X-ray tube and an X-ray detector. When you fire the X-ray through 10cm of healthy tissue, you measure $\displaystyle \frac{15}{e}$keV on your X-ray detector. When you fire the X-ray through 20cm of healthy tissue, you measure $\displaystyle \frac{15}{e^2}$keV. Using your model of X-ray attenuation, estimate the linear attenuation coefficient of healthy tissue.
+\end{enumerate}
+
+\vfill
+
+This is the basis for using X-ray Computed Tomography (CT) used in medical imaging! We can recognize healthy versus unhealthy tissue by using what we know about their attenuation coefficients. To do this in a human body requires more advanced mathematics such as the Radon transform introduced in 1917 by Johann Radon. However, consider a simple case below.
+
+\vfill
+
+\begin{enumerate}[resume,label=\emph{\arabic*.}]
+\item Suppose that you have a 10cm $\times$ 2cm rectangle with the same linear attenuation coefficient as healthy tissue, and somewhere inside this square is a circle of unknown size having a linear attenuation coefficient different from that of healthy tissue.
+\begin{itemize}
+\item  Using an X-ray tube and an X-ray detector, can you locate the circle and determine its radius? How?
+\item  Can you determine the linear attenuation coefficient of the circle? How?
+ \end{itemize}
+
+ \vfill
+ 
+ \item In actuality, a more complex model is needed for accurate imaging. The linear attenuation coefficient is actually dependent on the intensity of the X-ray! How does this impact your model? Discuss how this would impact your solutions to the above problems.
+
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}

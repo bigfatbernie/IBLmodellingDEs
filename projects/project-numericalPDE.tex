@@ -1,0 +1,161 @@
+\emph{Goal. } We want to approximate solutions of a PDE. \\
+
+
+
+
+\begin{minipage}{11cm}
+
+The heat equation is
+$$
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0,
+$$
+where $u(x,y)$ is the equilibrium temperature at the position $(x,y)$ given some boundary conditions. \\
+
+This is a Partial Differential Equation (PDE), which we don't know how to solve. We can however obtain an approximation of the solution.
+
+In this example, the domain is shown on the right $\Omega = [0,2] \times [0,2]$ and the initial conditions are the following
+$$
+u(x,0)=90 
+\quad , \quad u(x,2)=30
+\quad , \quad u(0,y)=0
+\quad , \quad u(2,y)=60.
+$$
+\hfill
+\end{minipage}
+\hfill
+\begin{minipage}{150pt}
+\includegraphics*[width=150pt]{images/project-numericalPDE-domain.pdf}
+\end{minipage}
+
+To approximate the solution, we divide the domain in $N$ small pieces. In the example $N=4$ and $\Delta = \frac{2-0}{N}=\frac12$.
+
+Then we define the points
+$$
+\vec{p}_1, \vec{p}_2, \vec{p}_3, \ldots , \vec{p}_M,
+$$
+as the points in the interior of the domain (usually by moving left$\to$right and bottom$\to$top).
+
+\begin{enumerate}[label=\emph{\arabic*.}] 
+\item What are the points $\vec{p}_n$? What is $M$?
+\end{enumerate}
+
+Then we define
+$$
+u_n = u(\vec{p}_n),
+$$
+where $u(x,y)$ is the solution of the initial-value problem above (PDE with boundary conditions). \\
+
+The next step is to approximate the PDE itself. We do that by approximating the derivatives:
+$$
+\frac{\partial u}{\partial x}(x_0,y_0) \approx \frac{u(x_0+\Delta,y_0)-u(x_0,y_0)}{\Delta}.
+$$
+
+\begin{enumerate}[resume, label=\emph{\arabic*.}] 
+\item What is the approximation for $\frac{\partial u}{\partial x} (\vec{p}_5)$ ?
+What is the approximation for $\frac{\partial u}{\partial x} (\vec{p}_3)$ ?
+
+\item What is an approximation for $\frac{\partial u}{\partial y}(x_0,y_0)$?
+What is the approximation for $\frac{\partial u}{\partial y} (\vec{p}_8)$ ?
+\end{enumerate}
+
+
+From here, we define the second derivative in a similar fashion:
+
+\begin{align*}
+\frac{\partial^2u}{\partial x^2}(x_0,y_0) 
+	& \approx \frac{\dfrac{u(x_0+\Delta,y_0)-u(x_0,y_0)}{\Delta} - \dfrac{u(x_0,y_0)-u(x_0-\Delta,y_0)}{\Delta}}{\Delta}  \\
+	& = \frac{u(x_0+\Delta,y_0) - 2 u(x_0,y_0) + u(x_0-\Delta,y_0)}{\Delta^2}.
+\end{align*}
+
+\begin{enumerate}[resume, label=\emph{\arabic*.}] 
+\item What is the approximation for $\frac{\partial^2 u}{\partial x^2} (\vec{p}_5)$ ?
+What is the approximation for $\frac{\partial^2 u}{\partial x^2} (\vec{p}_3)$ ?
+
+\item What is an approximation for $\frac{\partial^2 u}{\partial y^2}(x_0,y_0)$?
+What is the approximation for $\frac{\partial^2 u}{\partial y^2} (\vec{p}_8)$ ?
+\end{enumerate}
+
+We are now ready to put it all together. 
+
+The PDE applies to all points in the domain. Instead of applying the PDE to all points $(x,y) \in \Omega$, we apply the approximation of the (second) derivatives to all the points $\vec{p}_n$.
+
+
+\begin{enumerate}[resume, label=\emph{\arabic*.}] 
+\item What is the equation that we obtain for the point $\vec{p}_5$?
+
+\item What is the equation for each point $\vec{p}_n$?
+\end{enumerate}
+
+
+These equations form a linear system of equations.
+Define a vector $\vec{u}  = \begin{bmatrix}
+u_1 \\
+u_2 \\
+\vdots \\
+u_M
+\end{bmatrix}
+$
+
+\begin{enumerate}[resume, label=\emph{\arabic*.}] 
+\item Write the system of equations in matrix form $\textbf{A} \vec{u} = \vec{b}$.
+
+\item Solve it and plot the solution. (You should use some software to solve this!)
+
+\end{enumerate}
+
+\vfill
+
+\emph{MATLAB. } Here is a quick introduction to some tools in MATLAB that are useful for this problem.
+
+\begin{itemize}
+\item Define a matrix $\textbf{A} = \begin{bmatrix}  1 & 2 \\ 3 & 4 \end{bmatrix}$ by
+\begin{center}
+\tt >> A=[1,2;3,4]
+\end{center}
+
+\item Define a vector $\vec{b} = \begin{bmatrix}  5 \\ 6 \end{bmatrix}$ by
+\begin{center}
+\tt >> b=[5;6]
+\end{center}
+
+\item Solve the system $\textbf{A}\vec{u} = \vec{b}$ by defining $\vec{u} = \textbf{A}^{-1} \, \vec{b}$
+\begin{center}
+\tt >> u=A$\backslash$b
+\qquad { \rm or } \qquad 
+>> u=inv(A)*b
+\end{center}
+
+\hfil\\
+
+\item To plot a 3D plot like this, define a matrix for the solutions and write
+\begin{center}
+\tt >> surf(p)
+\end{center}
+
+To use the typical colouring for the heat equation, type 
+\begin{center}
+\tt >> colormap(cool)
+\end{center}
+
+\end{itemize}
+
+
+\vfill
+
+\emph{Further Investigation. } 
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Approximate the solution for the domain and boundary conditions
+\begin{center}
+\includegraphics*[width=200pt]{images/project-numericalPDE-domain2.pdf}
+\end{center}
+
+\item Formulate the procedure for a general $N$.
+
+\item Formulate the procedure for a different $\Delta x$ and $\Delta y$.
+
+\item This method can be adapted to what kind of domains? And what kind of boundary conditions?
+
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}

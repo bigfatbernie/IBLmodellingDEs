@@ -1,0 +1,113 @@
+\emph{Goal.} We want to model the spread of an epidemic, like the recent Ebola epidemic in Africa.
+
+\vfill
+
+
+\emph{SIR Model.} To model an infectious disease, we divide the population in 3 groups:
+\begin{itemize}
+\item Susceptible Individuals $S(t) = $ number of people who haven't contracted the disease;
+\item Infected individuals $I(t)= $ number of people infected;
+\item Removed individuals $R(t)=$ number people that either died or recovered from the disease and are now immune to it.
+\end{itemize}
+
+\vfill
+
+\emph{Assumptions.} 
+
+\begin{enumerate}[label=\emph{(\alph*)}] 
+\item Population size $N$ is large and constant (no birth, death, or migration)
+\item No latent/incubation period
+\item Homogeneous population
+\item Infection rate is proportional to the proportion of infected people with constant $\beta$
+\item ``Recovery'' rate is constant $\gamma$ (includes rate at which people die or recover from the disease)
+\item The typical time until recovery is $T = \dfrac{1}{\gamma}$
+\end{enumerate}
+
+\vfill
+
+\emph{ODE. } From here we can obtain the SIR model:
+
+\begin{emphbox}[]
+\begin{align*}
+\frac{dS}{dt} \quad & = \quad \text{proportional to $S(t)$ and the constant is the infection rate \emph{(e)}} 
+	 \quad = \quad  - \beta \underbrace{\frac{I(t)}{N}}_{\substack{\text{proportion of}\\\text{infected people}}}S(t) \\
+%	\\
+\frac{dI}{dt} \quad & = \quad \underbrace{\beta \frac{I(t)}{N} S(t)}_{\substack{\text{people that stop being}\\ \text{susceptible become infected}}} - \underbrace{\gamma I(t)}_{\text{from \emph{(f)}}} \\
+%	\\
+\frac{dR}{dt} \quad & = \quad \underbrace{\gamma I(t)}_{\substack{\text{people that stop being}\\ \text{infected become ``recovered''}}}
+\end{align*}
+\end{emphbox}
+
+
+\begin{itemize}
+\item An important constant in this model is 
+$$
+R_0 = \frac{\beta}{\gamma} = \text{basic reproductive number}
+$$
+
+If $R_0 > 1$, then the disease is an epidemic (why?).
+
+\end{itemize}
+
+
+\newpage
+
+\emph{Data. } Please download the spreadsheet with the data from the Ebola epidemic in Sierra Leone, Liberia, and Guinea.
+%\begin{graybox}
+\begin{itemize}
+	\item \qrvideo{https://tinyurl.com/ebola-data}
+\end{itemize}
+%\end{graybox}
+
+\emph{Populations. } The populations of these three countries are
+\begin{itemize}
+\item Sierra Leone: $N=6.3 \times 10^6$;
+\item Liberia: $N=4.5 \times 10^6$;
+\item Guinea: $N=12.1 \times 10^6$.
+\end{itemize}
+
+\vfill
+
+\emph{Task. } 
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Use the total population $N$ to write $R(t)$ in terms of the other functions $S(t)$ and $I(t)$.
+
+\item Find a function that approximates the data.
+
+\item Find an estimate for the constant $\beta$ for Ebola.
+
+\item Find an estimate for the constant $\gamma$.
+
+\item Use function from \emph{1.} to simplify the system of 2 ODEs to a first-order ODE.
+
+\item Solve it.
+
+\item What was the number of recovered people?
+
+\item Analyze the results.
+%\begin{itemize}
+%\item Compare your solution with a solution of the original system with the same constants
+%\item \qrvideo{http://www.public.asu.edu/~hnesse/classes/sir.html}
+%
+%\item Conclusions about the disease
+%
+%\end{itemize}
+
+\end{enumerate}
+
+
+
+
+\vfill
+
+
+\emph{Further Investigation. } 
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Study the CoViD-19 pandemic using the SEIR model.
+\item Find out about linearizing the system of 2 ODEs and solving it.
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}
+

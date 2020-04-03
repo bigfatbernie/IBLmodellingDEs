@@ -5,9 +5,12 @@ $$
 where $r$ is the natural growth rate of the population and $K$ is the maximum number of individuals that the environment can sustain. \\
 
 If that population is harvested at the rate of $H(t,P)$ fish per year, then it can be modelled by the ODE
+\begin{emphbox}[]
 $$
 \frac{dP}{dt} = r P \left(1 - \frac{P}{K} \right) - H(P,t).
 $$
+\end{emphbox}
+
 
 This ODE assumes that the population is harvested continuously throughout the year, which is not exactly true. Later in the course we will see how to make a better model. \\
 
@@ -15,8 +18,7 @@ This ODE assumes that the population is harvested continuously throughout the ye
 Your goal is to figure out the maximum profit you can generate from this population of fish. For that, it should be clear that it is undesirable to harvest too much, since it may lead to the extinction of the fish.
 
 
-\paragraph{\emph{1. Selling fishing licenses.}}
-
+\emph{1. Selling fishing licenses.}
 As the manager of the lake, you decide to profit from it by selling fishing licenses to people and allow them to fish there. 
 
 \begin{enumerate}[label=\emph{(\alph*)}]
@@ -47,8 +49,7 @@ Determine the maximum\footnote{This value can be controlled, e.g. by defining th
 
 \vfill
 
-\paragraph{\emph{2. Selling fish.}}
-
+\emph{2. Selling fish.}
 As the manager of the lake, you decide to profit from it by harvesting the fish yourself and selling it. 
 
 \begin{enumerate}[label=\emph{(\alph*)}]
@@ -69,10 +70,12 @@ As the manager of the lake, you decide to profit from it by harvesting the fish 
 
 \vfill
 
-\paragraph{\emph{Further Investigation.}} 
+\emph{Further Investigation.}
 \begin{enumerate}[label=\emph{\arabic*.}]
-\item What happens if you sell fishing licenses and also harvest some fish to sell?
-
 \item Can you think of other forms for $H(P,t)$? 
+
+\item If, instead of a logistic model, you include an extinction threshold as well, what can you say about the model for constant effort fishing? for constant rate fishing? Is it a useful addition to the model? Have fun with it!
 \end{enumerate}
 
+\begin{noexercises}
+\end{noexercises}

@@ -1,0 +1,165 @@
+\emph{Qestion.} 
+What is the path of a lion chasing an antelope?
+
+\vfill
+
+\emph{Rules. } 
+\begin{itemize}
+\item The antelope flees at a constant speed $v$ in a straight line
+\item The lion chases at a constant speed $u$
+\end{itemize}
+
+
+
+\vfill
+
+\emph{Step-by-step breakdown of the problem.}
+\begin{enumerate}[label=\emph{\arabic*.}]
+
+\item Assume the antelope starts at $(0,0)$ and moves up the $y$-axis. What is its position?
+
+$$ (0,vt) $$
+
+\item Assume the lion's position is $\big(x(t),y(t)\big)$. What happens if $x(0)=0$?
+%    
+%    if $y(0)<0$, then 
+%    $$y(t)=y_0+ut$$
+%    otherwise
+%    $$y(t) = y_0-ut$$
+
+\item \label{sign} Assume the lion's position is $\big(x(t),y(t)\big)$ with $x(0)\neq 0$. For simplicity, assume that $x(0)<0$. What is the sign of $x'(t)$?
+
+%    $$x'(t)>0$$
+
+\item \label{func} The goal is to find the path, so we are looking for an equation to describe $y(x)$. Using the result from \ref{sign}, explain why the solution will be a function $y(x)$.
+
+%    $x'(t)>0$, so the graph will be going to the right and will pass the vertical line test. This means that the path will form a graph of a function $y(x)$.
+
+\item \label{speed} The lion's speed is $u$. Express that condition using $x(t)$ and $y(t)$.
+
+%    $$\big(x'(t)\big)^2 + \big(y'(t)\big)^2 = u^2$$
+
+\item Find an expression for $\dfrac{dx}{dt}$ without the variable $t$. 
+%    TA hint: Use \ref{func} and \ref{speed}
+%    
+%    \begin{gather*}
+%    \frac{dy}{dt} = \frac{dy}{dx} \frac{dx}{dt} \\
+%    \left(\frac{dx}{dt}\right)^2 \left[ 1 + \left(\frac{dy}{dx}\right)^2 \right] = u^2 \\
+%    \frac{dx}{dt} = \frac{u}{\sqrt{1 + \big(y'(x)\big)^2}}
+%    \end{gather*}
+%    
+
+\item \label{slope} Which condition on $\dfrac{dy}{dx}$ do we get from the fact that the lion is chasing the antelope? Draw a picture.
+
+%    $$ \frac{dy}{dx} = \frac{y - vt}{x}$$
+
+\item Use \ref{slope}, and obtain an expression for $\dfrac{dx}{dt}$ in terms of $\dfrac{d^2y}{dx^2}$. 
+%    TA hint: Recall that $\frac{dz}{dt} = \frac{dz}{dx} \frac{dx}{dt}$.
+%    
+%    \begin{gather*}
+%    x \frac{dy}{dx} = y-vt \\
+%    \frac{dx}{dt} \frac{dy}{dx} + x \frac{d^2y}{dx^2}\frac{dx}{dt} = \frac{dy}{dx}\frac{dx}{dt} - v \\
+%    \frac{dx}{dt} = -\frac{v}{x \frac{d^2y}{dx^2}}
+%    \end{gather*}
+
+
+\item Obtain a Differential Equation that describes the lion's path $y(x)$.
+
+%    \begin{gather*}
+%    \frac{u}{\sqrt{1 + \big(y'(x)\big)^2}} = -\frac{v}{x \frac{d^2y}{dx^2}} \\
+%    x y''(x) = -\frac{v}{u} \sqrt{1 + \big(y'(x)\big)^2}
+%    \end{gather*}
+
+\item For simplicity, assume that the lion starts at $(-1,0)$. Solve this Initial-Value problem. 
+
+%    TA hint 1: $\rm arc\,sinh\,x = \ln \big(x+\sqrt{1+x^2}\big)$.
+%    
+%    TA hint 2: $y'(-1)=0$ because initially $x=-1$ and the lion is facing the antelope at the origin. 
+%    
+%    \begin{gather*}
+%    z(x) = y'(x) \\
+%    x z'(x) = -\frac{v}{u} \sqrt{1 + z^2} \\
+%    \int \frac{1}{\sqrt{1 + z^2}} \, dz = -\frac{v}{u} \ln |x| + A \tag{$z = \sinh w$} \\
+%    w = -\frac{v}{u} \ln |x| + A \\
+%    {\rm arc\,sinh\,} z = -\frac{v}{u} \ln (-B x)   \tag{$x<0$} \\
+%    \ln \big(z + \sqrt{1 + z^2} \big) = -\frac{v}{u} \ln (-Bx)  \tag{$k = \frac vu>0$}\\
+%    z + \sqrt{1+z^2} = C (-x)^{-k} \\
+%    1 + z^2 = C^2 (-x)^{-2k} + z^2 - 2 C z (-x)^{-k} \\
+%    z = \frac12 \left[ C (-x)^{-k} - \frac{1}{C} (-x)^k \right] \\
+%    y = \int z \, dx = \frac12 \left[ \frac{1}{C(1+k)} (-x)^{k+1} - \frac{C}{1-k} (-x)^{-k+1} \right]  + D\\
+%    y(-1)=0 \text{ and } y'(-1)=0 \\
+%    C = 1 \text{ and } D = \frac{k}{1-k^2} \tag{$u\neq v$}\\
+%    y = \frac12 \left[ \frac{1}{1+k} (-x)^{k+1} - \frac{1}{1-k} (-x)^{-k+1} \right]  + \frac{k}{1-k^2}\\
+%    \end{gather*}
+%    
+%    \begin{center}
+%    \includegraphics*[width=250pt]{lion_antelope.pdf}
+%    \end{center}
+
+\item When does the lion actually catch the antelope?
+
+%    \begin{gather*}
+%    x=0 \\
+%    y=\frac{k}{1-k^2}  = \frac{vu}{u^2- v^2} \\
+%    \text{ interception for $y>0$ only if } u>v  \\
+%    y = vT \tag{antelope} \\
+%    T = \frac{u}{u^2- v^2}
+%    \end{gather*}
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\vfill
+
+\emph{Further investigation. } 
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Program the pursuit (it will be approximated) and check your answer.
+\item Can you figure out the path of the lion for other antelope trajectories? 
+Program that pursuit and check your answer.
+
+\item (for fun) Program a ``game'' where you control the antelope and the computer controls the lion.
+\end{enumerate}
+
+
+
+
+
+
+%    WITHOUT CONSIDERING FIXED LION SPEED
+%
+%    \begin{gather*}
+%    \frac{dx}{dt} = -x \\
+%    \frac{dy}{dt} = v t - y \\
+%    \\
+%    \frac{dy}{dx} = - \frac{vt - y}{x}\\
+%    x = -\frac{vt-y}{\frac{dy}{dx}}
+%    \\
+%    \frac{dx}{dt} = -\frac{(v-\frac{dy}{dt})\frac{dy}{dx} - (vt-y) \frac{d}{dt} \frac{dy}{dx}}{(\frac{dy}{dx})^2} \\
+%    -x \left( \frac{dy}{dx}\right)^2	= (v-vt+y)\frac{vt - y}{x} - (vt-y) \frac{d^2y}{dx^2} x \\
+%    - \frac{vt-y}{x}	= \frac{v-vt+y}{x} - \frac{d^2y}{dx^2} x \\
+%    \frac{dy}{dt} = \frac vx + \frac{dy}{dt} - \frac{d^2y}{dx^2} x \\
+%    \frac{d^2y}{dx^2} = \frac{v}{x^2} \\
+%    \frac{dy}{dx} = -\frac vx + A \\
+%    y = -v \ln |x| + Ax + B\\
+%    \\
+%    y(-1)=0 \text{ and } 
+%    y'(-1)=0 \\
+%    y'(-1)=v+A = 0 \Rarrow A=-v \\
+%    y(-1) = -A+B = v+B = 0 \Rarrow B = -v \\
+%    \\
+%    y = -v (\ln |x| + x + 1)\\
+%    %
+%    %
+%    \end{gather*}
+
+\begin{noexercises}
+\end{noexercises}

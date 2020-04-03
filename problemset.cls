@@ -418,6 +418,15 @@
 
 \newcounter{projectcounter}
 	\def\probset@InProjectEnv{0}
+%	\newcommand*\probset@cleartooddpage{
+%		\clearpage
+%		\ifodd\value{page}
+%		\else
+%			\hbox{}
+%			\newpage
+%		\fi
+%	}
+
 	\newcommand\probset@drawProjectBanner[2]{
 		\def\bannerpathR{
 			([shift={(-0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north east) 
@@ -455,7 +464,7 @@
 			\else
 				% put a banner on the page with no text if we are not the first
 				% page in a project
-				\probset@drawMProjectBanner{Project \theprojectcounter: \probset@InProjectEnvTitle}{reverse}
+				\probset@drawProjectBanner{Project \theprojectcounter: \probset@InProjectEnvTitle}{reverse}
 			\fi
 		}{}
 	}
@@ -481,6 +490,13 @@
 			twoside=true}
 		\RenewDocumentCommand{\emph}{m}{{\bfseries\color{green} ##1}}
 
+\DeclareDocumentEnvironment{emphbox}{o}{
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Green} ##1}}
+		\begin{leftborderbox}[colframe=Green, colback=Green!10]
+		{\bfseries\sffamily\color{Green} ##1}
+	}{%
+		\end{leftborderbox}
+	}
 		% make sure we know what page this module starts on so
 		% we can do something special on the first page
 		\setcounter{probset@currentProjectStart}{\value{page}}
@@ -777,85 +793,86 @@
 	\global\let\extenable\tikzexternalenable
 
 %	\begin{multicols*}{2}[{%
-%			\subsection*{Practice Problems}}]\small %
-%	}{%
-%	\end{multicols*}%
+%			\subsection*{Practice Problems}]\small %
+%	}{
+%	\end{multicols*}}%
+
 	\clearpage
 }
 
 
-
-%%
-%% Commands to save definitions for reuse later
-%%
-% Usage:
-% 	\begin{SaveDefinition}[
-%  	   		key=unionintersection,          % this is the key used to render the definition later
-%			title={Unions \& Intersections}
-%		]
-%		The \emph{union} of two sets $X$ and $Y$ is $X\cup Y=\ldots$.
-% 	\end{SaveDefinition}
-\pgfkeys{
-	/definitions/all/.initial=
-}
-\NewEnviron{SaveDefinition}[1][]{%
-	% save the arguments in temporary keys for use later
-	\pgfkeys{
-		/definitions/working/.cd,
-		key/.initial,
-		title/.initial,
-		,#1,% there cannot be a space between the `,` and the `#1`.
-		title/.get=\deftitle, % the `.get` commands need to come after `#1`, otherwise the contents of `#1` won't get stored
-		key/.get=\defkey,
-	}%
-	% save the actual definition
-	\edef\deflist{\pgfkeysvalueof{/definitions/all}\pgfkeysvalueof{/definitions/working/key},}%
-	%
-	\edef\compareval{\pgfkeysnovalue}%
-	\def\wordtrue{true}
-	% we redefine with an \edef so that "title=" and "title={}" will both be recognized as an empty title
-	\edef\deftitle{\pgfkeysvalueof{/definitions/working/title}}% 
-	%
-	% from here on out, we want keys saved to be global
-	% we need to use the low-level command here to deal with expansion issues.
-	\globaldefs=1\relax%
-	\pgfkeyslet{/definitions/all}{\deflist}%
-	\pgfkeyslet{/definitions/stored/\defkey/body}{\BODY}%
-	\pgfkeyslet{/definitions/stored/\defkey/key}{\defkey}%
-	\ifdefequal{\deftitle}{\compareval}{
-		% the title is empty
-		% XXX This is an annoying hack...I don't know how to get it working another way
-		\pgfkeyslet{/definitions/stored/\defkey/title}{\compareval}%
-	}{%
-		% the title is non-empty
-		\pgfkeyslet{/definitions/stored/\defkey/title}{\deftitle}%
-	}%
-}
-\NewDocumentCommand{\SavedDefinitionBody}{m}{%
-	\pgfkeysvalueof{/definitions/stored/#1/body}%
-}
-\NewDocumentCommand{\SavedDefinitionTitle}{m}{%
-	\pgfkeysvalueof{/definitions/stored/#1/title}%
-}
-
-\NewDocumentCommand{\SavedDefinitionRender}{m}{%
-	%\edef\deftitle{\SavedDefinitionTitle{#1}}%
-	% XXX I don't know why "\edef\deftitle{\SavedDefinitionTitle{#1}}" doesn't work...
-	\edef\deftitle{\pgfkeysvalueof{/definitions/stored/#1/title}}%
-	\edef\defbody{\SavedDefinitionBody{#1}}%
-	\edef\compareval{\pgfkeysnovalue}%
-	\ifdefequal{\deftitle}{\compareval}{%
-		% the title is empty, do nothing
-		\begin{definition}
-			\defbody
-		\end{definition}
-	}{%
-		% the title is non-empty
-		\begin{definition}[\deftitle]
-			\defbody
-		\end{definition}
-	}%
-}
+%
+%%%
+%%% Commands to save definitions for reuse later
+%%%
+%% Usage:
+%% 	\begin{SaveDefinition}[
+%%  	   		key=unionintersection,          % this is the key used to render the definition later
+%%			title={Unions \& Intersections}
+%%		]
+%%		The \emph{union} of two sets $X$ and $Y$ is $X\cup Y=\ldots$.
+%% 	\end{SaveDefinition}
+%\pgfkeys{
+%	/definitions/all/.initial=
+%}
+%\NewEnviron{SaveDefinition}[1][]{%
+%	% save the arguments in temporary keys for use later
+%	\pgfkeys{
+%		/definitions/working/.cd,
+%		key/.initial,
+%		title/.initial,
+%		,#1,% there cannot be a space between the `,` and the `#1`.
+%		title/.get=\deftitle, % the `.get` commands need to come after `#1`, otherwise the contents of `#1` won't get stored
+%		key/.get=\defkey,
+%	}%
+%	% save the actual definition
+%	\edef\deflist{\pgfkeysvalueof{/definitions/all}\pgfkeysvalueof{/definitions/working/key},}%
+%	%
+%	\edef\compareval{\pgfkeysnovalue}%
+%	\def\wordtrue{true}
+%	% we redefine with an \edef so that "title=" and "title={}" will both be recognized as an empty title
+%	\edef\deftitle{\pgfkeysvalueof{/definitions/working/title}}% 
+%	%
+%	% from here on out, we want keys saved to be global
+%	% we need to use the low-level command here to deal with expansion issues.
+%	\globaldefs=1\relax%
+%	\pgfkeyslet{/definitions/all}{\deflist}%
+%	\pgfkeyslet{/definitions/stored/\defkey/body}{\BODY}%
+%	\pgfkeyslet{/definitions/stored/\defkey/key}{\defkey}%
+%	\ifdefequal{\deftitle}{\compareval}{
+%		% the title is empty
+%		% XXX This is an annoying hack...I don't know how to get it working another way
+%		\pgfkeyslet{/definitions/stored/\defkey/title}{\compareval}%
+%	}{%
+%		% the title is non-empty
+%		\pgfkeyslet{/definitions/stored/\defkey/title}{\deftitle}%
+%	}%
+%}
+%\NewDocumentCommand{\SavedDefinitionBody}{m}{%
+%	\pgfkeysvalueof{/definitions/stored/#1/body}%
+%}
+%\NewDocumentCommand{\SavedDefinitionTitle}{m}{%
+%	\pgfkeysvalueof{/definitions/stored/#1/title}%
+%}
+%
+%\NewDocumentCommand{\SavedDefinitionRender}{m}{%
+%	%\edef\deftitle{\SavedDefinitionTitle{#1}}%
+%	% XXX I don't know why "\edef\deftitle{\SavedDefinitionTitle{#1}}" doesn't work...
+%	\edef\deftitle{\pgfkeysvalueof{/definitions/stored/#1/title}}%
+%	\edef\defbody{\SavedDefinitionBody{#1}}%
+%	\edef\compareval{\pgfkeysnovalue}%
+%	\ifdefequal{\deftitle}{\compareval}{%
+%		% the title is empty, do nothing
+%		\begin{definition}
+%			\defbody
+%		\end{definition}
+%	}{%
+%		% the title is non-empty
+%		\begin{definition}[\deftitle]
+%			\defbody
+%		\end{definition}
+%	}%
+%}
 
 
 

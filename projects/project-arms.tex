@@ -1,0 +1,149 @@
+In this project, you will develop and analyze models for an arms race between two countries. 
+
+Define the following:
+\begin{itemize}
+	\item $t\geq 0$ represent time in years;
+	\item $x(t)$ and $y(t)$ represent the yearly military budget (in dollars) of countries Blue and Red respectively. 
+\end{itemize}
+
+\vfill
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item \emph{Mutual Fear!} 
+For a first model, assume that each country increases its military budget at a rate directly proportional to the existing military budget of the other nation. 
+\begin{enumerate}[label=\emph{(\alph*)}]
+\item What are the equations that define this model? \emph{Hint: There should be two constants in your model.}
+%\begin{align*}
+%x'(t) &= ay(t)\\
+%y'(t)  &=bx(t)
+%\end{align*}
+%where $a$, $b$ are positive.
+
+\item Solve the system and sketch a phase portrait.
+
+%\begin{align*}
+%\begin{pmatrix} x'(t)\\y'(t) \end{pmatrix} = \begin{pmatrix} 0 & a \\ b & 0\end{pmatrix}\begin{pmatrix}x(t)\\y(t)\end{pmatrix}
+%\end{align*}
+%Eigenvalues are $\pm \sqrt{ab}$ with eigenvectors $\begin{pmatrix} \pm\sqrt{ab} \\b \end{pmatrix}$.\\
+%So the general solution is 
+%$$
+%\begin{pmatrix} x(t)\\y(t)\end{pmatrix} = c_1 e^{\sqrt{ab}t}\begin{pmatrix} \sqrt{ab}\\b\end{pmatrix} + c_2 e^{-\sqrt{ab}t}\begin{pmatrix} -\sqrt{ab}\\b\end{pmatrix}
+%$$
+
+\item What does the model predict about the long term military budgets of the two countries? 
+
+%The budgets will increase without bound for almost any initial condition. If initial conditions are chosen so that $c_1=0$ and $c_2\neq 0$ then the budgets will approach 0 as $t\rightarrow \infty$, however in this case $x(t)$ would be negative and this doesn't makes sense for the problem (budgets can't be negative). So the budgets will increase without bound for any initial condition.
+
+\end{enumerate}
+
+\vfill
+
+\item \emph{The Richardson Model.} 
+Now include some limiting factors in to the model you set up above. Assume that in addition to the budget increases in the mutual fear model, each country's military budget decreases at a rate proportional to it's current military budget and increases at some fixed (independent of military budget) rate due to a long standing grievance.
+
+\begin{enumerate}[label=\emph{(\alph*)}]
+\item What are the equations that define this model? 
+
+\emph{Hint.} There should be six constants in your model.
+%\begin{align*}
+%x'(t) &= -ax(t) + by(t) + c\\
+%y'(t) &= dx(t) - ey(t) + f
+%\end{align*}
+%where all constants are positive.
+%\item What possibilities exist for the long term behaviour of the military budgets of the two countries?
+
+\item Under what conditions (on the six constants) can the arms race stabilize? By stabilize we mean that the military budgets remain at some fixed amount, or that the budgets approach some constant amounts. 
+
+
+\begin{itemize}
+\item There is a line $L_B$, called the optimal line for Blue, in the phase plane such that if $(x(t),y(t))$ lies on $L_B$ then $x'(t)=0$. What is the equation of that line?
+
+%If $x'(t) = 0$ then $-ax + by + c=0$ which implies $y=\frac{a}{b}x-\frac{c}{b}$.
+\item Show that Blue continuously changes its military budget to bring the solution $(x(t),y(t))$ closer to $L_B$.
+
+%Suppose that $(x_1, y_1)$ is any point not on $L_B$, and let $(x_2, y_1)$ be a point on $L_B$. Then $-ax_2 + by_1 + c = 0$.\\
+%\begin{align*}
+%x'(x_1,y_1) &= -ax_1 +by_1 + c\\
+%&=-ax_1+by_1+c - (-ax_2 + by_1 + c)\\
+%&=a(x_2-x_1)
+%\end{align*}
+%So $x'(x_1,y_1)$ is positive exactly when $x_2>x_1$, i.e. when $(x_1,y_1)$ is to the left of $L_B$. Similarly, $x'(x_1,y_1)$ is negative exactly when $(x_1,y_1)$ les to the right of $L_B$. Thus we see that Blue tries to bring its budget towards its optimal line.
+
+\item Repeat the previous two parts for a line $L_R$, the optimal line for Red.
+
+%Similar.
+
+\item What does the intersection point of $L_B$ and $L_R$ represent?
+
+%The point of intersection represents a stable solution where both countries' military budgets remain fixed.
+
+\item Under what conditions on the constants will the point of intersection lie in the first quadrant ($x>0, y>0$)? What will be the long term behaviour of the system for various initial conditions? Explain.
+
+
+%Point of intersection is $\displaystyle \left(\frac{ce+bf}{ae-bd}, \frac{af+cd}{ae-bd}\right)$, which is in the first quadrant if $ae-bd>0$. For any nonnegative initial conditions, the solution will approach the stable solution given by the point of intersection. This is evident from each country trying to move their budget towards their optimal line. Indeed, consider a point in the phase plane and based on its position relative to the optimal lines, determine how it must move as $t$ goes to infinity.
+
+\item Under what conditions on the constants will the point of intersection lie in the third quadrant ($x<0, y<0$)? What will be the long term behaviour of the system for various initial conditions? Explain.
+
+%In this case, the point of intersection is in the third quadrant if $ae-bd<0$. The solution will increase without bound.
+
+
+\end{itemize}
+
+
+\item What happens in the long run for various initial conditions if one or both of the ``grievance'' terms is/are negative? (More of a ``good will'' term than a ``grievance'' term!)
+
+%Depending on the initial conditions and whether the point of intersection lies on the first or third quadrant, the solutions may go to zero (mutual disarmament) or go to infinity (runaway arms race). If the point of intersection lies in the first quadrant, then exactly which initial conditions lead to which behaviour is hard to determine analytically. A qualitative description is sufficient.
+%Notice that if the point of intersection lies in the first quadrant, then the lines $L_B$ and $L_R$ divide the first quadrant into four pieces. Consider initial conditions starting in each of those four pieces.
+
+
+\item Can $L_B$ and $L_R$ be parallel? What happens in this case?
+
+\item Can $L_B = L_R$? What happens in this case?
+
+\item Produce examples that demonstrate these various cases and long term behaviours. Plot or sketch their phase portraits.
+\end{enumerate}
+
+\item \emph{Real World.}
+	One can argue that in the real world, a runaway arms race is impossible since there is a limit to how much a country can spend. We can add carrying capacities in to the model. Let $x_M$ and $y_M$ be the maximum budgets of the two countries. Then consider the model
+\begin{align*}
+x'(t) &= \left(1- \dfrac{x}{x_M}\right) (-ax + by + c)\\
+y'(t) &=\left(1-\frac{y}{y_M}\right)(dx-ey+f)
+\end{align*}
+Analyze this model.
+
+\end{enumerate}
+
+
+\emph{Further Investigation.}
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item \emph{Another Nonlinear Model.} Suppose that the equations underlying the model have the form
+$$
+\begin{cases}
+x'(t) = -ax+by^2+c\\
+y'(t) =dx^2-ey+f	
+\end{cases}
+$$
+where $a,b,d,e,f>0$. How many stable points are there? 
+There are now optimal curves instead of optimal lines. 
+Discuss the outcomes of such an arms race for various intersections of the optimal curves.
+
+\item \emph{The Richardson Model with Good Will.} If instead of having terms representing increases due to a grievance, what happens if you include terms representing fixed rate decreases in the military budgets of both countries due to good will?
+\begin{itemize}
+\item What are the equations that define this model? 
+
+\emph{Hint.} There should be six constants in your model.
+
+\item What possibilities exist for the long term behaviour of the military budgets of the two countries?
+\item How do the possibilities for the long term behaviour depend on initial conditions?
+\item Produce examples that demonstrate the various long term behaviours.
+\end{itemize}
+
+\item Richardson with carrying capacities.
+
+\item Extend Richardson to three countries.
+
+\item Increase not by absolute level but by amount over stable level.
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}

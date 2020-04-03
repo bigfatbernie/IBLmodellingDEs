@@ -1,0 +1,87 @@
+\emph{Statement. } 
+A motion sensor was set up to measure the motion in a spring-mass system, but something went wrong and the motion sensor measured the total distance traveled instead of simply measuring the distance from the sensor. The experiment was conducted three times (same spring and same mass) with different initial conditions. The total distance traveled is given as the data sets in the Google Sheet spreadsheet:
+\begin{itemize}
+	\item \qrvideo{https://goo.gl/AFMTn8}
+\end{itemize}
+
+
+The conditions for the three experiments were:
+
+\emph{Data Set \#1.} Initial position: $y(0) = 1$. Initial velocity: $y'(0) = 0$.	 \\
+\emph{Data Set \#2.} Initial position: $y(0) = 0.5$. Initial velocity: $y'(0) = 1$. \\	
+\emph{Data Set \#3.} Initial position: $y(0) = -0.75$. Initial velocity: $y'(0) = -2.5$.	\\
+
+
+\vfill
+
+\emph{Experimental Setup.}
+
+\begin{itemize}
+	\item The sensor gathered data at a rate of 20 samples per second.
+	\item The experiment was run for 5 seconds.
+	\item $y(t)$ is the distance from the equilibrium position of the spring-mass system. Positive values of $y(t)$ indicate that the mass was above the equilibrium position. Negative values of $y(t)$ indicate that the mass was below the equilibrium position.
+	\item There is some noise in the data.
+\end{itemize}
+
+\vfill
+
+\emph{Task. } 
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+	\item Use the data in the spreadsheet to determine the governing ODE, which should include estimates for the parameters.
+	\item Use the data in the spreadsheet to determine the height $y(t)$ for the different experiments.
+\end{enumerate}
+
+
+%
+%
+%\newpage
+%
+%\emph{Spring-Mass Systems.} \hfil
+%
+%\begin{itemize}
+%\item For a spring-mass system with no external forces, you can use
+%$$
+%my''(t) + by'(t) + ky(t) = 0
+%$$
+%where $m$ is the mass, $b$ is the damping coefficient, and $k$ is the spring constant or you can divide through by the mass and use
+%$$
+%y''(t) + 2\delta y'(t) + \kappa y(t) = 0
+%$$
+%where $\delta = \frac{b}{2m}$ and $\kappa = \frac{k}{m}$. \\
+%
+%
+%\item Recall that if $y(t)$ is displacement and $v(t) = y'(t)$ is velocity then the total distance traveled is given by the function
+%$$
+%d(t) = \int_0^t \big|v(\tau)\big| \, d\tau.
+%$$
+%\end{itemize}
+
+\emph{Hint.} Recall that if $y(t)$ is displacement and $v(t) = y'(t)$ is velocity then the total distance traveled is given by the function
+$$
+d(t) = \int_0^t \big|v(\tau)\big| \, d\tau.
+$$
+
+
+
+\vfill
+
+
+
+\emph{Further Investigation. } 
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item How many data sets and how many data points are needed to be able to solve the problem?
+
+\item Add more noise to the data. Can you still solve it? How much noise can you add and still obtain good results?
+
+\item Create your own (fake) data mimicking a spring with different properties (remember to include some noise in the data)? And solve it to show that it can be done.
+
+\item Could you use this to detect an external force acting on the spring-mass system? Try it with two new data sets: 
+\begin{itemize}
+	\item \qrvideo{https://goo.gl/TxzQWw}	
+\end{itemize}
+
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}

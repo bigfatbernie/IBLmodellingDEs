@@ -1,0 +1,174 @@
+\emph{Goal. } Understand that Supply Chain Management is hard(!) and attempt to model it. \\
+
+
+Watch the short movie:
+\begin{itemize}
+	\item \qrvideo{https://youtu.be/2nlmkTYZG5s}
+\end{itemize}
+to understand a bit better about the bullwhip effect. \\
+
+
+Read also:
+\begin{itemize}
+	\item \qrvideo{http://forio.com/about/blog/bullwhips-and-beer/}
+\end{itemize}
+
+
+
+
+
+
+\vfill
+\emph{Near Beer Game (Novice). } You own a (tiny) Beer Store.
+
+You start with a stable situation where your customers have been asking for 10 cases of beer every week, and your inventory and orders match the situation (so you don't run low on inventory and you don't accumulate either).
+
+From the second week, your customers start ordering 15 cases of beer instead.
+
+It is you job to stabilize the whole supply chain as soon as possible.
+
+Below is a screen from the ``game''.
+\begin{center}
+\includegraphics*[width=400pt]{images/project-bullwhip-Near_Beer_Game.png}
+\end{center}
+
+\begin{itemize}
+\item New Orders from Customers: Number of beer cases your new customers want this week
+\item Cumulative Unfilled Orders: Number of beer cases that your 
+\end{itemize}
+
+
+
+
+\newpage
+
+\emph{Task. } Go to 
+\begin{itemize}
+	\item \qrvideo{https://forio.com/simulate/mbean/near-beer-game/run/}	
+\end{itemize}
+
+The goal of the ``game'' is to try and stabilize the number of customer orders, your inventory, arriving orders, and your order, so that you end up with the following situation
+\begin{itemize}
+\item Customer Orders: 15 cases every week (with no unfilled orders)
+\item Inventory: 15 cases
+\item Arriving Order: 15 cases
+\item Order 15 cases
+\end{itemize}
+
+\begin{enumerate}[label = \emph{\arabic*.}]
+
+\item Play the ``game'' on $\pmb{\tt Novice}$ as a group and see how many weeks it takes to stabilize the situation.
+
+Consider the following sequences:
+\begin{itemize}
+\item $c_n = $ number of beer cases ordered by customers
+\item $u_n = $ number of cases ordered previously but not fulfilled yet
+\item $i_n = $ number of cases in inventory
+\item $o_n = $ number of cases ordered 
+\item $r_n = $ number of cases of beer produced
+\end{itemize}
+where $n$ is the number of weeks elapsed since the beginning of the ``game''. \\
+
+\begin{enumerate}[label = \emph{(\alph*)}]
+\item What are the initial conditions ($n=0$) ?
+\item What is the formula for $c_n$?
+
+
+\item What is the formula for $r_n$? 
+
+% {\bf Hint from TA. } How much time does it take from ordering to actually having it in inventory ready to sell?
+
+\item What is $i_n$?
+
+\item What is $u_n$?
+
+%    \item Run the ``game'' with your choice of $o_n$ and confirm that your modelling is correct, that is, that your variables follow the outcome of the game.
+
+\item Confirm that your modelling is correct, that is, that your variables follow the outcome of the game.
+
+\item Decide on a strategy for ordering beer cases. Decide on a formula for $o_n$ that can depend on $n$, $c_n$, $u_n$, $i_n$, $r_n$.
+Explain your choice.
+
+\item What is the result of your strategy? Does it go ``amuck'' -- bullwhip effect\footnote{It's ok if it goes ``amuck''! The goal is to see the Bullwhip Effect in action... Now try to fix it!}? Or does it control the supply chain nicely?
+
+\end{enumerate}
+
+
+\newpage
+
+\item Play the ``game'' on $\pmb{\tt Expert}$ as a group and see how many weeks it takes to stabilize the situation.
+
+Consider the same sequences as for \emph{1.} 
+
+The difference between {\tt Novice} and {\tt Expert} is that the customer orders go from $10\to50$ and every week $25\%$ of unfilled orders are cancelled.
+
+\begin{enumerate}[label = \emph{(\alph*)}]
+\item What are the initial conditions ($n=0$) ?
+\item What is the formula for $c_n$?
+
+
+\item What is the formula for $r_n$? 
+
+%{\bf Hint from TA. } How much time does it take from ordering to actually having it in inventory ready to sell?
+
+\item What is $i_n$?
+
+\item What is $u_n$?
+
+%    \item Run the ``game'' with your choice of $o_n$ and confirm that your modelling is correct, that is, that your variables follow the outcome of the game.
+
+\item Confirm that your modelling is correct, that is, that your variables follow the outcome of the game.
+
+\item Decide on a strategy for ordering beer cases. Decide on a formula for $o_n$ that can depend on $n$, $c_n$, $u_n$, $i_n$, $r_n$.
+Explain your choice.
+
+
+\item What is the result of your strategy? Does it go ``amuck'' -- bullwhip effect? Or does it control the ordering nicely?
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\vfill
+
+\emph{Further Investigation. } 
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item There is a more complex version of the game 
+\begin{itemize}
+	\item \qrvideo{https://beergame.pipechain.com/}
+\end{itemize}
+which includes 1--4 players from 4 different stages of the supply chain. It takes 2 weeks for orders to arrive to a different stage and it takes 2 weeks to fulfill a request.
+
+\begin{enumerate}[label = \emph{(\alph*)}]
+\item Play the game with 2 players\footnote{Create a game and then use another computer to join the same game} who do not communicate with each other, i.e., two-stage supply chain.
+
+\item Define the new sequences
+\begin{itemize}
+\item $c_n = $ number of beer cases ordered by customers
+\item $o_n = $ number of cases ordered by the retailer
+\item $s_n = $ number of cases in the retailer's stock
+\item $p_n = $ number of cases ordered by the producer
+\item $q_n = $ number of cases in the producer's stock
+\end{itemize}
+
+\item Make a similar study for this case. Observe that now you have to decide on the strategy for both $o_n$ and $p_n$.
+\end{enumerate}
+
+
+\item In the article suggested at the beginning
+\begin{itemize}
+\item \qrvideo{http://forio.com/about/blog/bullwhips-and-beer/}
+\end{itemize}
+the author describes ways a few ways to reduce the Bullwhip effect. Program each of them with your sequence $o_n$ and study how well they reduce the effect.
+
+
+\item You can avoid the Bullwhip effect completely with perfect information about the supply chain and the future customer demand. In reality, we can predict the customer demand, but it won't match exactly the prediction. Add a little noise to customer demand and try to avoid the Bullwhip effect. You can still use the fact that customer demand will still be close to 15 cases every week.
+
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}
