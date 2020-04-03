@@ -1,0 +1,144 @@
+\newpage 
+
+\begin{exercises}
+
+		\begin{problist}
+	
+	\prob Consider the following discrete population model:
+	\begin{itemize}
+		\item $p_k=$ population at the beginning of season $k$
+		\item $R = $ basic reproduction value for the population
+		\item $K= $ carrying capacity 
+		\item $\displaystyle p_{k+1}=p_k + R p_k\left(1-\frac{p_k}{K}\right)$
+	\end{itemize}
+	
+	\begin{enumerate}
+		\item Define:
+		\begin{itemize}
+			\item $\mu = 1+R$,
+			\item $\displaystyle x_k = \frac{R}{1+R} \frac{p_k}{K}$.
+		\end{itemize}
+		Show that $x_{k+1} = \mu x_k (1-x_k)$.
+		\item What are the equilibrium values for $x_k$?
+	%	$$
+	%	E = 1 - \frac1\mu = \frac{mu-1}{\mu}
+	%	$$
+	
+		\item Take $R=1, \mu=2$. Compare this model with the continuous logistic model.
+		\item In the continuous model, solutions cannot cross the equilibrium. 
+		Change the value of $R,\mu$ and show that in this discrete model, solutions can cross the equilibrium.
+		
+		\item Take $R=3, \mu=4$ (constants for influenza virus). Below is a graph with $\color{green!70!black}x_0 = 0.1$ and $\color{blue!85!black}x_0=0.101$.
+	
+			\begin{center}
+				\includegraphics*[width=150pt]{images/module26-logistic.png}
+			\end{center}
+		
+			Which conclusions do you take from this graph?
+			
+		\item Take $x_0=\frac12$. What happens to $x_k$ as $k$ gets larger and larger: does it remain bounded, or does it converge to $\pm \infty$? Check for different values of $\mu$.
+
+		\item You'll need to program for this exercise. Now allow complex values for $\mu \in \mathbb{C}$. In a graph, mark the values of $\mu \in \C$, for which $x_n$ does not diverge to infinity.
+		
+%		\includegraphics*[width=150pt]{images/module26-mandelbrot.png}
+		
+	\end{enumerate}
+
+\begin{annotation}
+\begin{goals}
+	\begin{itemize}
+	\item[1.] You can skip the first part and tell students to do it at home.
+	
+	\item[3.] For the comparison part, notice how the model is very similar in the way it looks. If you run the model it also behaves very similarly.
+
+	\qrvideo{https://www.desmos.com/calculator/zxk8udxmac}
+	
+	\item[4.] For the last part, for $\mu=3$, solutions oscillate but converge to equilibrium
+	\item[5.] For the last part, for $\mu=4$, $x_0=0.1$ and $x_0=0.101$ gives completely different solutions. Chaotic behaviour. So need to be careful analyzing nonlinear difference equations.
+	
+		\qrvideo{https://www.desmos.com/calculator/e656u8n4vt}
+	\end{itemize}
+\end{goals}	
+\end{annotation}
+
+	
+
+	
+
+	\prob Consider the model for a queue:
+	\begin{itemize}
+		\item $q_n=$ number of people waiting in the queue at minute $n$;
+		\item $\gamma=$ fraction of the people waiting that are attended each minute;
+		\item $\mu=$ average number of people that give up waiting in the queue per minute;
+	\end{itemize}
+
+	\begin{enumerate}
+		\item First, let us find out a very bad scenario for the queue. Find a number of initial people in the queue $q_0$ such that the size of the queue will never change.
+		\item Let 
+			\begin{itemize}
+				\item $p_k=$ probability that a person who joined the queue at time $k=0$ will still be waiting after $k$ minutes.
+			\end{itemize}
+			Is $p_k$ increasing, decreasing, or not monotone?
+		\item The probability that someone waited exactly $k$ minutes is $p_{k}-p_{k+1}$.
+			Find another expression for $p_{k}-p_{k+1}$ without using $p_k$.
+		\item The expected waiting time in the queue is given by the ``law'':
+			
+			\hspace{-.05\textwidth}\framebox{
+			\begin{minipage}{.4\textwidth}
+			The expected waiting time is the weighted average of the possible waiting times, where the weights are the probability of waiting that exact amount of time.
+			\end{minipage}}
+			
+		Find the expected waiting time for this queue.
+	\end{enumerate}
+	
+	
+	
+	
+	
+	\prob 	Two computers are facing each other on video conferencing software. The first computer makes a sound and every fraction of a second, the other computer reproduces the sound.
+	
+	Consider the following model for the microphone feedback:
+	\begin{itemize}
+		\item $v_n =$ volume produced by the first computer (in dB) for the $n$ iteration;
+		\item $e=$ fraction of the original volume reproduced by the second computer;
+		\item $M=$ maximum volume that first computer can produce (in DB). \\
+
+		\item $v_{n+1} = e v_n \left( \frac{M - e v_n}{M}+1\right)$.
+	\end{itemize}
+	
+	\begin{enumerate}
+		\item What is the initial volume that will just cause the following iterations to be the same?
+
+
+		\item Find a condition on $e$ that allows for the previous situation to occur.
+
+%v>0 iff 
+%v<M iff 
+
+		\item Assume $e \in (0,1)$. What happens if the initial volume is softer than the equilibrium? What happens if the initial volume is louder than the equilibrium?
+		\item Assume $e>1$. What happens if the initial volume is softer than the equilibrium? What happens if the initial volume is louder than the equilibrium?
+
+		\item Assume $e=\frac85$. Sketch a graph of the solution.
+		
+%		\begin{itemize}
+%			\item $v_0 = M$	
+%			\item $v_1 = \frac{16}{25}M$
+%			\item $v_2 = \frac85 \frac{16}{25}M \frac{122}{125} \approx M$
+%		\end{itemize}
+
+		What is the behaviour of the solution as $n$ gets larger?
+		
+		\item Assume $e=\frac{1+\sqrt{5}}{2}$ the golden ratio. Is there an initial volume that gives a periodic solution: $v_0=v_2=v_4,v_5=\cdots$ and $v_1=v_3=v_5=v_7=\cdots$?
+	
+	\end{enumerate}
+	
+\begin{annotation}
+\begin{goals}
+	For 2, remember that the first computer has to be able to produce the sound: $v_n < M$, and the sound needs to be audible $v_n>0$.
+\end{goals}	
+\end{annotation}
+
+
+		
+	\end{problist}
+\end{exercises}

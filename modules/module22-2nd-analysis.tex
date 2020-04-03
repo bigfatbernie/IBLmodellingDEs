@@ -1,0 +1,220 @@
+In this module you will learn
+\begin{itemize}
+	\item different ways to analyze models with higher-order differential equations
+\end{itemize}
+
+\hfill \\
+
+
+
+In this chapter, we have learned how to create models involving systems of ODEs and how to solve some special types of second-order ODEs.
+
+
+
+In this module, we'll study one example using a few different methods.
+
+\begin{example}
+Consider the model we found earlier for a mass attached to a spring:
+
+\begin{minipage}{0.85\textwidth}
+\begin{itemize}
+	\item $y(t)=$ vertical position of the mass, where $y=0$ is the position of the mass at rest
+	\item $my''(t) = -k y(t) - \gamma y'(t)$
+	\item $m,k,\gamma>0$ are constants for the mass, the stiffness of the spring, and the resistance of the dashpot.
+\end{itemize}
+\end{minipage}
+\begin{minipage}{50pt}
+\includegraphics*[height=100pt]{images/module16-spring-mass-dashpot.pdf}	
+\end{minipage}
+\end{example}
+
+\hfill
+
+\begin{center}
+\textbf{\color{cyan}
+Qualitative evolution of quantities
+}
+\end{center}
+
+
+We can try to figure out how these quantities, $y(t)$ is going to increase or decrease as time goes by. \\
+
+Let us imagine that initially  \quad $y(0)=1, y'(0)=0$.
+
+Then, at $t=0$, we have
+$$
+\begin{cases}
+y(0)=1 \\
+y'(0)=0 \\
+y''(0)= -k < 0 & \text{ (so mass is decelerating, meaning speed will become negative)}
+\end{cases}
+$$
+
+This means that mass is decelerating, so we have two immediate consequences:
+\begin{itemize}
+	\item the speed will decrease and become negative
+	\item the position will start decreasing
+\end{itemize}
+
+Once the speed is negative, we see another effect
+$$
+y''(t) = -k\underbrace{y(t)}_{\text{decreasing}} \underbrace{- \gamma y'(t)}_{\rm positive},
+$$
+so the acceleration is negative but approaching zero at time $t_1$:
+$$
+0=y''(t_1) = -ky(t_1) - \gamma y'(t_1)
+\quad \Leftrightarrow \quad k y(t_1) = - \gamma y'(t_1)
+$$
+
+Let us summarize our results so far in a table:
+
+\begin{graybox}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c}
+$\pmb{t}$	& $0$ 		& 			& $t_1$ &  			& 			& 	&	& \hspace{1cm} $+\infty$ \\[5pt] \hline\hline
+$\pmb{y}$ & $1$	& $ \searrow$	& $+$ &	$\searrow$ 	&	&  \hspace{0.5cm}	&  	& 	\\[5pt] \hline
+$\pmb{y'}$ & $0$ &	$\searrow$	& $-$ & $\nearrow$ & 	&  	& &	\\[5pt] \hline
+$\pmb{y''}$ & $-$		& $\nearrow$ & 0  & $\nearrow$  & 	& 	&  &	\\[5pt] \hline
+\end{tabular}
+\end{center}
+\end{graybox}
+
+The next milestone is:
+$$
+y(t_2)=0 \quad \text{ or } \quad y'(t_2)=0.
+$$
+
+If $y'(t_2)=0$ while $y(t_2)>0$, then 
+$$
+y''(t_2) = -ky(t_2) <0,
+$$
+which means that $y''$ would have had to decrease again, become zero and then negative, so must have been another milestone before.
+We deduce that the next milestone is
+$$
+y(t_2)=0
+\quad \Leftrightarrow \quad	
+	y''(t_2) = -\gamma y'(t_2) > 0.
+$$
+
+\begin{graybox}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c}
+$\pmb{t}$	& $0$ 		& 			& $t_1$ &  			&	$t_2$& 	&$t_3$	& \hspace{1cm} $+\infty$ \\[5pt] \hline\hline
+$\pmb{y}$ & $1$	& $ \searrow$	& $+$ &	$\searrow$ 	& $0$	&  $\searrow$ 	& $-$ 	& $\cdots$	\\[5pt] \hline
+$\pmb{y'}$ & $0$ &	$\searrow$	& $-$ & $\nearrow$ & $-$	&  $\nearrow$	& $0$ &	$\cdots$ \\[5pt] \hline
+$\pmb{y''}$ & $-$		& $\nearrow$ & 0  & $\nearrow$  & $+$ & $\nearrow$	& $+$ &	$ \cdots$ \\[5pt] \hline
+\end{tabular}
+\end{center}
+\end{graybox}
+
+We can continue this analysis to conclude that the position seems to cycle back and forth between positive and negative, like you would expect from a spring. \\
+
+In fact, this study is ``slightly'' flawed, since there is a possibility that the time $t_1$ never happens and the spring only approaches the state described without ever reaching it. This will happen for some configuration of the constants $m,k,\gamma$.
+
+
+
+
+\hfill
+
+\begin{center}
+\textbf{\color{cyan}
+Properties of the solutions
+}
+\end{center}
+
+
+
+We learned earlier in the chapter how to solve this type of differential equations.
+
+To solve them, we assume that solutions are of the form $y=e^{rt}$ and then find a characteristic equation for $r$:
+$$
+mr^2 = -k - \gamma r
+\quad \Leftrightarrow \quad 
+r = \frac{-\gamma \pm \sqrt{\gamma^2 - 4mk}}{2m}.
+$$
+
+Depending on the constants $m, k, \gamma$, we can have:
+\begin{itemize}
+	\item Two real distinct solutions 
+	\item Two complex distinct solutions
+	\item One repeated real solution
+\end{itemize}
+
+How do solutions behave in each case?
+What kind of springs or dashpots behave in each case?
+
+
+
+
+
+\hfill
+
+\begin{center}
+\textbf{\color{cyan}
+Limiting behaviour of the solutions
+}
+\end{center}
+
+
+From the analysis done above, we see that the possible values for $r$ are either negative or when $r$ is complex, its real part is negative (why?).
+
+This means that the solution will have the form
+$$
+y(t) = e^{(\text{negative constant}) t} \left[  a\cos(\alpha t) + b\sin(\beta t) + c\right],
+$$
+so 
+$$
+\lim_{t \to \infty} y(t) = 0.
+$$
+
+This means that the mass will slow down and eventually stop.
+
+
+%\newpage
+\hfill
+
+\begin{center}
+\textbf{\color{cyan}
+Numerical approximations
+}
+\end{center}
+
+
+
+In module \ref{Approximation} we learned how to approximate solutions of first-order ODEs using Euler's Method.
+
+We can extend that method to second-order ODEs, which we will leave as an exercise, and approximate the solution:
+
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics*[width=125pt]{images/module21-approx-k2g5.png}
+	& \includegraphics*[width=125pt]{images/module21-approx-k2g1.png}
+	& \includegraphics*[width=125pt]{images/module21-approx-k2g0.png} \\
+$k=2,\gamma=5$ 
+	& $k=2,\gamma=1$ 
+	& $k=2,\gamma=0$
+\end{tabular}
+\end{center}
+
+These graphs also give us some intuition on how the solutions behave.
+
+\begin{graybox}
+You can access this simulation here:
+\begin{itemize}
+	\item \qrvideo{https://www.desmos.com/calculator/mufgdgku9w}
+\end{itemize}	
+\end{graybox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

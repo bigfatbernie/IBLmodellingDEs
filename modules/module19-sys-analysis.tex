@@ -14,7 +14,7 @@ Solving the system of ODEs is often a large step in that direction, but it is mo
 
 Sometimes, when we cannot find an explicit formula for the solution, it is still possible to study the system to find some properties and behaviours of the solutions. \\
 
-In this module, we'll study one example using two different methods.
+In this module, we'll study one example using a few different methods.
 
 
 \begin{example}
@@ -210,6 +210,39 @@ Observe that if the population and cost of living are at these levels, then they
 
 This also informs us that the disastrous scenario on the first analysis, where the population all left the city, might have been caused by the stating position. \\
 
+
+
+
+
+
+\begin{center}
+\textbf{\color{cyan}
+Interpreting the phase portrait
+}
+\end{center}
+
+We have seen in the last module how to sketch a phase portrait for a system of ODEs such as this one.
+
+Let us assume that the constants $a=b=d=e=1$, $f=2$. Then the phase portrait is
+\begin{center}
+	\includegraphics*[width=250pt]{images/module18-pc.pdf}
+\end{center}
+
+Observe that both quantities should be positive, so let us focus on the quadrant where both are positive:
+\begin{center}
+	\includegraphics*[width=250pt]{images/module18-pc-closeup.pdf}
+\end{center}
+
+Observations:
+\begin{itemize}
+	\item Whenever a graph hits the axes, we must stop the model and re-evaluate what that means: when the graph hits the $c=0$ axis, then the population will start increasing until $c'>0 \Leftrightarrow p = 2$, so the graph will continue horizontally until the point $(2,0)$ where the model restarts.
+	\item The population seems to converge to $0$ in all cases.
+	\item The purple case seems to be an interesting one where the population and cost of living oscillate for a bit near the equilibrium and then the cost of living goes almost to zero before starting to go up again and forcing all the people to leave the city.
+\end{itemize}
+
+
+
+\hfill
 
 \begin{center}
 \textbf{\color{cyan}

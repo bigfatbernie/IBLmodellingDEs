@@ -272,7 +272,7 @@
 
 \question
 	Consider another population of rabbits. This is the lifecycle of a pair of rabbits:
-	\begin{enumerate}[label=(year \arabic*)]
+	\begin{enumerate}[start=0,label=(year \arabic*)]
 		\item Born
 		\item Immature (no babies)
 		\item Young Adult (2 pairs of babies)
@@ -428,19 +428,127 @@
 
 \newpage
 
+
+\question 
+	Consider the following difference equation:
+		$$u_{k+1} = a(u_k - b)$$
+
+	\begin{parts}
+		\item What is the equilibrium solution?
+		\item Are there periodic solutions? I.e. satisfying
+		\begin{itemize}
+			\item $v_0=v_2=v_4,v_5=\cdots$
+			\item $v_1=v_3=v_5=v_7=\cdots$
+		\end{itemize} 
+		\item What happens to the solutions for different values of $a$?
+		\item What happens to the solutions for different values of $b$?
+	\end{parts}
+
+
+\bookonlynewpage
+
 \question
-	Core Exercise with several parts
-\begin{parts}
-	\item Part 1
-	\item Part 2
-\end{parts}
+	Consider a drunkard that is walking randomly near a cliff.
+
+	\hfill \includegraphics*[width=250pt]{images/module26-drunk.pdf}
+	\vspace{-70pt}
+
+	\begin{minipage}{.9\textwidth}
+		Consider this model for the drunkard's chance of getting to safety from falling off the cliff:
+		\begin{itemize}
+			\item $q$ is the probability that the drunkard will step towards safety;
+			\item $1-q$ is the probability that the drunkard will step towards the cliff;
+			\item $p_n=$ probability that the drunkard will get to safety if he is in step number $n$; 
+			\item The drunkard will stop moving if he gets to safety (step $W$) or if he falls out of the cliff (step $0$); \\
+	
+			\item $p_n = q p_{n+1} + (1-q) p_{n-1}$. \\
+		\end{itemize}
+	\end{minipage}
+
+	
+	\begin{parts}
+		\item Is $p_n$ increasing or decreasing?
+		\item What is $p_0$? What is $p_W$?
+		\item Let $q=\frac12$. What is $p_{W/2}$? Is $p_n$ symmetric around $n=\frac{w}{2}$?
+		\item Let $q>\frac12$. Is $p_{W/2} > \frac12$? Is $p_{W/2} < \frac12$? 
+		\item How do solutions for $q=\alpha$ and $q=1-\alpha$ compare?
+	\end{parts}
+
+
+	
+\bookonlynewpage
+
+\hfill
 
 \bookonlynewpage
 
 
+\begin{minipage}{.45\textwidth}
 \question
-	One more core exercise
+	Consider a population of rabbits with the following lifecycle:
+	\begin{enumerate}[start=0,label=(year \arabic*)]
+		\item Born
+		\item Immature (no babies)
+		\item Young Adult (1 pair of babies)
+		\item Adult (1 pair of babies)
+		\item Old (no babies)
+		\item Die \\[5pt]
+	\end{enumerate}	
+	
+\end{minipage}
+\qquad
+\begin{minipage}{.45\textwidth}
+	Consider the definitions:
+	\begin{itemize}
+		\item We start with 1 pair of newborn rabbits in year 0;
+		\item $r_n=$ number of pairs of rabbits alive during year $n$;
+		\item $i_k=$ number of immature pairs;
+		\item $y_k=$ number of young adult pairs;
+		\item $a_k=$ number of adult pairs;
+		\item $o_k=$ number of old pairs.
+	\end{itemize}
 
+\end{minipage}
+
+	\begin{parts}
+		\item Show that $b_k=b_{k-2}+b_{k-3}$.
+		\item Show that $y_{k+1}=o_{k}+o_{k+1}$.
+		\item Show that $r_{n} = r_{n-2}+r_{n-3}$.
+	\end{parts}
+
+\begin{annotation}
+\begin{goals}
+$$
+r_k 
+	= {\color{magenta}r_{k-1}-o_{k-1}}+{\color{blue}b_k}
+$$
+
+On the other hand, 
+$$
+\color{magenta}
+r_{k-1}-o_{k-1}
+  = b_{k-2} + 2 y_{k-2} + a_{k-2} 
+  = r_{k-2} + y_{k-2} - o_{k-2}
+$$
+and
+$$
+\color{blue}
+b_k 
+  = b_{k-2}+b_{k-3}
+  = y_{k-3} + a_{k-3} + b_{k-3}
+  = r_{k-3} - o_{k-3}
+$$
+
+So we have
+$$
+r_k = {\color{magenta}r_{k-2} + {\color{black}\not} y_{k-2} - {\color{black}\not} o_{k-2}} + {\color{blue}r_{k-3} - {\color{black}\not}o_{k-3}}
+= r_{k-2} + r_{k-3}
+$$
+\end{goals}
+\end{annotation}	
+
+	
+	
 
 
 

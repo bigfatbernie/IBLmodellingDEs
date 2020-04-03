@@ -218,4 +218,84 @@
 \newpage
 
 \question
+	Consider the second-order ODE:
+	$$
+	y''(t) - 3y(t) = t \big( 2 + \sin(t) \big).
+	$$
+	
+	\begin{parts}
+		\item Assume that $y(0)=0$ and $y'(0)=b$. Which values of $b$ guarantee that $y(t)>0$ for $t\geq 0$. 
+		\item Assume that $y(0)=a<0$ and $y'(0)=b$. Give an example of $a,b$ such that $y(t)$ is increasing for $t\geq 0$. 
+		\item Assume that $y(0)=0$ and $y'(0)=b$. Which values of $b$ guarantee that $y(t)<0$ for all $t>0$.
+
+%\begin{align*}
+%& y''(t) = t \big( 2 + \sin(t) \big)  + 3 y(t) < 0 
+%	\quad \Leftrightarrow \quad 
+%		y(t) < - \frac{t}{3} \big( 2 + \sin(t) \big) \\
+%& y'(0) = -1 \\
+%\\
+%& y(0)<0, y'(0)= -1 \\
+%& y''(0) < 0 \\
+%	& y' \searrow \\
+%	& y \searrow \\
+%\end{align*}
+%
+%Since $y'(t)<-1$, that means $y(t) < -t$, thus
+%$$
+%y''(t) = 3 y(t)+ t \underbrace{\big( 2 + \sin(t) \big)}_{\leq 3}
+%	< -3t + 3t 
+%	= 0 
+%$$
+%which means that $y'$ will continue to decrease and $y$ will also continue to decrease, so it will continue to be negative.
+
+	\end{parts}
+
+\begin{annotation}
+\begin{goals}
+	The goal is to solve this without finding an expression for the solution.
+	
+	For 2, the idea is to make sure that $y''<0$. 
+\end{goals}	
+\end{annotation}
+
+	
+
+\bookonlynewpage
+
+\question	
+	Consider the second-order ODE:
+	$$
+	\begin{cases}
+	y''(t) +4 y(t) = f(t) \\
+	y(0)=y_0\\
+	y'(0)=0
+	\end{cases}
+	$$
+	
+	\begin{parts}
+		\item Let $f(t)=0$ and $y_0=1$. Sketch the solution.
+		\item Let $f(t)= 396\cos(20t)$ and $y_0=0$. Sketch the solution.
+%		$$ y(t) = \cos(2t) - \cos(20t)$$
+
+		\item Let $f(t) = -4\sin(2t)$ and $y_0=1$. Sketch the solution.
+%		$$ y(t) = \cos(2t) +t\cos(2t) $$	
+
+		\item Let $f(t) = 0.39\cos(1.9t)$ and $y_0=2$. Sketch the solution.
+		
+		\textbf{Hint. } $\displaystyle \cos(at) + \cos(bt) = 2 \cos\left( \frac{a-b}{2} \right)  \cos\left(\frac{a+b}{2} t \right)$
+%		$$ y(t) = \cos(2t) + \cos(1.9t) = 2 \cos(0.1 t) \cos(1.95t)$$	
+	\end{parts}
+
+\begin{annotation}
+\begin{goals}
+	\begin{enumerate}
+		\item Complementary solution!
+		\item Adding two trig functions: one oscillating slowly and one oscillating quickly
+		\item Resonance: $t$ times trig function
+		\item beats: product of two trig functions -- one oscillating slowly and one oscillating quickly
+	\end{enumerate}
+\end{goals}	
+\end{annotation}
+
+
 

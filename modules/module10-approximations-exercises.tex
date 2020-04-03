@@ -94,6 +94,26 @@
 	\end{enumerate}
 	
 	
+	\prob The idea of the Euler's method is to approximate the first derivative:
+	$$
+	y'(t_k) \approx \frac{y_{k+1}-y_k}{\Delta}.
+	$$
+	Similarly, we can approximate the second derivative.
+	\begin{enumerate}
+		\item Use a similar approach to obtain the following approximation:
+		$$
+		y''(t_k) \approx \frac{y_{k+1} - 2 y_k + y_{k-1}}{\Delta^2}.
+		$$
+		\item Use this to create a ``Second-Order Euler Method'' to approximate the initial-value problem:
+		$$
+		\begin{cases}
+			\theta''(t) = - \frac{g}{\ell} \sin\big(\theta(t)\big) \\
+			\theta(0)=\theta_0 \\
+			\theta'(0) = \theta_1
+		\end{cases}
+		$$
+
+	\end{enumerate}
 
 	
 	
