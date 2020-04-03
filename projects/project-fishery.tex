@@ -1,0 +1,78 @@
+The population $P(t)$ of a species of fish in a finite environment, like a lake is often described by the logistic equation
+$$
+\frac{dP}{dt} = r P \left(1 - \frac{P}{K} \right),
+$$
+where $r$ is the natural growth rate of the population and $K$ is the maximum number of individuals that the environment can sustain. \\
+
+If that population is harvested at the rate of $H(t,P)$ fish per year, then it can be modelled by the ODE
+$$
+\frac{dP}{dt} = r P \left(1 - \frac{P}{K} \right) - H(P,t).
+$$
+
+This ODE assumes that the population is harvested continuously throughout the year, which is not exactly true. Later in the course we will see how to make a better model. \\
+
+
+Your goal is to figure out the maximum profit you can generate from this population of fish. For that, it should be clear that it is undesirable to harvest too much, since it may lead to the extinction of the fish.
+
+
+\paragraph{\emph{1. Selling fishing licenses.}}
+
+As the manager of the lake, you decide to profit from it by selling fishing licenses to people and allow them to fish there. 
+
+\begin{enumerate}[label=\emph{(\alph*)}]
+\item Assuming that an average person, after a whole \emph{day} fishing, has an efficiency\footnote{Efficiency of $E\%$ means that after a whole day fishing, that person will have caught $E\%$ of the existing fish in the lake.} of $E\%$, what is $H(P,t)$ and what is the ODE that models the fish in the lake?
+
+\item There is a percentage $E^\star$, such that if $E \geq E^\star$, then the population will become extinct. What is $E^\star$? Explain why the population will become extinct.
+
+\emph{Hint.} You don't need to solve the ODE.
+
+%{\bf Hint for TA to give if needed. } What are the equilibrium points of the ODE? Are they stable or unstable?
+
+
+\item A sustainable yield $Y$ is the rate at which the fish can be harvested indefinitely: it is the value of $H(P,t)$ which doesn't change with time and for the asymptotically stable population.
+
+Determine the maximum\footnote{This value can be controlled, e.g. by defining the time available for fishing in a day.} value of $E$ to maximize $Y$ and then find the maximum $Y_{\max}$.
+
+%{\bf Hint for TA to give if needed. } asymptotically stable population = stable equilibrium point
+
+%{\bf Hint for TA to give if needed. } Find $Y$ as a function of $E$.
+
+\end{enumerate}
+
+
+
+
+
+
+
+\vfill
+
+\paragraph{\emph{2. Selling fish.}}
+
+As the manager of the lake, you decide to profit from it by harvesting the fish yourself and selling it. 
+
+\begin{enumerate}[label=\emph{(\alph*)}]
+\item Now the fish are harvested at a constant rate $h$. What is $H(P,t)$ and what is the ODE that models the fish in the lake?
+
+\item There is a rate $h^{\star}$, such that if $h \geq h^\star$, then the population will become extinct. What is $h^\star$? Explain why the population will become extinct.
+
+\emph{Hint.} You don't need to solve the ODE.
+
+%{\bf Hint for TA to give if needed. } What are the equilibrium points of the ODE? Are they stable or unstable?
+
+
+\item If $h \leq h^\star$, what is the maximum sustainable yield $Y_m$?
+
+\end{enumerate}
+
+
+
+\vfill
+
+\paragraph{\emph{Further Investigation.}} 
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item What happens if you sell fishing licenses and also harvest some fish to sell?
+
+\item Can you think of other forms for $H(P,t)$? 
+\end{enumerate}
+

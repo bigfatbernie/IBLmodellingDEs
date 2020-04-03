@@ -409,6 +409,116 @@
 	}
 	\newcounter{probset@currentModuleStart}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% BEGIN Project Environment 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{projectcounter}
+	\def\probset@InProjectEnv{0}
+	\newcommand\probset@drawProjectBanner[2]{
+		\def\bannerpathR{
+			([shift={(-0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north east) 
+			--
+			([shift={(-0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south east)
+		}
+		\def\bannerpathL{
+			([shift={(0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
+			--
+			([shift={(0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south west)
+		}
+		\ifstrequal{#2}{reverse}{
+			\ifodd\value{page}
+				\def\bannerpath{\bannerpathR}
+			\else
+				\def\bannerpath{\bannerpathL}
+			\fi
+		}{
+			\ifodd\value{page}
+				\def\bannerpath{\bannerpathL}
+			\else
+				\def\bannerpath{\bannerpathR}
+			\fi
+		}
+		\begin{tikzpicture}[remember picture,overlay]
+		    \draw[line width=25mm,LimeGreen] 
+			\bannerpath     
+			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily #1};
+		\end{tikzpicture}
+	}
+	\AddToShipoutPictureBG{%
+		% if we are in a project page, draw a border
+		\IfStrEq{\probset@InProjectEnv}{1}{%
+			\ifnum\value{page}=\value{probset@currentProjectStart}
+			\else
+				% put a banner on the page with no text if we are not the first
+				% page in a project
+				\probset@drawMProjectBanner{Project \theprojectcounter: \probset@InProjectEnvTitle}{reverse}
+			\fi
+		}{}
+	}
+	\newcounter{probset@currentProjectStart}
+	
+
+	\DeclareDocumentEnvironment{project}{m}{%
+		\addtocounter{projectcounter}{1}
+		\setlist[itemize]{ label={\color{LimeGreen!70!black}$\blacksquare$}, topsep=0pt}
+		\probset@cleartooddpage
+		% increase the margin widths
+		\newgeometry{top=.5in,
+			headsep=0in, 
+			headheight=0in, 
+			right=1.2in, 
+			bottom=.5in, 
+			footskip=.3in,
+			marginparsep=10pt, 
+			marginparwidth=1in,
+			left=1in,
+			%includeall,
+			%reversemarginpar,
+			twoside=true}
+		\RenewDocumentCommand{\emph}{m}{{\bfseries\color{green} ##1}}
+
+		% make sure we know what page this module starts on so
+		% we can do something special on the first page
+		\setcounter{probset@currentProjectStart}{\value{page}}
+		% put a banner on the left of the page
+		\probset@drawProjectBanner{Project \theprojectcounter: #1}{reverse}
+		\def\probset@InProjectEnvTitle{#1}
+		% renew some document commands to style them appropriately in
+		% the module environment
+%		\RenewDocumentCommand{\Title}{m}{%
+			\begin{center}
+				\color{green}{\sffamily\Large  #1}
+				\addcontentsline{toc}{section}{Project \theprojectcounter: #1}
+			\end{center}\par
+%		}
+%			\RenewDocumentCommand{\Title}{m}{%
+%				\begin{center}
+%					\color{Cerulean}{\sffamily\Large  ##1}
+%					\addcontentsline{toc}{section}{Module \themodulecounter: ##1}
+%				\end{center}\par
+%			}
+
+		\RenewDocumentCommand{\Heading}{m}{%
+			{\color{green}{\hspace{-0.1in}\sffamily\large ##1}}
+			\par
+		}
+		\def\probset@InProjectEnv{1}
+		
+	}{%
+		\def\probset@InProjectEnv{0}
+		\probset@cleartooddpage
+	}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% END Project Environment 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % BEGIN SUBMODULE ENVIRONMENT
 	\newcounter{submodulecounter}
 	\DeclareDocumentEnvironment{submodule}{m}{%
@@ -460,6 +570,7 @@
 %					\addcontentsline{toc}{section}{Module \themodulecounter: ##1}
 %				\end{center}\par
 %			}
+
 		\RenewDocumentCommand{\Heading}{m}{%
 			{\color{Cerulean}{\hspace{-0.1in}\sffamily\large ##1}}
 			\par
