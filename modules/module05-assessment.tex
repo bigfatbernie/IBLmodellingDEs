@@ -1,8 +1,8 @@
-\begin{siam}
 
 In this module you will learn
 \begin{itemize}
-	\item how to analyze a model to check whether it makes sense
+	\item how to analyze a model
+	\item to check the quality of the model
 \end{itemize}
 
 \hfill \\
@@ -28,15 +28,15 @@ What are the model's strengths? What are its weaknesses?
 When you change the inputs of the model, how do the outputs change? This is called {\emph sensitivity analysis}. 
 
 
-Next is a simple example adapted from \cite{bliss}.
+%Next is a simple example adapted from \cite{bliss}.
 
 
-\begin{annotation}
-	\begin{goals}
-	\Goal{Desmos Graph}
-	\hfill \qrcode{https://www.desmos.com/calculator/z9cftzus0z}	
-	\end{goals}
-\end{annotation}
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Desmos Graph}
+%	\hfill \qrvideo{https://www.desmos.com/calculator/z9cftzus0z}
+%	\end{goals}
+%\end{annotation}
 
 \begin{example}\textbf{Modelling the flu}
 
@@ -45,11 +45,18 @@ History of the project:
 	\item Split population into two classes: \emph{infected} and \emph{not infected}
 	\item Assume that each infected person infects $R$ number of non infected people every $b$ days
 	\item Define $I(n) = $ number of infected people after $n$ days
-	\item The two previous points imply \quad $I(n \cdot b) = R \cdot I(n)$
+	\item The two previous points imply \quad $I(n + b) = I(n) + R \, I(n)$
 	\item We can then conclude that \quad $I(n b) = (1+R)^n \, I(0)$ \hfill (why?) \\
 \end{itemize}
 
-After plotting the resulting function $I(n)$ (click or follow the QR code on the right), we can assess our model: \\
+After plotting the resulting function $I(n)$ (with $R=5, b=2, I(0)=20$), we can assess our model.
+\begin{center}
+	\includegraphics*[width=300pt]{images/module5-graph.png}	
+\end{center}
+\begin{itemize}
+	\item \qrvideo{https://www.desmos.com/calculator/deh5qeea20}
+\end{itemize}
+
 
 \emph{Strengths:}
 \begin{itemize}
@@ -63,7 +70,7 @@ After plotting the resulting function $I(n)$ (click or follow the QR code on the
 \emph{Weaknesses:}
 \begin{itemize}
 	\item The model is too simple, so it doesn't model the spread of the flu accurately
-	\item The model an exponential rate of infection, which is not possible for very long
+	\item The model yields an exponential rate of infection, which is not possible for very long
 	\item The model predicts that eventually the disease will spread to everyone
 	\item The model assumes that there are only two types of people: infected and susceptible. Do people recover from the disease?
 \end{itemize}
@@ -75,5 +82,4 @@ After plotting the resulting function $I(n)$ (click or follow the QR code on the
 
 After assessing the model, if time allows, it is important to re-think the model and the assumptions made.
 
-\end{siam}
 

@@ -1,4 +1,3 @@
-\begin{siam}
 
 In this module you will learn
 \begin{itemize}
@@ -11,7 +10,16 @@ In this module you will learn
 
 This is the part of the modelling where we connect all that we have done so far: the problem we defined, the mind map, the assumptions, and all the variables and parameters in a mathematical model to answer the ``mathematical'' problem defined in \hyperref[define]{Step A}.
 
-This usually means writing down mathematical equations, constructing a graph, analyzing a geometric figure, or do some statistical analysis. \\
+
+%When you have defined the problem you want to solve and you have made your (initial) assumptions, it is then time to define some details of the problem.
+	
+	
+With the problem statement clearly defined and an initial set of assumptions made (a list that will likely get longer), you are ready to start to define the details of your model. Now is the time to pause to ask what is important that you can measure. 
+Identifying these notions as variables, with units and some sense of their range, is key to building the model.
+
+The purpose of a model is to predict or quantify something of interest. %We refer to these predictions as the outputs of the model. 
+	
+Creating a model usually means writing down mathematical equations, constructing a graph, analyzing a geometric figure, or do some statistical analysis. \\
 
 
 \begin{example}
@@ -20,9 +28,9 @@ Your team is tasked with finding the best recycling centre (we looked at this ex
 As part of modelling process, your team has made the following assumptions/measurements:
 \begin{itemize}
 	\item People would be willing to pay \$2.29 to recycle per month or \$0.53 per week
-	\item People would make bi-weekly trips to the centre
+	\item People would make one weekly trip to the centre
 	\item Gasoline costs around \$1.26 per litre
-	\item On average a passenger car needs 10 litres per hundred kilometres
+	\item On average a passenger car consumes 10 litres per hundred kilometres\\
 \end{itemize}
 
 This means that the (one-way) distance people are willing to travel every week to the drop-off centre is
@@ -30,22 +38,26 @@ $$
 d \;=\; \frac{1}{4.3 \text{ trips/month}} \cdot \frac{\$2.29 / {\text{month}} }{(\$1.26 \text{/L}) \ \cdot\  (0.1 \text{ L / km})} \;=\; 4.2 \text{  km/trip}.
 $$
 
-This should help us figure out the best way to place the drop-off centres:
+This should help us figure out the best way to place the drop-off centres. \\
 
 The Mathematical model might look like this
 
 \begin{itemize}
 	\item Maximize (number of people within a 4.2 km radius of a drop-off centre)
-	\item subject to a certain number of drop-off centres (given by the city budget)
+	\item subject to a certain number of drop-off centres (given by the city budget) %\\
 \end{itemize}
 
-	
+%\textit{Note. } The model should also include the cost of building a drop off centre.
 \end{example}
 
-\hfill
+\begin{graybox}
+Assuming that this project was requested for a specific city, the final report should also include some suggested locations for various different budgets.	
+\end{graybox}
 
-Sometimes, the mathematical tools necessary to tackle the problem are clear, but often they are not. In those cases it may be helpful to analyze some simple cases.
 
-\end{siam}
+%\hfill
+%
+%Sometimes, the mathematical tools necessary to tackle the problem are clear, but often they are not. In those cases it may be helpful to analyze some simple cases.
+
 
 

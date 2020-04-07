@@ -58,10 +58,21 @@ In this chapter, we follow the approach of Bliss, Fowler, and Galluzzo from
 
 
 
-
-
-
 \end{topic}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  MODULE - DEFINING THE PROBLEM
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
 \begin{module}{Defining the Problem}
 	%\Title{Defining the Problem Statement}
@@ -98,6 +109,32 @@ In this chapter, we follow the approach of Bliss, Fowler, and Galluzzo from
 \end{lesson}
 
 
+
+
+
+
+
+\def\email{
+	\begin{graybox}
+	-------- Forwarded Message -------- \\[10pt]
+	\textbf{Date: } \dayofweekname{7}{9}{\the\year}, 7 September \the\year \; 21:41:35 + 0000  \\
+	\textbf{From: } CEO <theCEO@theBigCompany.ca> \\
+	\textbf{To: } Human Resources <hr@theBigCompany.ca> \\
+	\textbf{Subject: } they're still late! \\
+	
+	Hey Shophika! \\
+	
+	I still get complaints about staff being late, some by 15 minutes.
+	
+	With the staff we have, that's about one salary lost.
+	
+	Again the bottleneck of the elevators seems to be the problem.
+	
+	Can you suggest solutions? \\
+	
+	Thanks, the CEO
+	\end{graybox}
+}
 
 \question
 \label{elevator-define}
@@ -137,33 +174,19 @@ You are hired by theBigCompany to help with their ``elevator problem''.
 This is the email you received:
 
 \begin{center}
-	\color{blue}
-	\begin{tabular}{l}
-	\begin{minipage}{.75\textwidth}
-	-------- Forwarded Message -------- \\[10pt]
-	\textcolor{black}{Date: } Mon, 16 September 2019 21:41:35 + 0000  \\
-	\textcolor{black}{From: } CEO <theCEO@theBigCompany.ca> \\
-	\textcolor{black}{To: } Human Resources <hr@theBigCompany.ca> \\
-	\textcolor{black}{Subject: } they're still late !?\@\&! \\
-	
-	Hey Shophika! \\
-	
-	I still get complaints about staff being late, some by 15 minutes.
-	
-	With the staff we have, that's about one salary lost.
-	
-	Again the bottleneck of the elevators seems to be the problem.
-	
-	Can you suggest solutions? \\
-	
-	Thanks, the CEO
-	\end{minipage}
-	\end{tabular}
+\begin{minipage}{.75\textwidth}
+	\email
+\end{minipage}
 \end{center}
 
 
-\vspace{5mm}
+%\vspace{5mm}
 
+What mathematical object would you use to convince the CEO that you have solved or improved the problem?
+
+%\begin{teamwork}
+%	With your team, you must decide on one answer and be prepared to report on your decision and the reason for your choice.	
+%\end{teamwork}
 \begin{annotation}
 	\begin{notes}
 		
@@ -171,15 +194,10 @@ This is the email you received:
 			\item Students will start discussing how to solve the problem
 			\item This question deals with what will happen \textbf{after} solving the problem
 			\item The goal of this question is to think about how to best tell a ``mathematically-challenged'' CEO that you solved the problem
+			\item Student teamwork: ``With your team, you must decide on one answer and be prepared to report on your decision and the reason for your choice.''
 		\end{itemize}
 	\end{notes}
 \end{annotation}
-
-What mathematical object would you use to convince the CEO that you have solved or improved the problem?
-
-\begin{teamwork}
-	With your team, you must decide on one answer and be prepared to report on your decision and the reason for your choice.	
-\end{teamwork}
 
 \bookonlynewpage
 
@@ -190,9 +208,9 @@ What mathematical object would you use to convince the CEO that you have solved 
 
 
 
-\question \label{p:TTC}
+\question 
 
-The mayor of Toronto wants to extend the subway line with a new \textbf{\color{orange}orange line} as in the figure below.
+The mayor of Toronto wants to extend the subway line with a new \textbf{\color{orange}orange line} as in the figure below. \label{p:TTC}
 	
 %	\begin{center}
 %	\includegraphics*[width=500pt]{images/TTC-extension.png}
@@ -227,7 +245,7 @@ The mayor of Toronto wants to extend the subway line with a new \textbf{\color{o
 
 
 
-\newpage
+\standardonlynewpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -274,7 +292,7 @@ The mayor of Toronto wants to extend the subway line with a new \textbf{\color{o
 
 
 
-\newpage
+%\newpage
 
 
 \question
@@ -290,7 +308,7 @@ Consider the elevator problem from question \ref{elevator-define}.
 			\item Money spent on late employees' salaries
 			\item sum of time in minutes that employees are late counting only employees that are at most 15 minutes late
 		\end{itemize}
-		\item Stick with $R$, a simple first approach
+		\item Stick with $T$, a simple first approach
 	\end{itemize}	
 	\end{notes}
 	
@@ -298,12 +316,12 @@ Consider the elevator problem from question \ref{elevator-define}.
 
 Your team decides that the mathematical object you will use to show the CEO that you solved or improved the problem is
 \begin{itemize}
-	\item $R=$ the sum in minutes by which every employee is late.
+	\item $T=$ the sum in minutes by which every employee is late.
 \end{itemize}
 
 Note that employees that are on time count for 0 minutes (not a negative amount of minutes). \\
 
-Create a mind map for the question: \quad How can $R$ be minimized?
+Create a mind map for the question: \quad How can $T$ be minimized?
 
 
 \bookonlynewpage
@@ -312,10 +330,10 @@ Create a mind map for the question: \quad How can $R$ be minimized?
 \question
 
 The city of Toronto decided to tear down the Gardiner expressway. While the demolition is taking place, several key arteries are closed and many intersections are bottled. 
-At peak times, a police officer is often posted at this intersection to optimally control the traffic lights. 
+At peak times, a police officer is often posted at this intersection to \emph{optimally} control the traffic lights. 
 
 \begin{parts}
-	\item What ``mathematical'' meaning can we give to the word optimal? 
+	\item What mathematical meaning can we give to the word optimal in this circumstance? 
 	\item Create a mind map for this problem.
 \end{parts}
 
@@ -332,7 +350,7 @@ At peak times, a police officer is often posted at this intersection to optimall
 
 
 
-\newpage
+\standardonlynewpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -347,9 +365,12 @@ At peak times, a police officer is often posted at this intersection to optimall
 	%\Title{Making Assumptions}
 	\label{assumption}
 
+\begin{siam}
 	\input{modules/module03-assumptions.tex}
 	\input{modules/module03-assumptions-exercises.tex}
+\end{siam}
 \end{module}
+	
 
 
 
@@ -379,17 +400,18 @@ At peak times, a police officer is often posted at this intersection to optimall
 
 
 
-\newpage
+%\newpage
 
+\begin{minipage}{.5\textwidth}	
 \question
 \label{elevator-assumptions}
-Consider the elevator problem from question \ref{elevator-define}. 
+Consider the elevator problem from \hyperref[elevator-define]{core exercise \ref{elevator-define}}. 
 
-We now give you some technical details about theBigCompany:
 
+We now give you some technical details about \nobreak{theBigCompany}:
 
 \begin{itemize}
-	\item The company occupies the floors 30--33 of the building Place Ville-Marie (in Montr\'eal).
+	\item The company occupies the floors 30--33 of the building Place Ville-Marie in Montr\'eal.
 
 	\item Personnel is distributed in the following way: 
 	\begin{itemize}
@@ -400,10 +422,23 @@ We now give you some technical details about theBigCompany:
 	\end{itemize}
 \end{itemize}
 
-\textsl{Note.} Even though these details are fictional, the numbers respect the building code. \\
+\emph{Note.} Even though these details are fictional, the numbers respect the building code. \\
 
-Focus on a \textbf{few} parameters and variables. State hypotheses.
+\emph{Hint.} Focus on a \textbf{few} parameters and variables.
+\end{minipage}
+\qquad
+\begin{minipage}{.5\textwidth}	
+\email
+\end{minipage}
 
+\begin{parts} 
+
+	\item With your team, decide on what kind of information you would need to have to be able to solve this problem.
+
+	\item Find the relevant information about the elevators (search the internet, by experimentation). Check the reliability of the data you found.
+
+	\item For the relevant information that you cannot obtain, make assumptions. These assumptions should be reasonable and you should be able to justify them.
+\end{parts}
 
 \begin{annotation}
 	\begin{notes}
@@ -423,18 +458,16 @@ Focus on a \textbf{few} parameters and variables. State hypotheses.
 	\end{notes}
 \end{annotation}
 
+
+
+
 \bookonlynewpage
 
-\question
+\hfill
 
-\begin{parts} 
+\bookonlynewpage
 
-	\item With your team, decide on what kind of information you would need to have to be able to solve this problem.
-
-	\item Find the relevant information about the elevators (search the internet, by experimentation). Check the reliability of the data you found.
-
-	\item For the relevant information that you cannot obtain, make assumptions. These assumptions should be reasonable and you should be able to justify them.
-\end{parts}
+\question How much would it cost to make a bridge between Toronto and the U.S.?
 
 
 
@@ -449,13 +482,7 @@ Focus on a \textbf{few} parameters and variables. State hypotheses.
 
 
 
-
-
-
-
-
-\newpage
-
+\standardonlynewpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -469,8 +496,11 @@ Focus on a \textbf{few} parameters and variables. State hypotheses.
 	%\Title{Construct a model}
 	\label{model}
 
+\begin{siam}
 	\input{modules/module04-model.tex}
 	\input{modules/module04-model-exercises.tex}
+\end{siam}
+
 \end{module}
 
 
@@ -501,11 +531,41 @@ Focus on a \textbf{few} parameters and variables. State hypotheses.
 
 
 
-\newpage
+%\newpage
 
+
+
+\begin{minipage}{.5\textwidth}	
 \question
+Recall the \hyperref[elevator-assumptions]{core exercise \ref{elevator-assumptions}}.
 
-With the same details as before in \ref{elevator-assumptions}, write down a mathematical model for this problem.
+\begin{itemize}
+	\item The company occupies the floors 30--33 of the building Place Ville-Marie in Montr\'eal.
+
+	\item Personnel is distributed in the following way: 
+	\begin{itemize}
+		\item 350 employees in floor 30,
+		\item 350 employees in floor 31,
+		\item 250 employees in floor 32, 
+		\item 150 employees in floor 33.
+	\end{itemize}
+\end{itemize}
+
+\vspace{2cm}
+
+Write down a mathematical model for this problem.
+\label{elevator-model}
+\end{minipage}
+\qquad
+\begin{minipage}{.5\textwidth}	
+\email
+\end{minipage}
+
+\begin{annotation}
+\begin{goals}
+	NEED LOTS OF INSTRUCTIONS FOR INSTRUCTORS HERE!
+\end{goals}	
+\end{annotation}
 
 
 
@@ -522,7 +582,9 @@ With the same details as before in \ref{elevator-assumptions}, write down a math
 
 
 
-\newpage
+
+
+\standardonlynewpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -537,8 +599,11 @@ With the same details as before in \ref{elevator-assumptions}, write down a math
 	%\Title{Model Assessment}
 	\label{analysis}
 
+\begin{siam}
 	\input{modules/module05-assessment.tex}
 	\input{modules/module05-assessment-exercises.tex}
+\end{siam}
+
 \end{module}
 
 
@@ -569,11 +634,11 @@ With the same details as before in \ref{elevator-assumptions}, write down a math
 
 
 
-\newpage
+%\newpage
 
 \question
 
-Continuing on the elevator problem, let us think of this model for the problem.
+Continuing on the \hyperref[elevator-model]{elevator problem}, let us think of this model for the problem.
 
 \textbf{Facts:}
 \begin{itemize}
@@ -614,9 +679,12 @@ Continuing on the elevator problem, let us think of this model for the problem.
 		\item Number of trips necessary per elevator $= n = \dfrac{3025}{20 \cdot 8} \approx 19$ trips
 
 		\item Time necessary to carry the staff of the BigCompany $= \pmb{t} = \dfrac{19 \cdot 106}{60} = 33 $ minutes
+		
+		\item Accumulated late time $ = \pmb{T} = 180 \cdot 20 \cdot 8 + 74 \cdot 20 \cdot 8 = 40\,640$ seconds $= $ 11h18m
+
 \end{itemize}
 
-\hfill \\
+\hfill
 
 \begin{annotation}
 	\begin{notes}
@@ -631,7 +699,7 @@ Some questions to guide the students:
 \hfill \\
 In case students don't realize that something is wrong:
 \begin{itemize}
-	\item People start arriving 30 minutes before the starting time, so \emph{everybody will be on time?}
+	\item People start arriving 30 minutes before the starting time, so \emph{almost everybody will be on time?}
 	\item Assume that the CEO of the BigCompany is right: people are arriving late! What's wrong with the model?
 
 	\item Which assumptions should be relaxed? Or checked?
@@ -662,7 +730,7 @@ Be ready to report on your assessment.
 
 
 
-\newpage
+\standardonlynewpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -712,7 +780,7 @@ Be ready to report on your assessment.
 
 
 
-\newpage
+%\newpage
 
 %\question
 %Another question to be added here

@@ -1,11 +1,11 @@
-In this module you will learn
-\begin{itemize}
-	\item what is a differential equation
-	\item the different types of differential equations
-\end{itemize}
-
-\hfill \\[-10pt]
-
+%In this module you will learn
+%\begin{itemize}
+%	\item what is a differential equation
+%	\item the different types of differential equations
+%\end{itemize}
+%
+%\hfill \\[-10pt]
+\hfill
 
 \begin{definition}[Differential Equation]
 	A \emph{differential equation} is an equation involving an unknown function and one or more of its derivatives.
@@ -17,27 +17,28 @@ Among differential equations, there are lots of types, that require different ap
 \begin{definition}[Types of Differential Equations]
 	There are two main types of differential equations:
 	\begin{itemize}
-		\item \emph{Ordinary differential equations}, usually denoted as ODEs -- when the unknown function is a function of one variable;
-		\item \emph{Partial differential equations}, usually denoted as PDEs -- when the unknown function is a a function of several variables.
+		\item \emph{Ordinary differential equations}, usually denoted as ODEs: when the unknown function is a function of one variable;
+		\item \emph{Partial differential equations}, usually denoted as PDEs: when the unknown function is a function of several variables. \\
 	\end{itemize}	
 	
-	In this book, we are going to focus only on ordinary differential equations.
-	
+	In this book, we are going to focus only on ordinary differential equations. \\
+		
 	Among ordinary differential equations, we distinguish them according to:
+	
 	\begin{itemize}
 		\item \emph{order}: the order of a differential equation is the order of the highest derivative present in the differential equation;
-		\item \emph{linear} vs \emph{nonlinear}: A differential equation \quad $F(t,y,y',\ldots,y^{(n)}) = 0$ \quad is called \emph{linear} if $F$ is a linear function of $y, y', \ldots, y^{(n)}$. Linear ODEs have the form
+		\item \emph{linear} vs \emph{nonlinear}: A differential equation \quad $F\left(t,y,y',\ldots,y^{(n)}\right) = 0$ \quad is called \emph{linear} if $F$ is a linear function of $y, y', \ldots, y^{(n)}$. Linear ODEs have the form
 			$$ a_0(t) y(t) + a_1(t) y'(t) + \cdots + a_n(t) y^{(n)}(t) = g(t). $$
 			All other differential equations are called \emph{nonlinear}.
 	\end{itemize}
 \end{definition}
 
 \begin{graybox}
-	Roughly, to check whether an ODE is \textbf{linear}, we need to check that:
+	Roughly, to check whether an ODE is \emph{linear}, we need to check that:
 	\begin{itemize}
 		\item The unknown $y$ and its derivatives appear with exponent 1;
 		\item The unknown $y$ and its derivatives do not multiply by each other;
-		\item The unknown $y$ and its derivatives are not the objects of other functions -- there are no occurrences of things like $\sin(y)$ or $e^{y'}$, $\ln(y'')$, $\sqrt{y^{(3)}}$, etc.
+		\item The unknown $y$ and its derivatives are not the ``objects'' of other functions -- there are no occurrences of things like $\sin(y)$ or $e^{y'}$, $\ln(y'')$, $\sqrt{y^{(3)}}$, etc.
 	\end{itemize}
 \end{graybox}
 
@@ -45,7 +46,7 @@ In general, when tackling a differential equation, linear ODEs are easier to sol
 
 In the following chapters, observe how the methods and theory for linear ODEs is much more developed. Nonlinear ODEs are usually tackled on a case-by-case basis, and there is no theory that applies to a class of nonlinear ODEs.
 
-Fortunately, many important problems are modelled by linear equations. \\
+Fortunately, many important problems are modelled by linear equations.
 
 A common approach to nonlinear problems is to ``transform'' them into a linear problem. This means that the new linear problem is easier to study, but will be an approximation of the original problem, and often that approximation is only reasonable within some restricted conditions.
 
@@ -53,14 +54,14 @@ A common approach to nonlinear problems is to ``transform'' them into a linear p
 Consider the nonlinear ODE
 $$y' = -\sin(y).$$
 
-This is a nonlinear ODE. However, by Taylor's Theorem, we can approximate the function $\sin(y)$ by $y$, as long as $|y|$ is very small.
+This is a nonlinear ODE. 
+
+However, by Taylor's Theorem, we can approximate the function $\sin(y)$ by $y$, as long as $|y|$ is very small.
 
 So we can say that the solution of the original solution is very close to the solution of
 $$ y' = -y,$$
 as long as $|y|$ is very small.
 \end{example}
-
-
 
 
 

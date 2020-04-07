@@ -225,6 +225,7 @@
 		{\color{gray}{\sffamily\small\thequestion.\thepartsitem}}
 	}
 	\DeclareDocumentEnvironment{parts}{o}{
+		\parskip=1.7mm
 		\nopagebreak
 		\begin{list}{\formatpartsitem}{
 			\usecounter{partsitem}
@@ -246,6 +247,7 @@
 		\end{list}%
 	}
 	\DeclareDocumentEnvironment{solution}{o}{
+		\parskip=1.7mm
 		\nopagebreak
 		%\par
 		\color{cyan}
@@ -258,7 +260,8 @@
 		}
 	}
 	\DeclareDocumentEnvironment{graybox}{o}{
-		\sffamily\parskip=1.5mm%
+		%\sffamily
+		\parskip=1.7mm%
 		\begin{tcolorbox}[colframe=Gray,
 			colback=Gray!5!white, 
 			left=0mm, 
@@ -274,7 +277,7 @@
 		\end{tcolorbox}
 	}
 	\DeclareDocumentEnvironment{goals}{o}{
-		\footnotesize\sffamily\parskip=1.5mm%
+		\footnotesize\sffamily\parskip=1.7mm%
 		\begin{tcolorbox}[colframe=Cerulean,
 			colback=Cerulean!5!white, 
 			left=0mm, 
@@ -294,7 +297,7 @@
 		\vspace{1mm}\par
 	}
 	\DeclareDocumentEnvironment{notes}{o}{
-		\footnotesize\sffamily\parskip=1.5mm%
+		\footnotesize\sffamily\parskip=1.7mm%
 		\begin{tcolorbox}[
 			colframe=WildStrawberry,colback=red!5!white, 
 			left=0mm, 
@@ -311,7 +314,7 @@
 		\end{tcolorbox}
 	}
 	\DeclareDocumentEnvironment{annotation}{o}{
-		\footnotesize\sffamily\parskip=1.5mm%
+		\footnotesize\sffamily\parskip=1.7mm%
 		\MarginParWrap
 	}{%
 		\endMarginParWrap
@@ -592,6 +595,7 @@
 			\par
 		}
 		\RenewDocumentEnvironment{definition}{o}{
+			\parskip=1.7mm
 			\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Cerulean} ####1}}
 			\begin{leftborderbox}[colframe=Cerulean, colback=Cerulean!10]
 			{\bfseries\sffamily\color{Cerulean} ##1.}
@@ -629,6 +633,7 @@
 		\end{leftborderbox}
 	}
 	\DeclareDocumentEnvironment{video}{o}{
+		\parskip=1.7mm
 		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Gray} ##1}}
 		\begin{leftborderbox}[colframe=Gray, colback=Gray!10]
 		{\bfseries\sffamily\color{Gray} Video.}
@@ -637,6 +642,7 @@
 	}{%
 		\end{leftborderbox}
 	}\DeclareDocumentEnvironment{important}{o}{
+		\parskip=1.7mm
 		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{myorange} ##1}}
 		\begin{leftborderbox}[colframe=myorange, colback=myorange!10]
 		{\bfseries\sffamily\color{myorange!70!black} Important.}
@@ -689,10 +695,14 @@
 		colback=myorange!20,
 		#1
 	}
+	\DeclareDocumentEnvironment{notstandard}{o}{
+	}{%
+	}
 	\DeclareDocumentEnvironment{bookonly}{o}{
 	}{%
 	}
 	\DeclareDocumentEnvironment{example}{o}{
+		\parskip=1.7mm
 		\renewcommand{\currentbackgroundcolor}{Red!4}
 		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{BurntOrange} ##1}}
 
@@ -711,6 +721,7 @@
 		\end{leftborderbox}
 	}
 	\DeclareDocumentEnvironment{proof}{o}{
+		\parskip=1.7mm
 		\par{\bfseries Proof.}
 	}{%
 		\hfill$\blacksquare$
@@ -749,6 +760,7 @@
 
 \newenvironment{exercises}{%
 	\DeclareDocumentEnvironment{solution}{o}{
+		\parskip=1.7mm
 		\nopagebreak
 		%\par
 			\begin{adjustwidth}{1cm}{}
@@ -999,6 +1011,7 @@
 	\definecolor{myorange}{HTML}{F29B23}
 \declareoutlinedbox{definition}{DEFINITION}{DEF}{defframecolor}{defcolor}
 	\RenewDocumentEnvironment{definition}{o}{
+		\parskip=1.7mm
 		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Cerulean} ##1}}
 			\begin{leftborderbox}[colframe=Cerulean, colback=Cerulean!10]
 				{\bfseries\sffamily\color{Cerulean} #1.}
@@ -1010,6 +1023,7 @@
 	\colorlet{thmframecolor}{red!90!black}
 \declareoutlinedbox{theorem}{THEOREM}{THM}{thmframecolor}{thmcolor}
 	\RenewDocumentEnvironment{theorem}{o}{
+		\parskip=1.7mm
 		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{myorange} ##1}}
 			\begin{leftborderbox}[colframe=myorange, colback=myorange!10]
 			{\bfseries\sffamily\color{myorange} Theorem.
@@ -1031,5 +1045,5 @@
 
 \newcommand{\currentbackgroundcolor}{white}
 
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{.17cm}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1.7mm}

@@ -80,7 +80,7 @@
 %%%
 
 \fancypagestyle{usual}{%
-	\fancyhead[LO,RE]{\leftmark}	
+	\fancyhead[LO,RE]{}%\leftmark}	
 	\fancyhead[RO,LE]{}	
 	\fancyfoot[LO,RE]{\footnotesize\it \copyright\, 2020 Galv\~ao-Sousa-Siefken \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}	
 %	\rfoot{\footnotesize\it \copyright\, Galv\~ao-Sousa-Siefken, 2019--2020 \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}
@@ -89,11 +89,6 @@
 }
 
 
-%\fancypagestyle{siefken}{%
-%	\rfoot{\footnotesize\it \copyright\,Jason Siefken, 2015--2019 \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}
-%	\lfoot{}
-%	\renewcommand{\headrulewidth}{0pt}
-%}
 \fancypagestyle{siam}{%
 	\lfoot{\footnotesize\it \copyright\, 2014 Society for Industrial and Applied Mathematics.}
 	\rfoot{\footnotesize \it Reprinted with permission.  All rights reserved.}
@@ -123,9 +118,10 @@
 \newcommand{\displayonlynewpage}{\begin{displayonly}\newpage\end{displayonly}}
 % allow pagebreaks that only display in `book` mode
 \newcommand{\bookonlynewpage}{\begin{bookonly}\newpage\end{bookonly}}
+\newcommand{\standardonlynewpage}{\begin{displayonly}\newpage\end{displayonly}}
 
 %
-% Set up the three render modes: standard, instructor, and solutions.
+% Set up the four render modes: standard, book, instructor, and solutions.
 % These render with varying amounts of extra data (like solutions and notes)
 %
 \newtoggle{instructor}
@@ -190,6 +186,8 @@
 }{}
 \iftoggle{standard}{
 	\voidenvironment{module}
+	\voidenvironment{topic}
+	\voidenvironment{notstandard}
 	\voidenvironment{bookonly}
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
@@ -362,8 +360,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{notstandard}
+	
+
 \include{chap6-projects}
 
+\end{notstandard}
 
 
 
@@ -379,7 +381,7 @@
 
 
 
-
+\begin{bookonly}
 %\appendix
 
 
@@ -401,6 +403,6 @@
 
 
 
-
+\end{bookonly}
 
 \end{document}
