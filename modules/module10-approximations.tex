@@ -7,7 +7,7 @@ In this module you will learn
 
 We just learned to sketch a slope field and how to use it to sketch a rough approximation of a solution of a differential equation.
 
-The method of ``following the arrows'' of a slope field, when formalized mathematically is called \textbf{\color{cyan}Euler's Method}. 
+The method of ``following the arrows'' of a slope field, when formalized mathematically is called \emph{Euler's Method}. 
 
 So let us start with an initial-value problem
 $$
@@ -23,14 +23,14 @@ The idea is to follow the directions given by the differential equation, so we k
 	\item $y'(0) = f(0,y_0)$
 \end{itemize}
 
-This means that we have a starting point \quad {\color{cyan}$(0,y_0)$}.
+This means that we have a starting point \emph{$(0,y_0)$} and a direction.
 We still need to decide the distance that we want to follow the arrow:
 \begin{itemize}
 	\item smaller distance: more accurate approximation, but will take more calculations
 	\item longer distance: less accurate approximation, but will take fewer calculations
 \end{itemize}
 
-The typical way to decide is to set a parameter {\color{cyan}$\Delta t$}, that measures the distance we will travel in the $t$-axis.
+The typical way to decide is to set a parameter \emph{$\Delta t$}, that measures the distance we will travel in the $t$-axis.
 
 \begin{center}
 	\begin{tikzpicture}[xscale=1.5]%,yscale=0.35]
@@ -48,16 +48,17 @@ The typical way to decide is to set a parameter {\color{cyan}$\Delta t$}, that m
 	%	\draw[ultra thick, lightblue] (5,2) node {\tikzcircle[black,fill=magenta]{2pt}}-- (3,6) node {\tikzcircle[black,fill=navy]{2pt}};
 		\draw[ultra thick, cyan,-{\setam}] (0,2) -- (1,2.5);
 		\draw[] (1,2.5) node{\tikzcircle[black,fill=cyan]{2pt}};
+		\draw[] (1,2.5) node[above] {$(\Delta t, y_1)$};
 	\end{tikzpicture}
 \end{center}
 
-This way we find our second point \quad {\color{cyan} $(\Delta t,y_1)$} \quad where:
+This way we find our second point \emph{$(\Delta t,y_1)$} where:
 $$
 \frac{y_1 - y_0}{\Delta t} = \text{ slope of the arrow }= f(0,y_0)
 \quad \Rightarrow \quad
 	y_1 = y_0 + f(0,y_0) \Delta t $$
 
-We continue in this way to find more points \quad {\color{cyan} $(t_i, y_i)$}:
+We continue in this way to find more points \emph{$(t_i, y_i)$}:
 \begin{center}
 	\begin{tikzpicture}[xscale=1.5]%,yscale=0.35]
 		\draw[thick,-{\seta}] (-0.25,0) -- (4.5,0) node[above] {\small $t$};
@@ -81,14 +82,20 @@ We continue in this way to find more points \quad {\color{cyan} $(t_i, y_i)$}:
 		\foreach \t in {2,3} {
 			\draw[] (\t,{2.25+(\t-1)^3/4-\t^2/2+\t/1.3}) node[below] {$(t_{\t},y_{\t})$};	
 		}
-
 	\end{tikzpicture}
 \end{center}
 
 
 \begin{definition}[Euler's Method]
 	Let $y'(t) = f(t,y)$ be a first-order differential equation. 
-	The \emph{Euler approximation} to the initial value problem $y'(t)=(f(t,y)$ and $y(t_0)=y_0$ with step size $\Delta t$ is the sequence of points $(t_i,y_i)$ given by $(t_0,y_0)$ if $i=0$ and 
+	The \emph{Euler approximation} to the initial value problem 
+	$$
+	\begin{cases}
+		y'(t)=f(t,y)\\
+		y(t_0)=y_0
+	\end{cases}
+	$$
+	with step size $\Delta t$ is the sequence of points $(t_i,y_i)$ given by $(t_0,y_0)$ if $i=0$ and 
 	\begin{itemize}
 		\item $t_i = t_{i-1}+\Delta t$
 		\item $y_i = y_{i-1} +  f\big(t_{i-1},y_{i-1}\big) \Delta t$.

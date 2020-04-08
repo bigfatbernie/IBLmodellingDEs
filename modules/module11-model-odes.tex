@@ -6,7 +6,7 @@ In this module you will learn
 \hfill \\
 
 
-We started by studying some mathematical modelling in chapter 1. Then, we just used mathematical tools that we learned before. 
+We started by studying some mathematical modelling in \hyperref[chap1]{chapter 1}. Then, we just used mathematical tools that we learned before. 
 
 We now want to focus on mathematical models that arise from physical applications. These will often take the form of one or more differential equations.
 
@@ -21,11 +21,11 @@ Once we settle on a goal, we define it as the function we want to study.
 \begin{example}
 
 \begin{minipage}{.7\textwidth}
-In this module, we are going to think about the catapult problem from Module 9 - Slope Fields. \\
+In this module, we are going to think about the \hyperref[ODE:slopefields]{catapult problem from Module \ref{ODE:slopefields} (Slope Fields)}. \\
 
 A catapult throws a projectile into the air.
 
-Our goal is to track the height (in metres) of the projectile from the ground.
+Our goal is to track the height (in metres) of the projectile from the ground.\\
 
 This means that we have a goal: to find the height of the projectile at every moment in time after it is launched.
 \end{minipage}\hfill
@@ -34,7 +34,7 @@ This means that we have a goal: to find the height of the projectile at every mo
 \end{minipage}
 \hfill \\[10pt]
 
-This means that we define
+So we define
 \begin{itemize}
 	\item $y(t) = $ height of the projectile, in metres, $t$ seconds after it was launched from the catapult.
 \end{itemize}
@@ -61,12 +61,13 @@ In the catapult example, since we decided to study the projectile's height, we n
 	\fill[color=BurntOrange] (-5,-1) rectangle (-2,0) node[pos=.5] {\color{black}Wind};
 	\fill[color=BurntOrange] (-1,-2) rectangle (4,-1) node[pos=.5] {\color{black}Energy lost through sound};
 	\fill[color=BurntOrange] (-0.5,2) rectangle (3.5,3) node[pos=.5] {\color{black}Shape affects trajectory};
-	\draw (3,0.75) -- (5,1.5);
-	\draw (3,0.25) -- (5,-0.5);
-	\draw (0,0.75) -- (-2,1.5);
-	\draw (0,0.25) -- (-2,-0.5);
+	\draw (3,0.66) -- (5,1.5);
+	\draw (3,0.33) -- (5,-0.5);
+	\draw (0,0.66) -- (-2,1.33);
+	\draw (0,0.33) -- (-2,-0.5);
 	\draw (1.5,0) -- (1.5,-1);
 	\draw (1.5,1) -- (1.5,2);
+	\draw (-0.5,2.5) -- (-2,1.66);
 \end{tikzpicture}
 \end{center}
 
@@ -173,12 +174,12 @@ $$m y''(t) =  -g \pm \gamma y'(t).$$
 
 We just found a differential equation (model) for our situation. It is now time to test it to make sure that it behaves correctly.
 
-For this step, we need to obtain a solution of the differential equation, either by solving it mathematically and finding a formula for the solution, or by approximating the solution numerically (see Module \ref{NumericalMethods}).
+For this step, we need to obtain a solution of the differential equation, either by solving it mathematically and finding a formula for the solution (see module \ref{ODE:solve}), or by approximating the solution numerically (see module \ref{ODE:approximation}).
 
-Then we need to check if the differential in one of several ways:
+Then we need to check the quality of the differential equation in one of several ways:
 \begin{itemize}
-	\item We can test it empirically: make an experiment and compare the results of the experiment with the results of the model
-	\item We can test it mathematically: change the parameters and the initial conditions to make sure that we know how the model should behave and test some qualitative aspects of the model
+	\item We can test it \emph{empirically}: make an experiment and compare the results of the experiment with the results of the model
+	\item We can test it \emph{mathematically}: change the parameters and the initial conditions to make sure that we know how the model should behave and test some qualitative aspects of the model
 \end{itemize}
 
 \begin{important}
@@ -193,16 +194,16 @@ We have found the following model:
 	\item $y(t) = $ height of a projectile in metres, $t$ seconds after being released from a catapult
 	\item It satisfies:
 		$$m y''(t) =  -g + \gamma y'(t).$$
-	(note that I chose the $+$ sign for the air drag component)
+	\hfill (note that I chose the $+$ sign for the air drag component)
 
 	\item Constraints:
 	\begin{itemize}
 		\item $y(t) \in [0,100]$;
-		\item $\gamma >0$ is the drag constant: more air drag for larger values of $\gamma$;
+		\item $\gamma >0$ is the drag constant: more air drag for larger values of $\gamma$;\\
 	\end{itemize}
 \end{itemize}	
 
-This differential equation tells us what the second derivative, $y''(t)$, of $y(t)$ is given the first derivative $y'(t)$.
+This differential equation tells us what the second derivative, $y''(t)$, of $y(t)$ is, given the first derivative $y'(t)$.
 This means that to start solving the problem, we need to know what the initial values for $y'(t)$ and $y(t)$ are.
 
 Need to know the starting conditions:

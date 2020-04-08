@@ -36,7 +36,7 @@
 
 \begin{module}{Introduction to Differential Equations}
 %	\Title{Definition}
-	\label{ODE-intro}
+	\label{ODE:intro}
 %	\Heading{Textbook}	
 %	\Heading{Objectives}
 %	\begin{itemize}
@@ -104,7 +104,7 @@
 
 \begin{module}{Solutions of Differential Equations}
 	%\Title{Solutions}
-	\label{intro-sols}
+	\label{ODE:solutions}
 
 	\input{modules/module08-sols.tex}
 	\input{modules/module08-sols-exercises.tex}
@@ -138,7 +138,7 @@
 
 
 
-\newpage
+%\newpage
 
 \question
 
@@ -273,6 +273,15 @@ A & B & C \\[15pt]
 	& \modeightF \\
 D & E & F \\
 \end{tabular}
+\begin{annotation}
+\begin{goals}
+	Get students to figure out this core exercise in two different ways:
+	\begin{itemize}
+		\item by solving the ODE
+		\item without solving the ODE
+	\end{itemize}
+\end{goals}
+\end{annotation}
 
 
 
@@ -292,7 +301,7 @@ y(x) \mbox{ is increasing if } x > 4
 \end{cases}
 $$
 %
-Write down or graph an $\pmb{f(x)}$ that would produce such solutions.
+Write down or graph a function $f(x)$ that would produce such solutions.
 
 
 
@@ -305,12 +314,34 @@ Consider the ODE \quad $y'(t) = \big(y(t)\big)^2$ \quad .
 Which of the following is true?
 	
 \begin{parts}
+	\item $y(t)$ must always be decreasing
+	\item $y(t)$ must always be increasing \\[5pt]
+
 	\item $y(t)$ must always be positive
 	\item $y(t)$ must always be negative \\[5pt]
-
-	\item $y(t)$ must always be decreasing
-	\item $y(t)$ must always be increasing
+	
+	\item $y(t)$ must never change sign.
 \end{parts}
+\begin{annotation}
+\begin{goals}
+	The 5$^{\rm th}$ part is for stronger students to think about while they wait for the others to finish.
+	
+	Will be addressed later in module \ref{ODE:} (Properties of solutions).
+	
+	They can see that:
+	\begin{itemize}
+		\item If $y(t_0)>0$, then $y(t)>0$ for $t>t_0$
+		\item If $y(t_0)<0$, then
+
+		\begin{tikzpicture}
+			\draw[thick,-{\seta}] (-0.25,0) -- (3.5,0) node[above] {\small $t$};
+			\draw[thick,-{\seta}] (0,-2) -- (0,2) node[left] {\small $y$};
+			\draw[samples=20, ultra thick,domain=-1.25:1.25,smooth,variable=\x,blue] plot ({\x+1.5},{\x*\x*\x});
+			\draw (3,1) node[right,blue] {\Huge ?};
+		\end{tikzpicture}
+	\end{itemize}
+\end{goals}
+\end{annotation}
 
 
 
@@ -325,6 +356,13 @@ Which of the following is true?
 		\item Sketch all the integral curves for the differential equation.
 		\item What is the difference between a solution passing through the point $(1,-1)$ and an integral curve passing through the same point?
 	\end{parts}
+\begin{annotation}
+\begin{goals}
+	Similar to some practice problems.
+	
+	Skip if the other exercises take too long.
+\end{goals}
+\end{annotation}
 
 
 
@@ -346,7 +384,7 @@ Which of the following is true?
 
 \begin{module}{Slope Fields}
 	%\Title{Slope Fields}
-	\label{intro-slopefields}
+	\label{ODE:slopefields}
 
 	\input{modules/module09-slopes.tex}
 	\input{modules/module09-slopes-exercises.tex}
@@ -380,7 +418,7 @@ Which of the following is true?
 
 
 
-\newpage
+%\newpage
 
 \question
 \begin{minipage}{.7\textwidth}
@@ -537,7 +575,7 @@ Slope field for $y(t)$
 
 \begin{module}{Approximating Solutions}
 	%\Title{Slope Fields}
-	\label{Approximation}
+	\label{ODE:approximation}
 
 	\input{modules/module10-approximations.tex}
 	\input{modules/module10-approximations-exercises.tex}
@@ -571,7 +609,7 @@ Slope field for $y(t)$
 
 
 
-\newpage
+%\newpage
 
 \question
 	Consider the differential equation
@@ -592,11 +630,25 @@ Slope field for $y(t)$
 
 \begin{annotation}
 	\begin{goals}
-		The goal is to have student's recognize that the Euler approximation ``curves slower'' than the actual solution.
-		
-		Students can explain in words why that is the case using the way the approximations are generated.
+		\begin{itemize}
+			\item The goal is to have student's recognize that the Euler approximation ``curves slower'' than the actual solution.
+			\item Students can explain in words why that is the case using the way the approximations are generated.\\
+
+			\item For .2 and .4: 
+			\begin{enumerate}[label=(\alph*)]
+				\item If students learned how to solve ODEs before, then fine!
+				\item If students didn't learn, then ask students:
+				\begin{itemize}
+					\item From the approximation, what kind of function does the approximation look like?  (exponential)
+					\item Exponentials pass through $(0,1)$, so this looks like an exponential moved up.
+					\item Try $y=a e^{bt}+c$ and find $a,b,c$.
+				\end{itemize}
+			\end{enumerate}
+		\end{itemize}
 	\end{goals}
 \end{annotation}
+
+
 
 
 \bookonlynewpage
@@ -608,18 +660,19 @@ Slope field for $y(t)$
 
 \begin{annotation}
 	\begin{goals}
-		The question is purposefully ambiguous.
-		What do we mean by approximated perfectly?
+		\begin{itemize}
+			\item The question is purposefully ambiguous.
+				What do we mean by approximated perfectly?
 		
-		Ex: The IVP $y'=$ sign$(t)$ (assuming sign$(0)=1$) with $y(-5)=5$ has solution $y = |t|$ and it is captured with Euler's method if $\Delta t=\frac5k$ for any $k\in\mathbb{N}$. \\
+			\item Ex: The IVP $y'=$ sign$(t)$ (assuming sign$(0)=1$) with $y(-5)=5$ has solution $y = |t|$ and it is captured with Euler's method if $\Delta t=\frac5k$ for any $k\in\mathbb{N}$. \\
 		
-		Once students discuss, they'll find ODE's of the form $y'= c$ for any constant. 
+			\item Once students discuss, they'll find ODE's of the form $y'= c$ for any constant. 
 		
-		Prompt them to find other types. Show them the example above only after they tried for a bit. 
-		Then, let them revise their Conjecture.  \\
+			\item Prompt them to find other types. Show them the example above only after they tried for a bit. 
+				Then, let them revise their Conjecture.  \\
 		
-		Ex 2: $y'=f(y+t)$ with $y(0)=0$ and $f(z) = \lfloor z \rfloor$ is approximated perfectly if $\Delta t = 1$, but not if $\Delta t$ takes any other value.
-		
+			\item Ex 2: $y'=f(y+t)$ with $y(0)=0$ and $f(z) = \lfloor z \rfloor$ is approximated perfectly if $\Delta t = 1$, but not if $\Delta t$ takes any other value.
+		\end{itemize}
 	\end{goals}
 \end{annotation}
 
@@ -657,7 +710,7 @@ Slope field for $y(t)$
 
 \begin{module}{Modelling with Differential Equations}
 	%\Title{Slope Fields}
-	\label{model-odes}
+	\label{ODE:model}
 
 	\input{modules/module11-model-odes.tex}
 	\input{modules/module11-model-odes-exercises.tex}
@@ -691,7 +744,7 @@ Slope field for $y(t)$
 
 
 
-\newpage
+%\newpage
 
 
 \begin{annotation}
@@ -787,7 +840,7 @@ Slope field for $y(t)$
 \begin{module}{Solvable Types of ODEs}
 	%\Title{Separable ODEs}
 
-	\label{model-odes}
+	\label{ODE:solve}
 
 	\input{modules/module12-SolvableODEs.tex}
 	\input{modules/module12-SolvableODEs-exercises.tex}
@@ -830,7 +883,7 @@ Slope field for $y(t)$
 
 
 
-\newpage
+%\newpage
 
 \question 
 	Decide whether the following differential equations are separable, first-order linear, both, or neither. If they are of one of the solvable types, solve it.
@@ -854,65 +907,6 @@ Slope field for $y(t)$
 
 \bookonlynewpage
 
-
-\question Consider a differential equation $y' = f(t,y)$ with the following slope field.
-
-\begin{center}
-	\includegraphics*[width=200pt]{images/module12-dirfield.pdf}
-\end{center}
-
-\begin{parts}
-	\item What are the equilibrium solutions of the ODE?
-
-
-\item Directly on the direction field above, sketch the solution of the problem
-$$
-\begin{cases}
-y'=f(t,y) \\
-y(0) = \dfrac14
-\end{cases}
-$$
-
-\item From the direction field above, what is the type(s) of this ODE? Justify your answer.
-
-\begin{enumerate}[label={\bf (\alph*)}]
-\hfil 
-\begin{minipage}{.3\textwidth}
-\item separable. \\[-10pt]
-\item of first-order and linear.
-\end{minipage}
-\hfil
-\begin{minipage}{.4\textwidth}
-\item autonomous. \\[-10pt]
-\item none of the other options.
-\end{minipage}
-\end{enumerate}
-
-\item Assume that $y=g(t)$ and $y=h(t)$ are two solutions of the differential equation with $g(0)<h(0)$, then
-
-\hfill (select all the possible options)\\[-10pt]
-
-\begin{enumerate}[label={\bf (\alph*)}]
-\hfil 
-\begin{minipage}{.2\textwidth}
-\item $g(3) < h(3)$
-\end{minipage}
-\hfil
-\begin{minipage}{.2\textwidth}
-\item $g(3) = h(3)$
-\end{minipage}
-\hfil
-\begin{minipage}{.2\textwidth}
-\item $g(3) > h(3)$
-\end{minipage}
-\end{enumerate}
-
-\end{parts}
-
-
-
-
-\bookonlynewpage
 
 
 
@@ -951,10 +945,10 @@ $$
 
 
 
-
-\bookonlynewpage
-
-\hfill
+%
+%\bookonlynewpage
+%
+%\hfill
 
 \standardonlynewpage
 
@@ -965,6 +959,7 @@ $$
 
 
 \begin{module}{Properties of Differential Equations}
+	\label{ODE:properties}
 	%\Title{First-Order Linear ODEs}
 %	\Heading{Textbook}	
 %	\Heading{Objectives}
@@ -1013,7 +1008,7 @@ $$
 
 
 
-\newpage
+%\newpage
 
 \question For the following initial-value problems, answer the following questions:
 \begin{enumerate}[label=\color{gray}(\alph*)]
@@ -1108,7 +1103,7 @@ has the solutions
 %		\item Bla bla bla	
 %	\end{itemize}
 
-	\label{model-odes}
+	\label{ODE:autonomous}
 
 	\input{modules/module14-AutonomousODEs.tex}
 	\input{modules/module14-AutonomousODEs-exercises.tex}
@@ -1149,7 +1144,7 @@ has the solutions
 
 
 
-\newpage
+%\newpage
 
 \question Consider the differential equation \quad $y'=f(y)$ \quad where $f(y)$ is given by the following graph:
 \begin{center}
@@ -1176,6 +1171,66 @@ has the solutions
 
 
 \hfill
+
+
+\bookonlynewpage
+
+
+\question Consider a differential equation $y' = f(t,y)$ with the following slope field.
+
+\begin{center}
+	\includegraphics*[width=200pt]{images/module12-dirfield.pdf}
+\end{center}
+
+\begin{parts}
+	\item What are the equilibrium solutions of the ODE?
+
+
+\item Directly on the direction field above, sketch the solution of the problem
+$$
+\begin{cases}
+y'=f(t,y) \\
+y(0) = \dfrac14
+\end{cases}
+$$
+
+\item From the direction field above, what is the type(s) of this ODE? Justify your answer.
+
+\begin{enumerate}[label={\bf (\alph*)}]
+\hfil 
+\begin{minipage}{.3\textwidth}
+\item separable. \\[-10pt]
+\item of first-order and linear.
+\end{minipage}
+\hfil
+\begin{minipage}{.4\textwidth}
+\item autonomous. \\[-10pt]
+\item none of the other options.
+\end{minipage}
+\end{enumerate}
+
+\item Assume that $y=g(t)$ and $y=h(t)$ are two solutions of the differential equation with $g(0)<h(0)$, then
+
+\hfill (select all the possible options)\\[-10pt]
+
+\begin{enumerate}[label={\bf (\alph*)}]
+\hfil 
+\begin{minipage}{.2\textwidth}
+\item $g(3) < h(3)$
+\end{minipage}
+\hfil
+\begin{minipage}{.2\textwidth}
+\item $g(3) = h(3)$
+\end{minipage}
+\hfil
+\begin{minipage}{.2\textwidth}
+\item $g(3) > h(3)$
+\end{minipage}
+\end{enumerate}
+
+\end{parts}
+
+
 
 
 \bookonlynewpage

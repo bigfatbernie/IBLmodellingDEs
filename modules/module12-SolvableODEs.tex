@@ -20,11 +20,11 @@ A differential equation is called \emph{separable} if it has the form
 $$
 g(y) y'(t) = h(t),
 $$
-that is if we can separate all the $y$'s into the left-hand side and the all the $t$'s into the right-hand side of the equation. Observe that the $y$'s on the left hand side must all be multiplied by $y'(t)$. 
+that is if we can separate all the $y$'s into the left-hand side and all the $t$'s into the right-hand side of the equation. Observe that the $y$'s on the left hand side must all be multiplied by $y'(t)$. 
 \end{definition}
 
 
-\subparagraph{\textcolor{cyan}{Method of solution. }} The idea to solve this type of DEs is simple:
+\subparagraph{\emph{Method of solution. }} The idea to solve this type of DEs is simple:
 \begin{enumerate}[label={\bf \arabic*. } ]
 \item Integrate both sides with respect to $t$:
 $$
@@ -51,22 +51,34 @@ $$
 	Observe that the solution is given in implicit form. In general, when using this technique, the solution $y(t)$ will be given in implicit form, so there is still some work ahead to find an explicit formula for $y(t)$.	
 \end{important}
 
+\begin{graybox}
+A simplified method of solution is the following:
+\begin{enumerate}
+	\item Start with the differential equation
+	$$ g(y) \frac{dy}{dt} = h(t) .$$
+	\item ``Move the dt to the other side'':
+	$$ g(y) dy = h(t) dt .$$
+	\item Integrate both sides
+	$$ \int g(y) dy = \int h(t) dt.$$
+\end{enumerate}	
+\end{graybox}
 
 
-\def\arcsinh{\rm arcsinh\ }
+
+\def\arcsinh{{\rm arcsinh\ }}
 \begin{example}
 The shape $y(x)$ of a free falling chain under its own weight, called a catenary, satisfies the differential equation:
 $$
 y''(x) = \frac1a \sqrt{1+\big(y'(x)\big)^2}.
 $$
 
-It doesn't seem to be a \textbf{\color{Red!70!black}separable equation}, but if we can define $z(x) = y'(x)$, which satisfies
+It doesn't seem to be a \emph{separable equation}, but if we can define $z(x) = y'(x)$, which satisfies
 $$
 z'(x) = \frac1a \sqrt{1+\big(z(x)\big)^2}
 \qquad \Leftrightarrow \qquad \frac{1}{\sqrt{1+\big(z(x)\big)^2}} z'(x) = \frac1a.
 $$
 
-This is now clearly in the form of a \emph{\color{Red!70!black}separable ODE}. \\
+This is now in the form of a \emph{separable ODE}. \\
 
 We can solve it using the method described above: we need to solve
 $$
@@ -105,16 +117,16 @@ $$
 
 \end{submodule}
 
-\hfill \\
+%\hfill \\
+\newpage
 
 \begin{submodule}{First-Order Linear Differential Equations}
 
 \begin{definition}[First-Order Linear ODE]
 A differential equation is called \emph{first-order linear} if it has the form
 $$
-y'(t) + p(t) y(t) = f(t),
+y'(t) + p(t) y(t) = f(t).
 $$
-that is if we can separate all the $y$'s into the left-hand side and the all the $t$'s into the right-hand side of the equation. Observe that the $y$'s on the left hand side must all be multiplied by $y'(t)$. 
 \end{definition}
 
 
@@ -122,7 +134,7 @@ The idea to solve this type of DEs is to transform it into the result of a produ
 
 
 \begin{example}
-Consider the following \textbf{\color{Red!70!black}first-order linear ODE}
+Consider the following \emph{first-order linear ODE}
 $$
 t^2 \frac{dy}{dt} + 2t y = \sin t.
 $$
@@ -143,7 +155,7 @@ Now let us look at another example, where the left-hand side of the ODE is not i
 
 
 \begin{example}
-Consider the \textbf{\color{Red!70!black}first-order linear ODE}
+Consider the \emph{first-order linear ODE}
 \begin{equation}\tag{$\star$}\label{eq:intfact_1}
 \frac{dy}{dt} + \frac12 y = \frac13 e^{\frac t3}.
 \end{equation}
@@ -179,7 +191,7 @@ $$
 
 This last example required us to come up with a function to multiply the ODE so that it becomes of the right form: with a left-hand side that is the result of the product rule.
 
-This function is called the \textbf{\color{cyan}integrating factor}.
+This function is called the \emph{integrating factor}.
 
 Let us now see how we can find this function in more detail.
 
@@ -190,10 +202,10 @@ Consider the same ODE \eqref{eq:intfact_1}:
 \frac{dy}{dt} + \frac12 y = \frac13 e^{\frac t3}.
 \end{equation}
 
-So we multiply both sides of the equation with an unknown function $\mu(t)$, called the \textbf{\color{cyan}integrating factor}:
-\begin{equation}\tag{\#}\label{eq:intfactor2}
+So we multiply both sides of the equation with an unknown function $\mu(t)$, called the \emph{integrating factor}:
+$$%\begin{equation}\tag{\#}\label{eq:intfactor2}
 \mu(t) \frac{dy}{dt} + \frac12 \mu(t) y = \frac13 \mu(t) e^{\frac t3}.
-\end{equation}
+$$%\end{equation}
 
 And we find which $\mu(t)$ makes the left-hand side equal to the product rule:
 $$
@@ -207,7 +219,7 @@ $$
 	\mu'(t) = \frac12 \mu(t).
 $$
 
-We now need to solve this equation for $\mu(t)$. Fortunately, this is a \textbf{\color{cyan}separable ODE}:
+We now need to solve this differential equation for $\mu(t)$. Fortunately, this is a \emph{separable ODE}:
 \begin{align*}
 \mu'(t) = \frac12 \mu(t) \quad
 	& \Leftrightarrow \quad \frac{\mu'(t)}{\mu(t)} = \frac12 \\
@@ -216,8 +228,8 @@ We now need to solve this equation for $\mu(t)$. Fortunately, this is a \textbf{
 \end{align*}
 where $a = e^A$.
 
-We say that the function $\mu(t) = e^{\frac t2}$ is an \textbf{\color{cyan}integrating factor} for the equation \eqref{eq:intfact_1}.
-Observe that we chose $a=1$ ($A=0$), because we only need one function $\mu(t)$ that satisfies our condition $\mu' = \frac12 \mu$, we don't need to find all possible solutions. \\
+We say that the function $\mu(t) = e^{\frac t2}$ is an \emph{integrating factor} for the equation \eqref{eq:intfact_1}.
+Observe that we chose $a=1$ ($A=0$), because we only need \emph{one} function $\mu(t)$ that satisfies our condition $\mu' = \frac12 \mu$, we don't need to find all possible solutions. \\
 
 
 After finding the integrating factor $\mu(t)$, the rest of the solution is the same as in the previous example.
@@ -246,7 +258,7 @@ After finding the integrating factor $\mu(t)$, the rest of the solution is the s
 Now that we have a good idea of the method needed to solve these ODEs, let us tackle the general equation.
 
 
-\subparagraph{\color{cyan}Method of solution. } This method is also known as the \textbf{\color{cyan}Method of the Integrating Factor}. 
+\subparagraph{\emph{Method of solution. }} This method is also known as the \emph{Method of the Integrating Factor}. 
 \begin{enumerate}[label={\bf \arabic*. } ]
 \item Multiply both sides by $\mu(t)$, the integrating factor:
 $$
@@ -260,7 +272,7 @@ $$
 \mu'(t) = p(t) \mu(t).
 $$
 
-This is a \textbf{\color{cyan}separable ODE}, so we can solve it:
+This is a \emph{separable ODE}, so we can solve it:
 $$
 \mu(t) = A e^{\int p(t) \, dt}.
 $$

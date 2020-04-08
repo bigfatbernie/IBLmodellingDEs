@@ -6,10 +6,15 @@ In this module you will learn
 
 \hfill \\[-10pt]
 
-Assume that we have found a differential equation that models a situation.
-Often the goal is to figure out what happens, so we usually attempt to either solve the differential equation and obtain a solution or to find an approximation for the solution.
+When we model a quantity through a differential equation, we will need to study its solution.
 
-In this module, we will discuss solutions in more detail.
+%
+%
+%
+%Assume that we have found a differential equation that models a situation.
+%Often the goal is to figure out what happens, so we usually attempt to either solve the differential equation and obtain a solution or to find an approximation for the solution.
+%
+%In this module, we will discuss solutions in more detail.
 
 \begin{definition}[Solution]
 	Given a differential equation, a \emph{solution} is a differentiable function that satisfies the differential equation.
@@ -30,6 +35,45 @@ $$
 t \frac{du}{dt} = t \big( \sin(t) + t \cos(t) \big) = t \sin(t) + t^2 \cos (t) = u + t^2 \cos(t).
 $$
 \end{example}
+
+
+There are several different approaches to studying the solutions:
+\begin{itemize}
+	\item finding an explicit or implicit formula for the solution,
+	\item finding an approximation of the solution,
+	\item or just finding some of its properties.
+\end{itemize}
+
+We will see all these approaches in the next modules.\\
+
+Here we are interested in what it means to be a solution and the different types of solutions.
+
+\begin{definition}[General solution]
+Given a differential equation, its \emph{general solution} is an explicit or implicit formula for all the possible solutions of the differential equation.
+\end{definition}
+
+\begin{example}
+Consider the differential equation of the previous example:
+$$
+t \frac{du}{dt} = u + t^2 \cos(t).
+$$
+
+In the previous example we saw one of the solutions. In fact, all the possible solutions for this differential equation have the form:
+$$
+u(t) = t \big(\sin(t) + C \big),
+$$
+for an constant $C$. \\
+
+This is called the \emph{general solution} of the differential equation.
+\end{example}
+
+\begin{graybox}
+Roughly, the general solution of an $n^{\rm th}$-order differential equation must contain $n$ constants. \\
+
+This means that the space of solutions of an $n^{\rm th}$-order differential equation is a (affine) subspace of dimension $n$.
+\end{graybox}
+
+
 
 
 

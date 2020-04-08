@@ -1,7 +1,7 @@
 In this module you will learn
 \begin{itemize}
 	\item to find some properties of solutions without the need to find a solution or approximating it
-	\item an existence and uniqueness of solution theorem
+	\item existence and uniqueness of solution theorems
 \end{itemize}
 
 \hfill \\
@@ -25,15 +25,13 @@ y = t^2 \qquad & \text{ is also a solution}
 \end{align*}
 \end{itemize}
 
-\hfill 
-
 
 It is important (not just to mathematicians) to know whether a problem has solutions or not before trying to solve it. 
 It is also important to know whether there is one unique solution or multiple solutions.
 
-So for {\bf linear differential equations} we have the following theorem.
+So for \emph{linear differential equations} we have the following theorem.
 
-\begin{theorem}[Existence and Uniqueness for Linear DE]
+\begin{theorem}[Existence and Uniqueness for Linear ODEs]
 Let $p$ and $g$ be continuous functions in an open interval $I = (a,b)$ containing the point $t_0$.
 Then there exists a unique function $y=\phi(t)$ that satisfies
 \begin{align*}
@@ -63,11 +61,14 @@ So we can conclude, from the Theorem, that there is a unique solution $y(t)$ def
 
 
 \begin{example}
-We can see why on the previous example $ty'=2y$, this Theorem doesn't apply. To use the Theorem, we need to write this equation as 
+Above, we saw that $ty'=2y$ has more than one solution. 
+We can now see that this Theorem doesn't apply to this differential equation.
+
+First, we need to rewrite the differential equation in the same form of the Theorem:
 $$
-y' -\frac2t y = 0,
+y' -\frac2t y = 0.
 $$
-and the function $p(t) = -\frac2t$ is not continuous at $0$.
+Now we observe that $p(t) = -\frac2t$ is not continuous at $0$.
 \end{example}
 
 
@@ -76,19 +77,22 @@ $$
 y = x^{\frac23}.
 $$
 
-So even though $g(t) = \frac{2}{3\sqrt[3]{x}}$ is not continuous at $0$, the DE still has a unique solution.
+So even though $g(t) = \frac{2}{3\sqrt[3]{x}}$ is not continuous at $0$, the ODE still has a unique solution.
 \end{example}
 
 
 
+\begin{graybox}
+	What can you conclude from the last two examples?
+\end{graybox}
 
 
 The previous Theorem is very restrictive -- it only applies to some very particular differential equations. 
 
 Below, we state another Theorem that applies to a much broader range of differential equations.
 
-\begin{theorem}[Existence and Uniqueness for Nonlinear DE]
-Let the functions $f(t,y)$ and $\frac{\partial f}{y\partial y}$ be continuous in some rectangle $|t-t_0|\leq a$ and $|y-y_0|\leq b$ for $a,b>0$.
+\begin{theorem}[Existence and Uniqueness for Nonlinear ODEs]
+Let the functions $f(t,y)$ and $\frac{\partial f}{\partial y}$ be continuous in some rectangle $|t-t_0|\leq a$ and $|y-y_0|\leq b$ for $a,b>0$.
 
 Then, in some interval $(t_0-h,t_0+h)$, there is a unique solution $y=\phi(t)$ of the IVP
 \begin{align*}
@@ -96,7 +100,7 @@ Then, in some interval $(t_0-h,t_0+h)$, there is a unique solution $y=\phi(t)$ o
 & y(t_0) = y_0.
 \end{align*}
 
-Furthermore, $h \geq \min\{ a,b/M\}$ where $M = \max \big| f(t,y) \big|$.
+%Furthermore, $h \geq \min\{ a,b/M\}$ where $M = \max \big| f(t,y) \big|$.
 \end{theorem}
 
 \begin{definition}[Partial derivative]
@@ -104,6 +108,12 @@ Furthermore, $h \geq \min\{ a,b/M\}$ where $M = \max \big| f(t,y) \big|$.
 	
 	Roughly, assume that the variable $t=t_0$ is a fixed number and take the derivative on the variable $y$.
 \end{definition}
+
+\begin{graybox}
+In fact, the condition that $f(t,y)$ be continuous is sufficient to conclude that the solution exists. 
+
+The condition that $\frac{\partial f}{\partial y}$ be continuous is required to be able to conclude the uniqueness of the solution.
+\end{graybox}
 
 
 You should spend some time comparing these two Theorems. \\
@@ -130,7 +140,7 @@ which are continuous for all $x,y\in \R$.
 
 The previous Theorem guarantees that a solution exists and is unique in some interval around $x=0$.
 
-Even though the rectangle spans the whole space of $x$ and $y$, it doesn't mean that the solution exists for all $x$. The extra part of the Theorem, guarantees that the solution exists for $t<h$ where $h = \frac1b$ (because $M=b^2$). Since $b \geq y_0$, we know that a solution exists for $t < \frac{1}{y_0} = \frac13$.
+Even though the rectangle spans the whole space of $x$ and $y$, it doesn't mean that the solution exists for all $x$. %The extra part of the Theorem, guarantees that the solution exists for $t<h$ where $h = \frac1b$ (because $M=b^2$). Since $b \geq y_0$, we know that a solution exists for $t < \frac{1}{y_0} = \frac13$.
 
 In fact, this is a separable ODE, so we can find its solution:
 $$
