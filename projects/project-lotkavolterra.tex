@@ -1,0 +1,96 @@
+\begin{quote}
+		Snow collects on the brim of your fur coat and musket 
+		as you stalk your prey through the white woods.  A flash 
+		of orange, a rustling of branches, and then it's
+		gone.
+		You mutter a curse under your breath.  Foxes are scarce this year, 
+		and you'll have to explain to the Dutch East India Trading Company 
+		why you've come up short.  Worse yet, your rival, a
+		trapper who only hunts 
+		rabbits, is having a terrific year.  You shouldn't have teased him so 
+		much when rabbits were down and foxes were up just a few seasons ago.
+
+		If only you could somehow predict which game would be plentiful, you could always bid on the easier contract!  But how?
+
+		Back at camp, amid the crackling of your lonely fire, the answer comes to you.  Just two months ago you attended a talk by Dr.~\!Lotka on autocatalytic chemical reactions.  It was quite a spectacle when, after Dr.~\!Lotka had finished talking, a Dr.~\!Volterra stood up and proclaimed 	that he had applied the same model to predator-prey ecology. At the time you were rushed and didn't think much about the proclamation, but now the 	basic assumptions were making more and more sense:
+
+		\begin{enumerate}[label=\emph{(\alph*)}]
+			\item In the absence of foxes, the rabbit population grows
+				at a rate proportional to the number of rabbits.
+			\item In the absence of rabbits, the fox population declines
+				at a rate proportional to the number of foxes.
+			\item The population of rabbits declines at a rate proportional
+				to the product of the rabbit and fox populations.
+			\item The population of foxes grows at a rate proportional 
+				to the product of the rabbit and fox populations.
+		\end{enumerate}
+
+		Pop! A hot coal explodes, snapping you out of your pondering state
+		and into one of action.  Grabbing a piece of paper from your limited
+		supplies, you begin to grapple with the consequences of the
+		Lotka--Volterra model.
+	\end{quote}
+
+
+\emph{Task.} 
+	Let $R$ and $F$ stand for the rabbit and fox populations, respectively, and
+	let $\alpha$, $\beta$, $\gamma$, and $\delta$ be the constants of proportionality for
+	parts \emph{(a)}--\emph{(d)}.
+
+	Work through the following before you begin your report.
+
+	\begin{enumerate}[label=\emph{\arabic*.}]
+		\item Write down the Lotka-Volterra system of differential equations.  For
+			each of (a)--(d), explain whether or not the assumption is reasonable.
+		\item When is the fox population increasing or decreasing?  Given $R$ and $F$,
+			could you predict which one is on the rise on which one is on the decline?
+		\item Is there a steady state for the fox population?  Could the fox population
+			remain steady while the rabbit population is changing?
+		\item \label{params}
+			Sketch an $RF$-phase portrait for the Lotka-Volterra system of differential
+			equations with the following constants:
+			\begin{align*}
+				\alpha &= 0.2\text{ rabbits per month per rabbit}\\
+				\beta &= 0.1\text{ foxes per month per fox}\\
+				\gamma &= 0.002\text{ rabbits per month per rabbit-fox}\\
+				\delta &= 0.001\text{ foxes per month per rabbit-fox}
+			\end{align*}
+
+			Hint: you will need to consider rabbit and fox populations of well over
+			100 to see interesting behaviour in your phase portrait.
+		\item Does your phase portrait have any singular points?  What do they mean?
+		\item Use technology to graph $R(t)$ and $F(t)$ for some initial conditions.  
+			Do the initial conditions affect the period of the population increase
+			or decrease?  Does this seem reasonable when looking at your phase portrait?
+	\end{enumerate}
+
+
+	Your writeup should include the following:
+	\begin{itemize}
+		\item An explanation of the Lotka-Volterra model along with a discussion of
+			whether or not each assumption is reasonable.
+		\item A description of what behaviour you expect from which initial conditions.  You may use
+			the parameters specified in question \ref{params}.  Include a phase portrait in
+			your description as well as how to interpret the phase portrait, and make sure to point
+			out any critical points.
+		\item Suppose you wanted to legislate limits on the hunting of rabbits and foxes to ensure the population of either
+			never dipped below a certain level.  Based on the Lotka-Volterra model, propose
+			legislation.  Be specific and comment on whether a flat-out hunting ban
+			would achieve the desired effect.
+	\end{itemize}
+
+
+	Be careful with your simulations.  Euler's method loses accuracy quickly on Lotka-Volterra--based systems.
+
+
+
+
+\vfill
+
+\hfill ``Hunting Inspiration'' is a collaboration between Max Brugger and Jason Siefken
+
+
+
+
+\begin{noexercises}
+\end{noexercises}

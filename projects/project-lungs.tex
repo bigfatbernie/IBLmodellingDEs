@@ -1,0 +1,113 @@
+
+Lungs are somewhat important to human beings! 
+They are the source of oxygen to our bodies, so it is important to maximize the amount of oxygen that can be absorbed within the available volume.
+
+\emph{Task 1. }Let us find out the volume and surface area of the lungs.
+\begin{enumerate}[label=\emph{\arabic*.}]
+	\item The lungs are composed of a branched structure as in the figure below.
+	\begin{center}
+		\begin{tikzpicture}[scale=0.5]
+			\draw[ultra thick] (0,0) ellipse (2 and 1);
+			\draw[ultra thick] (-2,0)--(-2,-4);
+			\draw[ultra thick] (2,0)--(2,-4);
+			\draw[ultra thick] ($(0, -4) + (180:2cm and 1cm)$(P) arc  (180:360:2cm and 1cm);
+			\draw[thick] (-2,-4)--(-3.075,-7.1);
+			\draw[thick] (0,-5)--(-0.96,-7.45);
+			\draw[thick] ($(-2, -7.25) + (165:1.1cm and 0.55cm)$(P) arc  (165:350:1.1cm and 0.55cm);
+			\draw[thick] (2,-4)--(3.075,-7.1);
+			\draw[thick] (0,-5)--(0.96,-7.45);
+			\draw[thick] ($(2, -7.25) + (190:1.1cm and 0.55cm)$(P) arc  (190:375:1.1cm and 0.55cm);
+			\draw (-3.075,-7.1)--(-4.2,-8.5);
+			\draw (-2.125,-7.8)--(-2.93,-8.9);
+			\draw ($(-3.62, -8.6) + (160:0.6cm and 0.4cm)$(P) arc  (160:330:0.7cm and 0.5cm);
+			\draw (-2.125,-7.8)--(-2.125,-9);
+			\draw (-0.96,-7.45)--(-0.96,-9);
+			\draw ($(-1.5425, -9) + (180:0.5825cm and 0.3cm)$(P) arc  (180:360:0.5825cm and 0.3cm);
+			
+			\draw (3.075,-7.1)--(4.2,-8.5);
+			\draw (2.125,-7.8)--(2.93,-8.9);
+			\draw ($(3.45, -8.7) + (210:0.6cm and 0.4cm)$(P) arc  (210:380:0.7cm and 0.5cm);
+			\draw (2.125,-7.8)--(2.125,-9);
+			\draw (0.96,-7.45)--(0.96,-9);
+			\draw ($(1.5425, -9) + (180:0.5825cm and 0.3cm)$(P) arc  (180:360:0.5825cm and 0.3cm);
+		\end{tikzpicture}
+	\end{center}
+		The first segment is very large, then it bifurcates into smaller segments in a geometrical pattern.
+		
+		Here is some data about human lungs:
+		\begin{itemize}
+			\item radius of first segment: $r_0 = 0.5$cm
+			\item length of first segment: $\ell_0 = 5.6$cm
+			\item ratio of daughter to parent length: $\alpha = 0.9$
+			\item ratio of daughter to parent radius: $\beta = 0.86$
+			\item number of branch generations: $M=30$
+			\item average number of daughters per parent: $b = 1.7$
+		\end{itemize}
+		
+		In the figure, there are 2 daughters per parent, in 	real lungs, it isn't perfectly regular, so we have an average that is not a whole number.
+		
+		
+		
+	\item Calculate the volume inside the segments. What is the limit as the number of segments gets larger and larger?
+	\item Calculate the surface area inside the segments. What is the limit as the number of segments gets larger and larger?
+
+	\item If we had $b=2$ instead and the same number of generations, would that be possible? If not, how many generations would be possible?
+\end{enumerate}
+
+
+%\vfill
+\newpage
+\emph{Task 2. } Let us model the gas exchange that happens inside the lungs.
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Suppose that a lung has a volume of 3L when full. With each breath, 0.6L of the air is exhaled and replaced by 0.6L of outside air.
+
+	After exhaling the volume is 2.4L and it returns to 3L after inhaling.
+	
+	Suppose further that the lung contains a chemical with a concentration of 2 milimoles per litre before exhaling (a mole is a chemical unit for $6.02 \times 10^{23}$ molecules). The ambient air has a concentration of 5mmol/L of the same chemical.
+
+	What is the concentration after one breath? What is the concentration after $n$ breaths?
+
+\item Update your model to match the oxygen exchange inside a real human lung.
+	
+\item The model above ignored the fact that the body absorbs some of the oxygen. Assume now that the lungs absorb 30\% of the oxygen with each breath. Update your model.
+
+\item What is the equilibrium concentration of oxygen in the lungs? Find the graph of the equilibrium concentration as a function of the fraction of oxygen absorbed with each breath.
+
+\end{enumerate}
+
+\begin{graybox}
+You may choose to model the gas exchange in the lungs using either a discrete time \emph{difference equation} or a continuous time \emph{differential equation}.
+	\begin{enumerate}[label=\emph{(\alph*)}]
+	\item If you choose a difference equation, you might assume that every breath the concentration of the chemical changes. If $c(n)$ or $c_n$ represented the concentration of chemical ager $n$ breaths, your difference equation might look like
+	\begin{itemize}
+		\item $\Delta c(n) = c(n) - c(n-1) =$ some function at time $n$, where $n$ is only allowed to take whole numbers.
+	\end{itemize}
+
+	\item If you choose to use differential equations, the analogous equation would look like
+	\begin{itemize}
+		\item $c'(t)=$ some function at $t$, where $t$ can take any positive real value.  
+	\end{itemize}
+\end{enumerate}
+\end{graybox}
+
+\vfill
+
+\emph{Task 3. } Assume that the lungs only absorb a fraction of the air in contact with its surface. Combine the two previous tasks.
+
+\vfill
+
+\emph{Further Investigation:}
+\begin{enumerate}[label=\emph{\arabic*.}]
+%	\item Assume that the lungs only absorb a fraction of the air in contact with its surface. Combine the two tasks.
+	\item Investigate how the what is known about human lungs. Compare how the branching of real human lungs differs from this model. Refine the estimate.
+	\item Investigate how the what is known about human lungs. Compare how the gas exchange of real human lungs differs from this model. Refine the model.
+\end{enumerate}
+
+\vspace{1cm}
+
+
+
+\hfill ``Math of Lungs'' is a collaboration between Bernardo Galv\~ao-Sousa, Kseniya Garaschuk, and Miroslav Lovric.
+
+\begin{noexercises}
+\end{noexercises}

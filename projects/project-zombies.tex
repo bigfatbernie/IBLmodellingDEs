@@ -1,0 +1,79 @@
+	\begin{quote}
+	At one in the morning, your phone goes off.  After three attempts to 
+	turn off your alarm clock, you finally realize that it is a call---a call from a 
+	number you had promised to always answer.  By 1:15, you're dressed and out the door where 
+	a black SUV is idling, waiting for you.  After a transfer to a government plane, you 
+	touch down in Washington, D.C., and as the sun finally begins to rise, you traverse 
+	down the Secret Service tunnels to a large conference room lined with leather chairs.
+
+	``I'm not going to mince words,'' a voice says, from the other side of the room.  The 
+	chair at the end of the table swivels round and you see the President emerge 
+	from the shadows.  ``It's bad.  It's worse than bad.  It's, uh\ldots it's zombies.''
+
+	A revelation like that would have thrown a lesser scientist, but you're a professional.  
+	You've been preparing for this for years, urging your colleagues to take the threat seriously.  
+
+	``Where is the origin?  Have we identified a patient zero in the US or are there multiple sources?  
+	What are the parameters of the disease\mbox{?}'' you ask.
+
+	``Straight to work, okay,'' the President says, looking pleased. ``Chicago police began reporting violent attacks a few days ago.  It started with a single report in the navy shipyard.  The shipyard has been quarantined, but we're now getting reports from all over the city. These attacks are carried out by humans who always attempt to bite their victims.  Those bitten begin to show symptoms within a matter of hours, but those who are attacked but escape without being bitten appear normal. I've sent in the Marines, and they estimate that an infected person dies after eight days. They also predict about 3,000 individuals have been exposed, five days 	after the initial report.''
+
+	``Has any quarantine been successful\mbox{?}'' you ask.
+
+	``No.''  The President pauses and the gravity of what he has just said starts to sink in.  
+	``There are approximately 9.7 million people living in the Chicago metro area.  Obviously 
+	time is of the essence.  Now, I've been told that you're the best epidemiologist we have.  
+	I need to know if the region has a chance of survival, and if it does, what the impact will be.
+	Is there any hope for Chicago?''
+	\end{quote}
+
+
+%\vfill
+
+\begin{graybox}
+You may choose to model the zombie outbreak using either a discrete time \emph{difference equation} or a continuous time \emph{differential equation}.
+	\begin{enumerate}[label=\emph{(\alph*)}]
+		\item If you choose a difference equation, you might assume that every day or every hour, the number of zombies, humans, and dead increment.  If $Z(n)$ represented the number of zombies at time $n$, one of your difference equations might look like
+%	\[
+%		\Delta Z(n) = Z(n) - Z(n-1) = \text{some function of zombies, humans, and dead at time $n$},
+%	\]
+\begin{itemize}
+	\item $\Delta Z(n) = Z(n) - Z(n-1) =$ some function of zombies, humans, and dead at time $n$,
+	where $n$ is only allowed to take whole numbers.
+\end{itemize}
+
+	\item If you choose to use differential equations, the analogous equation would look like
+%	\[
+%		Z'(t) = \text{some function of zombies, humans, and dead at time $t$},
+%	\]
+\begin{itemize}
+	\item $	Z'(t) = $ some function of zombies, humans, and dead at time $t$,
+	where $t$ can take any positive real value.  
+\end{itemize}
+
+	\item Modelling with a difference equation or a differential equation should give you similar results (why?).
+	\end{enumerate}
+	
+\end{graybox}
+
+%\newpage
+\emph{Task.} Model the zombie infection. Make sure to address the following in your report:
+	\begin{itemize}
+		\item What situation are you trying to model?
+		\item What equations are you using, and what does each variable in each equation represent
+			(for example, ``In this model, $Z(t)$ is the number of zombies at $t$ hours from initial outbreak).
+		\item Justification for any constants that you use and how you estimated them.
+		\item Is there any hope for Chicago?
+	\end{itemize}
+
+Do not attempt to find an equation that solves your differential equations---this is really hard.
+Instead, rely on estimates and simulations.  You can use any computer program you like to assist you in estimating how the zombie outbreak spreads and whether your constants match with the known information.  Including plots and figures in your report will make explaining things easier.
+
+
+
+\vfill
+
+\hfill ``Dark Day'' is a collaboration between Max Brugger and Jason Siefken.
+
+\begin{noexercises}
+\end{noexercises}

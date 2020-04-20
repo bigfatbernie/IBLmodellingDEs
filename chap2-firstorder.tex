@@ -1047,6 +1047,16 @@ has the solutions
 \item What can you conclude?
 
 \end{parts}
+\begin{annotation}
+\begin{goals}
+	The goal is for the students to realize that if the Theorem's conditions hold, then its result must also hold, even though it might not look like it.
+	
+	So if the Theorem says that the solution is unique and we see two solutions, then they must be the same function (at least for $x$ near $\frac12$).
+\end{goals}
+\end{annotation}
+
+
+
 
 
 \bookonlynewpage
@@ -1054,26 +1064,49 @@ has the solutions
 \begin{minipage}{.5\textwidth}
 \question Consider a differential equation $y' = f(t,y)$ where 
 \begin{itemize}
-	\item $f(t,y)$ is continuous for all $t,y$;
-	\item $\frac{\partial f}{\partial y}(t,y)$ is continuous for all $t,y$.
+	\item $f(t,y)$ is continuous for all $t,y \in \mathbb{R}$;
+	\item $\frac{\partial f}{\partial y}(t,y)$ is continuous for all $t \in \mathbb{R}$,$y>0$.
 \end{itemize}
 \end{minipage}
 \hfill
 \begin{minipage}{250pt}
 %Consider the following graph:
 %\begin{center}
-	\includegraphics*[width=250pt]{images/module13-3graphs.pdf}
+\begin{tikzpicture}
+  \draw[thick,-{\seta}] (-4,0) -- (4,0) node[above] {\small $t$};
+  \draw[thick,-{\seta}] (0,-2) -- (0,2) node[left] {\small $y$};
+  \draw[samples=40, ultra thick,domain=-4:4,smooth,variable=\x,blue] plot ({\x},{sin(1.5*deg(\x))/2-\x/4}) node[below] {$y_3$};
+  \draw[samples=40, ultra thick,domain=0.075:4,smooth,variable=\x,gray] plot ({\x},{-1/((\x^(0.33))+\x)}) node[below] {$y_2$};
+  \draw[samples=40, ultra thick,domain=-2.35:3,smooth,variable=\x,green!50!black] plot ({\x-1.5},{\x*\x*\x/8-\x*\x/3+1.6}) node[right] {$y_1$};
+  \draw[dashed] (1,-2) -- (1,2);
+  \draw (1,0) node[below] {$t_0$};
+  \draw (1,-0.5) node {\tikzcircle[gray,fill=gray!50!white]{2pt}};
+  \draw (1,{(2.5^3)/8-(2.5^2)/3+1.6}) node {\tikzcircle[green!50!black,fill=green]{2pt}};
+  \draw (1,{sin(1.5*deg(1))/2-1/4}) node {\tikzcircle[blue,fill=cyan!50!white]{2pt}};
+\end{tikzpicture}
+%	\includegraphics*[width=250pt]{images/module13-3graphs.pdf}
 %\end{center}
 \end{minipage}
 
 
 \begin{parts}
-	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{blue} blue $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
-	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{gray} gray $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
-	\item Can \textbf{\color{blue} blue $y2$} and \textbf{\color{gray} gray $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{blue} blue $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{blue} blue $y3$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
 
 	\item Based on the answers to the three parts above, write a Corollary to the Existence and Uniqueness Theorems.
 \end{parts}
+\begin{annotation}
+\begin{goals}
+	The goal is for students to understand why solutions cannot touch \emph{IF} the Theorem is valid at the intersection point.
+	
+	\begin{itemize}
+		\item  $y1$, $y_2$ not ok!
+		\item  $y1$, $y_3$ ok!
+		\item  $y2$, $y_3$ ok!
+	\end{itemize}
+\end{goals}	
+\end{annotation}
 
 
 

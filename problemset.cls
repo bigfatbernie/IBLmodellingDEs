@@ -261,6 +261,7 @@
 	}
 	\DeclareDocumentEnvironment{graybox}{o}{
 		%\sffamily
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Gray!70!black} ##1}}
 		\parskip=1.7mm%
 		\begin{tcolorbox}[colframe=Gray,
 			colback=Gray!5!white, 
@@ -492,7 +493,6 @@
 			%reversemarginpar,
 			twoside=true}
 		\RenewDocumentCommand{\emph}{m}{{\bfseries\color{green} ##1}}
-
 \DeclareDocumentEnvironment{emphbox}{o}{
 		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Green} ##1}}
 		\begin{leftborderbox}[colframe=Green, colback=Green!10]

@@ -35,7 +35,7 @@ Observe that autonomous ODEs are also Separable ODEs.
 
 So let us look at an autonomous ODE and think what happens when $f(y_0)=0$?
 
-Then if the solution is unique (what are the conditions that will guarantee that?), then if $y(t_0)=y_0$, that means that
+Then if the solution is unique (what are the conditions that will guarantee that?) and if $y(t_0)=y_0$, that means that
 $$
 y'(t_0) = f(y_0)=0.
 $$
@@ -50,14 +50,14 @@ a constant solution. Since the solution is unique, that must be \textbf{the} sol
 This is a property of autonomous ODEs:
 
 \begin{definition}[Equilibrium points]
-Consider an autonomous ODE \quad $y'(f(y)$.
+Consider an autonomous ODE $y'=f(y)$.
 The zeros of the function $f$ are called \emph{critical points}. They can also be called \emph{equilibrium} or \emph{stationary} points.
 \end{definition}
 
 \begin{important}
-Consider an autonomous ODE \quad $y'=f(y)$ \quad and let $c$ be a zero of $f$, i.e. $f(c)=0$.
+Consider an autonomous ODE $y'=f(y)$ and let $c$ be a zero of $f$, i.e. $f(c)=0$.
 
-Then the constant function \quad $y(t) = c$ \quad is a solution of the ODE, called an \emph{equilibrium solution}.
+Then the constant function $y(t) = c$ is a solution of the ODE, called an \emph{equilibrium solution}.
 \end{important}
 
 
@@ -84,7 +84,7 @@ for all $t$.
 \end{example}
 
 
-Equilibrium solutions are even more important. In fact, we can also study what happens between equilibrium solutions without having to actually solve the ODE.
+Equilibrium solutions are even more important, because we can also study what happens between equilibrium solutions without having to actually solve the ODE.
 
 If the function $f(y)$ is continuous, then its sign cannot change between equilibrium points, so the solutions will be monotonic between equilibrium solutions.
 
@@ -100,15 +100,36 @@ We can study whether solutions will be increasing or decreasing by studying the 
 \begin{tabular}{c|ccccccccccc}
 $y$ & $\cdots$ & $-2\pi$ & & $-\pi$ & & $0$ & & $\pi$ & & $2\pi$ & $\cdots$ \\[5pt]%\hline
 $y'=\sin(2y)$ & & $0$ & $+$ & $0$ & $-$ & $0$ & $+$ & $0$ & $-$ & $0$ & \\[5pt]\hline\hline
-$y(t)$ & $\cdots$ & $c$ & $\nearrow$ & $c$ & $\searrow$ & $c$ & $\nearrow$ & $0$ & $\searrow$ & $c$ & $\cdots$
+$y(t)$ & $\cdots$ & $c$ & $\nearrow$ & $c$ & $\searrow$ & $c$ & $\nearrow$ & $c$ & $\searrow$ & $c$ & $\cdots$
 \end{tabular}	
 \end{center}
 
 In a graph, we have
 \begin{center}
-	\includegraphics[height=150pt]{images/module14-equil1.pdf}
-	\quad 
-	\includegraphics[height=150pt]{images/module14-equil2.pdf}
+\begin{tikzpicture}
+  \draw[thick] (-2,-3.5) -- (-2,4) node[left] {\large $y$};
+  \draw[thick,-{\seta}] (0,0) -- (7,0) node[above] {\large $t$};
+  \draw[thick,-{\seta}] (0,-3.5) -- (0,4) node[left] {\large $y$};
+  \foreach \k in {-2,...,2} {
+    \draw[ultra thick, green!50!black] (0,{\k*pi/2}) -- (7,{\k*pi/2});
+    \draw (-2,{\k*pi/2}) node {\tikzcircle[black,fill=white]{2pt}};
+    \draw (0,{\k*pi/2}) node {\tikzcircle[black,fill=white]{2pt}};
+  }
+  \foreach \k in {-2,0} {
+    \draw ({\k},0)  node[left] {\large $0$};
+    \draw ({\k},{pi/2})  node[left] {\large $\pi$};
+    \draw ({\k},{pi})  node[left] {\large $2\pi$};
+    \draw ({\k},{-pi/2})  node[left] {\large $-\pi$};
+    \draw ({\k},{-pi})  node[left] {\large $-2\pi$};
+    \draw[samples=40, ultra thick,domain=0:7,smooth,variable=\x,blue] plot ({\x},{rad(atan(\x-3.5))/2+pi/4+\k*pi/2});
+    \draw[samples=40, ultra thick,domain=0:7,smooth,variable=\x,blue] plot ({\x},{-rad(atan(\x-3.5))/2+3*pi/4+\k*pi/2});
+    \draw[ultra thick,-{\seta},blue] (-2,{pi/4+\k*pi/2}) -- (-2,{pi/4+0.2+\k*pi/2});
+    \draw[ultra thick,-{\seta},blue] (-2,{-pi/4-\k*pi/2}) -- (-2,{-pi/4-0.2-\k*pi/2});
+  }
+\end{tikzpicture}
+%	\includegraphics[height=150pt]{images/module14-equil1.pdf}
+%	\quad 
+%	\includegraphics[height=150pt]{images/module14-equil2.pdf}
 \end{center}
 
 We can infer that the graphs will approach the constant solutions without touching because the derivative $y'$ will become smaller and smaller the more they approach the equilibria. We also know that solutions cannot touch each other.

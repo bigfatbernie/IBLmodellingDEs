@@ -1,0 +1,93 @@
+\emph{Goal.} We want to model the spread of the CoViD-19 pandemic in Canada.
+
+\vfill
+
+\emph{SIR Model.} This is the typical model for an infectious disease. We start by dividing the population into three groups:
+\begin{itemize}
+\item Susceptible Individuals $S(t) = $ number of people who haven't contracted the disease;
+\item Infected individuals $I(t)= $ number of people infected;
+\item Removed individuals $R(t)=$ number of people that either died or recovered from the disease and are now immune to it.
+\end{itemize}
+
+\vfill
+
+\emph{Assumptions.} 
+
+\begin{enumerate}[label=\emph{(\alph*)}] 
+\item Population size $N$ is large and constant (no birth, death, or migration);
+\item No latent/incubation period (there is an improved model that includes this - SEIR model);
+\item Homogeneous population;
+\item Recovery rate is constant $\gamma$ (includes rate at which people die or recover from the disease);
+
+\hfill
+
+\item Out of all possible interactions between susceptible and infected individuals $S(t) \cdot I(t)$, there is a proportion $\frac{\beta}{N}$ that will result in the susceptible individual becoming infected;
+\item The probability that an infected person will either die or recover is $\gamma$.
+
+\end{enumerate}
+
+\vfill
+
+\emph{ODE. } From here we can obtain the SIR model:
+
+\begin{emphbox}[]
+\begin{align*}
+\frac{dS}{dt} & \quad = \quad - \frac{\beta}{N} S I \\[5pt]
+\frac{dI}{dt} & \quad = \quad + \frac{\beta}{N} S I  \quad - \gamma I \\[5pt]
+\frac{dR}{dt} & \quad = \qquad \qquad \quad \;\, + \gamma I
+\end{align*}
+\end{emphbox}
+\begin{video}
+\begin{itemize}
+	\item \qrvideo{https://youtu.be/f1a8JYAixXU}
+\end{itemize}	
+\end{video}
+
+
+\begin{important}
+\begin{itemize}
+\item An important constant in this model is $R_0 = \frac{\beta}{\gamma}$, called the basic reproductive number, which informs us about how fast the disease propagates.
+\item The expected time from infection to recovery (or death) can be proved to be $T = \gamma^{-1}$.
+\end{itemize}
+\end{important}
+
+
+
+\newpage
+
+\emph{Data. } Data from the Public Health Agency of Canada:
+\begin{itemize}
+	\item \qrvideo{http://uoft.me/covid19-canada}
+\end{itemize}
+
+
+\vspace{1cm}
+
+\emph{Task. } 
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Explain how the system of ODEs relates to the assumptions.
+\item Estimate the constants $N, R_0, \beta, \gamma$ for Canada.
+\item Using the idea from Euler's Method (used to approximate the solution of one first-order ODE), create a method to approximate the solution $S(t)$, $I(t)$, $R(t)$ of the SIR model.
+\item Compare your approximation from \emph{3} with the actual data.
+\item Observe that the data is the result of the lockdown measures imposed in Canada. Find a value for $R_0$ that best matches your approximation to the data.
+\item Study what happens to Canada if the lockdown measures are lifted when the number of infected people is very small vs when the number of infected people is actually zero.
+\end{enumerate}
+
+
+
+
+\vfill
+
+
+\emph{Further Investigation. } 
+\begin{enumerate}[label=\emph{\arabic*.}]
+\item Study what happens to the model when $R_0<1$, $R_0=1$ or $R_0>1$.
+\item Adapt your method to the SEIR model and answer questions \emph{1-6} above for the new model.
+\item Improve the SEIR model to better model different lockdown scenarios.
+
+\end{enumerate}
+
+\begin{noexercises}
+\end{noexercises}
+
