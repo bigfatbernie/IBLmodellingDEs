@@ -43,6 +43,53 @@
 			 x_1 = 2
  		\end{cases} $$
 	
+	\prob Find the solution for the problem
+	$$ 	\begin{cases}
+			 a x_{k+1} - x_k + (1-a) x_{k-1} = 0 \\
+			 x_0 = 1 \\
+			 x_N = 0
+ 		\end{cases} $$
+	
+	
+	\prob Consider the problem
+	$$ 	x_{k} - 2x_{k-1}  - x_{k-2} + 2 x_{k-3} = 0 $$
+	Find the solution for the following initial conditions.
+	\begin{enumerate}
+		\item $x_0 = 2, x_1 = 2,	 x_2 = 2$.
+		\item $x_0 = 1, x_1 = 0,	 x_2 = 1$.
+		\item $x_0 = 1, x_1 = 2,	 x_2 = 3$.
+	\end{enumerate}
+	
+	\prob Consider the problem
+	$$ 	\begin{cases}
+			 x_{k+1} = -2x_{k} - 2x_{k-1} \\
+			 x_0 = 1 \\
+			 x_1 = 0 
+ 		\end{cases} $$
+ 	\begin{enumerate}
+ 		\item Find the solution of this problem (it will involve complex numbers).
+ 		\item Show that $x_k \in \mathbb{R}$ for all $k=0,1,\ldots$
+	\end{enumerate}
+ 	Let us re-write the solution without using complex numbers.
+ 	\begin{enumerate}[resume]
+ 		\item Assuming the solution is an exponential $x_k=r^k$, what are the possible values or $r$?
+	\end{enumerate}
+	This means that the solution is of the form
+ 		$$ x_k = c_1 r_1^k + c_2 r_2^k.$$
+ 	We need to know how to easily write $\alpha + i \beta)^k$.
+ 	\begin{enumerate}[resume]
+ 		\item Using Euler's Formula in \ref{EulersFormula}, write the complex numbers $r_1$ and $r_2$ in the form
+			$$ r_1 = \rho e^{i \theta}.$$
+			Also show that 
+			$$ r_2 = \rho e^{-i \theta}.$$
+		\item Now it should be easier to compute $r_1^k$ and $r_2^k$. After simplifying, use Euler's Formula in \ref{EulersFormula} again to get an expression for $r_1^k$ with $\cos$ and $\sin$.
+		\item Let us put everything together again to get a solution of the form
+		$$ x_k = a_1 \rho^k \cos(?) + a_2 \rho^k \sin(?).$$
+		How do $a_1, a_2$ relate to $c_1,c_2$?
+		\item Find the constants $a_1,a_2$.
+ 	\end{enumerate}
+	
+	
 	\end{problist}
 \end{exercises}
 

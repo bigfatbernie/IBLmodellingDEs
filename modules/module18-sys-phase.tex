@@ -27,29 +27,31 @@ $$
 
 Which of the following ways are better?
 \begin{itemize}
-\item \begin{minipage}{400pt}\includegraphics[width=400pt]{images/module18-sep-xy.pdf}\end{minipage}
+\item \begin{minipage}{400pt}\includegraphics[width=400pt]{images/module17-sep-xy.pdf}\end{minipage}
 
-\item \begin{minipage}{200pt}\includegraphics*[width=200pt]{images/module18-together-xy.pdf}\end{minipage}
+\item \begin{minipage}{200pt}\includegraphics*[width=200pt]{images/module17-together-xy.pdf}\end{minipage}
 
-\item \begin{minipage}{200pt}\includegraphics[height=200pt]{images/module18-phaseportrait.pdf}\end{minipage}
+\item \begin{minipage}{200pt}\includegraphics[height=200pt]{images/module17-phaseportrait.pdf}\end{minipage}
 \end{itemize}
 
 There is no correct answer, but the last graph gives more information on how the two quantities interact with each other, so we will focus on that type of graph.
 \end{example}
 
 
-The graphs in the example above are graphs of one specific solution. A phase portrait gives an idea of all possible solutions. 
+The graphs in the example above are graphs of one specific solution. 
+They don't give us an idea of what all other possible solutions of the system look like.
+
 \begin{example}
-The last graph of the example is part of which phase portrait?
+In the last graph of the example, what are the other solutions?
 
 \begin{center}
-\includegraphics*[width=420pt]{images/module18-possiblephaseportraits.pdf}
+\includegraphics*[width=420pt]{images/module17-possiblephaseportraits.pdf}
 \end{center}
 
-A phase portrait gives a good idea of how all solutions behave.
 \end{example}
 
-Sketching phase portraits for systems of two first-order linear ODEs is important because it gives us insight on how the two components affect each other for all solutions.
+
+Sketching \emph{phase portraits} for systems of two first-order linear ODEs is important because it gives us insight on how the two components affect each other for all solutions.
 
 \begin{example}
 Consider the problem
@@ -79,14 +81,14 @@ We can use the general form and start sketching some solutions.
 	
 	So we want to sketch $ \vec{r}(t) = \begin{bmatrix}	 \sin(3t) \\ \cos(3t) \end{bmatrix}$:
 	\begin{center}
-		\includegraphics[height=200pt]{images/module18-phaseportrait.pdf}
+		\includegraphics[height=200pt]{images/module17-phaseportrait.pdf}
 	\end{center}
 	
 	The path is going in circles in the clockwise direction.
 	
 	By multiplying the solution by $e^{-2t}$, which starts at $1$ when $t=0$ and keeps decreasing towards $0$ as $t$ increases, we are creating a graph that keeps revolving around the origin as it converges towards the origin, yielding a spiral.
 	\begin{center}
-		\includegraphics[height=200pt]{images/module18-spiral.pdf}
+		\includegraphics[height=200pt]{images/module17-spiral.pdf}
 	\end{center}
 	
 	In this graph, we also include the graph for $t<0$. \\
@@ -96,7 +98,7 @@ We can use the general form and start sketching some solutions.
 	
 	We add this graph to the previous one.
 	\begin{center}
-		\includegraphics[height=200pt]{images/module18-spiral2.pdf}
+		\includegraphics[height=200pt]{images/module17-spiral2.pdf}
 	\end{center}
 	
 	\item Let $c_1=0$ and $c_2=\pm 1$ and we obtain
@@ -104,7 +106,7 @@ We can use the general form and start sketching some solutions.
 
 	And add these to the graph:
 	\begin{center}
-		\includegraphics[height=200pt]{images/module18-spiral3.pdf}
+		\includegraphics[height=200pt]{images/module17-spiral3.pdf}
 	\end{center}
 
 \end{itemize}
@@ -114,8 +116,7 @@ Sometimes, we need some solutions of the type $c_1=\pm 1$ and $c_2=\pm 1$ to get
 These four solutions seem to give a good idea of all possible solutions: clockwise spirals converging to the origin.\\
 
 
-Also observe that $\vec{r}(t) = \begin{bmatrix}0 \\ 0\end{bmatrix}$, so this system has an equilibrium solution.
-
+Also observe that $\vec{r}(t) = \begin{bmatrix}0 \\ 0\end{bmatrix}$ is a solution of the system, so this system has an equilibrium solution.
 This kind of equilibrium is called a \emph{spiral sink} and it is \emph{asymptotically stable}.
 This means that it is a spiral and it converges to the equilibrium (the origin).
 \end{example}

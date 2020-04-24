@@ -121,7 +121,7 @@ For the first two items, we need to estimate the number of encounters salmon-bea
 
 \begin{enumerate}
 	\item Salmon provide food for bears: for every possible salmon-bear encounter, there is a probability that a bear actually encounters a salmon, and then there is a chance that the bear will catch the salmon. Each catch improves the possibility that the bear population will increase. All these put together means that this factor should increase the bear growth rate by \emph{$a \,b(t)\, s(t)$}, where the constant $a$ needs to be found.
-	\item Bears hunt salmon: similarly to the previous item, for every possible encounter, there is a probability that the bear actually encounters a salmon, and then there is a chance that the bear will catch the salmon. Every catch will decrease the salmon population, so the salmon growth rate will decrease by \emph{$c \,b(t) \,s(t)$}, there the constant $b$ needs to be found.
+	\item Bears hunt salmon: similarly to the previous item, for every possible encounter, there is a probability that the bear actually encounters a salmon, and then there is a chance that the bear will catch the salmon. Every catch will decrease the salmon population, so the salmon growth rate will decrease by \emph{$c \,b(t) \,s(t)$}, there the constant $c$ needs to be found.
 \end{enumerate}
 
 Right now we have the following model:
@@ -156,7 +156,7 @@ To find the constants $a,c,d,e$, we would probably need to go back to Step 3 and
 
 \begin{example}
 
-We can do several things here. I'll let you brainstorm and think of ways you can assess this model.
+We can do several things here. 
 
 One of the things that we can do is approximate its solutions using Euler's Method discussed in Module \ref{Approximation}. 
 
@@ -170,7 +170,7 @@ Let us assume, for this example the constants: $a=1$, $e=10$, $c=1$, $d=5$ and a
 	\item \url{https://www.desmos.com/calculator/zywspwstwk} \hfill \qrcode{https://www.desmos.com/calculator/zywspwstwk}
 \end{itemize}
 
-The $x-$axis is the bear population while the $y-$axis is the salmon population. Each dot gives gives an approximation of the populations $\Delta t = 0.5$ time units after the previous approximation.\\
+The $x-$axis is the bear population while the $y-$axis is the salmon population. Each dot gives an approximation of the populations $\Delta t = 0.5$ time units after the previous approximation.\\
 
 
 From this approximation, we can say infer that this model creates a population cycle, but it seems to spiral outwards: 
@@ -184,6 +184,7 @@ From this approximation, we can say infer that this model creates a population c
 	\item Is the spiralling a feature of the model or the approximation? If it's from the approximation, how does the model behave?
 \end{itemize}
 
+I'll let you brainstorm and think of other ways you can assess this model.
 \end{example}
 
 \begin{graybox}
@@ -192,24 +193,28 @@ There are lots of other tools to create slope fields and approximate solutions o
 \begin{itemize}
 	\item GeoGebra approximation of the same model, called the Lotka-Volterra model:
 	
-	\hfill \url{https://www.geogebra.org/m/KqNV7eHB} \hfill \qrcode{https://www.geogebra.org/m/KqNV7eHB}
+	\hfill \qrvideo{https://www.geogebra.org/m/KqNV7eHB}
 	
 	\item WolframAlpha slope field of the same model:
 
-	\hfill \url{https://uoft.me/modelling-sys-wa} \hfill \qrcode{https://uoft.me/modelling-sys-wa}
+	\hfill \qrvideo{https://uoft.me/modelling-sys-wa}
 
 	\item WolframAlpha stream plot of the same model:
 
-	\hfill \url{https://uoft.me/modelling-sys-wa2} \hfill \qrcode{https://uoft.me/modelling-sys-wa2}
+	\hfill \qrvideo{https://uoft.me/modelling-sys-wa2}
+	
+	\item There are also better methods of approximating ODEs and systems, e.g. \href{https://en.wikipedia.org/wiki/Runge-Kutta_methods}{Runge-Kutta methods} 
+	
+	\hfill \qrvideo{https://en.wikipedia.org/wiki/Runge-Kutta_methods}
 \end{itemize}
 
 \end{graybox}
 
 
-\paragraph{\emph{Step 6.}} Putting it all together in a report
-
-We'll skip this part here.
-
+%\paragraph{\emph{Step 6.}} Putting it all together in a report
+%
+%We'll skip this part here.
+%
 
 
 

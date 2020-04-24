@@ -88,7 +88,11 @@
 \end{minipage}
 \end{itemize}
 	
-	
+\begin{annotation}
+	\begin{goals}
+		.1 should be very quick, since a very (very) similar example was solved in the module.
+	\end{goals}
+\end{annotation}
 \begin{parts}
 	\item Model a laptop keypress.
 	\item What happens if the damping system of the key is broken? What happens if the damping system is too strong? How strong should the damping system be?
@@ -98,6 +102,54 @@
 
 
 
+
+\bookonlynewpage
+
+\begin{annotation}
+	\begin{goals}
+		\Goal{Ball rolling}
+		Different approach depending on students. \\
+		
+		\emph{Students need some challenge and have time}:
+		\begin{itemize}
+			\item Ramp $y=f(x)$ makes it simpler
+			\item Need projection (Linear Algebra) to find gravity force along the ramp at $(x_0,y_0) = \big(x_0,f(x_0)\big)$:
+			$$			
+			\ell = (0,-mg) \cdot (1, k)\frac{1}{\sqrt{1+k^2}} = -\frac{mgk}{\sqrt{1+k^2}}
+			$$
+			where $k = f'(x_0)$.
+			So gravity force along the ramp is:
+			$$
+			\vec{F}_g = \ell (1, k)\frac{1}{\sqrt{1+k^2}} = -\frac{mgk}{1+k^2} (1,k)
+			$$
+			\item Yields second-order ODE 
+		\end{itemize}
+		\hfil
+		
+		\emph{Weaker students with less time}:
+		\begin{itemize}
+			\item Give the formula for gravity force along the ramp:
+			$$
+			\vec{F}_g = \ell (1, k)\frac{1}{\sqrt{1+k^2}} = -\frac{mgk}{1+k^2} (1,k)
+			$$
+		\end{itemize}
+		
+		\hfil
+		
+		\emph{Follow-up question}:
+		\begin{itemize}
+			\item Ramp is $y=(x-1)^2$
+			\item Get second-order ODE for ball position
+			\item Will the ball always move to the right? Justify with the ODE.
+			\item Approximate near the bottom of the ramp: $y' \approx 0 \Leftrightarrow \sqrt{1+(y')^2} \approx 1$ and solve the simpler ODE.
+			\item When is this approximation valid? (when ball oscillates back and forth near the bottom)
+		\end{itemize}
+	\end{goals}
+\end{annotation}
+\question
+	Model a ball rolling down a ramp.
+
+	
 
 
 
@@ -218,6 +270,14 @@
 	y''(t) - 3y(t) = t \big( 2 + \sin(t) \big).
 	$$
 	
+\begin{annotation}
+\begin{goals}
+	\Goal{Without solution}
+	The goal is to solve this without finding an expression for the solution.
+	
+	For .2, the idea is to make sure that $y''<0$. 
+\end{goals}	
+\end{annotation}
 	\begin{parts}
 		\item Assume that $y(0)=0$ and $y'(0)=b$. Which values of $b$ guarantee that $y(t)>0$ for $t\geq 0$. 
 		\item Assume that $y(0)=a<0$ and $y'(0)=b$. Give an example of $a,b$ such that $y(t)$ is increasing for $t\geq 0$. 
@@ -245,18 +305,29 @@
 
 	\end{parts}
 
-\begin{annotation}
-\begin{goals}
-	The goal is to solve this without finding an expression for the solution.
-	
-	For 2, the idea is to make sure that $y''<0$. 
-\end{goals}	
-\end{annotation}
 
 	
 
 \bookonlynewpage
 
+\begin{annotation}
+\begin{goals}
+	\Goal{Goals:}
+	\begin{itemize}
+		\item 	Learn some different types of behaviour of for second-order ODEs
+		\item Learn how to sketch trig functions combined with linear or other trig functions
+	\end{itemize}
+	
+	\hfill
+	
+	\begin{enumerate}[label=.\arabic*.]
+		\item Complementary solution!
+		\item \emph{Adding} two trig functions: one oscillating slowly and one oscillating quickly
+		\item Resonance: $t$ times trig function
+		\item Beats: \emph{product} of two trig functions -- one oscillating slowly and one oscillating quickly
+	\end{enumerate}
+\end{goals}	
+\end{annotation}
 \question	
 	Consider the second-order ODE:
 	$$
@@ -281,16 +352,6 @@
 %		$$ y(t) = \cos(2t) + \cos(1.9t) = 2 \cos(0.1 t) \cos(1.95t)$$	
 	\end{parts}
 
-\begin{annotation}
-\begin{goals}
-	\begin{enumerate}
-		\item Complementary solution!
-		\item Adding two trig functions: one oscillating slowly and one oscillating quickly
-		\item Resonance: $t$ times trig function
-		\item beats: product of two trig functions -- one oscillating slowly and one oscillating quickly
-	\end{enumerate}
-\end{goals}	
-\end{annotation}
 
 
 \standardonlynewpage

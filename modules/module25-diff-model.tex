@@ -17,7 +17,7 @@ This module will be divided in several parts depending on the type of situation.
 
 \submodule{Economic Models}
 
-Economic quantities don't often change continuously but in bursts. That's what happens to a savings account as in the example below, or to the stock prices, or to the balance left on a mortgage.
+Economic quantities often change in bursts, not continuously. That's what happens to a savings account as in the example below, or to stock prices, or to the balance left on a mortgage.
 Economic quantities are usually modelled by difference equations.
 
 
@@ -31,9 +31,9 @@ How does the balance in the savings account change over time? \\
 	\item $b(t)=$ balance on the savings account at time $t$.
 \end{itemize}
 
-Notice that the balance on the bank account doesn't change continuously. The balance doesn't change at all and when the compounding period passes, the bank adds the interest into the account.
+Notice that the balance on the bank account doesn't change continuously, the balance doesn't change at all until the end of the compounding period. Then the bank adds the interest into the account.
 
-So the balance only changes at each compounding period, so we can change our goal to define
+So the balance only changes at each compounding period. We can change our goal to define
 \begin{itemize}
 	\item $b_n=$ balance on the savings account after $n$ compounding periods.
 \end{itemize}
@@ -41,7 +41,17 @@ So the balance only changes at each compounding period, so we can change our goa
 
 \paragraph{Step 2.} Create a mind map.
 
-We will skip this part for this example. You should create a mind map of everything that affects the savings account.
+We will keep this model simple, so our mind map is just:
+\begin{center}
+\begin{tikzpicture}
+    \fill[color=yellow!40!white] (-4,2) rectangle (-1,3) node[pos=.5] {\color{black}account balance};
+%    \draw (-1,2.5) -- (1,2.5);
+    \fill[color=yellow!40!white] (1,2) rectangle (4,3) node[pos=.5] {\color{black}interest};
+    \draw[-{latex}] (-1,2.66) arc (110:70:2.9);
+    \draw[-{latex}] (1,2.33) arc (290:250:2.9);
+\end{tikzpicture}	
+\end{center}
+
 
 \paragraph{Step 3.} Let us make the following assumptions:
 \begin{itemize}
@@ -51,8 +61,11 @@ We will skip this part for this example. You should create a mind map of everyth
 \end{itemize}
 
 \paragraph{Step 4.} We create the following model
-$$
-b_{n+1}=b_n + \alpha \frac{p}{100} b_n = \left( 1 + \alpha \frac{p}{100}\right) b_n.
+$$ 
+\begin{array}{ccccccl}
+b_{n+1} & = & \big(\substack{\rm previous\\ \rm balance}\big) & + & {\rm interest} \\
+b_{n+1}& =& b_n & + & \alpha \frac{p}{100} b_n & = & \left( 1 + \alpha \frac{p}{100}\right) b_n.
+\end{array}
 $$
 	
 \end{example}
@@ -60,6 +73,7 @@ $$
 
 \hfill
 
+\newpage 
 \submodule{Probability Models}
 
 There are several circumstances that involve probabilities that can be modelled using difference equations.
@@ -183,6 +197,7 @@ Similarly, the number of deaths is proportional to the number of mosquitoes in t
 \begin{video}
 \begin{itemize}
 	\item \qrvideo{https://youtu.be/qmm9GPhA1MY}
+	\item \qrvideo{https://youtu.be/j__Kredt7vY}
 \end{itemize}	
 \end{video}
 

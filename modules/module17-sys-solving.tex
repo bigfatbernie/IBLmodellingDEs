@@ -13,9 +13,9 @@ x'(t) = f\big(t, x(t),y(t)\big) \\
 y'(t) = g\big(t, x(t),y(t)\big)
 \end{cases}
 $$
-where the functions $f$ and $g$ are continuous and have continuous derivatives. \\
+where the functions $f$ and $g$ are continuous and have continuous partial derivatives. \\
 
-This system could be nonlinear, so we are only considering linear systems with constant coefficients, which means that they have a very specific form:
+This system could be nonlinear. We are only considering \emph{linear systems with constant coefficients}, which means that they have a very specific form:
 $$
 \begin{cases}
 	x'(t) = a x(t) + b y(t) + e\\
@@ -43,7 +43,7 @@ A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
 \vec{b}=\begin{bmatrix} e \\ f \end{bmatrix}.
 $$
 
-The unknown functions we are trying to find is $\vec{r}(t)$. \\
+The unknown functions we are trying to find are $x(t)$ and $y(t)$, or equivalently, $\vec{r}(t)$. \\
 
 
 \paragraph{\emph{Homogeneous Systems.}} These are systems of the form above with $\vec{b} = \vec{0}$.
@@ -149,7 +149,7 @@ In fact, we can show that this formula captures all possible solutions for this 
 We actually don't need to know a lot about complex numbers to be able to understand how to solve this case.
 The results about complex values that are necessary to know will be included in the box below.
 
-\begin{definition}[Complex numbers]
+\begin{definition}[Complex numbers] \label{EulersFormula}
 \begin{itemize}
 	\item A complex number is a number of the form $z=a+ib$ where $i$ is called the imaginary constant and satisfies $i^2=-1$.
 	\item Given a complex number $z=a+ib$, we call $\overline{z}=a-ib$ its complex conjugate. It satisfies:
@@ -195,7 +195,7 @@ Imagine that we start with a problem where we have two (real) quantities that in
 Then we expect these quantities to measure in real numbers, not complex.
 
 \begin{itemize}
-	\item This means that we expect \emph{the imaginary part of this solutions to cancel out}.
+	\item This means that we expect \emph{the imaginary part of these solutions to cancel out}.
 \end{itemize}
 
 So let us manipulate this formula using Euler's formula and see if we can re-write in such a way that doesn't involve complex numbers. \\
@@ -230,7 +230,7 @@ We can now manipulate this expression:
 		\right)
 \end{align*}
 
-So now we do something that might look like a ``cheating''. We define:
+So now we do something that might look like cheating. We define:
 $$
 a_1 = c_1+c_2 \quad \text{ and } \quad a_2 = i (c_1-c_2).
 $$
@@ -323,8 +323,7 @@ x'(t) = 5 x(t) \\
 y'(t) = x(t) +5 y(t)	
 \end{cases}
 $$
-These are two ODEs, but we can solve the first and then tackle the second one.
-We obtain
+These are two ODEs, but the first one is independent of the second on. We can solve the first and then tackle the second one.
 $$
 \begin{cases}
 	x(t) = c_2 e^{5t} \\
@@ -341,7 +340,6 @@ $$
 $$
 \end{example}
 
-\begin{graybox}
 Observe that the solution we found has the form:
 $$
 	\vec{r}(t) = \underbrace{c_1 \begin{bmatrix} 0 \\ 1 \end{bmatrix} e^{5t}}_{\text{solution } \vec{r}_1(t)} + c_2 \left( 
@@ -376,7 +374,6 @@ $$
 
 Since at this point we already know $\lambda$ and $\vec{v}_1$, we can now find $\vec{w}$ in a similar way used to find the eigenvector $\vec{v}_1$. The vector $\vec{w}$ is called a \emph{generalized eigenvector} of $A$ associated with the eigenvalue $\lambda$.
 
-\end{graybox}
 
 \begin{video}
 	\begin{itemize}

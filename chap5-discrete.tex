@@ -136,17 +136,8 @@
 	$$	u_{k+1} = 6 u_k - 9u_{k-1}	$$
 	
 \begin{parts}
-	\item Find the solution that satisfies:
-		$$ \begin{cases}
-			u_0 = 1 \\
-			u_1 = 3	
-  		\end{cases} $$
-
-	\item Find the solution that satisfies:
-		$$ \begin{cases}
-			u_0 = 1 \\
-			u_1 = 4	
-  		\end{cases} $$
+	\item Find the solution that satisfies $u_0 = 1, u_1 = 3	$.
+	\item Find the solution that satisfies $u_0 = 1, u_1 = 4$.
 \end{parts}
 
 
@@ -157,10 +148,7 @@
 \question
 	Consider a difference equation that has solutions $u_k = r^k$ for $r=2$ and $r=3$.
 	
-	We also have the conditions:
-	$$ 
-	u_0 = 0 = 7 \quad \text{ and } \quad u_1=6.
-	$$
+	We also have the conditions $u_0 = 7$ and $u_1=6$.
 	
 	What is $u_{22}$?
 
@@ -199,6 +187,11 @@
 
 
 
+\begin{annotation}
+\begin{goals}
+	The effective annual interest rate is the interest rate with a compounding period of 1 year that gives the same result s the rate of $p\%$ compounded every $\alpha$ years.
+\end{goals}
+\end{annotation}
 \question
 	Let us expand on the economic example above.
 	
@@ -208,18 +201,65 @@
 	
 	Calculate the effective interest rate $p_{\rm eff}\%$.
 
-\begin{annotation}
-\begin{goals}
-	The effective annual interest rate is the interest rate with a compounding period of 1 year that gives the same result s the rate of $p\%$ compounded every $\alpha$ years.
-\end{goals}
-\end{annotation}
 
 	
 
 \bookonlynewpage
 
 
+\question The goal of this quesiton is to try to understand the meaning of average lifespan.
+\begin{annotation}
+\begin{goals}
+	\Goal{Pre-class question}
+	The goal of this question is to prepare for calculating the average lifespan in the next page. \\
 
+	Not to do in lecture. Assign to students to solve at home before.
+\end{goals}
+\end{annotation}
+\begin{parts}
+	\item Consider a small tribe, where the people in there died at the ages:		
+		\begin{graybox}
+		\begin{center}
+			42, 56, 46, 52, 5, 103, 47, 67, 67, 85, 57, 42, 47, 67, 46, 42, 5, 46, 57, 42.
+		\end{center}
+		\end{graybox}
+		What is the average lifespan of this tribe's population? %51.05
+
+	\item  Consider another small tribe, where people recorded their lifespans differently. Below is a table with the percentage of the population that died at each age:
+		\begin{graybox}
+		\begin{center}
+		\begin{tabular}{c||c|c|c|c|c|c|c}
+			\textbf{Percentage of population}
+				& 2\% & 5\% & 9\% & 9\% & 16\% & 22\% & 37\% \\ \hline
+			\textbf{Age at death}
+				& 98 & 82 & 71 & 66 & 61 & 53 & 48\\
+		\end{tabular}
+		\end{center}
+		\end{graybox}
+		What is the average lifespan of this tribe's population? %57.57
+\end{parts}
+ 
+
+\vfill
+
+
+
+\bookonlynewpage
+
+
+
+\begin{annotation}
+\begin{goals}
+	Some hints:
+	\begin{itemize}
+		\item individual dying during season $k$ $\Leftrightarrow$ lifespan $= k$ seasons
+		\item From previous two exercises, deduce that: average lifespan $=$ expected value of lifespan $\ell = E$:
+		$$ E = \sum_{k=0}^\infty k \ell(k) $$
+		\item $\displaystyle \sum_{k=1}^\infty k r^k = \frac{r}{(1-r)^2}$ for $|r|<1$.
+		\item End result should be $\frac1\mu$.
+\end{itemize}	
+\end{goals}
+\end{annotation}
 \question
 	Given a population with
 	\begin{itemize}
@@ -232,27 +272,10 @@
 	\end{itemize}
 	Find a model for $P(k)$.
 
-	\item What is the probability of the individual dying at age $k$?
+	\item What is the probability of the individual dying during the k$^{\rm th}$ season?
 	\item What is the average lifespan of an individual in this population?
 \end{parts}
 
-\begin{annotation}
-\begin{goals}
-\begin{itemize}
-	\item For the first part, it might be necessary to give the questions:
-	\begin{enumerate}[label=(\alph*)]
-		\item What is the probability of dying between seasons $(k-1)$ and $k$?
-		\begin{itemize}
-			\item Find an expression that uses $\mu$.
-			\item Find an expression that does not use $\mu$.
-		\end{itemize}
-	\end{enumerate}
-	\item For the last part, the average lifespan is the average of $P(k)$:
-	$$ L = \sum_{k=0}^\infty k P(k) $$
-	\item Give the hint: $\displaystyle \sum_{k=0}^\infty k r^k = \frac{r}{(r-1)^2}$
-\end{itemize}	
-\end{goals}
-\end{annotation}
 
 
 
@@ -262,8 +285,13 @@
 \question
 	Consider a population of special rabbits. Once a pair of rabbits is born, they grow and one year later they are still immature. But two years after they are born they give birth to another pair of rabbits.
 	
-	Model this population of rabbits.
-	
+\begin{annotation}
+	\begin{goals}
+		If there is time, students should show that the Fibonacci sequence does indeed match the number of rabbits.
+	\end{goals}
+\end{annotation}
+	Model this population of rabbits.	
+
 	
 
 
@@ -275,23 +303,25 @@
 	\begin{enumerate}[start=0,label=(year \arabic*)]
 		\item Born
 		\item Immature (no babies)
-		\item Young Adult (2 pairs of babies)
+		\item Young Adult (1 pairs of babies)
 		\item Adult (1 pair of babies)
 		\item Old (no babies)
 		\item Die
 	\end{enumerate}	
-	
-	Model this population of rabbits.
-	
 \begin{annotation}
 	\begin{goals}
 		Students might try to find a pattern. 
 		
 		It is possible, but very difficult.
 		
-		Hint: Use a system of difference equations.
+		Hint: Use a system of difference equations. \\
+		
+		In core exercise \ref{rabbitscomplicatedproof}, the students are asked to prove the formula.
 	\end{goals}
 \end{annotation}
+	
+	Model this population of rabbits.
+	
 	
 
 
@@ -437,14 +467,32 @@
 
 	\begin{parts}
 		\item What is the equilibrium solution?
-		\item Are there periodic solutions? I.e. satisfying
+		\item Are there 2-periodic solutions? I.e. satisfying
+\begin{annotation}
+	\begin{goals}
 		\begin{itemize}
-			\item $v_0=v_2=v_4,v_5=\cdots$
+			\item In the calculations for .2, there is a step that involves a division by $(1-a^2)$, so it can only be done for $a \neq \pm 1$.
+			\item The final result for .2 is:
+			\begin{align*}
+				a \neq \pm1. & \quad {\rm periodic} \Rightarrow u_0 = \frac{ab}{a-1} \quad & \Rightarrow & 1-{\rm periodic} \\
+				a = 1. & \quad {\rm periodic} \Rightarrow b=0  & \Rightarrow & 1-{\rm periodic} \\
+				a = -1. & \quad {\rm periodic} \Rightarrow b=0  & \Rightarrow & 2-\text{periodic if } u_0\neq 0
+			\end{align*}
+		\end{itemize}
+	\end{goals}
+\end{annotation}
+		\begin{itemize}
+			\item $v_0=v_2=v_4=v_6=\cdots$
 			\item $v_1=v_3=v_5=v_7=\cdots$
+			\item $v_0\neq v_1$
 		\end{itemize} 
 		\item What happens to the solutions for different values of $a$?
 		\item What happens to the solutions for different values of $b$?
 	\end{parts}
+
+
+
+
 
 
 \bookonlynewpage
@@ -468,6 +516,11 @@
 	\end{minipage}
 
 	
+\begin{annotation}
+	\begin{goals}
+		Question .3 is purposefully ambiguous about symmetry. What kind of symmetry is there? Is there any?
+	\end{goals}
+\end{annotation}
 	\begin{parts}
 		\item Is $p_n$ increasing or decreasing?
 		\item What is $p_0$? What is $p_W$?
@@ -486,7 +539,7 @@
 
 
 \begin{minipage}{.45\textwidth}
-\question
+\question \label{rabbitscomplicatedproof}
 	Consider a population of rabbits with the following lifecycle:
 	\begin{enumerate}[start=0,label=(year \arabic*)]
 		\item Born

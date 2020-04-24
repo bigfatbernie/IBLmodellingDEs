@@ -48,6 +48,37 @@ $$
 This is the value that the department should strive for, since it would remain stable.
 
 
+%\newpage
+\hfill
+
+\begin{center}
+\textbf{\color{cyan}
+Numerical approximations
+}
+\end{center}
+
+
+For models with difference equations, we don't need numerical methods, since the recursive definition of the sequence is already a numerical method in itself.
+
+We can follow the same approach however and run some numbers and with different values for the parameters to gain some intuition on the solutions.
+
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics*[width=150pt]{images/module26-stud-above.png}
+	& \includegraphics*[width=150pt]{images/module26-stud-below.png} \\
+$e_0 > E$ 
+	& $e_0 < E$
+\end{tabular}
+\end{center}
+ 
+
+\begin{graybox}
+You can access this simulation here:
+\begin{itemize}
+	\item \qrvideo{https://www.desmos.com/calculator/wv3oxrjvrz}
+\end{itemize}	
+\end{graybox}
+
 
 \hfill
 
@@ -58,7 +89,7 @@ Qualitative evolution of quantities
 \end{center}
 
 
-Let us now look at what happens if the situation is not in equilibrium.
+Let us now look at what happens if the situation is not in equilibrium. The numerical study above, gives some intuition about the behaviour of solutions. 
 
 Let us assume that $e_k  > E$. Then
 \begin{align*}
@@ -77,7 +108,7 @@ It's clear that $E$ should be positive, since it is a number of students. \\
 
 The other quantity is not so obvious: \quad $g+q < 1$ ?
 
-In fact, $g+q$ is the percentage of students that graduate or quit the Mathematics program, so it can't exceed 1! (Why?)
+In fact, $g+q$ is the fraction of students that graduate or quit the Mathematics program, so it can't exceed 1! (Why?)
 \end{graybox}
 
 
@@ -143,6 +174,7 @@ So we can see that the sequence $e_k$ will be approaching $E$, so we can say tha
 
 
 
+
 \hfill
 
 \begin{center}
@@ -158,9 +190,9 @@ $$
 \lim_{k \to \infty} e_k = E.
 $$
 
-But we didn't prove this yet. It could be that the sequence converges to some value. 
+But we didn't prove this yet. It could be that the sequence converges to some other value. 
 
-To show this, we would need to define a new sequence $x_k = e_k-E$, assume that it has the form $x_k = C r^k$ and then obtain a characteristic equation for $r$;:
+To show this, we would need to define a new sequence $x_k = e_k-E$, assume that it has the form $x_k = C r^k$ and then obtain a characteristic equation for $r$:
 $$
 r = 1-g-q \in (0,1),
 $$
@@ -173,37 +205,6 @@ $$
 
 So we now know that the number of students will converge monotonically to the equilibrium.
 
-
-%\newpage
-\hfill
-
-\begin{center}
-\textbf{\color{cyan}
-Numerical approximations
-}
-\end{center}
-
-
-For models with difference equations, we don't need numerical methods, since the recursive definition of the sequence is already a numerical method in itself.
-
-We can follow the same approach however and run some numbers and with different values for the parameters to gain some intuition on the solutions.
-
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics*[width=150pt]{images/module26-stud-above.png}
-	& \includegraphics*[width=150pt]{images/module26-stud-below.png} \\
-$e_0 > E$ 
-	& $e_0 < E$
-\end{tabular}
-\end{center}
- 
-
-\begin{graybox}
-You can access this simulation here:
-\begin{itemize}
-	\item \qrvideo{https://www.desmos.com/calculator/wv3oxrjvrz}
-\end{itemize}	
-\end{graybox}
 
 
 

@@ -67,6 +67,13 @@
 
 	\item Extend the model to include a population of antelopes.	
 \end{parts}
+\begin{annotation}
+	\begin{goals}
+		Stress that students should follow the step-by-step approach from chapter 1.
+		
+		\emph{.4} only if there is time. Tell the students to ``go nuts'' and include everything that relates.
+	\end{goals}
+\end{annotation}
 
 
 
@@ -81,7 +88,9 @@
 	
 \begin{annotation}
 	\begin{goals}
-		This exercise is not required to do in lecture.
+		This exercise is not required to do in lecture. \\
+		
+		Be careful with assumptions! A very general model will be very hard to study. \\
 		
 		Allow some brainstorming and try to create a structure for this problem:
 		\begin{itemize}
@@ -163,22 +172,39 @@ $$
 
 
 
-
 \bookonlynewpage
 
-
+\begin{annotation}
+	\begin{goals}
+		\Goal{Non-Homogeneous Problem}
+%		Introduce this core exercise as a non-homogeneous problem. \\
+		
+		Students don't know how to solve it yet:
+		\begin{enumerate}
+			\item Equilibrium solution ($\begin{bmatrix}2\\-1\end{bmatrix}$)
+			\item Show phase portrait using WolframAlpha \url{https://uoft.me/modelling-sys-nonhom}
+			\item Ask students about properties of the phase portrait (\emph{Goal}: solutions revolve around the equilibrium point)
+			\item Redefine centre: $\vec{r} = \vec{\rm eq} + \vec{p}$. What system foes $\vec{p}$ solve?
+			\item $\cdots$
+		\end{enumerate}
+		
+		There are practice problems about this.
+	\end{goals}
+\end{annotation}
 \question
 Consider a problem:
 $$
-\frac{d \,\vec{r}}{dt} = \begin{bmatrix} 4 & -1 \\ 8 & -2\end{bmatrix} \vec{r} - \begin{bmatrix} 5 \\ 10 \end{bmatrix}.
+\frac{d \,\vec{r}}{dt} = \begin{bmatrix} 2 & -5 \\ 1 & -2\end{bmatrix} \vec{r} - \begin{bmatrix} 9 \\ 4 \end{bmatrix}.
 $$
-%[2,3]
+%[2,-1]
 \begin{parts}
 	\item Find the equilibrium solution.
 	\item Find the general solution.
-	\item Find the solution that satisfies $\vec{r}(0) = \begin{bmatrix} 2 \\ 3\end{bmatrix}$?
+	\item Find the solution that satisfies $\vec{r}(0) = \begin{bmatrix} 8 \\ 6 \end{bmatrix}$?
 \end{parts}
 
+
+	
 
 
 
@@ -218,7 +244,16 @@ $$
 
 
 
-
+\begin{annotation}
+	\begin{goals}
+	\Goal{Unstable Saddle Point}
+	At the end, let the students know that the equilibrium is called \emph{saddle point} and it is \emph{unstable}, because solutions go away from it.
+	
+	For the interpretation question, when one population hits zero, it is extinct, so the graph doesn't make sense. 
+	
+	We can interpret that if a population becomes extinct, then the other will behave as it would without competitors: grow exponentially fast!
+	\end{goals}
+\end{annotation}
 \question
 	Consider the following model for cheetah's and lions, where
 	$$ \vec{p}(t) = \begin{bmatrix} \ell(t) = \text{population of lions} \\ c(t) = \text{population of cheetahs} \end{bmatrix} $$
@@ -243,16 +278,6 @@ $$
 	\item Provide an interpretation of the different types of solutions.
 \end{parts}
 
-\begin{annotation}
-	\begin{goals}
-	At the end, let the students know that the equilibrium is called \emph{saddle point} and it is \emph{unstable}, because solutions go away from it.
-	
-	For the interpretation question, when one population hits zero, it is extinct, so the graph doesn't make sense. 
-	
-	We can interpret that if a population becomes extinct, then the other will behave as it would without competitors: grow exponentially fast!
-	\end{goals}
-\end{annotation}
-
 
 
 
@@ -260,6 +285,14 @@ $$
 
 \bookonlynewpage
 
+\begin{annotation}
+	\begin{goals}
+		Get students to compare their results with the previous core exercise.
+%
+%		Some students might try to sketch everything from scratch.
+%		Remind them that the solutions look very similar and they only have to adapt the phase portrait they had before.\\		
+	\end{goals}
+\end{annotation}
 \question
 	Let us expand the model from the previous exercise to:
 	$$ \vec{p}(t) = \begin{bmatrix} \ell(t) = \text{population of lions} \\ c(t) = \text{population of cheetahs} \end{bmatrix} $$
@@ -271,7 +304,7 @@ $$
  	\end{bmatrix} \vec{p}
  	+ \begin{bmatrix}
  		- 10 \\ 50
-	 \end{bmatrix} \vec{p}.
+	 \end{bmatrix}.
 	$$
 	
 	The extra term corresponds to the effect of harvesting 10 lions and bringing in 50 cheetahs every year to the reserve. \\
@@ -286,13 +319,6 @@ $$
 	\item Provide an interpretation of the different types of solutions.
 \end{parts}
 
-\begin{annotation}
-	\begin{goals}
-		Some students might try to sketch everything from scratch.
-		Remind them that the solutions look very similar and they only have to adapt the phase portrait they had before.
-	\end{goals}
-\end{annotation}
-
 
 
 \bookonlynewpage
@@ -306,15 +332,16 @@ $$
 \end{parts}
 \begin{annotation}
 	\begin{goals}
-	At the end, let the students know that these equilibria are called 
+	At the end, let the students know what these equilibria are called:
 	\begin{itemize}
 		\item \emph{source} and it is \emph{unstable}, because solutions go away from it.
 		\item \emph{sink} and it is \emph{asymptotically stable}, because solutions converge to it.
 	\end{itemize}
 	
 	If there is time, students can think about:
-
-	Given a matrix $A$, which part of $A$ indicates whether the equilibrium is stable / unstable? Which part indicates whether it's a sink/source vs spiral sink/source?
+	\begin{itemize}
+		\item Given a matrix $A$, which part of $A$ indicates whether the equilibrium is stable / unstable? Which part indicates whether it's a sink/source vs spiral sink/source?
+	\end{itemize}
 	\end{goals}
 \end{annotation}
 
@@ -390,6 +417,11 @@ $$
 		\item Are there constants $a,b,c,d>0$, such that the solution $\vec{x}$ is periodic?
 		\item Consider the constants $a=b=c=d=1$. Assume that initially CM were buying $c_0>0$ items and FP were buying $f_0>0$ items.
 			What will happen to $x_1(t)$ and $x_2(t)$ as $t \to \infty$? Explain the results in terms of the evolution of purchases from CM and FP.
+\begin{annotation}
+	\begin{goals}
+		Can leave .6 as a practice problem if there isn't enough time.
+	\end{goals}
+\end{annotation}
 		\item Consider the constants $a=b=c=d=1$.  If $c_0=10$, $f_0=100$, then at what time will FP stop buying items? And at what time will FP be buying the maximum number of items?
 	
 	\end{parts}

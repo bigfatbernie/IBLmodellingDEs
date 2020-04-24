@@ -73,28 +73,28 @@ $$
 
 \paragraph{\color{cyan}Two complex roots.} When $b^2-4ac<0$, we have two possible values for $r$, but they are complex values:
 $$
-r_{\pm} = a \pm ib.
+r_{\pm} = \alpha \pm i\beta.
 $$
 \begin{graybox}
-What are the value of $a$ and $b$?	
+What are the value of $\alpha$ and $\beta$?	
 \end{graybox}
 
 Then we have two solutions
 $$
-y_{+}(t) = e^{(a+ib) t} \quad \text{ and } \quad y_{-}(t) = e^{(a-ib) t},
+y_{+}(t) = e^{(\alpha+i\beta) t} \quad \text{ and } \quad y_{-}(t) = e^{(\alpha-i\beta) t},
 $$
 and the general solution is
 $$
-y(t) = a_1 e^{(a+ib) t}  + a_2 e^{(a-ib) t}.
+y(t) = a_1 e^{(\alpha+i\beta) t}  + a_2 e^{(\alpha-i\beta) t}.
 $$
 
 Just like we did with systems with complex eigenvalues, we prefer to write the solutions without complex numbers, so we expand it using Euler's formula to get
 \begin{align*}
-y(t) 	& = a_1 e^{(a+ib) t}  + a_2 e^{(a-ib) t} \\
-		& = a_1 e^{at}e^{ibt}  + a_2 e^{at}e^{-ibt} \\
-		& = a_1 e^{at} \big( \cos(bt) + i \sin(bt) \big)  + a_2 e^{at} \big( \cos(bt) - i \sin(bt) \big) \\
-		& = (a_1+a_2)  \cos(bt)e^{at} + i (a_1-a_2)\sin(bt) e^{at} \\
-		& = c_1 \cos(bt)e^{at} + c_2\sin(bt) e^{at}
+y(t) 	& = a_1 e^{(\alpha+i\beta) t}  + a_2 e^{(\alpha-i\beta) t} \\
+		& = a_1 e^{\alpha t}e^{i\beta t}  + a_2 e^{\alpha t}e^{-i\beta t} \\
+		& = a_1 e^{\alpha t} \big( \cos(\beta t) + i \sin(\beta t) \big)  + a_2 e^{\alpha t} \big( \cos(\beta t) - i \sin(\beta t) \big) \\
+		& = (a_1+a_2)  \cos(\beta t)e^{\alpha t} + i (a_1-a_2)\sin(\beta t) e^{a\alpha t} \\
+		& = c_1 \cos(\beta t)e^{\alpha t} + c_2\sin(\beta t) e^{\alpha t}
 \end{align*}
 
 \begin{graybox}
@@ -103,7 +103,7 @@ How do $c_1$ and $c_2$ depend on $a_1,a_2$?
 
 So another way to write the general solution is
 $$
-y(t) = c_1 \cos(bt)e^{at} + c_2\sin(bt) e^{at}.
+y(t) = c_1 \cos(\beta t)e^{\alpha t} + c_2\sin(\beta t) e^{\alpha t}.
 $$
 
 
@@ -168,12 +168,12 @@ where $y(t)$ is the solution we are still missing, $y_1(t)$ is the solution we a
 
 To do that, we need to plug the formula above for $y(t)$ into the original ODE. 
 
-\begin{graybox}
+\begin{important}
 You should do these calculations yourself.
 Remember to use the product rule and to be careful not to make any mistakes.	
 
-Also remember that we know the value of $r$
-\end{graybox}
+Also remember that we know the value of $r$.
+\end{important}
 
 We obtain
 $$
@@ -187,7 +187,7 @@ y(t) = (c_1 + c_2 t) e^{rt}
 \quad \Leftrightarrow \quad y(t) = \underbrace{c_1 e^{rt}}_{\substack{\rm previous \\ \text{solution } y_1(t)}} + c_2 t e^{rt}.
 $$
 
-The general solution is this
+The general solution is 
 $$
 y(t) = c_1 e^{rt} + c_2 t e^{rt},
 $$
@@ -208,28 +208,28 @@ where $r = -\frac{b}{2a}$.
 \subsection{Non-Homogeneous ODEs}
 
 We are trying to solve
-$$
+\begin{equation}\tag{$\star$}\label{mod20:orig}
 a y''(t)  + b y'(t) + c y(t) = f(t),
-$$
+\end{equation}
 where $f(t)$ is a known function. \\
 
 
-\begin{graybox}
+\begin{important}
 If $u(t)$ is the general solution of
-$$
+\begin{equation}\tag{$H$}\label{mod20:hom}
 ay''(t)+by'(t)+cy(t) = 0,
-$$
+\end{equation}
 and $v(t)$ satisfies
-$$
+\begin{equation}\tag{\ref{mod20:orig}}
 ay''(t)+by'(t)+cy(t) = f(t),
-$$
+\end{equation}
 then $y(t) = u(t) + v(t)$ gives the general solution of
 $$
 ay''(t)+by'(t)+cy(t) = f(t).
 $$
 
 This is a practice problem at the end of this module.
-\end{graybox}
+\end{important}
 
 
 This means that to solve this ODE, we split the general solution into two parts
@@ -238,8 +238,8 @@ y(t) = y_c(t) + y_p(t),
 $$
 where
 \begin{itemize}
-	\item $y_c(t)$ is called the \emph{complementary solution} and it is the general solution of the corresponding homogenous ODE. It is solved using the technique we studied above.
-	\item $y_p(t)$ is called the \emph{particular solution} and it is one function that satisfies the original ODE.
+	\item $y_c(t)$ is called the \emph{complementary solution} and it is the general solution of the corresponding homogenous ODE \eqref{mod20:hom}. It is solved using the technique we studied above.
+	\item $y_p(t)$ is called the \emph{particular solution} and it is one function that satisfies the original ODE \eqref{mod20:orig}.
 \end{itemize}
 
 \begin{important}
@@ -247,8 +247,8 @@ It may seem strange that to solve the original ODE, we need its solution, but wh
 
 To find all possible solutions of the original ODE, we require two things:
 \begin{itemize}
-	\item One solution of the original ODE:  $y_p(t)$,
-	\item and all possible solution of the homogeneous ODE: $y_c(t)$.
+	\item \emph{One} solution of the original ODE:  $y_p(t)$,
+	\item and all possible solutions of the homogeneous ODE: $y_c(t)$.
 \end{itemize}
 \end{important}
 
@@ -269,8 +269,10 @@ and remember that some functions don't change much when differentiated:
 	\item Cosines and Sines alternate between one and the other, so functions of the form $y=c_1 \sin(rt) + c_2\cos(rt)$ don't change after differentiation.
 \end{itemize}
 
-This means that, if $f(t)$ is one of these types of function, then $y(t)$ must be of the same form.	
 
+\begin{important}
+This means that, if $f(t)$ is one of these types of function, then $y(t)$ must be of the same form.	
+\end{important}
 
 \begin{example}
 Find a particular solution for the ODE

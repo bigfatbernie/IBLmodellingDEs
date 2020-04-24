@@ -9,8 +9,8 @@ In this module you will learn
 
 In this chapter, we have learned how to create models involving systems of ODEs and how to solve some special types of systems of ODEs.
 
-Once we create a model that involves a system of ODEs, the ultimate goal is not to solve the system of ODEs, but to be able to understand how the situation will proceed.
-Solving the system of ODEs is often a large step in that direction, but it is more important to be able to take the solution and knowing how to interpret in light of the original situation.
+Once we create a model that involves a system of ODEs, the ultimate goal is not to solve the system of ODEs, but to be able to understand how the situation will develop.
+Solving the system of ODEs is often a large step in that direction, but it is more important to know how to interpret it in light of the original situation.
 
 Sometimes, when we cannot find an explicit formula for the solution, it is still possible to study the system to find some properties and behaviours of the solutions. \\
 
@@ -25,12 +25,12 @@ We are going to model population versus cost of living in Toronto.
 
 Consider the following functions
 \begin{itemize}
-\item $p(t) = $ Population of Toronto (GTA) in millions at time $t$ in years since the beginning of 2015.
-\item $c(t) = $ Cost of living in Toronto (in thousands of dollars) at time $t$.
+\item $p(t) = $ Population of Toronto (GTA) in millions, $t$ years since the beginning of 2015.
+\item $c(t) = $ Cost of living in Toronto (in thousands of dollars), $t$ years since the beginning of 2015.
 \item Define a vector $\vec{x}(t) = \begin{bmatrix} p(t) \\ c(t) \end{bmatrix}$.
 \end{itemize}
 
-These two factors are related according to the following properties:
+We assume that these two factors are related according to the following properties:
 \begin{itemize}
 \item In the absence of any migration, the population will decrease proportionally to the cost of living (with constant $a$);
 \item There are always people moving into Toronto independently of its current population or cost of living (with constant $b$)
@@ -160,7 +160,7 @@ We expect that at some point $p(t_3)=0$. From that point on we have
 $$
 \begin{cases}
 p'(t_3) = -a c(t_3) + b <0 & \text{ we need to ignore the model at this point and keep $p$ constant}\\
-c'(t_3) = e c(t_3) - f	>0 & \text{ still increasing exponentially}
+c'(t_3) = e c(t_3) - f	>0 & \text{ still increasing exponentially, as long as } c(t_3) > \frac{f}{e}
 \end{cases}
 $$
 

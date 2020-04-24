@@ -336,8 +336,8 @@ Which of the following is true?
 		\begin{tikzpicture}
 			\draw[thick,-{\seta}] (-0.25,0) -- (3.5,0) node[above] {\small $t$};
 			\draw[thick,-{\seta}] (0,-2) -- (0,2) node[left] {\small $y$};
-			\draw[samples=20, ultra thick,domain=-1.25:1.25,smooth,variable=\x,blue] plot ({\x+1.5},{\x*\x*\x});
-			\draw (3,1) node[right,blue] {\Huge ?};
+			\draw[samples=20, ultra thick,domain=-1.25:1.25,smooth,variable=\x,cyan] plot ({\x+1.5},{\x*\x*\x});
+			\draw (3,1) node[right,cyan] {\Huge ?};
 		\end{tikzpicture}
 	\end{itemize}
 \end{goals}
@@ -477,7 +477,6 @@ Slope field for $y(t)$
 	\begin{goals}
 		The goal is not to be very accurate, but to capture the symmetry of each of these slope fields.
 	\end{goals}
-	
 \end{annotation}
 
 	\begin{tikzpicture}[xscale=0.75,yscale=0.75]
@@ -967,8 +966,6 @@ Slope field for $y(t)$
 %		\item Bla bla bla	
 %	\end{itemize}
 
-	\label{model-odes}
-
 	\input{modules/module13-PropertiesODEs.tex}
 	\input{modules/module13-PropertiesODEs-exercises.tex}
 
@@ -1030,6 +1027,14 @@ Slope field for $y(t)$
 \bookonlynewpage
 
 
+\begin{annotation}
+\begin{goals}
+	\Goal{Existence and Uniqueness Thms}
+	The goal is for the students to realize that if the Theorem's conditions hold, then its result must also hold, even though it might not look like it.
+	
+	So if the Theorem says that the solution is unique and we see two solutions, then they must be the same function (at least for $x$ near $\frac12$).
+\end{goals}
+\end{annotation}
 \question The initial-value problem
 $$
 \begin{cases}
@@ -1047,13 +1052,6 @@ has the solutions
 \item What can you conclude?
 
 \end{parts}
-\begin{annotation}
-\begin{goals}
-	The goal is for the students to realize that if the Theorem's conditions hold, then its result must also hold, even though it might not look like it.
-	
-	So if the Theorem says that the solution is unique and we see two solutions, then they must be the same function (at least for $x$ near $\frac12$).
-\end{goals}
-\end{annotation}
 
 
 
@@ -1075,29 +1073,22 @@ has the solutions
 \begin{tikzpicture}
   \draw[thick,-{\seta}] (-4,0) -- (4,0) node[above] {\small $t$};
   \draw[thick,-{\seta}] (0,-2) -- (0,2) node[left] {\small $y$};
-  \draw[samples=40, ultra thick,domain=-4:4,smooth,variable=\x,blue] plot ({\x},{sin(1.5*deg(\x))/2-\x/4}) node[below] {$y_3$};
+  \draw[samples=40, ultra thick,domain=-4:4,smooth,variable=\x,cyan] plot ({\x},{sin(1.5*deg(\x))/2-\x/4}) node[below] {$y_3$};
   \draw[samples=40, ultra thick,domain=0.075:4,smooth,variable=\x,gray] plot ({\x},{-1/((\x^(0.33))+\x)}) node[below] {$y_2$};
-  \draw[samples=40, ultra thick,domain=-2.35:3,smooth,variable=\x,green!50!black] plot ({\x-1.5},{\x*\x*\x/8-\x*\x/3+1.6}) node[right] {$y_1$};
+  \draw[samples=40, ultra thick,domain=-2.35:3,smooth,variable=\x,green] plot ({\x-1.5},{\x*\x*\x/8-\x*\x/3+1.6}) node[right] {$y_1$};
   \draw[dashed] (1,-2) -- (1,2);
   \draw (1,0) node[below] {$t_0$};
   \draw (1,-0.5) node {\tikzcircle[gray,fill=gray!50!white]{2pt}};
-  \draw (1,{(2.5^3)/8-(2.5^2)/3+1.6}) node {\tikzcircle[green!50!black,fill=green]{2pt}};
-  \draw (1,{sin(1.5*deg(1))/2-1/4}) node {\tikzcircle[blue,fill=cyan!50!white]{2pt}};
+  \draw (1,{(2.5^3)/8-(2.5^2)/3+1.6}) node {\tikzcircle[green,fill=green!50!white]{2pt}};
+  \draw (1,{sin(1.5*deg(1))/2-1/4}) node {\tikzcircle[cyan,fill=cyan!50!white]{2pt}};
 \end{tikzpicture}
 %	\includegraphics*[width=250pt]{images/module13-3graphs.pdf}
 %\end{center}
 \end{minipage}
 
-
-\begin{parts}
-	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{blue} blue $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
-	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
-	\item Can \textbf{\color{blue} blue $y3$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
-
-	\item Based on the answers to the three parts above, write a Corollary to the Existence and Uniqueness Theorems.
-\end{parts}
 \begin{annotation}
 \begin{goals}
+	\Goal{Intersecting solutions?}
 	The goal is for students to understand why solutions cannot touch \emph{IF} the Theorem is valid at the intersection point.
 	
 	\begin{itemize}
@@ -1107,6 +1098,13 @@ has the solutions
 	\end{itemize}
 \end{goals}	
 \end{annotation}
+\begin{parts}
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{cyan} blue $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{cyan} blue $y3$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
+
+	\item Based on the answers to the three parts above, write a Corollary to the Existence and Uniqueness Theorems.
+\end{parts}
 
 
 
@@ -1181,7 +1179,31 @@ has the solutions
 
 \question Consider the differential equation \quad $y'=f(y)$ \quad where $f(y)$ is given by the following graph:
 \begin{center}
-	\includegraphics*[width=350pt]{images/module14-graphf.pdf}
+	\begin{tikzpicture}
+	  \draw[thick,-{\seta}] (-4.5,0) -- (6,0) node[above] {\large $y$};
+	  \draw[thick,-{\seta}] (0,-3) -- (0,3) node[left] {\large $y'$};
+	  \foreach \k in {-4,...,-1} {
+	    \draw ({\k},0) node[above] {$\k$};
+	    \draw[dashed,color=gray] ({\k},-3) -- ({\k},3);
+	  }
+	  \foreach \k in {1,...,5} {
+	    \draw ({\k},0) node[below] {$\k$};
+	    \draw[dashed,color=gray] ({\k},-3) -- ({\k},3);
+	  }
+	  \foreach \k in {-2,-1,1,2} {
+	    \draw (0,{\k}) node[left] {$\k$};
+	    \draw[dashed,color=gray] (-4.5,{\k}) -- (6,{\k});
+	  }
+	  \draw[samples=10, thick,domain=-1.5:0,smooth,variable=\x,cyan] plot ({\x-3},{-2*exp(2.4*\x)});
+	  \draw[samples=10, thick,domain=-1:0,smooth,variable=\x,cyan] plot ({\x},{\x});
+	  \draw (-1,-1) node {\tikzcircle[thick,cyan,fill=white]{2pt}};
+	  \draw (-1,0) node {\tikzcircle[thick,cyan,fill=cyan]{2pt}};
+	  \draw[samples=10, thick,domain=-3:-1,smooth,variable=\x,cyan] plot ({\x},{\x+1});
+	  \draw[samples=10, thick,domain=0:1,smooth,variable=\x,cyan] plot ({\x},{sqrt(\x)});
+	  \draw[samples=10, thick,domain=-1:1,smooth,variable=\x,cyan] plot ({\x+2},{\x*\x});
+	  \draw[samples=20, thick,domain=0:3,smooth,variable=\x,cyan] plot ({\x+3},{sin(deg(pi*\x))/2+1+\x/2});
+	\end{tikzpicture}
+	%\includegraphics*[width=350pt]{images/module14-graphf.pdf}
 \end{center}
 
 \begin{parts}
@@ -1212,7 +1234,23 @@ has the solutions
 \question Consider a differential equation $y' = f(t,y)$ with the following slope field.
 
 \begin{center}
-	\includegraphics*[width=200pt]{images/module12-dirfield.pdf}
+	\def\delta{0.25}
+	\def\NN{16}% \NN = 4/\delta
+	\def\fac{0.75}
+	\begin{tikzpicture}[scale=1.5]
+	  \draw[thick,-latex] (-0.5,0) -- (4.5,0) node[above] {\large $t$};
+	  \draw[thick,-latex] (0,-1.5) -- (0,3) node[left] {\large $y$};
+	  \foreach \k in {-1,...,2} {
+	    \draw (0,{\k}) node[left] {$\k$};
+	    \draw (-0.05,{\k})--(0.05,{\k});
+	  }
+	  \foreach \xk in {0,...,\NN} {
+	    \foreach \yk in {0,...,\NN} {
+	      \draw[-latex,cyan] ({\xk*\delta},{(-1.5+\yk*\delta)}) -- ({\xk*\delta+(0.5+abs(cos(deg(pi*(-1.5+\yk*\delta)))))*\delta*\fac},{(-1.5+\yk*\delta)+abs(sin(deg(pi*(-1.5+\yk*\delta))))*\delta*\fac});
+	    }
+	  }
+	\end{tikzpicture}
+%	\includegraphics*[width=200pt]{images/module12-dirfield.pdf}
 \end{center}
 
 \begin{parts}
@@ -1227,7 +1265,7 @@ y(0) = \dfrac14
 \end{cases}
 $$
 
-\item From the direction field above, what is the type(s) of this ODE? Justify your answer.
+\item From the direction field above, circle the correct type(s) of this ODE? Justify your answer.
 
 \begin{enumerate}[label={\bf (\alph*)}]
 \hfil 
