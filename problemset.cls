@@ -695,9 +695,6 @@
 		colback=myorange!20,
 		#1
 	}
-	\DeclareDocumentEnvironment{notstandard}{o}{
-	}{%
-	}
 	\DeclareDocumentEnvironment{bookonly}{o}{
 	}{%
 	}

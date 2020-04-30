@@ -45,28 +45,49 @@
 
 
 \begin{lesson}
-	\Title{Modelling Two Quantities}
+	\Title{Modelling Two Quantities I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 15
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Model with two interconnected quantities
+		\item Follow the step-by-step procedure to create a model
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+Again, this is the main goal of this course: learn how to create models.
+
+In this class, the goal is to study how to model quantities that affect each other (and are affected by external factors). 
+
+After the students create a model, they should get used to making sure the model is ``good'', i.e., using some software look at some approximation of solutions to see the consequences of the model.
+
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Read the core exercise \ref{sys:competition} and solve steps 1 (define problem) and 2 (create a mind map)
+\end{itemize}
+
 
 \end{lesson}
 
 
 
+\begin{annotation}
+\begin{goals}
+	\Goal{Pre-class exercise.} 
+	Students bring their mind map and the definition of the functions they need to find.
+\end{goals}	
+\end{annotation}
 
-\question We want to model two competing populations, like cheetahs and lions: they don't hunt each other, but they hunt the same prey.
-\begin{parts}
-	\item Create a model for these two populations.
-	\item Using Desmos or WolframAlpha, create a slope field in the plane where the horizontal axis is one population and the vertical one is the other.
-	\item Using the slope field, deduce some properties of your model and discuss how closely it matches what you expect from these populations.
-
-	\item Extend the model to include a population of antelopes.	
-\end{parts}
+\question \label{sys:competition}
+	We want to model two competing populations, like cheetahs and lions: they don't hunt each other, but they hunt the same prey.
 \begin{annotation}
 	\begin{goals}
 		Stress that students should follow the step-by-step approach from chapter 1.
@@ -74,6 +95,13 @@
 		\emph{.4} only if there is time. Tell the students to ``go nuts'' and include everything that relates.
 	\end{goals}
 \end{annotation}
+\begin{parts}
+	\item Create a model for these two populations.
+	\item Using Desmos or WolframAlpha, create a slope field in the plane where the horizontal axis is one population and the vertical one is the other.
+	\item Using the slope field, deduce some properties of your model and discuss how closely it matches what you expect from these populations.
+
+	\item Extend the model to include a population of antelopes.	
+\end{parts}
 
 
 
@@ -81,13 +109,43 @@
 
 \bookonlynewpage
 
+\begin{lesson}
+	\Title{Modelling Two Quantities II}
 
-\question
-	A cheetah is chasing an antelope. We want a model of their positions as they run.
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 15
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Model with two interconnected quantities
+		\item Follow the step-by-step procedure to create a model
+	\end{itemize}
 	
-	
+\Heading{Motivation} 
+
+This class students work on a model that involves a little more calculus (for the cheetah's movement) and also is more \textbf{open ended} on how the cheetah will follow the antelope, but mainly on how the antelope will try to escape the cheetah. 
+
+The instructor should encourage different solutions from students. 
+
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Read the core exercise \ref{sys:chase} and solve steps 1 (define problem) and 2 (create a mind map)
+\end{itemize}
+
+\end{lesson}
+
+
 \begin{annotation}
-	\begin{goals}
+\begin{goals}
+	\Goal{Pre-class exercise.} 
+	Students bring their mind map and the definition of the functions they need to find.
+\end{goals}	
+\begin{goals}
 		This exercise is not required to do in lecture. \\
 		
 		Be careful with assumptions! A very general model will be very hard to study. \\
@@ -100,8 +158,11 @@
 			\item For the antelope, students need to come up with an escape strategy
 			\item Model will be nonlinear!
 		\end{itemize}
-	\end{goals}
-\end{annotation}
+	\end{goals}\end{annotation}
+\question \label{sys:chase}
+	A cheetah is chasing an antelope. We want a model of their positions as they run.
+	
+	
 
 
 
@@ -126,26 +187,58 @@
 
 
 \begin{lesson}
-	\Title{Systems of two linear ODEs with constant coefficients}
+	\Title{Systems of two linear ODEs with constant coefficients I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 16
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Know how to find eigenvalues and eigenvectors of a matrix
+		\item Know how to find a solution from an eigenvalue and an eigenvector
+		\item Know how to write the general solution to a system of ODEs
+		\item Know how to find the constants given an initial condition
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+Linear Algebra strikes again!!! It will be very important to know how to solve a linear system of equations (although we'll focus on $2\times 2$ systems only) and how to find eigenvalues and eigenvectors. 
+
+This is the more computational part of the course. 
+
+Even though it's not the focus of the course, students need to know how solutions are found. This will give some insight for the analysis of a system of ODEs later. 
+
+We start with problems involving two real distinct eigenvalues.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Review \hyperref[LinAlg]{Linear Algebra (Appendix \ref{LinAlg})}
+	\item Read textbook: Two real distinct eigenvalues
+	\item Watch video
+	\item Solve the core exercise \ref{sys:2real}.1.
+\end{itemize}
 
 \end{lesson}
 
 
 
 
-\question
+\question \label{sys:2real}
 Consider a cheetah-lion inspired problem:
 $$
 \frac{d \,\vec{r}}{dt} = \begin{bmatrix} 3 & -2 \\ -1 & 4\end{bmatrix} \vec{r}.
 $$
-	
+\begin{annotation}
+\begin{notes}
+	\Goal{Superposition Principle.}
+	After .5, can introduce the principle of superposition:
+	\begin{itemize}
+		\item If $\vec{r}_1$ and $\vec{r}_2$ are solutions of a linear homogeneous (system of) ODE(s), then $\vec{r} = c_1 \vec{r}_1 + c_2\vec{r}_2$ is also a solution for any constants $c_1,c_2$.
+	\end{itemize}
+\end{notes}	
+\end{annotation}
 \begin{parts}
 	\item Find the two solutions $\vec{r}_1, \vec{r}_2$.
 	\item Is $\vec{r}_1(t) + \vec{r}_2(t)$ a solution?
@@ -154,12 +247,56 @@ $$
 	\item What is the general solution?
 	\item Find the solution that satisfies $\vec{r}(0) = \begin{bmatrix} 6 \\ 7\end{bmatrix}$?
 \end{parts}
+\begin{annotation}
+\begin{notes}
+	\Goal{If there is more time.} 
+	Start working on the core exercise for the next lesson.
+\end{notes}	
+\end{annotation}
 
 
 \bookonlynewpage
+\begin{lesson}
+	\Title{Systems of two linear ODEs with constant coefficients II}
+
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 16
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Know how to find complex eigenvalues and eigenvectors of a matrix
+		\item Know how to find a complex solution from an eigenvalue and an eigenvector
+		\item Know how to re-write the solution using Euler's Formula and only real numbers
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+We now add some complex numbers into the mix! Although students only need a very (Very) superficial knowledge of complex numbers. 
+
+We study problems involving two complex eigenvalues or one repeated real eigenvalue. 
+
+The third case: One repeated real eigenvalue will not be worked on in lecture. Students should learn it by themselves and practice it.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook: Two complex eigenvalues
+	\item Watch corresponding video
+	\item Solve the core exercise \ref{sys:corecomplex}.
+\end{itemize}
+
+\end{lesson}
 
 
-\question
+
+
+\begin{annotation}
+\begin{goals}
+	\Goal{Skip .2 and start working on next core exercise}
+\end{goals}
+\end{annotation}
+\question \label{sys:corecomplex}
 Consider a problem:
 $$
 \frac{d \,\vec{r}}{dt} = \begin{bmatrix} 2 & -5 \\ 1 & -2\end{bmatrix} \vec{r}.
@@ -173,6 +310,8 @@ $$
 
 
 \bookonlynewpage
+
+
 
 \begin{annotation}
 	\begin{goals}
@@ -230,14 +369,38 @@ $$
 
 
 \begin{lesson}
-	\Title{Phase Portraits}
+	\Title{Phase Portraits I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 17
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Interpret a phase portrait
+		\item Sketch a phase portrait
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+
+After learning how to create a model involving a system of ODEs and how to find the solution, we turn our attention to how to represent the solutions.
+
+The phase portrait is a compact way to represent all possible solutions of a system of two ODEs. 
+
+Through sketching phase portraits, we are also learning the different possible behaviours of solutions of systems of two ODEs. 
+
+We start with systems of two ODEs with two real distinct eigenvalues.
+It usually takes a while to sketch the first phase portrait, so the first lesson is dedicated to sketching only one.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Watch first video
+	\item Solve the core exercise \ref{sys:phaseportrait-real}.
+\end{itemize}
+
 
 \end{lesson}
 
@@ -245,6 +408,9 @@ $$
 
 
 \begin{annotation}
+	\begin{goals}
+	\Goal{Pre-class exercise}	
+	\end{goals}
 	\begin{goals}
 	\Goal{Unstable Saddle Point}
 	At the end, let the students know that the equilibrium is called \emph{saddle point} and it is \emph{unstable}, because solutions go away from it.
@@ -254,7 +420,7 @@ $$
 	We can interpret that if a population becomes extinct, then the other will behave as it would without competitors: grow exponentially fast!
 	\end{goals}
 \end{annotation}
-\question
+\question \label{sys:phaseportrait-real}
 	Consider the following model for cheetah's and lions, where
 	$$ \vec{p}(t) = \begin{bmatrix} \ell(t) = \text{population of lions} \\ c(t) = \text{population of cheetahs} \end{bmatrix} $$
 	which satisfies
@@ -285,15 +451,46 @@ $$
 
 \bookonlynewpage
 
+\begin{lesson}
+	\Title{Phase Portraits II}
+
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 17
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Interpret a phase portrait
+		\item Sketch a phase portrait
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+There are a few more different behaviours, so we study some more cases. 
+
+We start with a non-homogeneous case and then study some other cases of phase portraits with two real distinct eigenvalues.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Solve the core exercise \ref{sys:phaseportrait-real-equil}.
+\end{itemize}
+
+\end{lesson}
+
 \begin{annotation}
 	\begin{goals}
-		Get students to compare their results with the previous core exercise.
-%
+		\Goal{Pre-class exercise}
+		\begin{itemize}
+			\item Solve quickly in class.
+			\item Get students to compare their results with the previous core exercise.
+			\item How does the interpretation of the population dynamics change?
+		\end{itemize}
 %		Some students might try to sketch everything from scratch.
 %		Remind them that the solutions look very similar and they only have to adapt the phase portrait they had before.\\		
 	\end{goals}
 \end{annotation}
-\question
+\question \label{sys:phaseportrait-real-equil}
 	Let us expand the model from the previous exercise to:
 	$$ \vec{p}(t) = \begin{bmatrix} \ell(t) = \text{population of lions} \\ c(t) = \text{population of cheetahs} \end{bmatrix} $$
 	which satisfies
@@ -323,13 +520,6 @@ $$
 
 \bookonlynewpage
 
-
-\question
-	For each of the following general solutions, sketch the phase portrait.
-\begin{parts}
-	\item $	\vec{r}(t) = c_1 \begin{bmatrix} 2 \\ 1 \end{bmatrix} e^{2t} + c_2 \begin{bmatrix} -1 \\ 1 \end{bmatrix} e^{5t}.$
-	\item $	\vec{r}(t) = c_1 \begin{bmatrix} 2 \\ 1 \end{bmatrix} e^{-2t} + c_2 \begin{bmatrix} -1 \\ 1 \end{bmatrix} e^{-5t}.$	
-\end{parts}
 \begin{annotation}
 	\begin{goals}
 	At the end, let the students know what these equilibria are called:
@@ -344,6 +534,12 @@ $$
 	\end{itemize}
 	\end{goals}
 \end{annotation}
+\question
+	For each of the following general solutions, sketch the phase portrait.
+\begin{parts}
+	\item $	\vec{r}(t) = c_1 \begin{bmatrix} 2 \\ 1 \end{bmatrix} e^{2t} + c_2 \begin{bmatrix} -1 \\ 1 \end{bmatrix} e^{5t}.$
+	\item $	\vec{r}(t) = c_1 \begin{bmatrix} 2 \\ 1 \end{bmatrix} e^{-2t} + c_2 \begin{bmatrix} -1 \\ 1 \end{bmatrix} e^{-5t}.$	
+\end{parts}
 
 
 
@@ -370,20 +566,36 @@ $$
 
 \begin{lesson}
 	\Title{Analysis of Models with Systems}
-%
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item Bla
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
+
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 18
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Deduce properties of solutions of systems of ODEs using different approaches
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+Analysis of a system of ODEs is important.
+
+It's not always possible to find the solution of a model, but it's usually possible to sketch a rough phase portrait, to approximate the solution, or to just deduce some properties of the solutions.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Solve the core exercise \ref{sys:clothes}.1
+\end{itemize}
 
 \end{lesson}
 
 
 
 
-\question
+\question \label{sys:clothes}
 	Consider the following model for the sales from a designer clothing brand:
 	\begin{itemize}
 	\item $x_1(t) = $ purchases by ``common mortals'' (CM) at time $t$ in years since the beginning of 2015.
@@ -415,13 +627,17 @@ $$
 
 		\item What conditions on the constants $a,b,c,d$ will guarantee that the solutions will spiral? In that case, is it a spiral source or spiral sink? Is it clockwise or counterclockwise?
 		\item Are there constants $a,b,c,d>0$, such that the solution $\vec{x}$ is periodic?
-		\item Consider the constants $a=b=c=d=1$. Assume that initially CM were buying $c_0>0$ items and FP were buying $f_0>0$ items.
-			What will happen to $x_1(t)$ and $x_2(t)$ as $t \to \infty$? Explain the results in terms of the evolution of purchases from CM and FP.
 \begin{annotation}
 	\begin{goals}
-		Can leave .6 as a practice problem if there isn't enough time.
+		\Goal{If there isn't enough time to finish:}
+		\begin{itemize}
+			\item Take an extra lecture if there is enough to do
+			\item Can leave .6 as a practice problem
+		\end{itemize}
 	\end{goals}
 \end{annotation}
+		\item Consider the constants $a=b=c=d=1$. Assume that initially CM were buying $c_0>0$ items and FP were buying $f_0>0$ items.
+			What will happen to $x_1(t)$ and $x_2(t)$ as $t \to \infty$? Explain the results in terms of the evolution of purchases from CM and FP.
 		\item Consider the constants $a=b=c=d=1$.  If $c_0=10$, $f_0=100$, then at what time will FP stop buying items? And at what time will FP be buying the maximum number of items?
 	
 	\end{parts}

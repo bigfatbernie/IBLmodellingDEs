@@ -56,19 +56,6 @@
 
 
 
-\begin{lesson}
-	\Title{Introduction to Difference Equations}
-
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-\end{lesson}
-
-
 %\newpage
 %
 %\question
@@ -174,7 +161,7 @@
 
 
 \begin{lesson}
-	\Title{Modelling with Difference Equations}
+	\Title{Modelling with Difference Equations I}
 
 	\Heading{Objectives}
 	\begin{itemize}
@@ -207,7 +194,23 @@
 \bookonlynewpage
 
 
-\question The goal of this quesiton is to try to understand the meaning of average lifespan.
+
+\begin{lesson}
+	\Title{Modelling with Difference Equations II}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Bla
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+\end{lesson}
+
+
+
+
+\question The goal of this question is to try to understand the meaning of average lifespan.
 \begin{annotation}
 \begin{goals}
 	\Goal{Pre-class question}
@@ -280,6 +283,22 @@
 
 
 \bookonlynewpage
+
+
+
+
+\begin{lesson}
+	\Title{Modelling with Difference Equations III}
+
+	\Heading{Objectives}
+	\begin{itemize}
+		\item Bla
+	\end{itemize}
+	
+	\Heading{Motivation} 
+
+\end{lesson}
+
 
 
 \question
@@ -447,7 +466,7 @@
 
 
 \begin{lesson}
-	\Title{Analysis of Difference Equations}
+	\Title{Analysis of Difference Equations I}
 
 	\Heading{Objectives}
 	\begin{itemize}
@@ -497,7 +516,7 @@
 
 \bookonlynewpage
 
-\question
+\question \label{DE:drunkard}
 	Consider a drunkard that is walking randomly near a cliff.
 
 	\hfill \includegraphics*[width=250pt]{images/module26-drunk.pdf}
@@ -536,6 +555,24 @@
 \hfill
 
 \bookonlynewpage
+
+
+
+\begin{lesson}
+	\Title{Analysis of Difference Equations II}
+
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+Finish core exercise \ref{DE:drunkard}.
+Then continue with rabbits.
+
+\end{lesson}
 
 
 \begin{minipage}{.45\textwidth}
@@ -579,26 +616,28 @@ r_k
 $$
 
 On the other hand, 
-$$
+\begin{align*}
 \color{magenta}
 r_{k-1}-o_{k-1}
-  = b_{k-2} + 2 y_{k-2} + a_{k-2} 
-  = r_{k-2} + y_{k-2} - o_{k-2}
-$$
+  & = b_{k-2} + 2 y_{k-2} + a_{k-2}  \\
+  & = r_{k-2} + y_{k-2} - o_{k-2}
+\end{align*}
 and
-$$
+\begin{align*}
 \color{blue}
 b_k 
-  = b_{k-2}+b_{k-3}
-  = y_{k-3} + a_{k-3} + b_{k-3}
-  = r_{k-3} - o_{k-3}
-$$
+  & = b_{k-2}+b_{k-3} \\
+  & = y_{k-3} + a_{k-3} + b_{k-3} \\
+  & = r_{k-3} - o_{k-3}	
+\end{align*}
+
 
 So we have
-$$
-r_k = {\color{magenta}r_{k-2} + {\color{black}\not} y_{k-2} - {\color{black}\not} o_{k-2}} + {\color{blue}r_{k-3} - {\color{black}\not}o_{k-3}}
-= r_{k-2} + r_{k-3}
-$$
+\begin{align*}
+r_k & = {\color{magenta}r_{k-2} + {\color{black}\not} y_{k-2} - {\color{black}\not} o_{k-2}} + {\color{blue}r_{k-3} - {\color{black}\not}o_{k-3}} \\
+& = r_{k-2} + r_{k-3}
+\end{align*}
+
 \end{goals}
 \end{annotation}	
 

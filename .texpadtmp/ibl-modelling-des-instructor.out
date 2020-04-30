@@ -44,55 +44,50 @@
 \BOOKMARK [2][-]{Item.92}{29}{paragraph*.13}% 44
 \BOOKMARK [2][-]{Item.102}{30}{paragraph*.13}% 45
 \BOOKMARK [1][-]{section.3}{Models of Systems}{}% 46
-\BOOKMARK [1][-]{section.3}{Lesson 14: Modelling Two Quantities}{}% 47
+\BOOKMARK [1][-]{section.3}{Lesson 14: Modelling Two Quantities I}{}% 47
 \BOOKMARK [2][-]{section*.15}{31}{section.3}% 48
-\BOOKMARK [2][-]{Item.117}{32}{section.3}% 49
-\BOOKMARK [1][-]{Item.117}{Lesson 15: Systems of two linear ODEs with constant coefficients}{}% 50
-\BOOKMARK [2][-]{section*.16}{33}{Item.117}% 51
-\BOOKMARK [2][-]{Item.123}{34}{Item.117}% 52
-\BOOKMARK [2][-]{Item.130}{35}{Item.117}% 53
-\BOOKMARK [1][-]{Item.133}{Lesson 16: Phase Portraits}{}% 54
-\BOOKMARK [2][-]{section*.17}{36}{Item.133}% 55
-\BOOKMARK [2][-]{Item.139}{37}{Item.133}% 56
-\BOOKMARK [2][-]{Item.141}{38}{Item.133}% 57
-\BOOKMARK [1][-]{Item.143}{Lesson 17: Analysis of Models with Systems}{}% 58
-\BOOKMARK [2][-]{section*.18}{39}{Item.143}% 59
-\BOOKMARK [1][-]{section.4}{Higher-Order Models}{}% 60
-\BOOKMARK [1][-]{section.4}{Lesson 18: Modelling with Second-Order ODEs}{}% 61
-\BOOKMARK [2][-]{section*.19}{40}{section.4}% 62
-\BOOKMARK [2][-]{Item.154}{41}{section.4}% 63
-\BOOKMARK [1][-]{Item.154}{Lesson 19: Second-Order Linear ODEs with Constant Coefficients}{}% 64
-\BOOKMARK [2][-]{section*.20}{42}{Item.154}% 65
-\BOOKMARK [2][-]{Item.158}{43}{Item.154}% 66
-\BOOKMARK [2][-]{Item.161}{44}{Item.154}% 67
-\BOOKMARK [1][-]{Item.164}{Lesson 20: Analysis of Models with Higher Order ODEs}{}% 68
-\BOOKMARK [2][-]{section*.21}{45}{Item.164}% 69
-\BOOKMARK [2][-]{Item.171}{46}{Item.164}% 70
-\BOOKMARK [1][-]{section.5}{Difference Equations}{}% 71
-\BOOKMARK [1][-]{section.5}{Lesson 21: Introduction to Difference Equations}{}% 72
-\BOOKMARK [1][-]{section.5}{Lesson 22: Solving Difference Equations}{}% 73
-\BOOKMARK [2][-]{section*.22}{47}{section.5}% 74
-\BOOKMARK [2][-]{Item.177}{48}{section.5}% 75
-\BOOKMARK [1][-]{Item.177}{Lesson 23: Modelling with Difference Equations}{}% 76
-\BOOKMARK [2][-]{section*.23}{49}{Item.177}% 77
-\BOOKMARK [2][-]{section*.23}{50}{Item.177}% 78
-\BOOKMARK [2][-]{Item.179}{51}{Item.177}% 79
-\BOOKMARK [2][-]{Item.182}{52}{Item.177}% 80
-\BOOKMARK [2][-]{Item.182}{53}{Item.177}% 81
-\BOOKMARK [1][-]{Item.188}{Lesson 24: Analysis of Difference Equations}{}% 82
-\BOOKMARK [2][-]{section*.24}{54}{Item.188}% 83
-\BOOKMARK [2][-]{Item.192}{55}{Item.188}% 84
-\BOOKMARK [2][-]{Item.197}{56}{Item.188}% 85
-\BOOKMARK [1][-]{section.6}{Projects}{}% 86
-\BOOKMARK [1][-]{section.6}{Project 1: Managing a fishery}{}% 87
-\BOOKMARK [1][-]{Item.214}{Project 2: X-ray attenuation}{}% 88
-\BOOKMARK [1][-]{Item.219}{Project 3: Predator-prey chase}{}% 89
-\BOOKMARK [1][-]{Item.233}{Project 4: Epidemic modelling}{}% 90
-\BOOKMARK [1][-]{Item.248}{Project 5: Hunting inspiration}{}% 91
-\BOOKMARK [1][-]{Item.258}{Project 6: Arms race}{}% 92
-\BOOKMARK [1][-]{Item.275}{Project 7: Spring data}{}% 93
-\BOOKMARK [1][-]{Item.281}{Project 8: Wing flutter}{}% 94
-\BOOKMARK [1][-]{Item.295}{Project 9: Bullwhip effect}{}% 95
-\BOOKMARK [1][-]{Item.319}{Project 10: Approximating the temperature of a thin sheet}{}% 96
-\BOOKMARK [1][-]{Item.332}{Project 11: Math of lungs}{}% 97
-\BOOKMARK [1][-]{Item.344}{Project 12: Dark day}{}% 98
+\BOOKMARK [1][-]{Item.117}{Lesson 15: Modelling Two Quantities II}{}% 49
+\BOOKMARK [2][-]{section*.16}{32}{Item.117}% 50
+\BOOKMARK [1][-]{section*.16}{Lesson 16: Systems of two linear ODEs with constant coefficients I}{}% 51
+\BOOKMARK [2][-]{section*.17}{33}{section*.16}% 52
+\BOOKMARK [1][-]{Item.123}{Lesson 17: Systems of two linear ODEs with constant coefficients II}{}% 53
+\BOOKMARK [2][-]{section*.18}{34}{Item.123}% 54
+\BOOKMARK [2][-]{Item.130}{35}{Item.123}% 55
+\BOOKMARK [1][-]{Item.133}{Lesson 18: Phase Portraits I}{}% 56
+\BOOKMARK [2][-]{section*.19}{36}{Item.133}% 57
+\BOOKMARK [1][-]{Item.139}{Lesson 19: Phase Portraits II}{}% 58
+\BOOKMARK [2][-]{section*.20}{37}{Item.139}% 59
+\BOOKMARK [2][-]{Item.141}{38}{Item.139}% 60
+\BOOKMARK [1][-]{Item.143}{Lesson 20: Analysis of Models with Systems}{}% 61
+\BOOKMARK [2][-]{section*.21}{39}{Item.143}% 62
+\BOOKMARK [1][-]{section.4}{Higher-Order Models}{}% 63
+\BOOKMARK [1][-]{section.4}{Lesson 21: Modelling with Second-Order ODEs I}{}% 64
+\BOOKMARK [2][-]{section*.22}{40}{section.4}% 65
+\BOOKMARK [1][-]{Item.154}{Lesson 22: Modelling with Second-Order ODEs II}{}% 66
+\BOOKMARK [2][-]{section*.23}{41}{Item.154}% 67
+\BOOKMARK [1][-]{section*.23}{Lesson 23: Second-Order Linear ODEs with Constant Coefficients I}{}% 68
+\BOOKMARK [2][-]{section*.24}{42}{section*.23}% 69
+\BOOKMARK [1][-]{Item.158}{Lesson 24: Second-Order Linear ODEs with Constant Coefficients II}{}% 70
+\BOOKMARK [2][-]{section*.25}{43}{Item.158}% 71
+\BOOKMARK [2][-]{Item.161}{44}{Item.158}% 72
+\BOOKMARK [1][-]{Item.164}{Lesson 25: Analysis of Models with Higher Order ODEs I}{}% 73
+\BOOKMARK [2][-]{section*.26}{45}{Item.164}% 74
+\BOOKMARK [1][-]{Item.167}{Lesson 26: Analysis of Models with Higher Order ODEs II}{}% 75
+\BOOKMARK [2][-]{Item.171}{46}{Item.167}% 76
+\BOOKMARK [1][-]{section.5}{Difference Equations}{}% 77
+\BOOKMARK [1][-]{section.5}{Lesson 27: Solving Difference Equations}{}% 78
+\BOOKMARK [2][-]{section*.27}{47}{section.5}% 79
+\BOOKMARK [2][-]{Item.177}{48}{section.5}% 80
+\BOOKMARK [1][-]{Item.177}{Lesson 28: Modelling with Difference Equations I}{}% 81
+\BOOKMARK [2][-]{section*.28}{49}{Item.177}% 82
+\BOOKMARK [1][-]{section*.28}{Lesson 29: Modelling with Difference Equations II}{}% 83
+\BOOKMARK [2][-]{section*.29}{50}{section*.28}% 84
+\BOOKMARK [2][-]{Item.179}{51}{section*.28}% 85
+\BOOKMARK [1][-]{Item.182}{Lesson 30: Modelling with Difference Equations III}{}% 86
+\BOOKMARK [2][-]{section*.30}{52}{Item.182}% 87
+\BOOKMARK [2][-]{section*.30}{53}{Item.182}% 88
+\BOOKMARK [1][-]{Item.188}{Lesson 31: Analysis of Difference Equations I}{}% 89
+\BOOKMARK [2][-]{section*.31}{54}{Item.188}% 90
+\BOOKMARK [2][-]{Item.192}{55}{Item.188}% 91
+\BOOKMARK [1][-]{Item.197}{Lesson 32: Analysis of Difference Equations II}{}% 92
+\BOOKMARK [2][-]{section*.32}{56}{Item.197}% 93
