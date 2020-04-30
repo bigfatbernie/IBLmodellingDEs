@@ -115,30 +115,58 @@
 \begin{lesson}
 	\Title{Solutions of Differential Equations}
 
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\begin{annotation}
-%	\begin{goals}
-%	\Goal{Extra Reading}
-%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-%	
-%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-%	\end{goals}
-%\end{annotation}
-%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-%
+\Heading{Textbook} 
+	\begin{itemize}
+		\item Modules 7, 8
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Identifying the order of a differential equation
+		\item Identifying a linear vs nonlinear differential equation
+		\item Knowing how to check if a function is a solution of a differential equation
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+This is an introduction to differential equations.
+
+Students have different levels of experience with differential equations. We want to establish a common notation.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Students should bring an ODE of their choice to class with some information about it
+	\begin{itemize}
+		\item Put about 8 ODEs on the board
+		\item Get students to identify them: order + linearity
+		\item Get some info about the ODEs to the whole class
+	\end{itemize}
+
+	\item Read textbook modules.
+\end{itemize}
+
 \end{lesson}
 
 
 
 
 %\newpage
+
+\begin{annotation}
+\begin{goals}
+	\Goal{Without solving.}
+	\begin{itemize}
+		\item Students should try to answer this question without solving the differential equation.
+		\item Check properties of the ODE:
+		\begin{itemize}
+			\item What does $x^2-1=0$ mean for the solution?
+			\item When is $y'>0$? What does that mean for the solution?
+			\item When is $y'<0$? What does that mean for the solution?
+		\end{itemize}
+	\end{itemize}
+\end{goals}	
+\end{annotation}
 
 \question
 
@@ -262,6 +290,10 @@ Which of these shows solutions of $y' = (x-1)(x+1) = x^2 - 1$ ?
 }
 
 
+
+\begin{instructoronly}
+	\hspace{-1cm}
+\end{instructoronly}
 \begin{tabular}{ccc}
 \modeightA
 	& \modeightB
@@ -288,6 +320,13 @@ D & E & F \\
 \bookonlynewpage
 
 
+
+\begin{annotation}
+\begin{goals}
+	Quick exercise
+\end{goals}	
+\end{annotation}
+
 \question
 
 We seek a first-order ordinary differential equation 
@@ -308,25 +347,13 @@ Write down or graph a function $f(x)$ that would produce such solutions.
 
 \bookonlynewpage
 
-\question
 
-Consider the ODE \quad $y'(t) = \big(y(t)\big)^2$ \quad .
-Which of the following is true?
-	
-\begin{parts}
-	\item $y(t)$ must always be decreasing
-	\item $y(t)$ must always be increasing \\[5pt]
-
-	\item $y(t)$ must always be positive
-	\item $y(t)$ must always be negative \\[5pt]
-	
-	\item $y(t)$ must never change sign.
-\end{parts}
 \begin{annotation}
 \begin{goals}
+	\Goal{Stronger students.}
 	The 5$^{\rm th}$ part is for stronger students to think about while they wait for the others to finish.
 	
-	Will be addressed later in module \ref{ODE:} (Properties of solutions).
+	Will be addressed later in module 13 (Properties of solutions). %\ref{ODE:properties}
 	
 	They can see that:
 	\begin{itemize}
@@ -342,12 +369,35 @@ Which of the following is true?
 	\end{itemize}
 \end{goals}
 \end{annotation}
+\question
+
+Consider the ODE \quad $y'(t) = \big(y(t)\big)^2$ \quad .
+Which of the following is true?
+	
+\begin{parts}
+	\item $y(t)$ must always be decreasing
+	\item $y(t)$ must always be increasing \\[5pt]
+
+	\item $y(t)$ must always be positive
+	\item $y(t)$ must always be negative \\[5pt]
+	
+	\item $y(t)$ must never change sign.
+\end{parts}
+
 
 
 
 
 \bookonlynewpage
 
+
+\begin{annotation}
+\begin{goals}
+	Similar to some practice problems.
+	
+	Skip if the other exercises take too long.
+\end{goals}
+\end{annotation}
 \question Consider the differential equation $2xy'=y$.
 	
 	\begin{parts}
@@ -356,14 +406,6 @@ Which of the following is true?
 		\item Sketch all the integral curves for the differential equation.
 		\item What is the difference between a solution passing through the point $(1,-1)$ and an integral curve passing through the same point?
 	\end{parts}
-\begin{annotation}
-\begin{goals}
-	Similar to some practice problems.
-	
-	Skip if the other exercises take too long.
-\end{goals}
-\end{annotation}
-
 
 
 
@@ -395,25 +437,75 @@ Which of the following is true?
 \begin{lesson}
 	\Title{Slope Fields}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+		\item Module 9
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Sketch a slope field
+		\item Use technology to create a slope field: WolframAlpha, Desmos, Geogebra, etc.
+		\item Interpret a slope field
+		\item Deduce properties of slope field from the ODE
+		\item Deduce properties of solution from slope field
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+ODEs are often difficult to solve, so we need tools to be able to interpret their solutions and deduce properties without having to solve them.
+
+Slope fields are such a tool. \\
+
+Slope fields are not meant to be sketched by hand, so they shouldn't be asked to do that, except at the beginning to learn how they are sketched so they can understand them better. \\
+
+Slope fields should be used to help interpret solutions of ODEs.
+
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Watch first video (second is optional)
+	\item Solve first core exercise for this lesson/module
+\end{itemize}
+ 
+\end{lesson}
+
+
+
+
+
+
+
 
 \begin{annotation}
-	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
+\begin{goals}
+	\Goal{Pre-Class exercise}
+	Let students know that they should solve this exercise at home before class.
 	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-	\end{goals}
+	In class, quickly solve it.
+\end{goals}	
 \end{annotation}
-	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+\question Consider the slope field from the first video of the module.
+	
+\begin{minipage}{.75\textwidth}
+\begin{parts}
+	\item If $y(0)=5$, then estimate $y(-7)$.
+	\item If $y(0)=a$, then $y(x)>0$ for all $x>0$. For which values of $a$ is this statement true?
+\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{125pt}
+	\includegraphics*[width=125pt]{images/module9-preclass.png}
+\end{minipage}
 
-\end{lesson}
+
+\bookonlynewpage
+
+
+
+
 
 
 
@@ -432,9 +524,6 @@ Which of the following is true?
 
 
 
-
-
-
 \setlength{\len}{200pt}
 \begin{tabular}{cc}
 \includegraphics*[height=\len]{images/module9-y.png}
@@ -443,6 +532,18 @@ Slope field for $y(t)$
 	& Slope field for $y'(t)$
 \end{tabular}
 
+
+\begin{annotation}
+\begin{goals}
+	\begin{itemize}
+		\item Students should think about the initial conditions.
+		What is a possible value for $y(0)$? What is a possible value for $y'(0)$? \\
+
+		\item What does the second slope field tell us? The equilibrium in the slope field for $y'(t)$ is called \emph{terminal velocity}.
+		\item Sketch a possible solution again, but for $t\in[0,30]$.
+	\end{itemize}
+\end{goals}	
+\end{annotation}
 \hfill {\footnotesize(These slope fields were created using WolframAlpha)} \\
 
 \begin{parts}
@@ -450,34 +551,29 @@ Slope field for $y(t)$
 	\item Consider the graph of $y(t)$. Does it form a parabola? Justify your answer.
 \end{parts}
 
+
+
+
+
+
+\newpage
+%\bookonlynewpage
+
+
+
 \begin{annotation}
 	\begin{goals}
-		Students should think about the initial conditions.
-		What is a possible value for $y(0)$? What is a possible value for $y'(0)$?
-		Then sketch a possible solution that starts at those values. \\
-		
-		The equilibrium in the slope field for $y'(t)$ is called \emph{terminal velocity}. Some students might be able to identify it.
+		\Goal{Symmetry.}
+		\begin{itemize}
+			\item The goal is not to be very accurate, but to capture the symmetry of each of these slope fields.
+			\item Which property of the slope field allowed you to sketch it more quickly?
+		\end{itemize}
 	\end{goals}
 \end{annotation}
-
-
-
-
-
-\bookonlynewpage
-
-
-
 \question Sketch the slope field for the following differential equations. 
 
 \begin{parts}
 	\item $y'=x$
-
-\begin{annotation}
-	\begin{goals}
-		The goal is not to be very accurate, but to capture the symmetry of each of these slope fields.
-	\end{goals}
-\end{annotation}
 
 	\begin{tikzpicture}[xscale=0.75,yscale=0.75]
 		\draw[thick,-{\seta}] (-5,0) -- (5.5,0) node[above] {\small $x$};
@@ -488,7 +584,9 @@ Slope field for $y(t)$
 	\end{tikzpicture}
 	
 	
-\vfil	
+\begin{bookonly}
+\vfil		
+\end{bookonly}
 	
 	\item $y'=y^2$	
 
@@ -503,9 +601,14 @@ Slope field for $y(t)$
 \end{parts}
 
 
+\newpage
+%\bookonlynewpage
 
-\bookonlynewpage
-
+\begin{annotation}
+	\begin{goals}
+		Students should be able to justify their choices	.
+	\end{goals}
+\end{annotation}
 \question Consider the following slope fields:
 
 
@@ -545,12 +648,6 @@ Slope field for $y(t)$
 
 \end{parts}
 
-\begin{annotation}
-	\begin{goals}
-		Students should be able to justify their choices	.
-	\end{goals}
-\end{annotation}
-
 
 
 
@@ -585,31 +682,118 @@ Slope field for $y(t)$
 \begin{lesson}
 	\Title{Approximating Solutions}
 
-%	\Heading{Objectives}
-%%	\begin{itemize}
-%%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-%%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-%%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\begin{annotation}
-%	\begin{goals}
-%	\Goal{Extra Reading}
-%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-%	
-%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-%	\end{goals}
-%\end{annotation}
-%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-%
+
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 10
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Know the idea of Euler's method
+		\item Use Euler's method
+		\item Be aware of the limitations of Euler's method
+		\item Deduce some properties of Euler's method
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+After sketching slope fields and observing that they can be used to get an idea of the solution, the idea to use slope fields to rigorously define an approximation of the solution should come naturally.
+
+Euler's method is just that approximation method. \\
+
+This is probably one of the most important tools for an Engineer or a Physicist studying Differential equations, since the ODEs that often arise naturally from real problems are too complicated to solve rigorously and approximating the solution might be the only way.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Watch first video (second is optional -- algebraic approach of approximating the derivative)
+	\item Solve first core exercise for this lesson/module
+\end{itemize}
+
 \end{lesson}
-
-
 
 
 %\newpage
 
+
+\begin{annotation}
+	\begin{goals}
+	\Goal{Pre-class exercise}
+		Let students know that they should solve this exercise at home before class. 
+		
+		In class, quickly solve it. \\
+
+		\url{https://www.desmos.com/calculator/ebfn5vpudr}
+		
+		\begin{center}
+		\begin{tabular}{c|c}
+			$\Delta x$ & Error \\ \hline
+%			10&10.4342 \\
+%			5&9.9007 \\
+%			4&6.7738 \\
+			2.5&3.4552 \\
+			2&2.7050 \\
+			1.67&2.2269 \\
+			1.43&1.8937 \\
+			1.25&1.6475 \\
+			1.11&1.4581 \\
+			1&1.3078 \\
+			0.5&0.6439 \\
+			0.25&0.3193 \\
+		\end{tabular}
+		
+		\includegraphics*[width=100pt]{images/module10-euler-error.pdf}
+		\end{center}
+
+		\begin{itemize}
+			\item Linear with $\Delta x$: \quad $ E \approx C \Delta x$.
+		\end{itemize}
+	\end{goals}
+\end{annotation}		
+
+\question
+	Consider the initial-value problem
+	$$
+	\begin{cases}
+		y' = -\sin(x)+\frac{y}{20} \\
+		y(-10)=2
+	\end{cases}
+	$$
+
+	The solution satisfies $y(10)=\frac{20\sin(10)+400\cos(10)-2e(-401-10\sin(10)+200\cos(10))}{401} \approx 6.7738406\ldots$.
+%y=\frac{20\sin(x)+400\cos(x)-2e^{\frac{x+10}{20}}(-401-10\sin(10)+200\cos(10))}{401}
+
+	\begin{parts}
+		\item Using some software, approximate the solution at $x=10$ for different values of $\Delta x$.
+		\item Calculate the error between the solution and the approximation at $x=10$ for the different values of $\Delta x$.
+		\item Plot the error. Is it decreasing as $\Delta x$ decreases? Does it decrease linearly / quadratically / cubicly as $\Delta x$ decreases?		
+	\end{parts}
+
+\bookonlynewpage
+
+
+\begin{annotation}
+	\begin{goals}
+		\begin{itemize}
+			\item The goal is to have student's recognize that the Euler approximation ``curves slower'' than the actual solution.
+			\item Students can explain in words why that is the case using the way the approximations are generated.\\
+
+			\item For .2 and .4: 
+			\begin{itemize}%enumerate}[label=(\alph*)]
+				\item If students learned how to solve ODEs before, then fine!
+				\item If students didn't learn, then tell them to use WolframAlpha: \href{http://www.wolframalpha.com/input/?i=solve+y'=y-2,y(0)=3}{\tt solve y'=y-2, y(0)=3}
+%				\item If students didn't learn, then ask students:
+%				\begin{itemize}
+%					\item From the approximation, what kind of function does the approximation look like?  (exponential)
+%					\item Exponentials pass through $(0,1)$, so this looks like an exponential moved up.
+%					\item Try $y=a e^{bt}+c$ and find $a,b,c$.
+%				\end{itemize}
+			\end{itemize}%enumerate}
+		\end{itemize}
+	\end{goals}
+\end{annotation}
 \question
 	Consider the differential equation
 	$$ y' = y - 2 .$$
@@ -627,26 +811,6 @@ Slope field for $y(t)$
 
 \end{parts}
 
-\begin{annotation}
-	\begin{goals}
-		\begin{itemize}
-			\item The goal is to have student's recognize that the Euler approximation ``curves slower'' than the actual solution.
-			\item Students can explain in words why that is the case using the way the approximations are generated.\\
-
-			\item For .2 and .4: 
-			\begin{enumerate}[label=(\alph*)]
-				\item If students learned how to solve ODEs before, then fine!
-				\item If students didn't learn, then ask students:
-				\begin{itemize}
-					\item From the approximation, what kind of function does the approximation look like?  (exponential)
-					\item Exponentials pass through $(0,1)$, so this looks like an exponential moved up.
-					\item Try $y=a e^{bt}+c$ and find $a,b,c$.
-				\end{itemize}
-			\end{enumerate}
-		\end{itemize}
-	\end{goals}
-\end{annotation}
-
 
 
 
@@ -654,11 +818,9 @@ Slope field for $y(t)$
 
 
 
-\question
-	Which differential equations will be approximated perfectly using Euler's Method?
-
 \begin{annotation}
 	\begin{goals}
+		\Goal{Only if there is time.}
 		\begin{itemize}
 			\item The question is purposefully ambiguous.
 				What do we mean by approximated perfectly?
@@ -674,11 +836,45 @@ Slope field for $y(t)$
 		\end{itemize}
 	\end{goals}
 \end{annotation}
+\question
+	Which differential equations will be approximated perfectly using Euler's Method?
 
 
 
 
 
+
+
+%
+%\bookonlynewpage
+%
+%\question
+%	Consider the initial-value problem
+%	$$
+%	\begin{cases}
+%	y' = y \\
+%	y(0)=1	
+%	\end{cases}
+%	$$
+%	
+%	We want to study how the approximation and the solution compare.
+%	The solution at the point $x=1$ is $y(1)=e$.
+%	
+%	Consider $\Delta x$ and $x_k = k \Delta x$.
+%	Let $y_k \approx y(x_k)$ be an approximation of the solution at $x=x_k$.
+%\begin{parts}
+%	\item What is the approximation of the solution at $x=1$? Your solution should depend on $\Delta x$.
+%	\item 
+%\end{parts}
+%
+%
+%\begin{align*}
+%	y_{k+1} &=(1+\Delta x)y_k \\
+%	y_k &= (1+\Delta x)^k \\
+%	y(1) \approx y_N &= (1+\Delta x)^N = (1+\Delta x)^{\frac{1}{\Delta x}} \\
+%	\\
+%	
+%\end{align*}
 
 
 
@@ -688,20 +884,6 @@ Slope field for $y(t)$
 
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%		Chapter 3 -
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%
-%\begin{topic}[First-Order Models]
-%
-%\end{topic}
-%
-%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		Modelling with ODEs
@@ -720,23 +902,29 @@ Slope field for $y(t)$
 \begin{lesson}
 	\Title{Modelling with Differential Equations}
 
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\begin{annotation}
-%	\begin{goals}
-%	\Goal{Extra Reading}
-%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-%	
-%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-%	\end{goals}
-%\end{annotation}
-%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 11
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Start modelling physical quantities
+		\item Follow the procedure from chapter 1 when creating a model
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+This is one of the main goals of this course. \\
+
+Students should be given the opportunity to create models in class. They should be encouraged to follow the procedure from chapter 1, as it will improve their models.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Read the first core exercise and solve steps 1 (define problem) and 2 (create a mind map)
+\end{itemize}
 
 \end{lesson}
 
@@ -748,20 +936,23 @@ Slope field for $y(t)$
 
 \begin{annotation}
 	\begin{goals}
-	\Goal{Pendulum and Rumours}
-		This should take 2 lectures.
+		Students will mostly likely identify the goal as finding the position of the ball $\vec{r}(t) = \big( x(t) , y(t) \big)$. That's fine!
 		
-		Lecture 1. Focus on Pendulum problem. Students should finish it at home.
+		Later, in Step 3, try to guide the students to recognize the following:
+		\begin{itemize}
+			\item Rope is massless (negligible)
+			\item Rope doesn't bend (negligible)
+			\item So can assume that the rope is rigid. How does that affect the position of the ball?
+			\item No friction (negligible)
+			\item \textbf{Important:} Students always focus on string tension. One can consider it, but it all cancels out. It's one of the exercises of the module (above). For the lecture, don't consider tension.
+		\end{itemize}
 		
-		
-		Lecture 2. Rumour problem is more open-ended. 
-		
-		Students should follow the structure from chapter 1 to think about this problem.
+		Then on Step 4, guide students to recognize that they actually only need to find a model for the angle, because the position of the ball really only depends on the angle $\theta(t): \vec{r}\big(\theta(t)\big)$ \\
+
+		Students should finish it at home.				
 	\end{goals}
 \end{annotation}
-		
-		
-		
+
 \question \label{pendulum}
 	A pendulum is swinging side to side. We want to model its movement.
 
@@ -791,27 +982,6 @@ Slope field for $y(t)$
 
 
 
-\begin{annotation}
-	\begin{goals}
-		Students will mostly likely identify the goal as finding the position of the ball $\vec{r}(t) = \big( x(t) , y(t) \big)$. That's fine!
-		
-		Later, in Step 3, try to guide the students to recognize the following:
-		\begin{itemize}
-			\item Rope is massless (negligible)
-			\item Rope doesn't bend (negligible)
-			\item So can assume that the rope is rigid. How does that affect the position of the ball?
-			\item No friction (negligible)
-			\item \textbf{Important:} Students always focus on string tension. One can consider it, but it all cancels out. It's one of the exercises of the module (above). For the lecture, don't consider tension.
-		\end{itemize}
-		
-		Then on Step 4, guide students to recognize that they actually only need to find a model for the angle, because the position of the ball really only depends on the angle $\theta(t): \vec{r}\big(\theta(t)\big)$
-				
-	\end{goals}
-\end{annotation}
-
-
-
-
 
 
 
@@ -822,6 +992,35 @@ Slope field for $y(t)$
 
 
 \bookonlynewpage
+
+\begin{lesson}
+	\Title{Modelling with Differential Equations}
+
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 11
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Model an open ended problem
+		\item Follow the procedure from chapter 1 when creating a model
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+Students may be used to some models from physics classes or from Calculus classes. \\
+
+They should practice developing more open ended models.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Read the first core exercise and solve steps 1 (define problem) and 2 (create a mind map)
+\end{itemize}
+
+\end{lesson}
+
 
 \question \label{rumour} Model the spreading of a rumour through the students of a school.
 
@@ -844,38 +1043,39 @@ Slope field for $y(t)$
 	\input{modules/module12-SolvableODEs.tex}
 	\input{modules/module12-SolvableODEs-exercises.tex}
 
-%	\Heading{Textbook}	
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item Bla bla bla	
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-
-
 \end{module}
 
 
 \begin{lesson}
 	\Title{Solvable Types of Differential Equations}
 
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\begin{annotation}
-%	\begin{goals}
-%	\Goal{Extra Reading}
-%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-%	
-%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-%	\end{goals}
-%\end{annotation}
-%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 12
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Identify a Separable ODE
+		\item Know how to solve a Separable ODE
+		\item Identify a first-order linear ODE
+		\item Know how to solve a first-order linear ODE: Method of the Integrating Factor
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+This is the traditional class on differential equations. \\
+
+Even though the focus of the course is not on recipes for solving differential equations, when creating a model that involves a differential equation and analyzing it, it is necessary to be aware of some of the basic methods for solving them. \\
+
+Students should practice these methods more than the limited time devoted to them in lecture. Even though there aren't many practice problems, it is easy to find exercises for this module in any differential equations textbook.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Watch first video for each method
+\end{itemize}
+
 
 \end{lesson}
 
@@ -883,6 +1083,16 @@ Slope field for $y(t)$
 
 
 %\newpage
+
+
+\begin{annotation}
+\begin{goals}
+	\begin{itemize}
+		\item First, ask students to identify all the ODEs
+		\item Then, students can start solving them one by one
+	\end{itemize}
+\end{goals}	
+\end{annotation}
 
 \question 
 	Decide whether the following differential equations are separable, first-order linear, both, or neither. If they are of one of the solvable types, solve it.
@@ -909,6 +1119,12 @@ Slope field for $y(t)$
 
 
 
+\begin{annotation}
+\begin{goals}
+	\Goal{Idea of Integrating Factor}
+	By recognizing that the left-hand side is the result of a product rule, it is much easier to find the solution.
+\end{goals}
+\end{annotation}
 \question
 \begin{parts}
 	\item Calculate $\big( \sin(x) f(x) \big)'$.
@@ -920,24 +1136,6 @@ Slope field for $y(t)$
 
 
 
-
-\begin{annotation}
-	\begin{goals}
-		Students will mostly likely identify the goal as finding the position of the ball $\vec{r}(t) = \big( x(t) , y(t) \big)$. That's fine!
-		
-		Later, in Step 3, try to guide the students to recognize the following:
-		\begin{itemize}
-			\item Rope is massless (negligible)
-			\item Rope doesn't bend (negligible)
-			\item So can assume that the rope is rigid. How does that affect the position of the ball?
-			\item No friction (negligible)
-			\item \textbf{Important:} Students always focus on string tension. One can consider it, but it all cancels out. It's one of the exercises of the module (above). For the lecture, don't consider tension.
-		\end{itemize}
-		
-		Then on Step 4, guide students to recognize that they actually only need to find a model for the angle, because the position of the ball really only depends on the angle $\theta(t): \vec{r}\big(\theta(t)\big)$
-				
-	\end{goals}
-\end{annotation}
 
 
 
@@ -982,23 +1180,34 @@ Slope field for $y(t)$
 \begin{lesson}
 	\Title{Properties of Differential Equations}
 
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\begin{annotation}
-%	\begin{goals}
-%	\Goal{Extra Reading}
-%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-%	
-%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-%	\end{goals}
-%\end{annotation}
-%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 13
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item HERE HERE HERE HERE HERE HERE HERE
+		\item Identify a Separable ODE
+		\item Know how to solve a Separable ODE
+		\item Identify a first-order linear ODE
+		\item Know how to solve a first-order linear ODE: Method of the Integrating Factor
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+This is the traditional class on differential equations. \\
+
+Even though the focus of the course is not on recipes for solving differential equations, when creating a model that involves a differential equation and analyzing it, it is necessary to be aware of some of the basic methods for solving them. \\
+
+Students should practice these methods more than the limited time devoted to them in lecture. Even though there aren't many practice problems, it is easy to find exercises for this module in any differential equations textbook.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Watch first video for each method
+\end{itemize}
+
 
 \end{lesson}
 
@@ -1006,6 +1215,39 @@ Slope field for $y(t)$
 
 
 %\newpage
+
+
+\begin{annotation}
+\begin{goals}
+	\Goal{Pre-Class exercise}
+	Let students know that they should solve this exercise at home before class.
+	
+	In class, quickly solve it.
+\end{goals}	
+\end{annotation}
+\question Consider the example in the video:
+
+$$
+\begin{cases}
+x \dfrac{dy}{dx} = y \\
+y(0)=b
+\end{cases}
+$$
+
+Without solving, but only according to the Existence and Uniqueness Theorem, what can we conclude?
+
+\begin{enumerate}[label=(\alph*)]
+	\item We can conclude that there is a unique solution.
+	\item We can conclude that if $b=0$ there are many solutions, but if $b\neq 0$, then there are no solutions.
+	\item We can conclude that there are many solutions.
+	\item We can conclude that there are no solutions.
+	\item We can't conclude anything.
+\end{enumerate}
+
+
+
+
+\bookonlynewpage
 
 \question For the following initial-value problems, answer the following questions:
 \begin{enumerate}[label=\color{gray}(\alph*)]
@@ -1173,6 +1415,33 @@ has the solutions
 \end{lesson}
 
 
+\begin{annotation}
+\begin{goals}
+	\Goal{Pre-Class exercise}
+	Let students know that they should solve this exercise at home before class.
+	
+	In class, quickly solve it.
+\end{goals}	
+\end{annotation}
+\question Consider the ODE from the video in the module.
+
+\begin{center}
+	\includegraphics*[width=200pt]{images/module14-preclass.png}
+\end{center}
+Select all the initial conditions that yield a decreasing solution.
+\begin{enumerate}
+	\item $x(-2)=\sqrt{2}$
+	\item $x(20\,000)=0.000000001$
+	\item $x(5)=\pi$
+	\item $x(0)=\frac12$
+	\item $x(3)=-\frac12$
+	\item $x(1000) = \frac1e$
+\end{enumerate}
+
+
+
+
+\bookonlynewpage
 
 
 %\newpage

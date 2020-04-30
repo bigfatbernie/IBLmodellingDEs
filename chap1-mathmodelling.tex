@@ -15,13 +15,13 @@ In this section, we study some strategies to model problems mathematically in an
 We also provide a structure to modelling problems by breaking them in small parts:
 
 \begin{enumerate}[label={\bf \arabic*.}]
-	\item \hyperref[define]{Define the problem}
+	\item \hyperref[moddefine]{Define the problem}
 	\item \hyperref[mindmap]{Build a mind map}
 	\item \hyperref[assumption]{Make assumptions}
 %	\item \hyperref[D-parvsvar]{Decide on your parameters and variables}
 	\item \hyperref[model]{Construct a model}
-	\item \hyperref[analysis]{Analysis of the model}
-	\item \hyperref[report]{Writing a report}
+	\item \hyperref[analysis]{Analyze the model}
+	\item \hyperref[report]{Write a report}
 \end{enumerate}
 
 \vspace{2cm}
@@ -76,7 +76,7 @@ In this chapter, we follow the approach of Bliss, Fowler, and Galluzzo from
 
 \begin{module}{Defining the Problem}
 	%\Title{Defining the Problem Statement}
-	\label{mod:define}
+	\label{moddefine}
 
 	\input{modules/module01-define.tex}
 	\input{modules/module01-define-exercises.tex}
@@ -86,22 +86,42 @@ In this chapter, we follow the approach of Bliss, Fowler, and Galluzzo from
 \begin{lesson}
 	\Title{Defining Problem Statement}
 
-	\Heading{Objectives}
+	
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 1
+	\end{itemize}
+
+\Heading{Objectives}
 	\begin{itemize}
 		\item The first step in Mathematical modelling is to define the problem
 		\item A good way to do this is to figure out what is the ``mathematical object'' we are looking for at the end of the process
 
-		\item The second step is to create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
 	\end{itemize}
 	
 \Heading{Motivation} 
 
 \begin{annotation}
+\begin{notes}
+\begin{itemize}
+	\item Students usually want to start thinking of ways to solve the problem.
+	
+	\item They need to learn to tackle a modelling task step-by-step.
+\end{itemize}
+\end{notes}	
+\end{annotation}
+
+Students have heard the words ``Model'' and ``Modelling'', yet they don't have a good idea what it means. \\
+
+The goal of this first chapter is to establish a common procedure to approach all  (or at least most) modelling tasks. \\
+
+The very first step in the procedure is to \emph{define the problem} in a clear and Mathematical way.
+
+
+\begin{annotation}
 	\begin{goals}
 	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+	\qrvideo{https://m3challenge.siam.org/resources/modeling-handbook}	
 	\end{goals}
 \end{annotation}
 	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
@@ -166,6 +186,15 @@ Elevator problem at theBigCompany
 %				and \emph{column vector notation}.
 %		\end{itemize}
 %	\end{notes}
+	\begin{notes}
+		
+		\begin{itemize}
+			\item Students will start discussing how to solve the problem
+			\item This question deals with what will happen \textbf{after} solving the problem
+			\item The goal of this question is to think about how to best tell a ``mathematically-challenged'' CEO that you solved the problem
+			\item Student teamwork: ``With your team, you must decide on one answer and be prepared to report on your decision and the reason for your choice.''
+		\end{itemize}
+	\end{notes}
 \end{annotation}
 
 
@@ -184,20 +213,9 @@ This is the email you received:
 
 What mathematical object would you use to convince the CEO that you have solved or improved the problem?
 
-%\begin{teamwork}
-%	With your team, you must decide on one answer and be prepared to report on your decision and the reason for your choice.	
-%\end{teamwork}
-\begin{annotation}
-	\begin{notes}
-		
-		\begin{itemize}
-			\item Students will start discussing how to solve the problem
-			\item This question deals with what will happen \textbf{after} solving the problem
-			\item The goal of this question is to think about how to best tell a ``mathematically-challenged'' CEO that you solved the problem
-			\item Student teamwork: ``With your team, you must decide on one answer and be prepared to report on your decision and the reason for your choice.''
-		\end{itemize}
-	\end{notes}
-\end{annotation}
+\begin{teamwork}
+	With your team, you must decide on \emph{one} answer and be prepared to report on your decision and the reason for your choice.	
+\end{teamwork}
 
 \bookonlynewpage
 
@@ -269,20 +287,33 @@ The mayor of Toronto wants to extend the subway line with a new \textbf{\color{o
 \begin{lesson}
 	\Title{Defining Problem Statement}
 
-	\Heading{Objectives}
+
+\Heading{Textbook}
 	\begin{itemize}
+		\item Module 2
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+%		\item The second step is to create a mind map of the problem. This is a structured way to brainstorm possible solutions, their requirements, and other objects that affect or are affected.
+
 		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+
+		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions, requirements, other objects that are related, etc.
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+In this step, students are supposed to brainstorm and relate the problem at hand with everything that is affected or can be affected by it.
+
+The idea is to get a simple visual representation of possible solutions, without all the details. \\
+
+This is a fundamental step in modelling.
 
 \begin{annotation}
 	\begin{goals}
 	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+	\qrvideo{https://m3challenge.siam.org/resources/modeling-handbook}	
 	\end{goals}
 \end{annotation}
 	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
@@ -313,7 +344,6 @@ Consider the elevator problem from question \ref{elevator-define}.
 	\end{notes}
 	
 \end{annotation}
-
 Your team decides that the mathematical object you will use to show the CEO that you solved or improved the problem is
 \begin{itemize}
 	\item $T=$ the sum in minutes by which every employee is late.
@@ -377,20 +407,44 @@ At peak times, a police officer is often posted at this intersection to \emph{op
 \begin{lesson}
 	\Title{Making Assumptions}
 
-	\Heading{Objectives}
+\Heading{Textbook} 
 	\begin{itemize}
-		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+		\item Module 3
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item The third step is to decide on a path to the solution and start making assumptions.
+		
+		\item This is a difficult balance between:
+		\begin{itemize}
+			\item Accuracy, but difficult to analyze/solve;
+			\item Simple, easy to analyze/solve but not very accurate.
+		\end{itemize}
+
+	\item Make sure assumptions and conditions of the modelling are clearly mentioned to the future reader/user of the model
 	\end{itemize}
 	
-	\Heading{Motivation} 
+	
+\Heading{Motivation} 
+
+Students often make assumptions explicitly and implicitly, but they often keep them out of their notes. In the end they forget to include them in the final report.
+
+\begin{annotation}
+\begin{goals}
+	\Goal{Assumptions.}
+	Include the assumptions in the model's final report.
+\end{goals}
+\end{annotation}
+It is imperative that they include their assumptions in the final report of their model.
+
+Moreover, students should make an effort to find out the implicit assumptions and the conditions that to the model that their assumptions require.
+
 
 \begin{annotation}
 	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+		\Goal{Extra Reading}
+		\qrvideo{https://m3challenge.siam.org/resources/modeling-handbook}	
 	\end{goals}
 \end{annotation}
 	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
@@ -431,15 +485,6 @@ We now give you some technical details about \nobreak{theBigCompany}:
 \email
 \end{minipage}
 
-\begin{parts} 
-
-	\item With your team, decide on what kind of information you would need to have to be able to solve this problem.
-
-	\item Find the relevant information about the elevators (search the internet, by experimentation). Check the reliability of the data you found.
-
-	\item For the relevant information that you cannot obtain, make assumptions. These assumptions should be reasonable and you should be able to justify them.
-\end{parts}
-
 \begin{annotation}
 	\begin{notes}
 		\begin{itemize}
@@ -457,6 +502,13 @@ We now give you some technical details about \nobreak{theBigCompany}:
 		\end{itemize}	
 	\end{notes}
 \end{annotation}
+\begin{parts} 
+	\item With your team, decide on what kind of information you would need to have to be able to solve this problem.
+
+	\item Find the relevant information about the elevators (search the internet, by experimentation). Check the reliability of the data you found.
+
+	\item For the relevant information that you cannot obtain, make assumptions. These assumptions should be reasonable and you should be able to justify them.
+\end{parts}
 
 
 
@@ -493,10 +545,18 @@ We now give you some technical details about \nobreak{theBigCompany}:
 
 
 \begin{module}{Construct a model}
-	%\Title{Construct a model}
+%	\Title{Construct a model}
 	\label{model}
 
 \begin{siam}
+
+In this module you will learn
+\begin{itemize}
+	\item how to build a model based on the previous steps
+\end{itemize}
+
+\hfill
+
 	\input{modules/module04-model.tex}
 	\input{modules/module04-model-exercises.tex}
 \end{siam}
@@ -508,20 +568,43 @@ We now give you some technical details about \nobreak{theBigCompany}:
 \begin{lesson}
 	\Title{Construct a model}
 
-	\Heading{Objectives}
+\Heading{Textbook} 
 	\begin{itemize}
-		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+		\item Module 4
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item The fourth step is to use the mind map created in step 2, the assumptions from step 3, and assemble everything into one model.
+		
+		\item The model is not the solution to the problem: it is the framework to solve the problem. 
 	\end{itemize}
 	
-	\Heading{Motivation} 
+
+\Heading{Motivation} 
+
+\begin{annotation}
+\begin{notes}
+	\begin{itemize}
+	\item Model $\neq$ Solution
+	\end{itemize}
+\end{notes}
+\end{annotation}
+Students usually think that the solution is the model that they need.
+
+Emphasize that students should see the example in the textbook to get an idea of what a model looks like.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Ask students to prepare the next core exercise before class.
+	\item They should combine their mind map(s) and assumptions from the previous lessons and come up with an idea of a model to discuss with their classmates in lecture.
+	\item There won't be enough time in class to finish the question if  students don't prepare in advance.
+\end{itemize}
 
 \begin{annotation}
 	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+		\Goal{Extra Reading}
+		\qrvideo{https://m3challenge.siam.org/resources/modeling-handbook}	
 	\end{goals}
 \end{annotation}
 	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
@@ -551,10 +634,15 @@ Recall the \hyperref[elevator-assumptions]{core exercise \ref{elevator-assumptio
 	\end{itemize}
 \end{itemize}
 
-\vspace{2cm}
+%\vspace{1 .5cm}
 
 Write down a mathematical model for this problem.
 \label{elevator-model}
+
+\begin{teamwork}
+Each team should have \emph{one} model and be prepared to present it to the class.	
+\end{teamwork}
+
 \end{minipage}
 \qquad
 \begin{minipage}{.5\textwidth}	
@@ -563,8 +651,32 @@ Write down a mathematical model for this problem.
 
 \begin{annotation}
 \begin{goals}
-	NEED LOTS OF INSTRUCTIONS FOR INSTRUCTORS HERE!
+	\Goal{Create a model.}
+	\begin{enumerate}[label=\textbf{\color{Cerulean}\arabic*.}]
+		\item Students should join in teams of 4 and come up with \emph{one model} for the team.
+		\item The model should include:
+		\begin{itemize}
+			\item Definition of the problem
+			\item Mind map
+			\item Assumptions and conditions
+			\item Clearly defined path to solve the problem
+		\end{itemize}
+		\item A few teams present their model for everyone else. 
+		\item Full class brainstorm about each model:
+		\begin{itemize}
+			\item Does it include all the parts specified?
+			\item Is it solvable? 
+			\item Could we make some extra assumptions to make it simpler?
+			\item Is it accurate?
+			\item Could we change something to make it more accurate without sacrificing simplicity?
+		\end{itemize}
+	\end{enumerate}
 \end{goals}	
+\begin{notes}
+\begin{itemize}
+	\item Solution should not be included!
+\end{itemize}	
+\end{notes}
 \end{annotation}
 
 
@@ -608,23 +720,40 @@ Write down a mathematical model for this problem.
 
 
 
+
 \begin{lesson}
 	\Title{Model Assessment}
 
-	\Heading{Objectives}
+\Heading{Textbook} 
 	\begin{itemize}
-		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+		\item Module 5
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item After creating a model, students should make an analysis of the model
+		\item The analysis is meant to test the model as well as obtain some of its consequences
+		\item If there is a solution to the model, here is where it can be found and analyzed
 	\end{itemize}
 	
-	\Heading{Motivation} 
+
+\Heading{Motivation} 
+
+Once a model is created, one must check if the model solves the problem it is meant to solve.
+There are different types of assessment for a model:
+\begin{itemize}
+	\item Check some known cases to see if it works as expected;
+	\item Check some extreme cases to see if it works as expected;
+	\item Check some implications of the model to make sure they are reasonable;
+	\item Check that the assumptions made are reasonable for the problem at hand;
+	\item If possible, use approximation methods to estimate the solution;
+	\item If possible, find the solution and analyze it.
+\end{itemize}
 
 \begin{annotation}
 	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
+		\Goal{Extra Reading}
+		\qrvideo{https://m3challenge.siam.org/resources/modeling-handbook}	
 	\end{goals}
 \end{annotation}
 	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
@@ -687,30 +816,44 @@ Continuing on the \hyperref[elevator-model]{elevator problem}, let us think of t
 \hfill
 
 \begin{annotation}
-	\begin{notes}
-
-Some questions to guide the students:
+\begin{notes}
+	Some questions to guide the students:
 	\begin{itemize}
-	\item What are the strengths?
-	\item What are the weaknesses?
-	\item Is the result around what you expected?
-\end{itemize}	
+		\item What are the strengths of this model?
+		\item What are the weaknesses of this model?
+		\item Is the result around what you expected?
+	\end{itemize}	
 	
-\hfill \\
-In case students don't realize that something is wrong:
-\begin{itemize}
-	\item People start arriving 30 minutes before the starting time, so \emph{almost everybody will be on time?}
-	\item Assume that the CEO of the BigCompany is right: people are arriving late! What's wrong with the model?
-
-	\item Which assumptions should be relaxed? Or checked?
-	\item If one needs to be replaced, by what?
+	\hfill \\
+	In case students don't realize that something is wrong:
+	\begin{itemize}
+		\item People start arriving 30 minutes before the starting time, so \emph{almost everybody will be on time?}
+		\item Assume that the CEO of the BigCompany is right: people are arriving late! What's wrong with the model?
+	
+		\item Which assumptions should be relaxed? Or checked?
+		\item If one needs to be replaced, by what?
+		\item Do we need extra assumptions? Which?
 	\end{itemize}
+\end{notes}
+\begin{goals}
+	\Goal{First make sure model works. Then try to find a solution.}
+	Notice that the model doesn't attempt to find a solution to the question. \\
 	
-	\end{notes}
+	If there weren't any problems with this model, we could then start asking other questions:
+	\begin{itemize}
+		\item How can we get people in their office faster? 
+		\item How will each idea affect the estimate?
+		\item Will they cost money to the company?
+	\end{itemize}
+\end{goals}
 \end{annotation}
 
 Your task is to assess this model.
 Be ready to report on your assessment.
+
+\begin{teamwork}
+Each team should have \emph{one} assessment and be prepared to present it to the class.	
+\end{teamwork}
 
 
 
@@ -751,28 +894,31 @@ Be ready to report on your assessment.
 
 
 
-\begin{lesson}
-	\Title{Putting it all together}
-
-	\Heading{Objectives}
-	\begin{itemize}
-		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-\begin{annotation}
-	\begin{goals}
-	\Goal{Extra Reading}
-	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-	
-	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-	\end{goals}
-\end{annotation}
-	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
-
-\end{lesson}
+%\begin{lesson}
+%	\Title{Putting it all together}
+%
+%\Heading{Textbook} 
+%	\begin{itemize}
+%		\item Module 6
+%	\end{itemize}
+%
+%\Heading{Objectives}
+%	\begin{itemize}
+%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
+%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
+%	\end{itemize}
+%	
+%\Heading{Motivation} 
+%
+%\begin{annotation}
+%	\begin{goals}
+%	\Goal{Extra Reading}
+%	\qrvideo{https://m3challenge.siam.org/resources/modeling-handbook}	
+%	\end{goals}
+%\end{annotation}
+%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+%
+%\end{lesson}
 
 
 

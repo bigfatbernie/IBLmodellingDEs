@@ -140,12 +140,12 @@
 	\togglefalse{solutions}
 	\togglefalse{book}
 }
-\newcommand{\setsolutions}{
-	\togglefalse{instructor}
-	\togglefalse{standard}
-	\toggletrue{solutions}
-	\togglefalse{book}
-}
+%\newcommand{\setsolutions}{
+%	\togglefalse{instructor}
+%	\togglefalse{standard}
+%	\toggletrue{solutions}
+%	\togglefalse{book}
+%}
 \newcommand{\setbook}{
 	\togglefalse{instructor}
 	\togglefalse{standard}
@@ -176,19 +176,20 @@
 	\voidenvironment{displayonly}
 	\renewcommand{\coversubtitle}{Instructor Guide}
 }{}
-\iftoggle{solutions}{
-	\voidenvironment{module}
-	\voidenvironment{bookonly}
-	\voidenvironment{displayonly}
-	\voidenvironment{lesson}
-	\voidenvironment{notes}
-	\renewcommand{\coversubtitle}{Solutions}
-}{}
+%\iftoggle{solutions}{
+%	\voidenvironment{module}
+%	\voidenvironment{bookonly}
+%	\voidenvironment{displayonly}
+%	\voidenvironment{lesson}
+%	\voidenvironment{notes}
+%	\renewcommand{\coversubtitle}{Solutions}
+%}{}
 \iftoggle{standard}{
 	\voidenvironment{module}
 	\voidenvironment{topic}
 	\voidenvironment{notstandard}
 	\voidenvironment{bookonly}
+	\voidenvironment{instructoronly}
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
 	\voidenvironment{lesson}
@@ -196,6 +197,7 @@
 }{}
 \iftoggle{book}{
 	\voidenvironment{displayonly}
+	\voidenvironment{instructoronly}
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
 	\voidenvironment{lesson}

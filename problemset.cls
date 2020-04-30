@@ -348,7 +348,7 @@
 		    ([shift={(0.55\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
 		    --
 		    ([shift={(0.55\pgflinewidth,0.05\pgflinewidth)}]current page.south west) 
-			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Lesson \thelessoncounter};  %FIGURE OUT HOW TO PUT THE LESSON TITLE HERE
+			node[anchor=east,pos=0.1,text=white,rotate=90] {\Huge\sffamily Lesson \thelessoncounter}; 
 		\end{tikzpicture}
 		
 	}{%
@@ -701,6 +701,9 @@
 	\DeclareDocumentEnvironment{bookonly}{o}{
 	}{%
 	}
+	\DeclareDocumentEnvironment{instructoronly}{o}{
+	}{%
+	}
 	\DeclareDocumentEnvironment{example}{o}{
 		\parskip=1.7mm
 		\renewcommand{\currentbackgroundcolor}{Red!4}
@@ -1000,7 +1003,8 @@
 \definecolor{Green}{HTML}{00A64F}
 \definecolor{Blue}{HTML}{2D2F92}
 \definecolor{cyan}{HTML}{00AEEF}
-\definecolor{Plum}{HTML}{92268F}
+%\definecolor{Plum}{HTML}{92268F}
+%\definecolor{Plum}{HTML}{92268F}
 \definecolor{Turquoise}{HTML}{00B4CE}
 \definecolor{myred}{HTML}{D13409}
 \definecolor{mypink}{HTML}{B3094F}
