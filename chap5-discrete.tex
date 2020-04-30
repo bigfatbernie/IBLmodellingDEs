@@ -105,12 +105,34 @@
 \begin{lesson}
 	\Title{Solving Difference Equations}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 23
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Understand the two main ideas: expansion or educated guessing
+		\item Use mathematical induction to show that the formula found is indeed the solution
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+
+Difference equations are a bit different from Differential equations.
+
+One of the possible ways to solve difference equations is very simple in its idea, but it is actually hard to do in practice.
+
+The second method to solve this type of equations is similar to the method we used before for systems and second-order ODEs.
+
+However, showing that a solution is indeed a solution is quite a bit more difficult. It involves using the Principle of Mathematical Induction (appendix 7.2).
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Watch videos
+	\item Solve the core exercise \ref{de:de1}
+\end{itemize}
 
 \end{lesson}
 
@@ -118,7 +140,7 @@
 
 
 
-\question	
+\question \label{de:de1}
 	Consider the difference equation
 	$$	u_{k+1} = 6 u_k - 9u_{k-1}	$$
 	
@@ -133,9 +155,7 @@
 
 
 \question
-	Consider a difference equation that has solutions $u_k = r^k$ for $r=2$ and $r=3$.
-	
-	We also have the conditions $u_0 = 7$ and $u_1=6$.
+	Consider a difference equation that has solutions $u_k = r^k$ for $r=2$ and $r=3$ and satisfies the conditions $u_0 = 7$ and $u_1=6$.
 	
 	What is $u_{22}$?
 
@@ -163,12 +183,29 @@
 \begin{lesson}
 	\Title{Modelling with Difference Equations I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 24
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Model economic quantities to obtain a difference equation
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+Economic quantities often change in bursts, not continuously. That's what happens to a savings account of the example in the textbook. So difference equations are a good tool to model these quantities.
+
+In lecture, the goal is to study the concept of effective annual interest.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook: Economic Models
+	\item Watch the corresponding video
+	\item Bring definition of {\tt effective annual interest}
+\end{itemize}
 
 \end{lesson}
 
@@ -179,7 +216,7 @@
 	The effective annual interest rate is the interest rate with a compounding period of 1 year that gives the same result s the rate of $p\%$ compounded every $\alpha$ years.
 \end{goals}
 \end{annotation}
-\question
+\question \label{de:economic}
 	Let us expand on the economic example above.
 	
 	We put a certain amount of money in a savings bank account with an annual interest rate of $p\%$, and compounded at regular periods of $\alpha$ (in years). \\
@@ -198,25 +235,43 @@
 \begin{lesson}
 	\Title{Modelling with Difference Equations II}
 
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 24
+	\end{itemize}
+
 \Heading{Objectives}
 	\begin{itemize}
-		\item Bla
+		\item Model a population to obtain a difference equation
 	\end{itemize}
 	
 \Heading{Motivation} 
+
+We have modelled populations using differential equations. Populations can be modelled using both differential or difference equations. Which kind of equations to use depends on the goal of the model and the assumptions that we make.
+
+In lecture, the goal is to study the concept of average lifespan.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook: Population Models
+	\item Watch the first corresponding video
+	\item Solve core exercise \ref{de:averagelifespan}
+\end{itemize}
 
 \end{lesson}
 
 
 
 
-\question The goal of this question is to try to understand the meaning of average lifespan.
+\question \label{de:averagelifespan}
+	The goal of this question is to try to understand the meaning of average lifespan.
 \begin{annotation}
 \begin{goals}
 	\Goal{Pre-class question}
 	The goal of this question is to prepare for calculating the average lifespan in the next page. \\
 
-	Not to do in lecture. Assign to students to solve at home before.
+	In class do it quickly.
 \end{goals}
 \end{annotation}
 \begin{parts}
@@ -290,26 +345,43 @@
 \begin{lesson}
 	\Title{Modelling with Difference Equations III}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 24
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Model a population to obtain a system of difference equations
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
 
+We now turn our attention to a different type of population model. 
+It's still a population model, but the reproduction of the population changes depending on the age.
+This means that a system of difference equations is a good way to model this.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Watch the second video about Population Models
+	\item Solve core exercise \ref{de:simplerabbits}
+\end{itemize}
 \end{lesson}
 
 
 
-\question
-	Consider a population of special rabbits. Once a pair of rabbits is born, they grow and one year later they are still immature. But two years after they are born they give birth to another pair of rabbits.
-	
 \begin{annotation}
 	\begin{goals}
-		If there is time, students should show that the Fibonacci sequence does indeed match the number of rabbits.
-	\end{goals}
+		\Goal{Pre-class exercise.}
+		\begin{itemize}
+			\item In class solve it quickly.
+			\item Let students know that they should use Mathematical Induction to prove that the Fibonacci sequence does indeed match the number of rabbits.
+		\end{itemize}
+\end{goals}
 \end{annotation}
-	Model this population of rabbits.	
+\question \label{de:simplerabbits}
+	Consider a population of special rabbits. Once a pair of rabbits is born, they grow and one year later they are still immature. But two years after they are born they give birth to another pair of rabbits.
+	Model this population of rabbits.
 
 	
 
@@ -329,13 +401,12 @@
 	\end{enumerate}	
 \begin{annotation}
 	\begin{goals}
-		Students might try to find a pattern. 
-		
-		It is possible, but very difficult.
-		
-		Hint: Use a system of difference equations. \\
-		
-		In core exercise \ref{rabbitscomplicatedproof}, the students are asked to prove the formula.
+		\begin{itemize}
+			\item Students might try to find a pattern. 
+			\item It is possible, but very difficult.
+			\item Hint: Use a system of difference equations. 
+			\item In core exercise \ref{rabbitscomplicatedproof}, the students are asked to prove the formula.
+		\end{itemize}
 	\end{goals}
 \end{annotation}
 	
@@ -347,106 +418,8 @@
 
 
 \standardonlynewpage
-%
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%%  MODULE - Models with probabilities
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%
-%
-%\begin{module}{Models with probabilities}
-%	\label{diff:prob}
-%
-%	\input{modules/module23-diff-prob.tex}
-%	\input{modules/module23-diff-prob-exercises.tex}
-%\end{module}
-%
-%
-%
-%\begin{lesson}
-%	\Title{Models with probabilities}
-%
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item Bla
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\end{lesson}
-%
-%
-%\newpage
-%
-%\question
-%	Core Exercise with several parts
-%\begin{parts}
-%	\item Part 1
-%	\item Part 2
-%\end{parts}
-%
-%\bookonlynewpage
-%
-%
-%\question
-%	One more core exercise
-%
-%
 
 
-
-
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%%  MODULE - Models for Two or More Interconnected Quantities
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%
-%
-%\begin{module}{Models for Two or More Interconnected Quantities}
-%	\label{diff:sys}
-%
-%	\input{modules/module26-diff-sys.tex}
-%	\input{modules/module26-diff-sys-exercises.tex}
-%\end{module}
-%
-%
-%
-%\begin{lesson}
-%	\Title{Models for Two or More Interconnected Quantities}
-%
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item Bla
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\end{lesson}
-%
-%
-%\newpage
-%
-%\question
-%	Core Exercise with several parts
-%\begin{parts}
-%	\item Part 1
-%	\item Part 2
-%\end{parts}
-%
-%\bookonlynewpage
-%
-%
-%\question
-%	One more core exercise
-%
-%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -468,19 +441,35 @@
 \begin{lesson}
 	\Title{Analysis of Difference Equations I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 25
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Deduce properties of solutions of difference equations using different approaches
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+
+Analyzing difference equations is similar to the different ways that we analyzed differential equations.
+
+Approximating solutions though is much easier as a difference equation is already in the form of a numerical method.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Solve the core exercise \ref{des:analysis1}.1--2.
+\end{itemize}
 
 \end{lesson}
 
 
 
 
-\question 
+\question \label{des:analysis1}
 	Consider the following difference equation:
 		$$u_{k+1} = a(u_k - b)$$
 
@@ -493,9 +482,12 @@
 			\item In the calculations for .2, there is a step that involves a division by $(1-a^2)$, so it can only be done for $a \neq \pm 1$.
 			\item The final result for .2 is:
 			\begin{align*}
-				a \neq \pm1. & \quad {\rm periodic} \Rightarrow u_0 = \frac{ab}{a-1} \quad & \Rightarrow & 1-{\rm periodic} \\
-				a = 1. & \quad {\rm periodic} \Rightarrow b=0  & \Rightarrow & 1-{\rm periodic} \\
-				a = -1. & \quad {\rm periodic} \Rightarrow b=0  & \Rightarrow & 2-\text{periodic if } u_0\neq 0
+				a \neq \pm1. & \quad {\rm periodic} \Rightarrow u_0 = \frac{ab}{a-1}\\
+							 & \Rightarrow  1-{\rm periodic} \\
+				a = 1. 	& \quad {\rm periodic} \Rightarrow b=0  \\
+						& \Rightarrow  1-{\rm periodic} \\
+				a = -1. & \quad {\rm periodic} \Rightarrow b=0  \\
+						& \Rightarrow  2-\text{periodic if } u_0\neq 0
 			\end{align*}
 		\end{itemize}
 	\end{goals}
@@ -562,15 +554,31 @@
 	\Title{Analysis of Difference Equations II}
 
 
+
+
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 25
+	\end{itemize}
+
 \Heading{Objectives}
 	\begin{itemize}
-		\item 
+		\item Deduce properties of solutions of difference equations using different approaches
 	\end{itemize}
 	
 \Heading{Motivation} 
 
-Finish core exercise \ref{DE:drunkard}.
-Then continue with rabbits.
+
+Analyzing difference equations is similar to the different ways that we analyzed differential equations.
+
+Approximating solutions though is much easier as a difference equation is already in the form of a numerical method.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Finish the core exercise \ref{DE:drunkard}.
+\end{itemize}
 
 \end{lesson}
 

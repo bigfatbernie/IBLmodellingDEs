@@ -53,19 +53,41 @@
 \begin{lesson}
 	\Title{Modelling with Second-Order ODEs I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 19
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Model physical phenomena to obtain a second-order ODE
+		\item Understand how to use Newton's Second Law of Motion
+		\item Follow the step-by-step procedure to create a model
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+By this point, the students should have a good idea on how the modelling task goes.
+
+Models about moving objects often require Newton's Second Law of Motion which end up having the form of a second-order ODE.
+
+Engineering and Physics students will find models like this often in their studies.
+
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Read the core exercise \ref{2nd:keyboard} and solve steps 1 (define problem), 2 (create a mind map), and 3 (make assumptions)
+\end{itemize}
+
 
 \end{lesson}
 
 
 
 
-\question
+\question \label{2nd:keyboard}
 	Here are some facts about laptop keys:
 
 \begin{itemize}
@@ -108,12 +130,29 @@
 \begin{lesson}
 	\Title{Modelling with Second-Order ODEs II}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 19
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Objectives}
+	\begin{itemize}
+		\item Model physical phenomena to obtain a second-order ODE
+		\item Understand how to use Newton's Second Law of Motion
+		\item Follow the step-by-step procedure to create a model
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+This class, students work on a model that involves a bit more of Linear Algebra (projections) and some ``uglier'' expressions.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Read the core exercise \ref{2nd:ballrolling} and solve steps 1 (define problem), 2 (create a mind map), and 3 (make assumptions)
+\end{itemize}
+
 
 \end{lesson}
 
@@ -159,7 +198,7 @@
 		\end{itemize}
 	\end{goals}
 \end{annotation}
-\question
+\question \label{2nd:ballrolling}
 	Model a ball rolling down a ramp.
 
 	
@@ -188,19 +227,42 @@
 \begin{lesson}
 	\Title{Second-Order Linear ODEs with Constant Coefficients I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 20
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Understand the main idea: assuming the solution is $y=e^{rt}$ and find $r$
+		\item Know how to find the characteristic equation and its solutions
+		\item Find the general solution of a homogeneous ODE
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+
+In this section we learn how to solve second-order linear ODEs with constant coefficients.
+
+We do that by assuming that the solution is an exponential of the form $y=e^{rt}$. The intuition behind this comes from the systems of ODEs that we just studied.
+
+Just like with systems, there are three possible cases, but its much simpler to solve them (especially the complex case).
+
+In this lesson, solve the core exercises \ref{2nd:ode1}--\ref{2nd:ode3} for the complementary solutions.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook: Homogeneous ODEs
+	\item Watch corresponding video
+	\item Solve the core exercise \ref{2nd:ode1}.1
+\end{itemize}
 
 \end{lesson}
 
 
 
 
-\question
+\question \label{2nd:ode1}
 	Consider the ODE \quad $y''(t) -9y(t) = f(t)$.
 \begin{parts}
 	\item Find a complementary solution.
@@ -211,19 +273,7 @@
 
 \bookonlynewpage
 
-\begin{lesson}
-	\Title{Second-Order Linear ODEs with Constant Coefficients II}
-
-	\Heading{Objectives}
-	\begin{itemize}
-		\item Bla
-	\end{itemize}
-	
-	\Heading{Motivation} 
-
-\end{lesson}
-
-\question
+\question \label{2nd:ode2}
 	Consider the ODE \quad $y''(t) -2y'(t)+5y(t) = f(t)$. %(roots $r = 1 \pm 2i$)
 \begin{parts}
 	\item Find a complementary solution.
@@ -237,7 +287,7 @@
 \bookonlynewpage
 
 
-\question
+\question \label{2nd:ode3}
 	Consider the ODE \quad $y'' + 3y' = 3t$.
 \begin{parts}
 	\item Find the complementary solution.
@@ -249,6 +299,42 @@
 	\end{cases}$$
 \end{parts}
 
+
+\begin{lesson}
+	\Title{Second-Order Linear ODEs with Constant Coefficients II}
+
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 20
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Write the solution of a non-homogeneous ODE as $y=y_c+y_p$
+		\item Use the Method of Undetermined Coefficients to find a particular solution
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+This will include some more linear algebra! 
+
+The Method of Undetermined Coefficients is very computational once the students have some practice with it. A good way to learn it is by giving only partial information and let students struggle a little before showing how to proceed: 
+\begin{itemize}
+	\item that's the idea behind core exercise \ref{2nd:ode1}, where the first two exercises are straight forwards, but then without more information the students will struggle to find the particular solution.
+	\item After a little struggle in lecture, the instructor can then show the way.
+\end{itemize}
+
+
+In this class, solve the core exercises \ref{2nd:ode1}--\ref{2nd:ode3} for the particular solutions.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook: Non-Homogeneous ODEs
+	\item Watch corresponding video
+	\item Solve the core exercise \ref{2nd:ode2}.2-3.
+\end{itemize}
+
+\end{lesson}
 
 
 
@@ -275,12 +361,27 @@
 \begin{lesson}
 	\Title{Analysis of Models with Higher Order ODEs I}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 21
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Deduce properties of solutions of second-order of ODEs using different approaches
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+As we have seen in the previous chapters, it is important to know how to analyze ODEs.
+
+In this first lesson about the Analysis of ODEs, we start with some more qualitative properties deduced without finding the solution.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Solve the core exercise \ref{2nd:analysis:ode1}.1
+\end{itemize}
 
 \end{lesson}
 
@@ -288,7 +389,7 @@
 
 
 
-\question
+\question \label{2nd:analysis:ode1}
 	Consider the second-order ODE:
 	$$
 	y''(t) - 3y(t) = t \big( 2 + \sin(t) \big).
@@ -306,6 +407,12 @@
 		\item Assume that $y(0)=0$ and $y'(0)=b$. Which values of $b$ guarantee that $y(t)>0$ for $t\geq 0$. 
 		\item Assume that $y(0)=a<0$ and $y'(0)=b$. Give an example of $a,b$ such that $y(t)$ is increasing for $t\geq 0$. 
 		\item Assume that $y(0)=0$ and $y'(0)=b$. Which values of $b$ guarantee that $y(t)<0$ for all $t>0$.
+\begin{annotation}
+\begin{goals}
+	If there is time, start the next core exercise.
+\end{goals}
+\end{annotation}
+
 
 %\begin{align*}
 %& y''(t) = t \big( 2 + \sin(t) \big)  + 3 y(t) < 0 
@@ -337,12 +444,31 @@
 \begin{lesson}
 	\Title{Analysis of Models with Higher Order ODEs II}
 
-	\Heading{Objectives}
+\Heading{Textbook}
 	\begin{itemize}
-		\item Bla
+		\item Module 21
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Deduce interesting behaviours:
+		\begin{itemize}
+			\item Resonance
+			\item Beats
+		\end{itemize}
 	\end{itemize}
 	
-	\Heading{Motivation} 
+\Heading{Motivation} 
+
+As we have seen in the previous chapters, it is important to know how to analyze ODEs.
+
+In this case, even after we find the solutions, the way they behave is hidden in the formula. We still need some work to find out the interesting behaviours that arise.
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Solve the core exercise \ref{2nd:analysis:ode2}.1--2
+\end{itemize}
 
 \end{lesson}
 
@@ -350,7 +476,7 @@
 \begin{goals}
 	\Goal{Goals:}
 	\begin{itemize}
-		\item 	Learn some different types of behaviour of for second-order ODEs
+		\item Learn some different types of behaviour of for second-order ODEs
 		\item Learn how to sketch trig functions combined with linear or other trig functions
 	\end{itemize}
 	
@@ -364,7 +490,7 @@
 	\end{enumerate}
 \end{goals}	
 \end{annotation}
-\question	
+\question \label{2nd:analysis:ode2}
 	Consider the second-order ODE:
 	$$
 	\begin{cases}
