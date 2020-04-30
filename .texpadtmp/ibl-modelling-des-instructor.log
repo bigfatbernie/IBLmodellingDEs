@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  29 APR 2020 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  30 APR 2020 14:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1692,7 +1692,7 @@ LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
 (Font)              scaled to size 25.85036pt on input line 9.
 
 
-LaTeX Warning: Hyper reference `define' on page 2 undefined on input line 18.
+LaTeX Warning: Hyper reference `moddefine' on page 2 undefined on input line 18.
 
 
 LaTeX Warning: Hyper reference `mindmap' on page 2 undefined on input line 19.
@@ -1861,24 +1861,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
  []
 
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 8.57605pt on input line 126.
+(Font)              scaled to size 8.57605pt on input line 131.
 
 
 <QR code requested for "https://m3challenge.siam.org/resources/modeling-handbook" in version 0-M.>
 <Copying the QR code for "https://m3challenge.siam.org/resources/modeling-handbook" in version 4-M as previously calculated.>
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--126
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
 [][]$\T1/cmtt/m/n/8 https : / / m3challenge . siam . org /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--126
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
 \T1/cmtt/m/n/8 resources / modeling-[]handbook$[]
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 129.
+Package pdftex.def Info: by-sa.pdf  used on input line 134.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1889,43 +1889,43 @@ This may cause the page layout to be inconsistent, however.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.129 \end{lesson}
+l.134 \end{lesson}
                    [3
 
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 159.
+(hyperref)                be the same. Added a new anchor on input line 164.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 
  []
 
 LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <10> not available
-(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 217.
+(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 222.
 LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
-(Font)              scaled to size 10.39001pt on input line 217.
+(Font)              scaled to size 10.39001pt on input line 222.
 LaTeX Font Info:    Font shape `T1/mdbch/b/it' will be
-(Font)              scaled to size 9.60007pt on input line 217.
+(Font)              scaled to size 9.60007pt on input line 222.
 <images/TTC.png, id=501, 1003.75pt x 453.695pt>
 File: images/TTC.png Graphic file (type png)
 <use images/TTC.png>
-Package pdftex.def Info: images/TTC.png  used on input line 238.
+Package pdftex.def Info: images/TTC.png  used on input line 243.
 (pdftex.def)             Requested size: 500.0pt x 226.00235pt.
 
-Overfull \hbox (110.28755pt too wide) in paragraph at lines 238--239
+Overfull \hbox (110.28755pt too wide) in paragraph at lines 243--244
  [] 
  []
 
@@ -1935,20 +1935,20 @@ Overfull \hbox (110.28755pt too wide) in paragraph at lines 238--239
 <Error-correction level increased from M to Q at no cost.>
 <Copying the QR code for "https://uoft.me/modelling-TTC" in version 3-Q as previously calculated.>
 
-Overfull \hbox (38.97362pt too wide) in paragraph at lines 240--243
+Overfull \hbox (38.97362pt too wide) in paragraph at lines 245--248
 $[]$ 
  []
 
 LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 9.35101pt on input line 245.
+(Font)              scaled to size 9.35101pt on input line 250.
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 288.
+Package pdftex.def Info: by-sa.pdf  used on input line 293.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.288 	\Title
+l.293 	\Title
              {Defining Problem Statement} [4 <./images/TTC.png>]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -1983,7 +1983,7 @@ l.288 	\Title
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
@@ -1992,18 +1992,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 309--310
 <QR code requested for "https://m3challenge.siam.org/resources/modeling-handbook" in version 0-M.>
 <Copying the QR code for "https://m3challenge.siam.org/resources/modeling-handbook" in version 4-M as previously calculated.>
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 [][]$\T1/cmtt/m/n/8 https : / / m3challenge . siam . org /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 \T1/cmtt/m/n/8 resources / modeling-[]handbook$[]
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 321.
+Package pdftex.def Info: by-sa.pdf  used on input line 333.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2014,22 +2014,22 @@ This may cause the page layout to be inconsistent, however.
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.321 \end{lesson}
+l.333 \end{lesson}
                    [5
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 329.
+(hyperref)                be the same. Added a new anchor on input line 341.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 408.
+Package pdftex.def Info: by-sa.pdf  used on input line 420.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [6]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2069,18 +2069,18 @@ Package pdftex.def Info: by-sa.pdf  used on input line 408.
 <QR code requested for "https://m3challenge.siam.org/resources/modeling-handbook" in version 0-M.>
 <Copying the QR code for "https://m3challenge.siam.org/resources/modeling-handbook" in version 4-M as previously calculated.>
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--449
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
 [][]$\T1/cmtt/m/n/8 https : / / m3challenge . siam . org /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--449
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
 \T1/cmtt/m/n/8 resources / modeling-[]handbook$[]
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 452.
+Package pdftex.def Info: by-sa.pdf  used on input line 469.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2093,41 +2093,41 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 460.
+(hyperref)                be the same. Added a new anchor on input line 477.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--485
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
 \T1/mdbch/b/n/10 To:  \T1/mdbch/m/n/10 (+20) Hu-man Re-sources
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--485
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--485
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--485
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
 
  []
 
 
-Overfull \hbox (20.99535pt too wide) in paragraph at lines 459--487
+Overfull \hbox (20.99535pt too wide) in paragraph at lines 476--504
 []$[]$  $[]$ 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 569.
+Package pdftex.def Info: by-sa.pdf  used on input line 586.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [8]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2167,18 +2167,18 @@ Package pdftex.def Info: by-sa.pdf  used on input line 569.
 <QR code requested for "https://m3challenge.siam.org/resources/modeling-handbook" in version 0-M.>
 <Copying the QR code for "https://m3challenge.siam.org/resources/modeling-handbook" in version 4-M as previously calculated.>
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--609
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
 [][]$\T1/cmtt/m/n/8 https : / / m3challenge . siam . org /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--609
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
 \T1/cmtt/m/n/8 resources / modeling-[]handbook$[]
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 612.
+Package pdftex.def Info: by-sa.pdf  used on input line 637.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2191,38 +2191,38 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 622.
+(hyperref)                be the same. Added a new anchor on input line 647.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
+Underfull \hbox (badness 10000) in paragraph at lines 674--674
 \T1/mdbch/b/n/10 To:  \T1/mdbch/m/n/10 (+20) Hu-man Re-sources
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
+Underfull \hbox (badness 10000) in paragraph at lines 674--674
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
+Underfull \hbox (badness 10000) in paragraph at lines 674--674
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
+Underfull \hbox (badness 10000) in paragraph at lines 674--674
 
  []
 
 
-Overfull \hbox (20.99535pt too wide) in paragraph at lines 621--651
+Overfull \hbox (20.99535pt too wide) in paragraph at lines 646--676
 []$[]$  $[]$ 
  []
 
 LaTeX Font Info:    Font shape `T1/cmss/m/it' will be
-(Font)              scaled to size 8.31201pt on input line 680.
+(Font)              scaled to size 8.31201pt on input line 705.
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 725.
+Package pdftex.def Info: by-sa.pdf  used on input line 750.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [10]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2262,18 +2262,18 @@ Package pdftex.def Info: by-sa.pdf  used on input line 725.
 <QR code requested for "https://m3challenge.siam.org/resources/modeling-handbook" in version 0-M.>
 <Copying the QR code for "https://m3challenge.siam.org/resources/modeling-handbook" in version 4-M as previously calculated.>
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--758
+Underfull \hbox (badness 10000) in paragraph at lines 790--790
 [][]$\T1/cmtt/m/n/8 https : / / m3challenge . siam . org /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--758
+Underfull \hbox (badness 10000) in paragraph at lines 790--790
 \T1/cmtt/m/n/8 resources / modeling-[]handbook$[]
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 761.
+Package pdftex.def Info: by-sa.pdf  used on input line 793.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2286,17 +2286,17 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 768.
+(hyperref)                be the same. Added a new anchor on input line 821.
 
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 803.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 803.
 
-Underfull \hbox (badness 10000) in paragraph at lines 849--849
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
 
  []
 
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 868.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 868.
 )
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
@@ -2347,7 +2347,7 @@ Package pdftex.def Info: by-sa.pdf  used on input line 9.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/chap2-xkcd.png, id=584, 323.40825pt x 487.8225pt>
+<images/chap2-xkcd.png, id=585, 323.40825pt x 487.8225pt>
 File: images/chap2-xkcd.png Graphic file (type png)
 <use images/chap2-xkcd.png>
 Package pdftex.def Info: images/chap2-xkcd.png  used on input line 17.
@@ -2425,7 +2425,7 @@ Package pdftex.def Info: by-sa.pdf  used on input line 25.
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 149.
+Package pdftex.def Info: by-sa.pdf  used on input line 158.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 
@@ -2440,51 +2440,51 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 171.
+(hyperref)                be the same. Added a new anchor on input line 180.
 
 \len=\skip77
 
-Overfull \hbox (6.25226pt too wide) in paragraph at lines 295--317
+Overfull \hbox (6.25226pt too wide) in paragraph at lines 304--326
 []   []
  []
 
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 8.48694pt on input line 371.
+(Font)              scaled to size 8.48694pt on input line 380.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 8.64006pt on input line 371.
+(Font)              scaled to size 8.64006pt on input line 380.
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 438.
+Package pdftex.def Info: by-sa.pdf  used on input line 447.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [16]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2520,18 +2520,18 @@ Package pdftex.def Info: by-sa.pdf  used on input line 438.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 473.
+Package pdftex.def Info: by-sa.pdf  used on input line 482.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2544,113 +2544,113 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 490.
+(hyperref)                be the same. Added a new anchor on input line 498.
 
-<images/module9-preclass.png, id=614, 396.0396pt x 304.9794pt>
+<images/module9-preclass.png, id=616, 396.0396pt x 304.9794pt>
 File: images/module9-preclass.png Graphic file (type png)
 <use images/module9-preclass.png>
-Package pdftex.def Info: images/module9-preclass.png  used on input line 500.
+Package pdftex.def Info: images/module9-preclass.png  used on input line 509.
 (pdftex.def)             Requested size: 125.0pt x 96.25981pt.
 
-Overfull \hbox (29.36711pt too wide) in paragraph at lines 492--502
+Overfull \hbox (29.36711pt too wide) in paragraph at lines 501--511
 []$[]$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--518
+Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
-<images/module9-catapult.pdf, id=616, 128.48pt x 90.3375pt>
+<images/module9-catapult.pdf, id=618, 128.48pt x 90.3375pt>
 File: images/module9-catapult.pdf Graphic file (type pdf)
 <use images/module9-catapult.pdf>
-Package pdftex.def Info: images/module9-catapult.pdf  used on input line 522.
+Package pdftex.def Info: images/module9-catapult.pdf  used on input line 531.
 (pdftex.def)             Requested size: 100.0pt x 70.31407pt.
-<images/module9-y.png, id=618, 539.01375pt x 499.8675pt>
+<images/module9-y.png, id=620, 539.01375pt x 499.8675pt>
 File: images/module9-y.png Graphic file (type png)
 <use images/module9-y.png>
-Package pdftex.def Info: images/module9-y.png  used on input line 529.
+Package pdftex.def Info: images/module9-y.png  used on input line 538.
 (pdftex.def)             Requested size: 215.65924pt x 200.0pt.
-<images/module9-yprime.png, id=620, 534.99875pt x 514.92375pt>
+<images/module9-yprime.png, id=622, 534.99875pt x 514.92375pt>
 File: images/module9-yprime.png Graphic file (type png)
 <use images/module9-yprime.png>
-Package pdftex.def Info: images/module9-yprime.png  used on input line 530.
+Package pdftex.def Info: images/module9-yprime.png  used on input line 539.
 (pdftex.def)             Requested size: 207.7915pt x 200.0pt.
 
-Overfull \hbox (57.7383pt too wide) in paragraph at lines 528--534
+Overfull \hbox (57.7383pt too wide) in paragraph at lines 537--543
 [][] 
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 546--546
+Underfull \hbox (badness 1917) in paragraph at lines 555--555
 \T1/cmss/m/n/8 (+20) ini-tial con-di-tions. What is a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
+Underfull \hbox (badness 10000) in paragraph at lines 555--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 559.
+Package pdftex.def Info: by-sa.pdf  used on input line 568.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [18 <./images/module9-preclass.png> <./images/module9-catapult.pdf> <./images/module9-y.png> <./images/module9-yprime.png>]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 579.
+(Font)              scaled to size 8.64006pt on input line 588.
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 604.
+Package pdftex.def Info: by-sa.pdf  used on input line 613.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
  [19]
-<images/module9-graph1.png, id=713, 532.99126pt x 551.05875pt>
+<images/module9-graph1.png, id=715, 532.99126pt x 551.05875pt>
 File: images/module9-graph1.png Graphic file (type png)
 <use images/module9-graph1.png>
-Package pdftex.def Info: images/module9-graph1.png  used on input line 617.
+Package pdftex.def Info: images/module9-graph1.png  used on input line 626.
 (pdftex.def)             Requested size: 145.08067pt x 150.0pt.
-<images/module9-graph2.png, id=715, 534.99875pt x 545.03625pt>
+<images/module9-graph2.png, id=717, 534.99875pt x 545.03625pt>
 File: images/module9-graph2.png Graphic file (type png)
 <use images/module9-graph2.png>
-Package pdftex.def Info: images/module9-graph2.png  used on input line 618.
+Package pdftex.def Info: images/module9-graph2.png  used on input line 627.
 (pdftex.def)             Requested size: 147.2353pt x 150.0pt.
-<images/module9-graph3.png, id=717, 572.1375pt x 568.1225pt>
+<images/module9-graph3.png, id=719, 572.1375pt x 568.1225pt>
 File: images/module9-graph3.png Graphic file (type png)
 <use images/module9-graph3.png>
-Package pdftex.def Info: images/module9-graph3.png  used on input line 619.
+Package pdftex.def Info: images/module9-graph3.png  used on input line 628.
 (pdftex.def)             Requested size: 151.05698pt x 150.0pt.
-<images/module9-graph4.png, id=719, 532.99126pt x 560.0925pt>
+<images/module9-graph4.png, id=721, 532.99126pt x 560.0925pt>
 File: images/module9-graph4.png Graphic file (type png)
 <use images/module9-graph4.png>
-Package pdftex.def Info: images/module9-graph4.png  used on input line 621.
+Package pdftex.def Info: images/module9-graph4.png  used on input line 630.
 (pdftex.def)             Requested size: 142.73843pt x 150.0pt.
-<images/module9-graph5.png, id=721, 532.99126pt x 542.025pt>
+<images/module9-graph5.png, id=723, 532.99126pt x 542.025pt>
 File: images/module9-graph5.png Graphic file (type png)
 <use images/module9-graph5.png>
-Package pdftex.def Info: images/module9-graph5.png  used on input line 622.
+Package pdftex.def Info: images/module9-graph5.png  used on input line 631.
 (pdftex.def)             Requested size: 147.49611pt x 150.0pt.
-<images/module9-graph6.png, id=723, 539.01375pt x 542.025pt>
+<images/module9-graph6.png, id=725, 539.01375pt x 542.025pt>
 File: images/module9-graph6.png Graphic file (type png)
 <use images/module9-graph6.png>
-Package pdftex.def Info: images/module9-graph6.png  used on input line 623.
+Package pdftex.def Info: images/module9-graph6.png  used on input line 632.
 (pdftex.def)             Requested size: 149.16273pt x 150.0pt.
 
-Overfull \hbox (89.92131pt too wide) in paragraph at lines 616--626
+Overfull \hbox (89.92131pt too wide) in paragraph at lines 625--635
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--628
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 683.
+Package pdftex.def Info: by-sa.pdf  used on input line 692.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [20 <./images/module9-graph1.png> <./images/module9-graph2.png> <./images/module9-graph3.png> <./images/module9-graph4.png> <./images/module9-graph5.png> <./images/module9-graph6.png>]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2686,13 +2686,13 @@ Package pdftex.def Info: by-sa.pdf  used on input line 683.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 703--704
+Underfull \hbox (badness 10000) in paragraph at lines 712--713
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 715.
+Package pdftex.def Info: by-sa.pdf  used on input line 724.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2703,42 +2703,42 @@ This may cause the page layout to be inconsistent, however.
 [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 754--754
+Underfull \hbox (badness 10000) in paragraph at lines 762--762
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--754
+Underfull \hbox (badness 10000) in paragraph at lines 762--762
 [][]$\T1/cmtt/m/n/8 https : / / www . desmos . com /
  []
 
-<images/module10-euler-error.pdf, id=752, 400.38585pt x 275.64581pt>
+<images/module10-euler-error.pdf, id=755, 400.38585pt x 275.64581pt>
 File: images/module10-euler-error.pdf Graphic file (type pdf)
 <use images/module10-euler-error.pdf>
-Package pdftex.def Info: images/module10-euler-error.pdf  used on input line 754.
+Package pdftex.def Info: images/module10-euler-error.pdf  used on input line 762.
 (pdftex.def)             Requested size: 100.0pt x 68.84398pt.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 756.
+(hyperref)                be the same. Added a new anchor on input line 764.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 838--838
+Underfull \hbox (badness 10000) in paragraph at lines 804--804
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--838
+Underfull \hbox (badness 10000) in paragraph at lines 846--846
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 846--846
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 903.
+Package pdftex.def Info: by-sa.pdf  used on input line 911.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [22 <./images/module10-euler-error.pdf>]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2774,13 +2774,13 @@ Package pdftex.def Info: by-sa.pdf  used on input line 903.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--919
+Underfull \hbox (badness 10000) in paragraph at lines 926--927
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 929.
+Package pdftex.def Info: by-sa.pdf  used on input line 937.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2791,22 +2791,22 @@ This may cause the page layout to be inconsistent, however.
 [23
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 954--954
+Underfull \hbox (badness 10000) in paragraph at lines 962--962
 
  []
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 956.
+(hyperref)                be the same. Added a new anchor on input line 964.
 
-<images/module11-pendulum.pdf, id=798, 104.39pt x 197.73875pt>
+<images/module11-pendulum.pdf, id=802, 104.39pt x 197.73875pt>
 File: images/module11-pendulum.pdf Graphic file (type pdf)
 <use images/module11-pendulum.pdf>
-Package pdftex.def Info: images/module11-pendulum.pdf  used on input line 976.
+Package pdftex.def Info: images/module11-pendulum.pdf  used on input line 984.
 (pdftex.def)             Requested size: 100.0pt x 189.4348pt.
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 997.
+Package pdftex.def Info: by-sa.pdf  used on input line 1005.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [24 <./images/module11-pendulum.pdf>]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2842,13 +2842,19 @@ Package pdftex.def Info: by-sa.pdf  used on input line 997.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1021
 
  []
 
+
+LaTeX Warning: Hyper reference `moddefine' on page 25 undefined on input line 1027.
+
+
+LaTeX Warning: Hyper reference `mindmap' on page 25 undefined on input line 1027.
+
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1022.
+Package pdftex.def Info: by-sa.pdf  used on input line 1030.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2861,11 +2867,11 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1025.
+(hyperref)                be the same. Added a new anchor on input line 1033.
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1050.
+Package pdftex.def Info: by-sa.pdf  used on input line 1058.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [26]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2901,18 +2907,18 @@ Package pdftex.def Info: by-sa.pdf  used on input line 1050.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1068
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1080.
+Package pdftex.def Info: by-sa.pdf  used on input line 1088.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2923,13 +2929,17 @@ This may cause the page layout to be inconsistent, however.
 [27
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 1108--1108
+
+ []
+
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1097.
+(hyperref)                be the same. Added a new anchor on input line 1110.
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1181.
+Package pdftex.def Info: by-sa.pdf  used on input line 1194.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [28]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2965,18 +2975,18 @@ Package pdftex.def Info: by-sa.pdf  used on input line 1181.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+Underfull \hbox (badness 10000) in paragraph at lines 1210--1211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1201--1202
+Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1212.
+Package pdftex.def Info: by-sa.pdf  used on input line 1228.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -2989,16 +2999,16 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1228.
+(hyperref)                be the same. Added a new anchor on input line 1242.
 
 
-Overfull \hbox (56.939pt too wide) in paragraph at lines 1304--1330
+Overfull \hbox (56.939pt too wide) in paragraph at lines 1283--1309
 []$[]$  $[]$ 
  []
 
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1395.
+Package pdftex.def Info: by-sa.pdf  used on input line 1406.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [30]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3033,11 +3043,20 @@ Package pdftex.def Info: by-sa.pdf  used on input line 1395.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1425--1426
+
+ []
+
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1415.
+Package pdftex.def Info: by-sa.pdf  used on input line 1439.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
-
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
 Make it at least 12.0pt.
@@ -3049,31 +3068,31 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1426.
+(hyperref)                be the same. Added a new anchor on input line 1448.
 
-<images/module14-preclass.png, id=875, 828.09375pt x 524.96124pt>
+<images/module14-preclass.png, id=883, 828.09375pt x 524.96124pt>
 File: images/module14-preclass.png Graphic file (type png)
 <use images/module14-preclass.png>
-Package pdftex.def Info: images/module14-preclass.png  used on input line 1429.
-(pdftex.def)             Requested size: 200.0pt x 126.78629pt.
+Package pdftex.def Info: images/module14-preclass.png  used on input line 1452.
+(pdftex.def)             Requested size: 190.0pt x 120.45016pt.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 1452.
+(Font)              scaled to size 11.52008pt on input line 1485.
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 1505.
+Package pdftex.def Info: by-sa.pdf  used on input line 1538.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [32 <./images/module14-preclass.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1543
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1547--1548
+Underfull \hbox (badness 10000) in paragraph at lines 1580--1581
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1554--1555
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 
  []
 
@@ -3118,7 +3137,7 @@ Package pdftex.def Info: by-sa.pdf  used on input line 289.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/chap3-xkcd.png, id=912, 590.205pt x 542.025pt>
+<images/chap3-xkcd.png, id=920, 590.205pt x 542.025pt>
 File: images/chap3-xkcd.png Graphic file (type png)
 <use images/chap3-xkcd.png>
 Package pdftex.def Info: images/chap3-xkcd.png  used on input line 16.
@@ -3461,7 +3480,7 @@ Package pdftex.def Info: by-sa.pdf  used on input line 8.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/chap4-xkcd.png, id=992, 742.775pt x 148.555pt>
+<images/chap4-xkcd.png, id=1000, 742.775pt x 148.555pt>
 File: images/chap4-xkcd.png Graphic file (type png)
 <use images/chap4-xkcd.png>
 Package pdftex.def Info: images/chap4-xkcd.png  used on input line 16.
@@ -3746,7 +3765,7 @@ Package pdftex.def Info: by-sa.pdf  used on input line 8.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/chap5-xkcd.png, id=1050, 545.6385pt x 240.29774pt>
+<images/chap5-xkcd.png, id=1058, 545.6385pt x 240.29774pt>
 File: images/chap5-xkcd.png Graphic file (type png)
 <use images/chap5-xkcd.png>
 Package pdftex.def Info: images/chap5-xkcd.png  used on input line 25.
@@ -4021,7 +4040,7 @@ Overfull \hbox (83.12038pt too wide) detected at line 483
 []
  []
 
-<images/module26-drunk.pdf, id=1093, 449.68pt x 229.85875pt>
+<images/module26-drunk.pdf, id=1101, 449.68pt x 229.85875pt>
 File: images/module26-drunk.pdf Graphic file (type pdf)
 <use images/module26-drunk.pdf>
 Package pdftex.def Info: images/module26-drunk.pdf  used on input line 503.
@@ -4097,7 +4116,7 @@ Package pdftex.def Info: by-sa.pdf  used on input line 348.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/chap6-xkcd.png, id=1138, 786.46765pt x 278.45206pt>
+<images/chap6-xkcd.png, id=1147, 786.46765pt x 278.45206pt>
 File: images/chap6-xkcd.png Graphic file (type png)
 <use images/chap6-xkcd.png>
 Package pdftex.def Info: images/chap6-xkcd.png  used on input line 15.
@@ -4553,12 +4572,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-<images/project-wing-Electra_1959.jpg, id=1291, 627.34375pt x 454.69875pt>
+<images/project-wing-Electra_1959.jpg, id=1299, 627.34375pt x 454.69875pt>
 File: images/project-wing-Electra_1959.jpg Graphic file (type jpg)
 <use images/project-wing-Electra_1959.jpg>
 Package pdftex.def Info: images/project-wing-Electra_1959.jpg  used on input line 10.
 (pdftex.def)             Requested size: 206.95706pt x 150.0pt.
-<images/project-wing-Electra_1960a.jpg, id=1293, 652.4375pt x 512.91624pt>
+<images/project-wing-Electra_1960a.jpg, id=1301, 652.4375pt x 512.91624pt>
 File: images/project-wing-Electra_1960a.jpg Graphic file (type jpg)
 <use images/project-wing-Electra_1960a.jpg>
 Package pdftex.def Info: images/project-wing-Electra_1960a.jpg  used on input line 12.
@@ -4625,7 +4644,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
 
-<images/project-wing-wing.pdf, id=1304, 439.6425pt x 303.1325pt>
+<images/project-wing-wing.pdf, id=1312, 439.6425pt x 303.1325pt>
 File: images/project-wing-wing.pdf Graphic file (type pdf)
 <use images/project-wing-wing.pdf>
 Package pdftex.def Info: images/project-wing-wing.pdf  used on input line 65.
@@ -4640,7 +4659,7 @@ File: by-sa.pdf Graphic file (type pdf)
 Package pdftex.def Info: by-sa.pdf  used on input line 70.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [76 <./images/project-wing-wing.pdf>]
-<images/project-wing-wing2.pdf, id=1328, 431.6125pt x 303.1325pt>
+<images/project-wing-wing2.pdf, id=1336, 431.6125pt x 303.1325pt>
 File: images/project-wing-wing2.pdf Graphic file (type pdf)
 <use images/project-wing-wing2.pdf>
 Package pdftex.def Info: images/project-wing-wing2.pdf  used on input line 129.
@@ -4709,7 +4728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
 <QR code requested for "http://forio.com/about/blog/bullwhips-and-beer/" in version 0-M.>
 <Copying the QR code for "http://forio.com/about/blog/bullwhips-and-beer/" in version 4-M as previously calculated.>
-<images/project-bullwhip-Near_Beer_Game.png, id=1367, 968.61874pt x 554.07pt>
+<images/project-bullwhip-Near_Beer_Game.png, id=1376, 968.61874pt x 554.07pt>
 File: images/project-bullwhip-Near_Beer_Game.png Graphic file (type png)
 <use images/project-bullwhip-Near_Beer_Game.png>
 Package pdftex.def Info: images/project-bullwhip-Near_Beer_Game.png  used on input line 32.
@@ -4812,7 +4831,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<images/project-numericalPDE-domain.pdf, id=1423, 328.22626pt x 258.9675pt>
+<images/project-numericalPDE-domain.pdf, id=1431, 328.22626pt x 258.9675pt>
 File: images/project-numericalPDE-domain.pdf Graphic file (type pdf)
 <use images/project-numericalPDE-domain.pdf>
 Package pdftex.def Info: images/project-numericalPDE-domain.pdf  used on input line 27.
@@ -4839,7 +4858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-<images/project-numericalPDE-domain2.pdf, id=1471, 418.56375pt x 258.9675pt>
+<images/project-numericalPDE-domain2.pdf, id=1479, 418.56375pt x 258.9675pt>
 File: images/project-numericalPDE-domain2.pdf Graphic file (type pdf)
 <use images/project-numericalPDE-domain2.pdf>
 Package pdftex.def Info: images/project-numericalPDE-domain2.pdf  used on input line 149.
@@ -4974,19 +4993,19 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 56135 strings out of 492616
- 1238843 string characters out of 6129482
- 1890254 words of memory out of 5000000
- 58142 multiletter control sequences out of 15000+600000
- 670603 words of font info for 517 fonts, out of 8000000 for 9000
+ 56149 strings out of 492616
+ 1239082 string characters out of 6129482
+ 1891828 words of memory out of 5000000
+ 58153 multiletter control sequences out of 15000+600000
+ 670733 words of font info for 518 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,17n,136p,1336b,1356s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsi0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx2074
 .pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des-instructor.pdf" (93 pages, 2651863 bytes).
+Output written on "/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des-instructor.pdf" (93 pages, 2655385 bytes).
 PDF statistics:
- 1736 PDF objects out of 2073 (max. 8388607)
- 1458 compressed objects within 15 object streams
- 473 named destinations out of 1000 (max. 500000)
+ 1744 PDF objects out of 2073 (max. 8388607)
+ 1466 compressed objects within 15 object streams
+ 474 named destinations out of 1000 (max. 500000)
  73933 words of extra memory for PDF output out of 74296 (max. 10000000)
 

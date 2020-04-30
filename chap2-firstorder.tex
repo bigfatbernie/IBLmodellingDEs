@@ -134,17 +134,26 @@ This is an introduction to differential equations.
 Students have different levels of experience with differential equations. We want to establish a common notation.
 
 
-\Heading{Preparation for Class}
-\begin{itemize}
-	\item Students should bring an ODE of their choice to class with some information about it
+
+\begin{annotation}
+\begin{goals}
+	\Goal{Using pre-class ODEs.}
 	\begin{itemize}
-		\item Put about 8 ODEs on the board
+		\item At the start of class, put about 8 student ODEs on the board
 		\item Get students to identify them: order + linearity
 		\item Get some info about the ODEs to the whole class
 	\end{itemize}
+\end{goals}	
+\end{annotation}
 
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Students should bring an ODE of their choice to class with some information about it
 	\item Read textbook modules.
 \end{itemize}
+
+
+
 
 \end{lesson}
 
@@ -467,7 +476,7 @@ Slope fields should be used to help interpret solutions of ODEs.
 \begin{itemize}
 	\item Read textbook
 	\item Watch first video (second is optional)
-	\item Solve first core exercise for this lesson/module
+	\item Solve the core exercise \ref{slopefields:preclass}
 \end{itemize}
  
 \end{lesson}
@@ -482,12 +491,12 @@ Slope fields should be used to help interpret solutions of ODEs.
 \begin{annotation}
 \begin{goals}
 	\Goal{Pre-Class exercise}
-	Let students know that they should solve this exercise at home before class.
 	
 	In class, quickly solve it.
 \end{goals}	
 \end{annotation}
-\question Consider the slope field from the first video of the module.
+\question \label{slopefields:preclass}
+	Consider the slope field from the first video of the module.
 	
 \begin{minipage}{.75\textwidth}
 \begin{parts}
@@ -709,7 +718,7 @@ This is probably one of the most important tools for an Engineer or a Physicist 
 \begin{itemize}
 	\item Read textbook
 	\item Watch first video (second is optional -- algebraic approach of approximating the derivative)
-	\item Solve first core exercise for this lesson/module
+	\item Solve the core exercise \ref{approx:preclass}
 \end{itemize}
 
 \end{lesson}
@@ -721,7 +730,6 @@ This is probably one of the most important tools for an Engineer or a Physicist 
 \begin{annotation}
 	\begin{goals}
 	\Goal{Pre-class exercise}
-		Let students know that they should solve this exercise at home before class. 
 		
 		In class, quickly solve it. \\
 
@@ -753,7 +761,7 @@ This is probably one of the most important tools for an Engineer or a Physicist 
 	\end{goals}
 \end{annotation}		
 
-\question
+\question \label{approx:preclass}
 	Consider the initial-value problem
 	$$
 	\begin{cases}
@@ -923,7 +931,7 @@ Students should be given the opportunity to create models in class. They should 
 \Heading{Preparation for Class}
 \begin{itemize}
 	\item Read textbook
-	\item Read the first core exercise and solve steps 1 (define problem) and 2 (create a mind map)
+	\item Read the core exercise \ref{pendulum} and solve steps 1 (define problem) and 2 (create a mind map)
 \end{itemize}
 
 \end{lesson}
@@ -1016,7 +1024,7 @@ They should practice developing more open ended models.
 \Heading{Preparation for Class}
 \begin{itemize}
 	\item Read textbook
-	\item Read the first core exercise and solve steps 1 (define problem) and 2 (create a mind map)
+	\item Read the core exercise \ref{rumour} and solve steps \hyperref[moddefine]{1} (define problem) and \hyperref[mindmap]{2} (create a mind map)
 \end{itemize}
 
 \end{lesson}
@@ -1089,9 +1097,14 @@ Students should practice these methods more than the limited time devoted to the
 \begin{goals}
 	\begin{itemize}
 		\item First, ask students to identify all the ODEs
-		\item Then, students can start solving them one by one
+		\item Then, students can start solving them one by one \\
 	\end{itemize}
 \end{goals}	
+\begin{notes}
+	\begin{itemize}
+		\item Make sure there is time for next core exercise. Skip some ODEs if necessary.
+	\end{itemize}	
+\end{notes}
 \end{annotation}
 
 \question 
@@ -1187,25 +1200,28 @@ Students should practice these methods more than the limited time devoted to the
 
 \Heading{Objectives}
 	\begin{itemize}
-		\item HERE HERE HERE HERE HERE HERE HERE
-		\item Identify a Separable ODE
-		\item Know how to solve a Separable ODE
-		\item Identify a first-order linear ODE
-		\item Know how to solve a first-order linear ODE: Method of the Integrating Factor
+		\item Identify which Theorem to use for a given ODE
+		\item Know the Existence and Uniqueness Theorems
+		\item Deduce properties of the solutions from the Theorems
 	\end{itemize}
 	
 \Heading{Motivation} 
 
-This is the traditional class on differential equations. \\
+This is a little glimpse into the theory of Differential Equations. \\
 
-Even though the focus of the course is not on recipes for solving differential equations, when creating a model that involves a differential equation and analyzing it, it is necessary to be aware of some of the basic methods for solving them. \\
+Knowing whether a differential equation has solutions, and whether there is one unique solution is important on its own right.
 
-Students should practice these methods more than the limited time devoted to them in lecture. Even though there aren't many practice problems, it is easy to find exercises for this module in any differential equations textbook.
+But even from a more applied point-of-view, these Theorems offer consequences to the behaviour of solutions of differential equations that make them very important. \\
+
+One of these properties is the fact that in the region in the $(t,y)$-plane where the Theorems' conditions are satisfied, solutions cannot intersect.
+
 
 \Heading{Preparation for Class}
 \begin{itemize}
 	\item Read textbook
-	\item Watch first video for each method
+	\item Watch first video: about the Theorem for Nonlinear ODEs
+	\item Watch the second video: short example video
+	\item Solve the core exercise \ref{prop:preclass}
 \end{itemize}
 
 
@@ -1219,14 +1235,11 @@ Students should practice these methods more than the limited time devoted to the
 
 \begin{annotation}
 \begin{goals}
-	\Goal{Pre-Class exercise}
-	Let students know that they should solve this exercise at home before class.
-	
+	\Goal{Pre-Class exercise}	
 	In class, quickly solve it.
 \end{goals}	
 \end{annotation}
-\question Consider the example in the video:
-
+\question \label{prop:preclass}Consider the example in the video:
 $$
 \begin{cases}
 x \dfrac{dy}{dx} = y \\
@@ -1235,8 +1248,7 @@ y(0)=b
 $$
 
 Without solving, but only according to the Existence and Uniqueness Theorem, what can we conclude?
-
-\begin{enumerate}[label=(\alph*)]
+\begin{enumerate}[label=\color{gray}(\alph*)]
 	\item We can conclude that there is a unique solution.
 	\item We can conclude that if $b=0$ there are many solutions, but if $b\neq 0$, then there are no solutions.
 	\item We can conclude that there are many solutions.
@@ -1255,15 +1267,72 @@ Without solving, but only according to the Existence and Uniqueness Theorem, wha
 
 \item Without solving, what is its domain?
 \end{enumerate}
-
-
-
-
 \begin{parts}
 	\item $y' = t + \frac{y}{t-\pi}$ with $y(1) = 1$
 	\item $y' = t + \sqrt{y-\pi}$ with $y(1) = 1$
 	\item $y' = \sqrt{4 - (t^2+y^2)}$ with $y(1) = 1$
 \end{parts}
+
+
+
+
+
+
+\bookonlynewpage
+
+\begin{minipage}{.5\textwidth}
+\question Consider a differential equation $y' = f(t,y)$ where 
+\begin{itemize}
+	\item $f(t,y)$ is continuous for all $t,y \in \mathbb{R}$;
+	\item $\frac{\partial f}{\partial y}(t,y)$ is continuous for all $t \in \mathbb{R}$,$y>0$.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{250pt}
+%Consider the following graph:
+%\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thick,-{\seta}] (-4,0) -- (4,0) node[above] {\small $t$};
+  \draw[thick,-{\seta}] (0,-2) -- (0,2) node[left] {\small $y$};
+  \draw[samples=40, ultra thick,domain=-4:4,smooth,variable=\x,cyan] plot ({\x},{sin(1.5*deg(\x))/2-\x/4}) node[below] {$y_3$};
+  \draw[samples=40, ultra thick,domain=0.075:4,smooth,variable=\x,gray] plot ({\x},{-1/((\x^(0.33))+\x)}) node[below] {$y_2$};
+  \draw[samples=40, ultra thick,domain=-2.35:3,smooth,variable=\x,green] plot ({\x-1.5},{\x*\x*\x/8-\x*\x/3+1.6}) node[right] {$y_1$};
+  \draw[dashed] (1,-2) -- (1,2);
+  \draw (1,0) node[below] {$t_0$};
+  \draw (1,-0.5) node {\tikzcircle[gray,fill=gray!50!white]{2pt}};
+  \draw (1,{(2.5^3)/8-(2.5^2)/3+1.6}) node {\tikzcircle[green,fill=green!50!white]{2pt}};
+  \draw (1,{sin(1.5*deg(1))/2-1/4}) node {\tikzcircle[cyan,fill=cyan!50!white]{2pt}};
+\end{tikzpicture}
+%	\includegraphics*[width=250pt]{images/module13-3graphs.pdf}
+%\end{center}
+\end{minipage}
+
+\begin{annotation}
+\begin{goals}
+	\Goal{Intersecting solutions?}
+	The goal is for students to understand why solutions cannot touch \emph{IF} the Theorem is valid at the intersection point.
+	
+	\begin{itemize}
+		\item  $y1$, $y_3$ not ok!
+		\item  $y1$, $y_2$ ok!
+		\item  $y2$, $y_3$ ok!
+	\end{itemize}
+\end{goals}	
+\end{annotation}
+\begin{parts}
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{cyan} blue $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
+	\item Can \textbf{\color{gray} gray $y2$} and \textbf{\color{cyan} blue $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
+
+	\item Based on the answers to the three parts above, write a Corollary to the Existence and Uniqueness Theorems.
+\end{parts}
+
+
+
+
+
+
+
 
 
 \bookonlynewpage
@@ -1295,65 +1364,7 @@ has the solutions
 
 \end{parts}
 
-
-
-
-
-\bookonlynewpage
-
-\begin{minipage}{.5\textwidth}
-\question Consider a differential equation $y' = f(t,y)$ where 
-\begin{itemize}
-	\item $f(t,y)$ is continuous for all $t,y \in \mathbb{R}$;
-	\item $\frac{\partial f}{\partial y}(t,y)$ is continuous for all $t \in \mathbb{R}$,$y>0$.
-\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{250pt}
-%Consider the following graph:
-%\begin{center}
-\begin{tikzpicture}
-  \draw[thick,-{\seta}] (-4,0) -- (4,0) node[above] {\small $t$};
-  \draw[thick,-{\seta}] (0,-2) -- (0,2) node[left] {\small $y$};
-  \draw[samples=40, ultra thick,domain=-4:4,smooth,variable=\x,cyan] plot ({\x},{sin(1.5*deg(\x))/2-\x/4}) node[below] {$y_3$};
-  \draw[samples=40, ultra thick,domain=0.075:4,smooth,variable=\x,gray] plot ({\x},{-1/((\x^(0.33))+\x)}) node[below] {$y_2$};
-  \draw[samples=40, ultra thick,domain=-2.35:3,smooth,variable=\x,green] plot ({\x-1.5},{\x*\x*\x/8-\x*\x/3+1.6}) node[right] {$y_1$};
-  \draw[dashed] (1,-2) -- (1,2);
-  \draw (1,0) node[below] {$t_0$};
-  \draw (1,-0.5) node {\tikzcircle[gray,fill=gray!50!white]{2pt}};
-  \draw (1,{(2.5^3)/8-(2.5^2)/3+1.6}) node {\tikzcircle[green,fill=green!50!white]{2pt}};
-  \draw (1,{sin(1.5*deg(1))/2-1/4}) node {\tikzcircle[cyan,fill=cyan!50!white]{2pt}};
-\end{tikzpicture}
-%	\includegraphics*[width=250pt]{images/module13-3graphs.pdf}
-%\end{center}
-\end{minipage}
-
-\begin{annotation}
-\begin{goals}
-	\Goal{Intersecting solutions?}
-	The goal is for students to understand why solutions cannot touch \emph{IF} the Theorem is valid at the intersection point.
-	
-	\begin{itemize}
-		\item  $y1$, $y_2$ not ok!
-		\item  $y1$, $y_3$ ok!
-		\item  $y2$, $y_3$ ok!
-	\end{itemize}
-\end{goals}	
-\end{annotation}
-\begin{parts}
-	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{cyan} blue $y3$} be two solutions of the same differential equation above with two different initial conditions? Why?
-	\item Can \textbf{\color{green} green $y1$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
-	\item Can \textbf{\color{cyan} blue $y3$} and \textbf{\color{gray} gray $y2$} be two solutions of the same differential equation above with two different initial conditions? Why?
-
-	\item Based on the answers to the three parts above, write a Corollary to the Existence and Uniqueness Theorems.
-\end{parts}
-
-
-
-
-
-
-
+\paragraph{Hint.} ``When you have eliminated the impossible, whatever remains, however improbable, must be the truth.'' -- Sherlock Holmes
 
 
 
@@ -1394,23 +1405,36 @@ has the solutions
 \begin{lesson}
 	\Title{Autonomous Differential Equations}
 
-%	\Heading{Objectives}
-%	\begin{itemize}
-%		\item The second step in Mathematical modelling is to construct a representation of how the team will be attempting to solve the problem.
-%		\item Create a mind map of the problem. This is a structured way to brainstorm possible solutions and their requirements.
-%	\end{itemize}
-%	
-%	\Heading{Motivation} 
-%
-%\begin{annotation}
-%	\begin{goals}
-%	\Goal{Extra Reading}
-%	Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo
-%	
-%	\hfill \qrcode{https://m3challenge.siam.org/resources/modeling-handbook}	
-%	\end{goals}
-%\end{annotation}
-%	\Heading{Extra Reading} \href{https://m3challenge.siam.org/resources/modeling-handbook}{Math Modelling: Getting started and getting solutions, Bliss-Fowler-Galluzzo}
+\Heading{Textbook}
+	\begin{itemize}
+		\item Module 14
+	\end{itemize}
+
+\Heading{Objectives}
+	\begin{itemize}
+		\item Identify an Autonomous ODE
+		\item Find and plot equilibrium solutions
+		\item Sketch solutions of an autonomous ODE without solving it
+		\item Classify equilibrium solutions
+	\end{itemize}
+	
+\Heading{Motivation} 
+
+Even though nonlinear ODEs are in general very hard to study, Autonomous ODEs, which are often nonlinear, are an exception. \\
+
+These are ODEs of the form $y'=f(y)$, which can usually be thoroughly studied without having to find their solution. \\
+
+One of the key ways that we use to study Autonomous equations is to find equilibrium points and classify them as stable / unstable.
+This will be extended to systems of ODEs.
+
+
+\Heading{Preparation for Class}
+\begin{itemize}
+	\item Read textbook
+	\item Watch the video
+	\item Solve the core exercise \ref{autonomous:preclass}
+\end{itemize}
+
 
 \end{lesson}
 
@@ -1418,18 +1442,17 @@ has the solutions
 \begin{annotation}
 \begin{goals}
 	\Goal{Pre-Class exercise}
-	Let students know that they should solve this exercise at home before class.
-	
 	In class, quickly solve it.
 \end{goals}	
 \end{annotation}
-\question Consider the ODE from the video in the module.
+\question \label{autonomous:preclass}
+	Consider the ODE from the video in the module.
 
 \begin{center}
-	\includegraphics*[width=200pt]{images/module14-preclass.png}
+	\includegraphics*[width=190pt]{images/module14-preclass.png}
 \end{center}
 Select all the initial conditions that yield a decreasing solution.
-\begin{enumerate}
+\begin{enumerate}[label=\color{gray}(\alph*)]
 	\item $x(-2)=\sqrt{2}$
 	\item $x(20\,000)=0.000000001$
 	\item $x(5)=\pi$
@@ -1446,6 +1469,16 @@ Select all the initial conditions that yield a decreasing solution.
 
 %\newpage
 
+\begin{annotation}
+\begin{goals}
+	\begin{itemize}
+		\item \emph{1--3}: Students come up with a definition of stable, unstable, semi-stable equilibrium points.
+		\item \emph{4}: Sketch solutions (do (a),(b) in class)
+		\item \emph{5--6}: Find properties of solutions
+		\item \emph{7}: Leave as HW
+	\end{itemize}
+\end{goals}	
+\end{annotation}
 \question Consider the differential equation \quad $y'=f(y)$ \quad where $f(y)$ is given by the following graph:
 \begin{center}
 	\begin{tikzpicture}
@@ -1536,7 +1569,7 @@ $$
 
 \item From the direction field above, circle the correct type(s) of this ODE? Justify your answer.
 
-\begin{enumerate}[label={\bf (\alph*)}]
+\begin{enumerate}[label=\color{gray}(\alph*)]
 \hfil 
 \begin{minipage}{.3\textwidth}
 \item separable. \\[-10pt]
@@ -1553,7 +1586,7 @@ $$
 
 \hfill (select all the possible options)\\[-10pt]
 
-\begin{enumerate}[label={\bf (\alph*)}]
+\begin{enumerate}[label=\color{gray}(\alph*)]
 \hfil 
 \begin{minipage}{.2\textwidth}
 \item $g(3) < h(3)$
