@@ -1,0 +1,97 @@
+\contentsline {section}{\numberline {1}Mathematical Modelling}{2}{section.1}% 
+\contentsline {section}{Lesson 1: Defining Problem Statement}{3}{Item.15}% 
+\contentsline {subsection}{1}{4}{section*.1}% 
+\contentsline {subsection}{2}{4}{section*.1}% 
+\contentsline {section}{Lesson 2: Defining Problem Statement}{5}{Item.17}% 
+\contentsline {subsection}{3}{6}{section*.2}% 
+\contentsline {subsection}{4}{6}{section*.2}% 
+\contentsline {section}{Lesson 3: Making Assumptions}{7}{Item.19}% 
+\contentsline {subsection}{5}{8}{section*.3}% 
+\contentsline {subsection}{6}{8}{Item.22}% 
+\contentsline {section}{Lesson 4: Construct a model}{9}{Item.22}% 
+\contentsline {subsection}{7}{10}{section*.4}% 
+\contentsline {section}{Lesson 5: Model Assessment}{11}{section*.4}% 
+\contentsline {subsection}{8}{12}{section*.5}% 
+\contentsline {section}{Lesson 6: Putting it all together}{13}{section*.5}% 
+\contentsline {section}{\numberline {2}First-Order Differential Equations}{14}{section.2}% 
+\contentsline {section}{Lesson 7: Solutions of Differential Equations}{15}{section.2}% 
+\contentsline {subsection}{9}{16}{section*.6}% 
+\contentsline {subsection}{10}{16}{section*.6}% 
+\contentsline {subsection}{11}{16}{section*.6}% 
+\contentsline {subsection}{12}{16}{Item.27}% 
+\contentsline {section}{Lesson 8: Slope Fields}{17}{Item.31}% 
+\contentsline {subsection}{13}{18}{section*.7}% 
+\contentsline {subsection}{14}{18}{Item.33}% 
+\contentsline {subsection}{15}{18}{Item.35}% 
+\contentsline {subsection}{16}{20}{Item.37}% 
+\contentsline {section}{Lesson 9: Approximating Solutions}{21}{Item.43}% 
+\contentsline {subsection}{17}{22}{section*.8}% 
+\contentsline {subsection}{18}{22}{Item.51}% 
+\contentsline {section}{Lesson 10: Modelling with Differential Equations}{23}{Item.51}% 
+\contentsline {subsection}{19}{24}{section*.9}% 
+\contentsline {subsection}{20}{24}{Item.58}% 
+\contentsline {section}{Lesson 11: Solvable Types of Differential Equations}{25}{Item.58}% 
+\contentsline {subsection}{21}{26}{section*.10}% 
+\contentsline {subsection}{22}{26}{Item.62}% 
+\contentsline {section}{Lesson 12: Properties of Differential Equations}{27}{Item.65}% 
+\contentsline {subsection}{23}{28}{section*.11}% 
+\contentsline {subsection}{24}{28}{Item.70}% 
+\contentsline {subsection}{25}{28}{Item.75}% 
+\contentsline {subsection}{26}{28}{Item.77}% 
+\contentsline {section}{Lesson 13: Autonomous Differential Equations}{29}{Item.81}% 
+\contentsline {subsection}{27}{30}{section*.12}% 
+\contentsline {subsection}{28}{30}{Item.87}% 
+\contentsline {subsection}{29}{31}{Item.97}% 
+\contentsline {section}{\numberline {3}Models of Systems}{32}{section.3}% 
+\contentsline {section}{Lesson 14: Modelling Two Quantities}{33}{section.3}% 
+\contentsline {subsection}{30}{34}{section*.13}% 
+\contentsline {subsection}{31}{34}{Item.112}% 
+\contentsline {section}{Lesson 15: Systems of two linear ODEs with constant coefficients}{35}{Item.112}% 
+\contentsline {subsection}{32}{36}{section*.14}% 
+\contentsline {subsection}{33}{36}{Item.118}% 
+\contentsline {subsection}{34}{36}{Item.125}% 
+\contentsline {section}{Lesson 16: Phase Portraits}{37}{Item.128}% 
+\contentsline {subsection}{35}{38}{section*.15}% 
+\contentsline {subsection}{36}{38}{Item.134}% 
+\contentsline {subsection}{37}{38}{Item.136}% 
+\contentsline {section}{Lesson 17: Analysis of Models with Systems}{39}{Item.138}% 
+\contentsline {subsection}{38}{40}{section*.16}% 
+\contentsline {section}{\numberline {4}Higher-Order Models}{42}{section.4}% 
+\contentsline {section}{Lesson 18: Modelling with Second-Order ODEs}{43}{section.4}% 
+\contentsline {subsection}{39}{44}{section*.17}% 
+\contentsline {subsection}{40}{44}{Item.149}% 
+\contentsline {section}{Lesson 19: Second-Order Linear ODEs with Constant Coefficients}{45}{Item.149}% 
+\contentsline {subsection}{41}{46}{section*.18}% 
+\contentsline {subsection}{42}{46}{Item.153}% 
+\contentsline {subsection}{43}{46}{Item.156}% 
+\contentsline {section}{Lesson 20: Analysis of Models with Higher Order ODEs}{47}{Item.159}% 
+\contentsline {subsection}{44}{48}{section*.19}% 
+\contentsline {subsection}{45}{48}{Item.166}% 
+\contentsline {section}{\numberline {5}Difference Equations}{50}{section.5}% 
+\contentsline {section}{Lesson 21: Introduction to Difference Equations}{51}{section.5}% 
+\contentsline {section}{Lesson 22: Solving Difference Equations}{52}{section.5}% 
+\contentsline {subsection}{46}{53}{section*.20}% 
+\contentsline {subsection}{47}{53}{Item.172}% 
+\contentsline {section}{Lesson 23: Modelling with Difference Equations}{54}{Item.172}% 
+\contentsline {subsection}{48}{55}{section*.21}% 
+\contentsline {subsection}{49}{55}{section*.21}% 
+\contentsline {subsection}{50}{55}{Item.174}% 
+\contentsline {subsection}{51}{55}{Item.177}% 
+\contentsline {subsection}{52}{55}{Item.177}% 
+\contentsline {section}{Lesson 24: Analysis of Difference Equations}{56}{Item.183}% 
+\contentsline {subsection}{53}{57}{section*.22}% 
+\contentsline {subsection}{54}{57}{Item.187}% 
+\contentsline {subsection}{55}{57}{Item.192}% 
+\contentsline {section}{\numberline {6}Projects}{58}{section.6}% 
+\contentsline {section}{Project 1: Managing a fishery}{59}{section.6}% 
+\contentsline {section}{Project 2: X-ray attenuation}{61}{Item.209}% 
+\contentsline {section}{Project 3: Predator-prey chase}{63}{Item.214}% 
+\contentsline {section}{Project 4: Epidemic modelling}{65}{Item.228}% 
+\contentsline {section}{Project 5: Hunting inspiration}{67}{Item.243}% 
+\contentsline {section}{Project 6: Arms race}{69}{Item.253}% 
+\contentsline {section}{Project 7: Spring data}{71}{Item.270}% 
+\contentsline {section}{Project 8: Wing flutter}{73}{Item.276}% 
+\contentsline {section}{Project 9: Bullwhip effect}{77}{Item.290}% 
+\contentsline {section}{Project 10: Approximating the temperature of a thin sheet}{81}{Item.314}% 
+\contentsline {section}{Project 11: Math of lungs}{83}{Item.327}% 
+\contentsline {section}{Project 12: Dark day}{85}{Item.339}% 
