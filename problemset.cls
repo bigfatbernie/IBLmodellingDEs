@@ -698,6 +698,9 @@
 	\DeclareDocumentEnvironment{bookonly}{o}{
 	}{%
 	}
+	\DeclareDocumentEnvironment{notstandard}{o}{
+	}{%
+	}
 	\DeclareDocumentEnvironment{instructoronly}{o}{
 	}{%
 	}

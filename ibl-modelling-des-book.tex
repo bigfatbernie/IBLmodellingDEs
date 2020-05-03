@@ -189,6 +189,7 @@
 	\voidenvironment{topic}
 	\voidenvironment{bookonly}
 	\voidenvironment{instructoronly}
+	\voidenvironment{notstandard}
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
 	\voidenvironment{lesson}
@@ -246,7 +247,10 @@
 \newpage
 
 
-\include{chap0-about}
+\begin{notstandard}
+	\include{chap0-about}
+\end{notstandard}
+
 	
 \newpage
 \pagestyle{usual}
