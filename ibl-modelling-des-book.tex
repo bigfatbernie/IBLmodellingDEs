@@ -95,9 +95,23 @@
 	\renewcommand{\headrulewidth}{0pt}
 }
 
+\fancypagestyle{siam2019}{%
+	\lfoot{\footnotesize\it \copyright\, 2019 Society for Industrial and Applied Mathematics.}
+	\rfoot{\footnotesize \it Reprinted with permission.  All rights reserved.}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
 \DeclareDocumentEnvironment{siam}{o}{%
 %	\newpage
 	\pagestyle{siam}
+}{%
+	\newpage
+}
+
+\DeclareDocumentEnvironment{siam2019}{o}{%
+%	\newpage
+	\pagestyle{siam2019}
 }{%
 	\newpage
 }
@@ -215,6 +229,7 @@
 \def\qrvideo#1{\url{#1}\hfill\qrcode{#1}}
 
 
+\usepackage{multirow}
 
 
 \begin{document}

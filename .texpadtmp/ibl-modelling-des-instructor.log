@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 MAY 2020 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 MAY 2020 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1896,18 +1896,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--212
  []
 
 LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <10> not available
-(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 222.
+(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 223.
 LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
-(Font)              scaled to size 10.39001pt on input line 222.
+(Font)              scaled to size 10.39001pt on input line 223.
 LaTeX Font Info:    Font shape `T1/mdbch/b/it' will be
-(Font)              scaled to size 9.60007pt on input line 222.
+(Font)              scaled to size 9.60007pt on input line 223.
 <images/TTC.png, id=482, 1003.75pt x 453.695pt>
 File: images/TTC.png Graphic file (type png)
 <use images/TTC.png>
-Package pdftex.def Info: images/TTC.png  used on input line 243.
+Package pdftex.def Info: images/TTC.png  used on input line 244.
 (pdftex.def)             Requested size: 500.0pt x 226.00235pt.
 
-Overfull \hbox (110.28755pt too wide) in paragraph at lines 243--244
+Overfull \hbox (110.28755pt too wide) in paragraph at lines 244--245
  [] 
  []
 
@@ -1917,12 +1917,12 @@ Overfull \hbox (110.28755pt too wide) in paragraph at lines 243--244
 <Error-correction level increased from M to Q at no cost.>
 <Copying the QR code for "https://uoft.me/modelling-TTC" in version 3-Q as previously calculated.>
 
-Overfull \hbox (38.97362pt too wide) in paragraph at lines 245--248
+Overfull \hbox (38.97362pt too wide) in paragraph at lines 246--249
 $[]$ 
  []
 
 LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 9.35101pt on input line 250.
+(Font)              scaled to size 9.35101pt on input line 251.
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
 Package pdftex.def Info: by-sa.pdf  used on input line 293.
@@ -4447,7 +4447,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  80i,16n,136p,1336b,1259s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsi0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des-instructor.pdf" (79 pages, 2212691 bytes).
+Output written on "/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des-instructor.pdf" (79 pages, 2212758 bytes).
 PDF statistics:
  1361 PDF objects out of 1440 (max. 8388607)
  1124 compressed objects within 12 object streams

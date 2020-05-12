@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 MAY 2020 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 MAY 2020 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1231,7 +1231,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip76
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 220.
- (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des.aux (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/title.aux) (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/chap1-mathmodelling.aux <Reading QR code for "https://uoft.me/modelling-TTC" at level 3-Q from aux file.>
+ (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des.aux (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/title.aux) (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/chap1-mathmodelling.aux <Reading QR code for "https://m3challenge.siam.org/resources/modeling-handbook" at level 4-M from aux file.>
+<Reading QR code for "https://uoft.me/modelling-TTC" at level 3-Q from aux file.>
 ) (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/chap2-firstorder.aux) (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/chap3-systems.aux) (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/chap4-higherorder.aux) (/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/chap5-discrete.aux))
 \openout1 = `ibl-modelling-des.aux'.
 
@@ -1594,85 +1595,85 @@ LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
 (Font)              scaled to size 4.80003pt on input line 213.
 LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <10> not available
-(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 222.
+(Font)              Font shape `T1/cmss/bx/n' tried instead on input line 223.
 LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
-(Font)              scaled to size 10.39001pt on input line 222.
+(Font)              scaled to size 10.39001pt on input line 223.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 222.
+(Font)              scaled to size 9.60007pt on input line 223.
 LaTeX Font Info:    Font shape `T1/mdbch/b/it' will be
-(Font)              scaled to size 9.60007pt on input line 222.
+(Font)              scaled to size 9.60007pt on input line 223.
 <images/TTC.png, id=262, 1003.75pt x 453.695pt>
 File: images/TTC.png Graphic file (type png)
 <use images/TTC.png>
-Package pdftex.def Info: images/TTC.png  used on input line 243.
+Package pdftex.def Info: images/TTC.png  used on input line 244.
 (pdftex.def)             Requested size: 500.0pt x 226.00235pt.
 
-Overfull \hbox (110.28755pt too wide) in paragraph at lines 243--244
+Overfull \hbox (110.28755pt too wide) in paragraph at lines 244--245
  [] 
  []
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 
 
 <QR code requested for "https://uoft.me/modelling-TTC" in version 0-M.>
 <Error-correction level increased from M to Q at no cost.>
 <Copying the QR code for "https://uoft.me/modelling-TTC" in version 3-Q as previously calculated.>
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 7.54395pt on input line 246.
+(Font)              scaled to size 7.54395pt on input line 247.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 5.65796pt on input line 246.
+(Font)              scaled to size 5.65796pt on input line 247.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 246.
+(Font)              scaled to size 7.68005pt on input line 247.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 246.
+(Font)              scaled to size 5.76004pt on input line 247.
 
-Overfull \hbox (38.97362pt too wide) in paragraph at lines 245--248
+Overfull \hbox (38.97362pt too wide) in paragraph at lines 246--249
 $[]$ 
  []
 
 LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 9.35101pt on input line 250.
+(Font)              scaled to size 9.35101pt on input line 251.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 7.68005pt on input line 271.
 
@@ -1781,7 +1782,7 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 4.80003pt on input line 868.
 File: by-sa.pdf Graphic file (type pdf)
 <use by-sa.pdf>
-Package pdftex.def Info: by-sa.pdf  used on input line 909.
+Package pdftex.def Info: by-sa.pdf  used on input line 908.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
  [5])
 \openout2 = `chap2-firstorder.aux'.
@@ -1811,7 +1812,7 @@ Package pdftex.def Info: by-sa.pdf  used on input line 424.
 
 
 ]
-<images/module9-preclass.png, id=327, 396.0396pt x 304.9794pt>
+<images/module9-preclass.png, id=330, 396.0396pt x 304.9794pt>
 File: images/module9-preclass.png Graphic file (type png)
 <use images/module9-preclass.png>
 Package pdftex.def Info: images/module9-preclass.png  used on input line 509.
@@ -1826,17 +1827,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
-<images/module9-catapult.pdf, id=329, 128.48pt x 90.3375pt>
+<images/module9-catapult.pdf, id=332, 128.48pt x 90.3375pt>
 File: images/module9-catapult.pdf Graphic file (type pdf)
 <use images/module9-catapult.pdf>
 Package pdftex.def Info: images/module9-catapult.pdf  used on input line 531.
 (pdftex.def)             Requested size: 100.0pt x 70.31407pt.
-<images/module9-y.png, id=331, 539.01375pt x 499.8675pt>
+<images/module9-y.png, id=334, 539.01375pt x 499.8675pt>
 File: images/module9-y.png Graphic file (type png)
 <use images/module9-y.png>
 Package pdftex.def Info: images/module9-y.png  used on input line 538.
 (pdftex.def)             Requested size: 215.65924pt x 200.0pt.
-<images/module9-yprime.png, id=333, 534.99875pt x 514.92375pt>
+<images/module9-yprime.png, id=336, 534.99875pt x 514.92375pt>
 File: images/module9-yprime.png Graphic file (type png)
 <use images/module9-yprime.png>
 Package pdftex.def Info: images/module9-yprime.png  used on input line 539.
@@ -1887,32 +1888,32 @@ File: by-sa.pdf Graphic file (type pdf)
 Package pdftex.def Info: by-sa.pdf  used on input line 613.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
  [8]
-<images/module9-graph1.png, id=426, 532.99126pt x 551.05875pt>
+<images/module9-graph1.png, id=429, 532.99126pt x 551.05875pt>
 File: images/module9-graph1.png Graphic file (type png)
 <use images/module9-graph1.png>
 Package pdftex.def Info: images/module9-graph1.png  used on input line 626.
 (pdftex.def)             Requested size: 145.08067pt x 150.0pt.
-<images/module9-graph2.png, id=428, 534.99875pt x 545.03625pt>
+<images/module9-graph2.png, id=431, 534.99875pt x 545.03625pt>
 File: images/module9-graph2.png Graphic file (type png)
 <use images/module9-graph2.png>
 Package pdftex.def Info: images/module9-graph2.png  used on input line 627.
 (pdftex.def)             Requested size: 147.2353pt x 150.0pt.
-<images/module9-graph3.png, id=430, 572.1375pt x 568.1225pt>
+<images/module9-graph3.png, id=433, 572.1375pt x 568.1225pt>
 File: images/module9-graph3.png Graphic file (type png)
 <use images/module9-graph3.png>
 Package pdftex.def Info: images/module9-graph3.png  used on input line 628.
 (pdftex.def)             Requested size: 151.05698pt x 150.0pt.
-<images/module9-graph4.png, id=432, 532.99126pt x 560.0925pt>
+<images/module9-graph4.png, id=435, 532.99126pt x 560.0925pt>
 File: images/module9-graph4.png Graphic file (type png)
 <use images/module9-graph4.png>
 Package pdftex.def Info: images/module9-graph4.png  used on input line 630.
 (pdftex.def)             Requested size: 142.73843pt x 150.0pt.
-<images/module9-graph5.png, id=434, 532.99126pt x 542.025pt>
+<images/module9-graph5.png, id=437, 532.99126pt x 542.025pt>
 File: images/module9-graph5.png Graphic file (type png)
 <use images/module9-graph5.png>
 Package pdftex.def Info: images/module9-graph5.png  used on input line 631.
 (pdftex.def)             Requested size: 147.49611pt x 150.0pt.
-<images/module9-graph6.png, id=436, 539.01375pt x 542.025pt>
+<images/module9-graph6.png, id=439, 539.01375pt x 542.025pt>
 File: images/module9-graph6.png Graphic file (type png)
 <use images/module9-graph6.png>
 Package pdftex.def Info: images/module9-graph6.png  used on input line 632.
@@ -1937,7 +1938,7 @@ File: by-sa.pdf Graphic file (type pdf)
 Package pdftex.def Info: by-sa.pdf  used on input line 890.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
  [10]
-<images/module11-pendulum.pdf, id=470, 104.39pt x 197.73875pt>
+<images/module11-pendulum.pdf, id=473, 104.39pt x 197.73875pt>
 File: images/module11-pendulum.pdf Graphic file (type pdf)
 <use images/module11-pendulum.pdf>
 Package pdftex.def Info: images/module11-pendulum.pdf  used on input line 984.
@@ -1961,7 +1962,7 @@ File: by-sa.pdf Graphic file (type pdf)
 Package pdftex.def Info: by-sa.pdf  used on input line 1373.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [13]
-<images/module14-preclass.png, id=529, 828.09375pt x 524.96124pt>
+<images/module14-preclass.png, id=532, 828.09375pt x 524.96124pt>
 File: images/module14-preclass.png Graphic file (type png)
 <use images/module14-preclass.png>
 Package pdftex.def Info: images/module14-preclass.png  used on input line 1451.
@@ -2072,7 +2073,7 @@ File: by-sa.pdf Graphic file (type pdf)
 Package pdftex.def Info: by-sa.pdf  used on input line 420.
 (pdftex.def)             Requested size: 25.93227pt x 9.21603pt.
 [24]
-<images/module26-drunk.pdf, id=651, 449.68pt x 229.85875pt>
+<images/module26-drunk.pdf, id=654, 449.68pt x 229.85875pt>
 File: images/module26-drunk.pdf Graphic file (type pdf)
 <use images/module26-drunk.pdf>
 Package pdftex.def Info: images/module26-drunk.pdf  used on input line 514.
@@ -2109,20 +2110,29 @@ Package rerunfilecheck Info: File `ibl-modelling-des.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 55056 strings out of 492616
- 1220706 string characters out of 6129482
- 1720687 words of memory out of 5000000
- 57610 multiletter control sequences out of 15000+600000
- 638516 words of font info for 361 fonts, out of 8000000 for 9000
+ 55114 strings out of 492616
+ 1221554 string characters out of 6129482
+ 1722074 words of memory out of 5000000
+ 57661 multiletter control sequences out of 15000+600000
+ 638751 words of font info for 364 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,16n,136p,1023b,1176s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,16n,136p,1325b,1176s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.4} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.3} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.1} has been referenced but does not exist, replaced by a fixed one
+
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb>
-Output written on "/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des.pdf" (27 pages, 1752952 bytes).
+Output written on "/Users/bernardo/Google Drive/Sync/Courses/Modelling 231/Textbook/Github/.texpadtmp/ibl-modelling-des.pdf" (27 pages, 1753135 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 642 compressed objects within 7 object streams
- 205 named destinations out of 1000 (max. 500000)
+ 798 PDF objects out of 1000 (max. 8388607)
+ 645 compressed objects within 7 object streams
+ 208 named destinations out of 1000 (max. 500000)
  58595 words of extra memory for PDF output out of 61914 (max. 10000000)
 
