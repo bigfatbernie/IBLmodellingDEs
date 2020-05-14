@@ -82,22 +82,32 @@
 \fancypagestyle{usual}{%
 	\fancyhead[LO,RE]{}%\leftmark}	
 	\fancyhead[RO,LE]{}	
-	\fancyfoot[LO,RE]{\footnotesize\it \copyright\, 2020 Galv\~ao-Sousa-Siefken \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}	
-%	\rfoot{\footnotesize\it \copyright\, Galv\~ao-Sousa-Siefken, 2019--2020 \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}
-%	\lfoot{}
+	\fancyfoot[RO,LE]{\footnotesize\it \copyright\, 2020 Galv\~ao-Sousa-Siefken \ \makebox(30,5){\includegraphics[height=1.2em]{by-sa.pdf}}}	
 	\renewcommand{\headrulewidth}{0pt}
 }
 
 
+%\fancypagestyle{siam}{%
+%	\lfoot{\footnotesize\it \copyright\, 2014 Society for Industrial and Applied Mathematics.}
+%	\rfoot{\footnotesize \it Reprinted with permission.  All rights reserved.}
+%	\renewcommand{\headrulewidth}{0pt}
+%}
+%
+%\fancypagestyle{siam2019}{%
+%	\lfoot{\footnotesize\it \copyright\, 2019 Society for Industrial and Applied Mathematics.}
+%	\rfoot{\footnotesize \it Reprinted with permission.  All rights reserved.}
+%	\renewcommand{\headrulewidth}{0pt}
+%}
+
 \fancypagestyle{siam}{%
-	\lfoot{\footnotesize\it \copyright\, 2014 Society for Industrial and Applied Mathematics.}
-	\rfoot{\footnotesize \it Reprinted with permission.  All rights reserved.}
+	\fancyfoot[RO,LE]{\footnotesize\it \copyright\, 2014 Society for Industrial and Applied Mathematics.}
+	\fancyfoot[LO,RE]{\footnotesize \it Reprinted with permission.  All rights reserved.}
 	\renewcommand{\headrulewidth}{0pt}
 }
 
 \fancypagestyle{siam2019}{%
-	\lfoot{\footnotesize\it \copyright\, 2019 Society for Industrial and Applied Mathematics.}
-	\rfoot{\footnotesize \it Reprinted with permission.  All rights reserved.}
+	\fancyfoot[RO,LE]{\footnotesize\it \copyright\, 2019 Society for Industrial and Applied Mathematics.}
+	\fancyfoot[LO,RE]{\footnotesize \it Reprinted with permission.  All rights reserved.}
 	\renewcommand{\headrulewidth}{0pt}
 }
 
@@ -268,9 +278,8 @@
 
 	
 \newpage
+
 \pagestyle{usual}
-
-
 
 %\addcontentsline{toc}{chapter}{modules}
 
