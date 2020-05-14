@@ -1,0 +1,98 @@
+
+
+\begin{center}
+	\includegraphics*[width=300pt]{images/project-maximus-screenshot.png}
+\end{center}
+
+
+\emph{Maximus, the Roman general turned slave turned gladiator} is seeking \emph{vengeance!} (In this life or the next).
+
+
+He has managed to make his way to the Roman Forum, and now all that stands between him and nefarious Emperor Commodus is the \emph{Pr{\ae}torian Guard}.
+
+Maximus must make his way across the Forum, defeating all Pr{\ae}torians in his way, if he is to achieve his goal in this lifetime.
+
+\begin{graybox}
+\emph{Conditions. }
+\begin{itemize}
+	\item The forum can be represented by the horizontal $x$-axis, in the interval $[1,1823]$;
+	\item Maximus starts at the left side of the forum;
+	\item Maximus moves at a constant rate across the forum - we call this $M_s$ (Maximus' speed);
+	\item The arrival of Pr{\ae}torian guards follows a Poisson process with rate $P_r$ (Pr{\ae}torian arrival rate);
+	\item Pr{\ae}torians appear at the right side of the forum, and move at a constant rate toward Maximus. This rate is called $P_s$ (Pr{\ae}torian speed);
+	\item Both Maximus and the Pr{\ae}torian(s) will move toward each other until blocked (by Maximus in the case of the front Pr{\ae}torian, or by another Pr{\ae}torian if there's a lineup waiting to turn Maximus into pulp);
+	\item The maximum number of Pr{\ae}torians is limited by the size of the forum.
+\end{itemize}
+\end{graybox}
+
+\begin{redbox}
+\emph{When Maximus meets a Pr{\ae}torian.}	
+Fisticuffs ensue!
+
+\begin{itemize}
+\item Maximus and the Pr{\ae}torians both start with a fixed health value, let's call this $M_h$ (Maximus health).
+\item Maximus strikes on the Pr{\ae}torians are another Poisson process, with rate $M_{hr}$ (Maximus hit-rate) Pr{\ae}torians strike Maximus also according to a Poisson process, with rate $P_{hr}$ (Pr{\ae}torian hit-rate)
+\item When Maximus hits a Pr{\ae}torian, he causes damage in the amount $d=M_{hv} \cdot \frac{\text{health}}{M_h}$.
+
+	That is, the damage is given by a parameter $M_{hv}$ (Maximus hit-value) multiplied by his current health divided by the initial (maximum) health. It's a tough world and Maximus' strikes get weaker the weaker he gets!
+\item The same is true for the Pr{\ae}torians (with their own hit-value and corresponding health), but there's an additional factor here - it's Maximus we're talking about! He's trained in the arena and defeated the most skilled gladiators! Therefore, he is able to dodge many of the Pr{\ae}torians' strikes!
+
+	Pr{\ae}torians land a blow on Maximus only with probability $1/M_{tf}$ where $M_{tf}$ is Maximus' training factor. The better trained Maximus is, the harder it is for the Pr{\ae}torians to actually strike him.
+\item If at any point the health of the Pr{\ae}torian goes below zero, the soldier dies and Maximus can continue his progress along the Forum (at least until he meets the next Pr{\ae}torian).
+\end{itemize}
+\end{redbox}
+
+If at any point Maximus' health goes below zero, it's over and he'll have to get his Vengeance on the next life.
+
+Happily for Maximus, as long as he's just walking (not fighting), his health regenerates at a rate given by $M_{rr}$ (Maximus' health recovery rate). How much he'll recover depends on how far he can get before meeting his next foe! \\
+
+
+
+
+\newpage
+\begin{graybox}
+To help you visualize the task, here is some code you can run on Octave or Matlab.
+\begin{itemize}
+	\item \qrvideo{https://github.com/bigfatbernie/IBLmodellingDEs/projects/Maximus}
+\end{itemize}
+\end{graybox}
+
+\hfill
+
+\emph{Task 1. } Model the fight with deterministic processes instead of the Poisson processes.
+
+\emph{Task 2. } Model the fight.
+
+
+
+
+
+
+
+
+
+\vfill
+
+Will Maximus make his way across the Forum and get his vengeance on Emperor Commodus? And more importantly$\ldots$
+
+\begin{center}
+\emph{ARE YOU NOT ENTERTAINED?????!!!!!!	}
+\end{center}
+
+\vfill
+
+%\emph{Further Investigation:}
+%\begin{enumerate}[label=\emph{\arabic*.}]
+%%	\item Assume that the lungs only absorb a fraction of the air in contact with its surface. Combine the two tasks.
+%	\item Investigate how the what is known about human lungs. Compare how the branching of real human lungs differs from this model. Refine the estimate.
+%	\item Investigate how the what is known about human lungs. Compare how the gas exchange of real human lungs differs from this model. Refine the model.
+%\end{enumerate}
+%
+%\vspace{1cm}
+
+
+
+\hfill ``Maximus vs Commodus'' is a collaboration between Francisco Estrada and Bernardo Galv\~ao-Sousa.
+
+\begin{noexercises}
+\end{noexercises}

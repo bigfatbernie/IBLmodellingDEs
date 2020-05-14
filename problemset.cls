@@ -277,6 +277,25 @@
 	}{%
 		\end{tcolorbox}
 	}
+		\DeclareDocumentEnvironment{redbox}{o}{
+		%\sffamily
+		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{red!70!black} ##1}}
+		\parskip=1.7mm%
+		\begin{tcolorbox}[colframe=red,
+			colback=red!5!white, 
+			left=0mm, 
+			right=0mm, 
+			top=1mm, 
+			bottom=1mm, 
+			leftrule=0mm, 
+			rightrule=0mm, 
+			sharp corners,
+		]
+		\setlist{leftmargin=*, labelindent=1mm, label={\color{red!70!black}$\blacksquare$\!\!}, topsep=0pt}
+	}{%
+		\end{tcolorbox}
+	}
+
 	\DeclareDocumentEnvironment{goals}{o}{
 		\footnotesize\sffamily\parskip=1.7mm%
 		\begin{tcolorbox}[colframe=Cerulean,
