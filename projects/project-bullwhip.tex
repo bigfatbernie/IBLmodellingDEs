@@ -1,17 +1,19 @@
 \emph{Goal. } Understand that Supply Chain Management is hard(!) and attempt to model it. \\
 
 
+\begin{video}
 Watch the short video:
 \begin{itemize}
 	\item \qrvideo{https://youtu.be/2nlmkTYZG5s}
 \end{itemize}
-to understand a bit better about the bullwhip effect. \\
+to understand a bit better about the bullwhip effect.
+\end{video}
 
-
-Read also:
+\begin{emphbox}[Read.]
 \begin{itemize}
 	\item \qrvideo{http://forio.com/about/blog/bullwhips-and-beer/}
 \end{itemize}
+\end{emphbox}
 
 
 
@@ -28,9 +30,11 @@ From the second week, your customers start ordering 15 cases of beer instead.
 It is you job to stabilize the whole supply chain as soon as possible.
 
 Below is a screen from the ``game''.
+\begin{graybox}
 \begin{center}
 \includegraphics*[width=400pt]{images/project-bullwhip-Near_Beer_Game.png}
 \end{center}
+\end{graybox}
 
 \begin{itemize}
 \item New Orders from Customers: Number of beer cases your new customers want this week
@@ -42,10 +46,12 @@ Below is a screen from the ``game''.
 
 \newpage
 
-\emph{Task. } Go to 
+\begin{graybox}
+Go to 
 \begin{itemize}
 	\item \qrvideo{https://forio.com/simulate/mbean/near-beer-game/run/}	
 \end{itemize}
+\end{graybox}
 
 The goal of the ``game'' is to try and stabilize the number of customer orders, your inventory, arriving orders, and your order, so that you end up with the following situation
 \begin{itemize}
@@ -55,9 +61,8 @@ The goal of the ``game'' is to try and stabilize the number of customer orders, 
 \item Order 15 cases
 \end{itemize}
 
-\begin{enumerate}[label = \emph{\arabic*.}]
 
-\item Play the ``game'' on $\pmb{\tt Novice}$ as a group and see how many weeks it takes to stabilize the situation.
+\emph{Task 1.} Play the ``game'' on \emph{\tt Novice} as a group and see how many weeks it takes to stabilize the situation.
 
 Consider the following sequences:
 \begin{itemize}
@@ -96,7 +101,7 @@ Explain your choice.
 
 \newpage
 
-\item Play the ``game'' on $\pmb{\tt Expert}$ as a group and see how many weeks it takes to stabilize the situation.
+\emph{Task 2.} Play the ``game'' on \emph{\tt Expert} as a group and see how many weeks it takes to stabilize the situation.
 
 Consider the same sequences as for \emph{1.} 
 
@@ -125,9 +130,6 @@ Explain your choice.
 
 \item What is the result of your strategy? Does it go ``amuck'' -- bullwhip effect? Or does it control the ordering nicely?
 
-
-\end{enumerate}
-
 \end{enumerate}
 
 
@@ -138,9 +140,11 @@ Explain your choice.
 \emph{Further Investigation. } 
 \begin{enumerate}[label=\emph{\arabic*.}]
 \item There is a more complex version of the game 
+\begin{graybox}
 \begin{itemize}
 	\item \qrvideo{https://beergame.pipechain.com/}
 \end{itemize}
+\end{graybox}
 which includes 1--4 players from 4 different stages of the supply chain. It takes 2 weeks for orders to arrive to a different stage and it takes 2 weeks to fulfill a request.
 
 \begin{enumerate}[label = \emph{(\alph*)}]
@@ -160,14 +164,15 @@ which includes 1--4 players from 4 different stages of the supply chain. It take
 
 
 \item In the article suggested at the beginning
+\begin{emphbox}[]
 \begin{itemize}
 \item \qrvideo{http://forio.com/about/blog/bullwhips-and-beer/}
 \end{itemize}
+\end{emphbox}
 the author describes ways a few ways to reduce the Bullwhip effect. Program each of them with your sequence $o_n$ and study how well they reduce the effect.
 
 
 \item You can avoid the Bullwhip effect completely with perfect information about the supply chain and the future customer demand. In reality, we can predict the customer demand, but it won't match exactly the prediction. Add a little noise to customer demand and try to avoid the Bullwhip effect. You can still use the fact that customer demand will still be close to 15 cases every week.
-
 \end{enumerate}
 
 \begin{noexercises}

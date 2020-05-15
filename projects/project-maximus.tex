@@ -30,11 +30,11 @@ Maximus must make his way across the Forum, defeating all Pr{\ae}torians in his 
 Fisticuffs ensue!
 
 \begin{itemize}
-\item Maximus and the Pr{\ae}torians both start with a fixed health value, let's call this $M_h$ (Maximus health).
+\item Maximus and the Pr{\ae}torians both start with a fixed health value, let's call this $H$ (initial health).
 \item Maximus strikes on the Pr{\ae}torians are another Poisson process, with rate $M_{hr}$ (Maximus hit-rate) Pr{\ae}torians strike Maximus also according to a Poisson process, with rate $P_{hr}$ (Pr{\ae}torian hit-rate)
-\item When Maximus hits a Pr{\ae}torian, he causes damage in the amount $d=M_{hv} \cdot \frac{\text{health}}{M_h}$.
+\item When Maximus hits a Pr{\ae}torian, he causes damage in the amount $d=M_{hv} \cdot \frac{M_h}{H}$.
 
-	That is, the damage is given by a parameter $M_{hv}$ (Maximus hit-value) multiplied by his current health divided by the initial (maximum) health. It's a tough world and Maximus' strikes get weaker the weaker he gets!
+	That is, the damage is given by a parameter $M_{hv}$ (Maximus hit-value) multiplied by $M_h$ (Maximus' current health) divided by the initial (maximum) health. It's a tough world and Maximus' strikes get weaker the weaker he gets!
 \item The same is true for the Pr{\ae}torians (with their own hit-value and corresponding health), but there's an additional factor here - it's Maximus we're talking about! He's trained in the arena and defeated the most skilled gladiators! Therefore, he is able to dodge many of the Pr{\ae}torians' strikes!
 
 	Pr{\ae}torians land a blow on Maximus only with probability $1/M_{tf}$ where $M_{tf}$ is Maximus' training factor. The better trained Maximus is, the harder it is for the Pr{\ae}torians to actually strike him.
@@ -59,9 +59,17 @@ To help you visualize the task, here is some code you can run on Octave or Matla
 
 \hfill
 
-\emph{Task 1. } Model the fight with deterministic processes instead of the Poisson processes.
+\emph{Task. } 
+\begin{enumerate}[label=\emph{\arabic*.}]
+	\item Using the code supplied above, find some values for which sometimes Maximus achieves vengeance in this life, and sometimes only in the next.
+	
+	\emph{Hint.} To speed the simulation, you might want to disable the graphics.
+	\item Model the fight with deterministic processes instead of the Poisson processes.
+	\item Fix all values and find the \emph{critical} training value for Maximus with the deterministic processes.
+	\item Model the actual fight.
+\end{enumerate}
 
-\emph{Task 2. } Model the fight.
+
 
 
 
@@ -79,8 +87,8 @@ Will Maximus make his way across the Forum and get his vengeance on Emperor Comm
 \emph{ARE YOU NOT ENTERTAINED?????!!!!!!	}
 \end{center}
 
-\vfill
-
+%\vfill
+%
 %\emph{Further Investigation:}
 %\begin{enumerate}[label=\emph{\arabic*.}]
 %%	\item Assume that the lungs only absorb a fraction of the air in contact with its surface. Combine the two tasks.
@@ -91,8 +99,9 @@ Will Maximus make his way across the Forum and get his vengeance on Emperor Comm
 %\vspace{1cm}
 
 
+\vfill
 
-\hfill ``Maximus vs Commodus'' is a collaboration between Francisco Estrada and Bernardo Galv\~ao-Sousa.
+\hfill ``Maximus vs Commodus'' is a collaboration with Francisco Estrada.
 
 \begin{noexercises}
 \end{noexercises}
