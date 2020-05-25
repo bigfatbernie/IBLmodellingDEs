@@ -347,6 +347,9 @@
 	\newcounter{lessoncounter}
 	\DeclareDocumentEnvironment{lesson}{o}{%
 		\addtocounter{lessoncounter}{1}
+		\renewcommand{\emph}[1]{{%
+			\color{Plum!70!black} \textbf{##1}%
+		}}
 		\setlist{ label={\color{Plum!70!black}$\blacksquare$}, topsep=0pt}
 		\newpage
 		% increase the margin widths
@@ -495,7 +498,8 @@
 	
 
 	\DeclareDocumentEnvironment{project}{m}{%
-		\addtocounter{projectcounter}{1}
+		%\addtocounter{projectcounter}{1}
+		\refstepcounter{projectcounter}
 		\setlist[itemize]{ label={\color{LimeGreen!70!black}$\blacksquare$}, topsep=0pt}
 		\probset@cleartooddpage
 		% increase the margin widths
