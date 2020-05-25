@@ -640,7 +640,7 @@
 	}
 	
 	\DeclareDocumentEnvironment{emphbox}{o}{
-		\RenewDocumentCommand{\emph}{m}{{\itshape\bfseries\color{Green} ##1}}
+		\RenewDocumentCommand{\emph}{m}{{\bfseries\color{Green} #####1}}
 		\begin{leftborderbox}[colframe=Green, colback=Green!10]
 		{\bfseries\sffamily\color{Green} #1.}
 	}{%
