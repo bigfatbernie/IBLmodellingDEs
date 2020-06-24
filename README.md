@@ -5,7 +5,7 @@ In this project, you can find a textbook and a series of problems that attempt t
 
 The source code is available here.
 
-To compile the books, you can change the name of the LaTeX file ibl-modelling-des-book.tex to:
+To compile, you can change the name of the LaTeX file ibl-modelling-des-book.tex to:
 * ibl-modelling-des-book.tex       -> compiles the textbook
 * ibl-modelling-des-instructor.tex -> compiles the instructor guide
 * ibl-modelling-des-slides.tex     -> compiles slides to use in lecture
