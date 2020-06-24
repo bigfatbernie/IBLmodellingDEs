@@ -143,6 +143,7 @@
 % allow pagebreaks that only display in `book` mode
 \newcommand{\bookonlynewpage}{\begin{bookonly}\newpage\end{bookonly}}
 \newcommand{\standardonlynewpage}{\begin{displayonly}\newpage\end{displayonly}}
+\newcommand{\slidesonlynewpage}{\begin{slidesonly}\newpage\end{slidesonly}}
 
 %
 % Set up the four render modes: standard, book, instructor, and solutions.
@@ -152,27 +153,40 @@
 \newtoggle{standard}
 \newtoggle{solutions}
 \newtoggle{book}
+\newtoggle{slides}
 \newcommand{\setinstructor}{
 	\toggletrue{instructor}
 	\togglefalse{standard}
+	\togglefalse{slides}
 	\togglefalse{solutions}
 	\togglefalse{book}
 }
 \newcommand{\setstandard}{
 	\togglefalse{instructor}
 	\toggletrue{standard}
+	\togglefalse{slides}
 	\togglefalse{solutions}
 	\togglefalse{book}
 }
 %\newcommand{\setsolutions}{
 %	\togglefalse{instructor}
 %	\togglefalse{standard}
+%	\togglefalse{slides}
 %	\toggletrue{solutions}
 %	\togglefalse{book}
 %}
+\newcommand{\setslides}{
+	\togglefalse{instructor}
+	\togglefalse{standard}
+	\toggletrue{slides}
+	\togglefalse{solutions}
+	\togglefalse{book}
+	\setslidesgeometry
+}
 \newcommand{\setbook}{
 	\togglefalse{instructor}
 	\togglefalse{standard}
+	\togglefalse{slides}
 	\togglefalse{solutions}
 	\toggletrue{book}
 	\setbookgeometry
@@ -185,7 +199,9 @@
 \IfSubStr{\jobname}{\detokenize{book}}{\setbook}{
 	\IfSubStr{\jobname}{\detokenize{solutions}}{\setsolutions}{
 		\IfSubStr{\jobname}{\detokenize{instructor}}{\setinstructor}{
-			\setstandard
+			\IfSubStr{\jobname}{\detokenize{slides}}{\setslides}{
+				\setstandard
+			}
 		}
 	}
 }
@@ -198,6 +214,7 @@
 	\voidenvironment{module}
 	\voidenvironment{bookonly}
 	\voidenvironment{displayonly}
+	\voidenvironment{slidesonly}
 	\renewcommand{\coversubtitle}{Instructor Guide}
 }{}
 %\iftoggle{solutions}{
@@ -213,15 +230,29 @@
 	\voidenvironment{topic}
 	\voidenvironment{bookonly}
 	\voidenvironment{instructoronly}
+	\voidenvironment{slidesonly}
 	\voidenvironment{notstandard}
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
 	\voidenvironment{lesson}
 	\renewcommand{\coversubtitle}{MAT231 Core Exercises}
 }{}
+\iftoggle{slides}{
+%	\geometry{paper=screen}
+	\voidenvironment{module}
+	\voidenvironment{topic}
+	\voidenvironment{notslides}
+	\voidenvironment{instructoronly}
+	\voidenvironment{notstandard}
+	\voidenvironment{solution}
+	\voidenvironment{annotation}
+	\voidenvironment{lesson}
+	\renewcommand{\coversubtitle}{MAT231 Slides}
+}{}
 \iftoggle{book}{
 	\voidenvironment{displayonly}
 	\voidenvironment{instructoronly}
+	\voidenvironment{slidesonly}
 	\voidenvironment{solution}
 	\voidenvironment{annotation}
 	\voidenvironment{lesson}
@@ -332,10 +363,13 @@
 \newpage
 
 
+\begin{notslides}
 \hbox{}
 
 
 \newpage
+	
+\end{notslides}
 
 
 \begin{notstandard}
@@ -476,7 +510,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
+\begin{notslides}
 \begin{bookonly}
 %\appendix
 
@@ -511,5 +545,7 @@
 
 
 \end{bookonly}
+\end{notslides}
+
 
 \end{document}

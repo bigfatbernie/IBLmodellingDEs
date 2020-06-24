@@ -76,6 +76,24 @@
 		right=10pt,
 		includeall,
 		twoside=true}}
+
+
+	\def\setslidesgeometry{
+	\geometry{
+		paper=screen,
+		top=10pt,
+		headsep=0in, 
+		headheight=0in, 
+		left=70pt, 
+		bottom=20pt, 
+		footskip=0in,
+		marginparsep=5pt, 
+		marginparwidth=10pt,
+		right=20pt,
+		includeall,
+		twoside=false
+		}
+	}
 	% set all the latex values.  We need to addtolength
 	% because geometry magically adjusted them so we start
 	% out using all of the page's area; the actual values may
@@ -195,6 +213,12 @@
 %%
 %% SET UP QUESTIONS AND PARTS ENVIRONMENTS
 %%
+	\def\bannerpathQ{
+			([shift={(0.45\pgflinewidth,-0.05\pgflinewidth)}]current page.north west) 
+			--
+			([shift={(0.45\pgflinewidth,0.05\pgflinewidth)}]current page.south west)
+		}
+
 	\newcounter{question}
 	\newcounter{questionpart}
 
@@ -203,14 +227,27 @@
 		\def\@currentlabel{\thequestion} 	% make a \label command work after a question
 		\pagebreak[3]
 		\noindent
-		\makebox(.5,0)[lt]{
-			\hspace{-2cm}
-			\makebox(0,10)[lt]{\rule{1.4in}{.5pt}}
-			\begin{minipage}[t]{1in}
-				\vspace{-2pt}
-				\color{gray}{\sffamily\large\thequestion}
-			\end{minipage}
-		}%
+		\begin{slidesonly}
+			\begin{tikzpicture}[remember picture,overlay]
+			    \draw[line width=25mm,Orange!70!white] 
+				\bannerpathQ     
+				node[anchor=north,pos=-0.04,text=white] {\Huge\sffamily\thequestion};
+			\end{tikzpicture}
+		\end{slidesonly}
+%		\begin{notslides}
+			\makebox(.5,0)[lt]{
+				\hspace{-2cm}
+				\begin{notslides}
+					\makebox(0,10)[lt]{\rule{1.4in}{.5pt}}
+				\end{notslides}
+				\begin{minipage}[t]{1in}
+					\vspace{-2pt}
+					\begin{notslides}
+					\color{gray}{\sffamily\large\thequestion}
+					\end{notslides}
+				\end{minipage}
+			}%
+%		\end{notslides}
 		\addcontentsline{toc}{subsection}{\thequestion}%
 		\nopagebreak
 		\par
@@ -222,7 +259,8 @@
 	\newcounter{partsitem}
 	\newcounter{partsitemlast}
 	\newcommand{\formatpartsitem}{%
-		{\color{gray}{\sffamily\small\thequestion.\thepartsitem}}
+		{\begin{notslides}\color{gray}{\sffamily\small\thequestion.\thepartsitem}\end{notslides}
+		\begin{slidesonly}\color{white}{\sffamily\small\thequestion.\thepartsitem}\end{slidesonly}}
 	}
 	\DeclareDocumentEnvironment{parts}{o}{
 		\parskip=1.7mm
@@ -379,6 +417,12 @@
 	% items in the displayonly environment only show up in "display mode";
 	% i.e., when the annotations environment is hidden
 	\DeclareDocumentEnvironment{displayonly}{o}{
+	}{%
+	}
+	\DeclareDocumentEnvironment{slidesonly}{o}{
+	}{%
+	}
+	\DeclareDocumentEnvironment{notslides}{o}{
 	}{%
 	}
 	% environment for describing book "modules"
