@@ -253,6 +253,29 @@
 		\par
 	}
 
+	\newcommand{\questionagain}{%
+		\begin{slidesonly}
+		\pagebreak[3]
+		\noindent
+			\begin{tikzpicture}[remember picture,overlay]
+			    \draw[line width=25mm,Orange!70!white] 
+				\bannerpathQ     
+				node[anchor=north,pos=-0.04,text=white] {\Huge\sffamily\thequestion};
+			\end{tikzpicture}
+%		\begin{notslides}
+			\makebox(.5,0)[lt]{
+				\hspace{-2cm}
+				\begin{minipage}[t]{1in}
+					\vspace{-2pt}
+				\end{minipage}
+			}%
+%		\end{notslides}
+		\nopagebreak
+		\par
+		\end{slidesonly}
+	}
+	
+
 	% the parts environment should act quite similarly to the
 	% list environment, so we'll use the latex list environment
 	% to create it
