@@ -33,6 +33,7 @@
 	\RequirePackage{eso-pic} % replaces `everyshi` to draw borders on the modules
 	\RequirePackage{multicol}
 
+	
 
 
 
